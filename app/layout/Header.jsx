@@ -35,13 +35,13 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
           <div className="flex items-center gap-3">
-            <div className="relative w-12 h-12"> 
-              <Image
-                src="/images/mangal-realty-logo.png"   
+            <div className="relative w-25 h-15"> 
+              <img
+                src="/assets/images/mangal-realty-logo.png"   
                 alt="Mangal Realty"
                 fill 
                 priority 
-                className="object-contain"
+                className="object-contain "
               />
             </div>
           </div>

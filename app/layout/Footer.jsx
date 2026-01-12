@@ -52,11 +52,10 @@ export default function Footer() {
           
           {/* COLUMN 1: BRANDING */}
           <motion.div variants={itemVariants} className="flex flex-col gap-8">
-            <div className="relative w-24 h-24">
-              <Image 
-                src="/mangal-realty-logo.png" 
-                alt="Mangal Realty Logo" 
-                fill 
+            <div className="relative w-45 h-24">
+              <img
+                src="/assets/images/mangal-realty-logo.png"
+                alt="Mangal Realty Logo"
                 className="object-contain brightness-200"
               />
             </div>
