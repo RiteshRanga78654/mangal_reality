@@ -1,84 +1,3 @@
-// import React from 'react';
-
-// const Page = () => {
-//   return (
-//     <main className="min-h-screen bg-white">
-//       {/* HERO SECTION 
-//           - Mobile: h-[40vh] (Shows at top without gaps)
-//           - Desktop: md:h-screen (Full screen)
-//       */}
-//       <section className="relative h-[40vh] md:h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-        
-//         {/* 1. Video Background */}
-//         <video
-//           autoPlay
-//           loop
-//           muted
-//           playsInline
-//           className="absolute z-10 w-full h-full object-cover"
-//         >
-//           <source src="/assets/videos/slider-video.mp4" type="video/mp4" />
-//           Your browser does not support the video tag.
-//         </video>
-
-//         {/* 2. Overlay */}
-//         <div className="absolute z-20 w-full h-full bg-black/10"></div>
-
-//         {/* 3. Center Logo/Text */}
-//         {/* <div className="relative z-30 flex flex-col items-center justify-center text-center px-4">
-//           <img 
-//             src="/assets/images/logo.png" 
-//             alt="Planet Green" 
-//             className="w-32 md:w-56 mb-2 drop-shadow-md"
-//           />
-//           <p className="text-white text-[10px] md:text-sm tracking-[0.3em] uppercase font-light">
-//             Come, Join the Revolution
-//           </p>
-//         </div> */}
-//       </section>
-
-//       {/* CONTENT SECTION (As per your second screenshot)
-//       */}
-//       {/* <section className="py-12 px-6 md:py-24 md:px-20 max-w-7xl mx-auto">
-       
-//         <h2 className="text-green-700 text-lg md:text-2xl font-semibold mb-1">
-//           We are Planet Green
-//         </h2>
-        
-        
-//         <h3 className="text-4xl md:text-7xl font-serif italic text-gray-900 mb-8">
-//           Move to Nature
-//         </h3>
-
-        
-//         <h4 className="text-xl md:text-4xl font-bold text-green-900 leading-tight mb-8">
-//           From the time earth was born to now, <br className="hidden md:block" /> 
-//           a lot has changed about nature.
-//         </h4>
-
-       
-//         <p className="text-gray-500 text-sm md:text-lg leading-relaxed max-w-4xl">
-//           We are proud to present Planet Green, a stunning new precinct that is 
-//           destined to be the residential and commercial hub of the future. 
-//           Experience a life where luxury meets sustainability.
-//         </p>
-//       </section> */}
-
-//       {/* Floating Call Button (Mobile bottom right) */}
-//       <div className="fixed bottom-6 right-6 z-50 md:bottom-10 md:right-10">
-//         <div className="bg-green-700 p-4 rounded-full shadow-lg cursor-pointer">
-//            {/* Phone Icon Placeholder */}
-//            <div className="w-6 h-6 border-2 border-white rounded-sm"></div>
-//         </div>
-//       </div>
-//     </main>
-
-
-
-//   );
-// };
-
-// export default Page;
 "use client";
 
 import React from 'react';
@@ -87,6 +6,8 @@ import { MapPin, Trees, Leaf, Home, Landmark, Palmtree } from 'lucide-react';
 import { FaArrowRight } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 
 
 const Page = () => {
@@ -172,6 +93,7 @@ const testimonials = [
   return (
 
     <>
+    <Header />
     <main className="relative bg-white">
       
       {/* SECTION 1: HERO VIDEO */}
@@ -550,7 +472,8 @@ const testimonials = [
         }
       `}</style>
     </section>
- 
+    <Footer />
+        
 </>
     
   );
