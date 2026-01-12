@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { TreePine, Wifi, Globe, Car, Map, Wallet, ShowerHead, Users, Stethoscope, Waves, Mountain, Wind, Flame, Trash2, Gamepad2, Bath, Utensils, UserPlus, MapPin, Trees, Leaf, Home, Landmark, Palmtree, ArrowRight } from 'lucide-react';
-
+import Header from './layout/Header.jsx';
+import Footer from './layout/Footer.jsx';
 
 const Page = () => {
   const [visibleCount, setVisibleCount] = useState(18);
@@ -92,6 +93,7 @@ const Page = () => {
   return (
 
     <>
+    <Header />
     <main className="relative bg-white">
       
       {/* SECTION 1: HERO */}
@@ -385,7 +387,9 @@ const Page = () => {
         }
       `}</style>
           </section>
+     
     </main>
+     <Footer />
   </>
 );
 
