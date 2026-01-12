@@ -1,20 +1,19 @@
 "use client";
 
-import React from 'react';
-
-import { MapPin, Trees, Leaf, Home, Landmark, Palmtree } from 'lucide-react';
-import { FaArrowRight } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import Header from './layout/Header';
-import Footer from './layout/Footer';
+import { TreePine, Wifi, Globe, Car, Map, Wallet, ShowerHead, Users, Stethoscope, Waves, Mountain, Wind, Flame, Trash2, Gamepad2, Bath, Utensils, UserPlus, MapPin, Trees, Leaf, Home, Landmark, Palmtree, ArrowRight } from 'lucide-react';
 
 
 const Page = () => {
-
+  const [visibleCount, setVisibleCount] = useState(18);
   const [index, setIndex] = useState(0);
 
-  // Auto-play logic: Changes slide every 5 seconds
+  // Custom Brand Color: #71b256
+  const brandGreen = "#71b256";
+
+  const showMore = () => setVisibleCount(prev => prev + 6);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
@@ -22,350 +21,264 @@ const Page = () => {
     return () => clearInterval(timer);
   }, []);
 
-const testimonials = [
-  {
-    name: "Pankaj Sharma",
-    text: "The property is under development but has tremendous potential; has a lot of green cover and the staff is excellent...",
-    image: "https://via.placeholder.com/150", // Replace with actual image
-  },
-  {
-    name: "Anjali Rao",
-    text: "Beautifully designed green spaces. It feels like a retreat away from the city noise. Highly recommend for families.",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Vikram Singh",
-    text: "Excellent customer service and transparent dealings. The progress on site is quite impressive.",
-    image: "https://via.placeholder.com/150",
-  }
-];
-
-  const features = [
-    { icon: <MapPin className="w-8 h-8" />, title: "3000 Villa Plots" },
-    { icon: <Trees className="w-8 h-8" />, title: "Natural Stream" },
-    { icon: <Leaf className="w-8 h-8" />, title: "Eco-Friendly Living" },
-    { icon: <Home className="w-8 h-8" />, title: "Clubhouse" },
-    { icon: <Landmark className="w-8 h-8" />, title: "Green Parks" },
-    { icon: <Palmtree className="w-8 h-8" />, title: "Luxury Resorts" },
+  const amenities = [
+    { icon: <TreePine />, title: 'Plantation Walks' },
+    { icon: <Wifi />, title: 'Free Wifi' },
+    { icon: <Globe />, title: 'Travel Desk' },
+    { icon: <Car />, title: 'Car Parking' },
+    { icon: <Map />, title: 'Local Tours' },
+    { icon: <Wallet />, title: 'Guide on Demand' },
+    { icon: <ShowerHead />, title: 'Premium bathroom' },
+    { icon: <Users />, title: 'Conference Room' },
+    { icon: <Stethoscope />, title: 'Doctor on Call' },
+    { icon: <Waves />, title: 'Natural Rivulet' },
+    { icon: <Mountain />, title: 'Trekking' },
+    { icon: <Wind />, title: 'Hair Dryer' },
+    { icon: <Flame />, title: 'Campfire' },
+    { icon: <Trash2 />, title: 'Farm Animals' },
+    { icon: <Gamepad2 />, title: 'Indoor Games' },
+    { icon: <Bath />, title: '24hr Hot Water' },
+    { icon: <Utensils />, title: 'BBQ' },
+    { icon: <UserPlus />, title: 'Group Booking' },
+    { icon: <Flame />, title: 'Campfire 2' },
+    { icon: <Trash2 />, title: 'Farm Animals 2' },
   ];
 
-  const amenities = [
-  { icon: '🌱', title: 'Plantation Walks' },
-  { icon: '📶', title: 'Free Wifi' },
-  { icon: '🌍', title: 'Travel Desk' },
-  { icon: '🚗', title: 'Car Parking' },
-  { icon: '🗺️', title: 'Local Tours' },
-  { icon: '💼', title: 'Guide on Demand' },
-  { icon: '🚿', title: 'Premium bathroom' },
-  { icon: '👥', title: 'Conference Room' },
-  { icon: '🩺', title: 'Doctor on Call', highlighted: true },
-  { icon: '🏞️', title: 'Natural Rivulet' },
-  { icon: '⛰️', title: 'Trekking' },
-  { icon: '💨', title: 'Hair Dryer' },
-  { icon: '🔥', title: 'Campfire' },
-  { icon: '🦌', title: 'Farm Animals' },
-  { icon: '🎲', title: 'Indoor Games' },
-  { icon: '🛁', title: '24hr Hot Water' },
-  { icon: '🍖', title: 'BBQ' },
-  { icon: '👨‍👩‍👧‍👦', title: 'Group Booking' },
-];
+  const testimonials = [
+    {
+      name: "PANKAJ SHARMA",
+      text: "The property is under development but has tremendous potential; has a lot of green cover and the staff is excellent.",
+      image: "https://i.pravatar.cc/150?u=pankaj",
+    },
+    {
+      name: "ANJALI RAO",
+      text: "Beautifully designed green spaces. It feels like a retreat away from the city noise. Highly recommend for families.",
+      image: "https://i.pravatar.cc/150?u=anjali",
+    },
+    {
+      name: "VIKRAM SINGH",
+      text: "Excellent customer service and transparent dealings. The progress on site is quite impressive.",
+      image: "https://i.pravatar.cc/150?u=vikram",
+    }
+  ];
 
-      // Project Cards Component
+  const features = [
+    { icon: <MapPin />, title: "3000 Villa Plots" },
+    { icon: <Trees />, title: "Natural Stream" },
+    { icon: <Leaf />, title: "Eco-Friendly Living" },
+    { icon: <Home />, title: "Clubhouse" },
+    { icon: <Landmark />, title: "Green Parks" },
+    { icon: <Palmtree />, title: "Luxury Resorts" },
+  ];
 
-    const projects = [
-      {
-        src: "/assets/images/top-view-5-scaled.jpg",
-        title: "THE NATURE VALLEY",
-        location: "Visakhapatnam, ANDHRA PRADESH",
-      },
-      {
-        src: "/assets/images/top-view-5-scaled.jpg",
-        title: "GREEN MEADOWS",
-        location: "Jonnada between Visakhapatnam and Vizianagaram ANDHRA PRADESH",
-      },
-      {
-        src: "/assets/images/top-view-5-scaled.jpg",
-        title: "SMART CITY",
-        location: "Bondapalli, Vizianagaram District",
-      },
-    ];
+  const projects = [
+    {
+      src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000",
+      title: "THE NATURE VALLEY",
+      location: "Visakhapatnam, Andhra Pradesh",
+    },
+    {
+      src: "/assets/images/top-view-5-scaled.jpg",
+      title: "GREEN MEADOWS",
+      location: "Jonnada, Visakhapatnam",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000",
+      title: "SMART CITY",
+      location: "Bondapalli, Vizianagaram",
+    },
+  ];
 
   return (
 
     <>
-    <Header />
     <main className="relative bg-white">
       
-      {/* SECTION 1: HERO VIDEO */}
-      <section className="relative h-[40vh] md:h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute z-10 w-full h-full object-cover"
-        >
+      {/* SECTION 1: HERO */}
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+        <video autoPlay loop muted playsInline className="absolute z-10 w-full h-full object-cover opacity-60">
           <source src="/assets/videos/slider-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-
-        {/* Overlay to make text readable */}
-        <div className="absolute z-20 w-full h-full bg-black/30"></div>
-
-        {/* Content */}
-        {/* <div className="relative z-30 flex flex-col items-center text-center">
-          <h1 className="text-white text-4xl md:text-7xl font-bold uppercase tracking-widest">
-            Planet <span className="text-green-500">Green</span>
-          </h1>
-          <p className="text-white/80 text-[10px] md:text-sm tracking-[0.4em] uppercase mt-4">
-            Come, Join the Revolution
-          </p>
-        </div> */}
+       
       </section>
 
-      {/* SECTION 2: STICKY IMAGE STACKING */}
-      {/* This container holds the images that will "stuck" and overlay */}
+      {/* SECTION 2: STICKY IMAGES */}
       <section className="relative">
-        
-        {/* First Sticky Image */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074" 
-            alt="Image 1" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <h2 className="text-white text-3xl md:text-5xl font-bold">01. Pure Nature</h2>
+        {[
+          { title: "Pure Nature", img: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074" },
+          { title: "Sustainable Life", img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=2070" },
+          { title: "Green Future", img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071" }
+        ].map((item, i) => (
+          <div key={i} className="sticky top-0 h-screen w-full overflow-hidden">
+            <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+               {/* <span className="text-white/70 text-lg mb-2 tracking-widest uppercase">Chapter</span> */}
+               {/* <h2 className="text-white text-5xl md:text-8xl font-bold uppercase italic">0{i+1}. {item.title}</h2> */}
+            </div>
           </div>
-        </div>
+        ))}
+      </section>
 
-        {/* Second Sticky Image - Slides over the first */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=2070" 
-            alt="Image 2" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <h2 className="text-white text-3xl md:text-5xl font-bold">02. Sustainable Life</h2>
+      {/* SECTION 3: OVERVIEW */}
+      <section className="py-24 px-6 md:px-12 bg-stone-50">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-4">
+            <h1 className="text-3xl font-bold  " style={{ color: brandGreen }}>Project</h1>
+            <h2 className="text-4xl md:text-7xl font-bold text-stone-800 leading-none">Overview</h2>
+            <div className="w-20 h-1" style={{ backgroundColor: brandGreen }}></div>
+            <p className="text-xl text-stone-600 leading-relaxed pt-4 font-medium italic">
+              "Ever wondered what it would be like to live by the Eco & the Luxury Villa?"
+            </p>
+            <p className="text-lg text-stone-500 leading-relaxed">
+              Own your slice of serenity at Dates County - an eco-luxury villa plot community offering 
+              residential plots for sale in Hyderabad. Nestled in Kandukur - Srisailam Highway, this 
+              self-sufficient community offers every necessity within its vast landscape.
+            </p>
           </div>
-        </div>
-
-        {/* Third Sticky Image - Slides over the second */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
-          <img 
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071" 
-            alt="Image 3" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <h2 className="text-white text-3xl md:text-5xl font-bold">03. Green Future</h2>
+          <div className="grid grid-cols-2 gap-4">
+            {features.map((item, i) => (
+              <div key={i} className="p-8 bg-white border border-stone-200 rounded-sm flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300" style={{ color: brandGreen }}>
+                  {React.cloneElement(item.icon, { size: 36, strokeWidth: 1.5 })}
+                </div>
+                <p className="font-bold text-stone-800 uppercase text-xs tracking-widest leading-tight">{item.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      
-
-    </main>
-
-    {/* SECTION 2.5: PROJECT OVERVIEW (NEW) */}
-     <section className="relative w-full bg-stone-50 py-16 px-6 md:px-12 lg:px-[10%] overflow-hidden">
-      {/* Container to match your inspector: flex-col with lg:items-start */}
-      <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-        
-        {/* Header Section */}
-        <h1 className="text-2xl md:text-3xl text-gray-500 font-light mb-1">Project</h1>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#4A4A4A] mb-6">
-          Overview
-        </h2>
-        
-        <div className="max-w-3xl space-y-4 mb-12">
-          <p className="text-lg md:text-xl text-[#727272] leading-relaxed font-medium">
-            Ever wondered what it would be like to live by the Eco & the Luxury Villa?
-          </p>
-          <p className="text-base md:text-lg text-[#727272] leading-relaxed">
-            Own your slice of serenity at Dates County - an eco-luxury villa plot community offering 
-            residential plots for sale in Hyderabad. Nestled in Kandukur - Srisailam Highway, this 
-            self-sufficient community offers every necessity within its vast landscape.
-          </p>
+      {/* SECTION 4: PROJECTS */}
+      <section className="py-24 px-6">
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <h2 className="text-4xl font-bold tracking">Current Projects</h2>
+          <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: brandGreen }}></div>
         </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 w-full">
-          {features.map((item, index) => (
-            <div key={index} className="flex flex-col items-center lg:items-start group">
-              <div className="w-20 h-20 rounded-full bg-white shadow-sm border border-stone-100 flex items-center justify-center mb-4 text-stone-600 group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+          {projects.map((project, i) => (
+            <div key={i} className="group cursor-pointer">
+              <div className="relative overflow-hidden aspect-[4/5] rounded-lg shadow-lg">
+                <img src={project.src} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                   <div className="w-full flex justify-between items-center">
+                      <div>
+                        <h3 className="text-white text-xl font-bold ">{project.title}</h3>
+                        <p className="text-white/70 text-xs mt-1  ">{project.location}</p>
+                      </div>
+                      <div className="p-3 rounded-full bg-white/20 backdrop-blur-md">
+                        <ArrowRight className="text-white" size={20} />
+                      </div>
+                   </div>
+                </div>
               </div>
-              <p className="text-lg font-semibold text-[#4A4A4A] tracking-tight">
-                {item.title}
-              </p>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
 
+      {/* SECTION 5: AMENITIES */}
+      <section className="relative py-24 px-6 overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-fixed bg-cover bg-center" style={{
+          backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2000')",
+          backgroundAttachment: 'fixed'
+        }}></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <header className="mb-16 text-center md:text-left">
+            <h2 className="text-white text-5xl md:text-6xl font-bold  tracking-tighter">Explore Amenities</h2>
+            <div className="w-32 h-1 mt-4 mx-auto md:mx-0" style={{ backgroundColor: brandGreen }}></div>
+          </header>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+            {amenities.slice(0, visibleCount).map((item, i) => (
+              <div key={i} className="group relative aspect-square border border-white/10 flex flex-col items-center justify-center overflow-hidden cursor-pointer">
+                <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" style={{ backgroundColor: brandGreen }}></div>
+                
+                <div className="relative z-10 text-white group-hover:text-white transition-colors duration-300 mb-4 scale-125 group-hover:scale-110">
+                  {React.cloneElement(item.icon, { strokeWidth: 1.2 })}
+                </div>
+                <span className="relative z-10 text-white group-hover:text-white text-[10px] font-bold uppercase tracking-widest text-center px-2">
+                  {item.title}
+                </span>
+              </div>
+            ))}
+          </div>
 
-
-
-        {/* Heading */}
-        <h2
-          style={{
-            fontSize: "28px",
-            fontWeight: "600",
-            marginBottom: "40px",
-            color: "#222",
-            fontFamily: "Optima, sans-serif",
-            textAlign: "center",
-
-          }}
-        >
-          PROJECT
-        </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "40px",
-          maxWidth: "1200px",
-          margin: "50px auto",
-        }}
-      >
-       
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            style={{
-              borderBottom: "2px solid #e0e0e0",
-              cursor: "pointer",
-              overflow: "hidden",
-              transition: "all 0.3s ease",
-              position: "relative",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderBottom = "2px solid #2a3290";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderBottom = "2px solid #e0e0e0";
-            }}
-          >
-            {/* Image */}
-            <div
-              style={{
-                overflow: "hidden",
-                position: "relative",
-                width: "100%",
-                height: "320px",
-              }}
-            >
-              <img
-                src={project.src}
-                alt={project.title}
-                width={500}
-                height={400}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  transition: "transform 0.5s ease",
+          {visibleCount < amenities.length && (
+            <div className="mt-16 text-center">
+              <button 
+                onClick={showMore} 
+                className="hover:bg-white border-2 px-12 py-4 font-bold tracking-widest uppercase transition-all duration-300"
+                style={{ borderColor: brandGreen, color: 'white', backgroundColor: 'transparent' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = brandGreen;
                 }}
-                className="card-img"
-                onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-              />
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
+              >
+                View All Facilities
+              </button>
             </div>
+          )}
+        </div>
+      </section>
 
-            {/* Content */}
-            <div style={{ padding: "15px" }}>
-              <h3 style={{ margin: "10px 0 5px", fontSize: "18px", fontWeight: "600", fontFamily: "Optima, sans-serif" }}>
-                {project.title}
-              </h3>
-              <p style={{ margin: 0, fontSize: "14px", color: "#555", fontFamily: "'Open Sans', sans-serif" }}>
-                {project.location}
-              </p>
-            </div>
-
-            {/* Arrow Icon */}
-            <FaArrowRight
-              style={{
-                position: "absolute",
-                bottom: "15px",
-                right: "15px",
-                fontSize: "18px",
-                color: "#666",
-                transition: "color 0.3s ease",
-                '&:hover': { color: '#2a3290' }
-              }}
-            />
+      {/* SECTION 6: TESTIMONIALS */}
+      <section className="py-24 px-6 bg-white overflow-hidden">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <Leaf className="mx-auto mb-4" size={48} style={{ color: brandGreen }} />
+            <h2 className="text-4xl md:text-6xl font-bold text-stone-800 uppercase tracking-tighter">Community Voice</h2>
           </div>
-        ))}
-      </div>
 
-      <div className="flex flex-col items-center justify-center min-h-screen bg-white px-4">
-      {/* Top Decoration & Heading */}
-      <div className="text-center mb-12 relative">
-        <img src="/tree-icon.png" alt="Tree" className="w-24 mx-auto mb-4" />
-        <h2 className="text-4xl font-serif text-slate-800 max-w-md leading-tight">
-          Dedicated open, green spaces for relaxation and rejuvenation.
-        </h2>
-      </div>
-
-      {/* Testimonial Card */}
-      <div className="relative w-full max-w-2xl h-64">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-            className="bg-black text-white p-10 rounded-xl flex flex-col items-center text-center shadow-2xl"
-          >
-            <img
-              src={testimonials[index].image}
-              alt={testimonials[index].name}
-              className="w-16 h-16 rounded-full border-2 border-gray-600 mb-4 object-cover"
-            />
-            <h3 className="font-semibold text-lg mb-4">{testimonials[index].name}</h3>
-            <p className="text-gray-300 italic text-sm md:text-base leading-relaxed">
-              "{testimonials[index].text}"
-            </p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Dot Indicators */}
-      <div className="flex space-x-3 mt-12">
-        {testimonials.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full border border-gray-400 transition-all duration-300 ${
-              index === i ? "bg-black scale-110" : "bg-transparent"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-
-
-    <section className="container">
-      <h2 className="title">Explore Amenities</h2>
-      
-      <div className="grid-container">
-        {amenities.map((item, index) => (
-          <div key={index} className={`tile ${item.highlighted ? 'highlighted' : ''}`}>
-            <div className="shutter"></div>
-            <div className="content">
-              <span className="icon">{item.icon}</span>
-              <span className="label">{item.title}</span>
+          <div className="relative min-h-[400px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="relative mb-8">
+                   <img
+                    src={testimonials[index].image}
+                    alt={testimonials[index].name}
+                    className="w-24 h-24 rounded-full grayscale hover:grayscale-0 transition-all duration-500 object-cover border-4 border-stone-100"
+                  />
+                  <div className="absolute -bottom-2 -right-2 p-2 rounded-full bg-stone-100">
+                    <Users size={16} style={{ color: brandGreen }} />
+                  </div>
+                </div>
+                
+                <p className="text-stone-500 text-2xl md:text-3xl font-light italic leading-relaxed mb-10 max-w-3xl">
+                  "{testimonials[index].text}"
+                </p>
+                
+                <div className="flex flex-col items-center">
+                   <h3 className="font-bold text-stone-800 tracking-[0.3em] text-lg uppercase">{testimonials[index].name}</h3>
+                   <div className="w-8 h-1 mt-2" style={{ backgroundColor: brandGreen }}></div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+            
+            <div className="flex justify-center space-x-6 mt-16">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setIndex(i)}
+                  className="h-1 transition-all duration-500 ease-in-out"
+                  style={{ 
+                    width: index === i ? '40px' : '20px', 
+                    backgroundColor: index === i ? brandGreen : '#e5e7eb' 
+                  }}
+                />
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-
-      <button className="view-all">View All Facilities</button>
+        </div>
 
       <style jsx>{`
         .container {
@@ -472,12 +385,10 @@ const testimonials = [
         }
       `}</style>
     </section>
-    <Footer />
-        
+ 
 </>
     
   );
 };
 
-// 2. Ensure you have this default export
 export default Page;
