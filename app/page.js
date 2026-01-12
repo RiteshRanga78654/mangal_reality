@@ -384,11 +384,11 @@ const Page = () => {
           50% { transform: translateY(-10px); }
         }
       `}</style>
-    </section>
- 
-</>
-    
-  );
+          </section>
+    </main>
+  </>
+);
+
 };
 
 export default Page;
