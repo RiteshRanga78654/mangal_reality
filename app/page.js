@@ -3,15 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import { TreePine, Wifi, Globe, Car, Map, Wallet, ShowerHead, Users, Stethoscope, Waves, Mountain, Wind, Flame, Trash2, Gamepad2, Bath, Utensils, UserPlus, MapPin, Trees, Leaf, Home, Landmark, Palmtree, ArrowRight } from 'lucide-react';
-import Header from './layout/Header.jsx';
-import Footer from './layout/Footer.jsx';
+
 
 const Page = () => {
   const [visibleCount, setVisibleCount] = useState(18);
   const [index, setIndex] = useState(0);
 
   // Custom Brand Color: #71b256
-  const brandGreen = "#71b256";
+  const brandGreen = "#22C55E";
 
   const showMore = () => setVisibleCount(prev => prev + 6);
 
@@ -93,7 +92,7 @@ const Page = () => {
   return (
 
     <>
-    <Header />
+    
     <main className="relative bg-white">
       
       {/* SECTION 1: HERO */}
@@ -125,13 +124,13 @@ const Page = () => {
       <section className="py-24 px-6 md:px-12 bg-stone-50">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-4">
-            <h1 className="text-3xl font-bold  " style={{ color: brandGreen }}>Project</h1>
+            <h1 className="text-4xl font-bold  " style={{ color: brandGreen }}>Project</h1>
             <h2 className="text-4xl md:text-7xl font-bold text-stone-800 leading-none">Overview</h2>
             <div className="w-20 h-1" style={{ backgroundColor: brandGreen }}></div>
-            <p className="text-xl text-stone-600 leading-relaxed pt-4 font-medium italic">
-              "Ever wondered what it would be like to live by the Eco & the Luxury Villa?"
+            <p className="text-xl text-black leading-relaxed pt-4 font-medium ">
+              Ever wondered what it would be like to live by the Eco & the Luxury Villa?
             </p>
-            <p className="text-lg text-stone-500 leading-relaxed">
+            <p className="text-lg text-black leading-relaxed">
               Own your slice of serenity at Dates County - an eco-luxury villa plot community offering 
               residential plots for sale in Hyderabad. Nestled in Kandukur - Srisailam Highway, this 
               self-sufficient community offers every necessity within its vast landscape.
@@ -153,7 +152,7 @@ const Page = () => {
       {/* SECTION 4: PROJECTS */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold tracking">Current Projects</h2>
+          <h2 className="text-5xl md:text-6xl font-bold tracking text-black">Current Projects</h2>
           <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: brandGreen }}></div>
         </div>
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
@@ -210,7 +209,7 @@ const Page = () => {
             <div className="mt-16 text-center">
               <button 
                 onClick={showMore} 
-                className="hover:bg-white border-2 px-12 py-4 font-bold tracking-widest uppercase transition-all duration-300"
+                className="hover:bg-white cursor-pointer border-2 px-12 py-4 font-bold tracking-widest transition-all duration-300"
                 style={{ borderColor: brandGreen, color: 'white', backgroundColor: 'transparent' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = brandGreen;
@@ -231,7 +230,7 @@ const Page = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <Leaf className="mx-auto mb-4" size={48} style={{ color: brandGreen }} />
-            <h2 className="text-4xl md:text-6xl font-bold text-stone-800 uppercase tracking-tighter">Community Voice</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-black uppercase tracking-tighter">Community Voice</h2>
           </div>
 
           <div className="relative min-h-[400px]">
@@ -255,7 +254,7 @@ const Page = () => {
                   </div>
                 </div>
                 
-                <p className="text-stone-500 text-2xl md:text-3xl font-light italic leading-relaxed mb-10 max-w-3xl">
+                <p className="text-black text-2xl md:text-3xl font-light leading-relaxed mb-10 max-w-3xl">
                   "{testimonials[index].text}"
                 </p>
                 
@@ -389,7 +388,7 @@ const Page = () => {
           </section>
      
     </main>
-     <Footer />
+     
   </>
 );
 
