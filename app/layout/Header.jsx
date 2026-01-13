@@ -33,7 +33,7 @@ export default function Header() {
       subLinks: [
         { name: 'Vision & Mission', href: '/about-us/vision-mission' },
         { name: 'Our Leadership', href: '/about-us/our-leadership' },
-        { name: 'Strategic Partner', href: '/about-us/strategic-partner' },
+        { name: 'Strategic Partner', href: '/' },
       ]
     },
     { 
