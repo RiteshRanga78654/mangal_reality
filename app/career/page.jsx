@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useRef } from "react"; // Added useRef
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react"; // Added useRef
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import Swal from "sweetalert2"; // Added SweetAlert2
 import {
   MapPin,
@@ -107,6 +107,44 @@ const stats = [
   { label: "Square Ft. Developed", value: "12M+", icon: Globe },
 ];
 
+// --- NEW COUNTER COMPONENT ---
+const Counter = ({ value }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [displayValue, setDisplayValue] = useState(0);
+
+  // Clean the string (e.g., "150+" -> 150)
+  const numericValue = parseInt(value.replace(/[^0-9]/g, ""));
+  const suffix = value.replace(/[0-9]/g, "");
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = numericValue;
+      const duration = 2000; // 2 seconds
+      const increment = end / (duration / 16);
+
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          setDisplayValue(end);
+          clearInterval(timer);
+        } else {
+          setDisplayValue(Math.floor(start));
+        }
+      }, 16);
+      return () => clearInterval(timer);
+    }
+  }, [isInView, numericValue]);
+
+  return (
+    <span ref={ref}>
+      {displayValue}
+      {suffix}
+    </span>
+  );
+};
+
 export default function CareerPage() {
   const [selectedJob, setSelectedJob] = useState(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -169,13 +207,6 @@ export default function CareerPage() {
 
   return (
     <div className="bg-[#FAF9F6] min-h-screen text-[#0a1a10]">
-
-      
-      {/* --- SECTION 1: DYNAMIC HERO --- */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-[#0a1a10] overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
-          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920" className="w-full h-full object-cover" alt="Office" />
-
       {/* --- DARK HERO SECTION --- */}
       <section className="relative min-h-[80vh] flex items-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0">
@@ -185,7 +216,6 @@ export default function CareerPage() {
             alt="Architecture"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a1a10] via-[#0a1a10]/80 to-[#FAF9F6]" />
-
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20 text-center">
@@ -218,7 +248,7 @@ export default function CareerPage() {
         </div>
       </section>
 
-      {/* NEW SECTION: IMPACT NUMBERS (Stats) */}
+      {/* UPDATED SECTION: IMPACT NUMBERS WITH COUNTER & BLACK ICONS */}
       <section className="relative z-30 -mt-16 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
@@ -233,12 +263,13 @@ export default function CareerPage() {
               }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white p-6 shadow-2xl rounded-sm border-b-4 flex flex-col items-center text-center "
+              className="bg-white p-6 shadow-2xl rounded-sm border-b-4 flex flex-col items-center text-center"
               style={{ borderBottomColor: brandGreen }}
             >
-              <stat.icon size={24} className="mb-3 opacity-50" />
+              {/* Icon color changed to Black */}
+              <stat.icon size={28} className="mb-3 text-black" />
               <h4 className="text-3xl font-black text-stone-900">
-                {stat.value}
+                <Counter value={stat.value} />
               </h4>
               <p className="text-[10px] uppercase tracking-widest font-bold text-stone-500 mt-1">
                 {stat.label}
@@ -249,7 +280,7 @@ export default function CareerPage() {
       </section>
 
       {/* --- INTERACTIVE SECTION: WHY JOIN US --- */}
-      <section className="pt-40 pb-25 px-6 max-w-7xl mx-auto relative -mt-20 z-20">
+      <section className="pt-35 pb-25 px-6 max-w-7xl mx-auto relative -mt-20 z-20">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-7xl font-serif mb-4 tracking-tight">
             Why Join Us?
@@ -352,16 +383,6 @@ export default function CareerPage() {
                 </p>
               </div>
 
-               <button
-                            className="group relative cursor-pointer px-12 py-5 text-black font-bold uppercase tracking-widest text-xs overflow-hidden"
-                        >
-                            <span className="relative z-10">Apply Now</span>
-                            <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-                            <div className="absolute inset-1 border border-green-600"></div>
-                        </button>
-            </div>
-
-
               <button
                 onClick={() => {
                   setSelectedJob(job);
@@ -372,7 +393,6 @@ export default function CareerPage() {
                 Apply Position
               </button>
             </motion.div>
-
           ))}
         </div>
       </section>
