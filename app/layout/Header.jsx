@@ -33,7 +33,7 @@ export default function Header() {
       subLinks: [
         { name: 'Vision & Mission', href: '/about-us/vision-mission' },
         { name: 'Our Leadership', href: '/about-us/our-leadership' },
-        { name: 'Strategic Partner', href: '/' },
+        { name: 'Strategic Partner', href: '/about-us/strategic-partner' },
       ]
     },
     { 
@@ -45,7 +45,7 @@ export default function Header() {
         { name: 'Completed', href: '/projects/completed-projects' },
       ]
     },
-    { name: 'Why Invest', href: '#' },
+    { name: 'Why Invest', href: '/why-invest' },
     { 
       name: 'Gallery', 
       href: '#',
@@ -53,7 +53,7 @@ export default function Header() {
       subLinks: [
         { name: 'Our Videos', href: '/gallery/our-videos' },
         { name: 'Our Creatives', href: '/gallery/creatives' },
-        { name: 'Press Coverage', href: '/gallery/press' },
+        { name: 'Press Coverage', href: '/gallery/press-coverages' },
       ]
     },
     { name: 'Career', href: '/career' },

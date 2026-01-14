@@ -124,7 +124,7 @@ const Page = () => {
       <section className="py-24 px-6 md:px-12 bg-stone-50">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold  " style={{ color: brandGreen }}>Project</h1>
+            <h1 className="text-5xl font-bold  " style={{ color: brandGreen }}>Project</h1>
             <h2 className="text-4xl md:text-7xl font-bold text-stone-800 leading-none">Overview</h2>
             <div className="w-20 h-1" style={{ backgroundColor: brandGreen }}></div>
             <p className="text-xl text-black leading-relaxed pt-4 font-medium ">
@@ -207,19 +207,13 @@ const Page = () => {
 
           {visibleCount < amenities.length && (
             <div className="mt-16 text-center">
-              <button 
-                onClick={showMore} 
-                className="hover:bg-white cursor-pointer border-2 px-12 py-4 font-bold tracking-widest transition-all duration-300"
-                style={{ borderColor: brandGreen, color: 'white', backgroundColor: 'transparent' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = brandGreen;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                }}
-              >
-                View All Facilities
-              </button>
+               <button
+                            className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+                        >
+                            <span className="relative z-10">View All Facilities</span>
+                            <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                            <div className="absolute inset-1 border border-green-600"></div>
+                        </button>
             </div>
           )}
         </div>
