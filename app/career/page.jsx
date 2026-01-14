@@ -170,12 +170,15 @@ export default function CareerPage() {
   return (
     <div className="bg-[#FAF9F6] min-h-screen text-[#0a1a10]">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       
       {/* --- SECTION 1: DYNAMIC HERO --- */}
       <section className="relative h-[80vh] flex items-center justify-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0 opacity-40">
           <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920" className="w-full h-full object-cover" alt="Office" />
 =======
+=======
+>>>>>>> Stashed changes
       {/* --- DARK HERO SECTION --- */}
       <section className="relative min-h-[80vh] flex items-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0">
@@ -185,6 +188,9 @@ export default function CareerPage() {
             alt="Architecture"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0a1a10] via-[#0a1a10]/80 to-[#FAF9F6]" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         </div>
 
@@ -352,6 +358,7 @@ export default function CareerPage() {
                 </p>
               </div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                <button
                             className="group relative cursor-pointer px-12 py-5 text-black font-bold uppercase tracking-widest text-xs overflow-hidden"
                         >
@@ -361,6 +368,8 @@ export default function CareerPage() {
                         </button>
             </div>
 =======
+=======
+>>>>>>> Stashed changes
 
               <button
                 onClick={() => {
@@ -372,6 +381,9 @@ export default function CareerPage() {
                 Apply Position
               </button>
             </motion.div>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           ))}
         </div>
