@@ -1,9 +1,42 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 import { Leaf, ShieldCheck, Globe, Users, Award, ChevronRight } from 'lucide-react';
 
 const brandGreen = "#22C55E";
+
+// --- NEW COUNTER COMPONENT ---
+const Counter = ({ value }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [displayValue, setDisplayValue] = useState(0);
+  
+  // Clean the string (e.g., "150+" -> 150)
+  const numericValue = parseInt(value.replace(/[^0-9]/g, ''));
+  const suffix = value.replace(/[0-9]/g, '');
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const end = numericValue;
+      const duration = 2000; // 2 seconds
+      const increment = end / (duration / 16);
+
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          setDisplayValue(end);
+          clearInterval(timer);
+        } else {
+          setDisplayValue(Math.floor(start));
+        }
+      }, 16);
+      return () => clearInterval(timer);
+    }
+  }, [isInView, numericValue]);
+
+  return <span ref={ref}>{displayValue}{suffix}</span>;
+};
 
 const leaders = [
   {
@@ -26,7 +59,6 @@ const management = [
   { name: 'Sneha Kapoor', role: 'Chief Legal Officer', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400' },
 ];
 
-// New Data for additional sections
 const stats = [
   { label: 'Years of Legacy', value: '30+', icon: Award },
   { label: 'Projects Delivered', value: '150+', icon: ShieldCheck },
@@ -38,7 +70,7 @@ export default function MangalLeadership() {
   return (
     <main className="relative bg-white font-sans">
       
-      {/* SECTION 1: HALF-HEIGHT HERO BANNER */}
+      {/* SECTION 1: HERO */}
       <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img 
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" 
@@ -63,7 +95,7 @@ export default function MangalLeadership() {
         </div>
       </section>
 
-      {/* NEW SECTION: IMPACT NUMBERS (Stats) */}
+      {/* UPDATED SECTION: IMPACT NUMBERS WITH COUNTER & BLACK ICONS */}
       <section className="relative z-30 -mt-16 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
@@ -76,15 +108,18 @@ export default function MangalLeadership() {
               className="bg-white p-6 shadow-2xl rounded-sm border-b-4 flex flex-col items-center text-center"
               style={{ borderBottomColor: brandGreen }}
             >
-              <stat.icon size={24} className="mb-3 opacity-50" />
-              <h4 className="text-3xl font-black text-stone-900">{stat.value}</h4>
+              {/* Icon color changed to Black */}
+              <stat.icon size={28} className="mb-3 text-black" />
+              <h4 className="text-3xl font-black text-stone-900">
+                <Counter value={stat.value} />
+              </h4>
               <p className="text-[10px] uppercase tracking-widest font-bold text-stone-500 mt-1">{stat.label}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* SECTION 2: THE FOUNDERS GRID */}
+      {/* SECTION 2: FOUNDERS */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {leaders.map((leader, index) => (
@@ -110,7 +145,7 @@ export default function MangalLeadership() {
         </div>
       </section>
 
-      {/* NEW SECTION: GOVERNANCE & VISION (Glassmorphism) */}
+      {/* SECTION: GOVERNANCE */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-stone-900 skew-y-3 origin-right translate-y-20"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

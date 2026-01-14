@@ -234,7 +234,7 @@ export default function MangalRealtyBlog() {
 
   return (
     <>
-     <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
@@ -418,6 +418,7 @@ export default function MangalRealtyBlog() {
               <button className="px-10 py-4 bg-[#22c55e] hover:bg-[#1ca850] text-white rounded-xl font-bold uppercase tracking-widest transition-all shadow-lg shadow-green-900/20 active:scale-95">
                 Subscribe
               </button>
+              
             </form>
           </div>
         </section>

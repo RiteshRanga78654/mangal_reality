@@ -122,9 +122,13 @@ export default function Footer() {
                   className="bg-[#051109] border border-[#22C55E]/20 px-5 py-4 rounded-sm focus:border-[#22C55E] outline-none text-white w-full text-sm transition-all"
                 />
               </div>
-              <button className="bg-[#15803D] cursor-pointer hover:bg-[#22C55E] text-white font-bold uppercase py-4 rounded-sm transition-all duration-700 tracking-[0.25em] text-[10px]">
-                Subscribe Now
-              </button>
+               <button
+                            className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+                        >
+                            <span className="relative z-10">Subscribe Now</span>
+                            <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                            <div className="absolute inset-1 border border-green-600"></div>
+                        </button>
             </div>
           </motion.div>
         </div>

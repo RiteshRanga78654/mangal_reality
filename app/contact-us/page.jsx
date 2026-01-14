@@ -15,7 +15,7 @@ const Page = () => {
     <>
       <div className="bg-white">
         {/* Hero Section with Dark Theme #0a1a10 Overlay */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"

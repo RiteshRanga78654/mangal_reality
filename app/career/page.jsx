@@ -28,7 +28,7 @@ export default function CareerPage() {
     <div className="bg-[#FAF9F6] min-h-screen text-[#0a1a10]">
       
       {/* --- SECTION 1: DYNAMIC HERO --- */}
-      <section className="relative h-[70vh] flex items-center justify-center bg-[#0a1a10] overflow-hidden">
+      <section className="relative h-[80vh] flex items-center justify-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0 opacity-40">
           <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920" className="w-full h-full object-cover" alt="Office" />
         </div>
@@ -106,12 +106,13 @@ export default function CareerPage() {
                   <span className="flex items-center gap-1"><Clock size={14}/> {job.type}</span>
                 </div>
               </div>
-              <button 
-                onClick={() => { setSelectedJob(job); setIsFormOpen(true); }}
-                className="mt-6 md:mt-0 bg-[#0a1a10] text-white px-10 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-[#22c55e] transition-colors"
-              >
-                Apply Now
-              </button>
+               <button
+                            className="group relative cursor-pointer px-12 py-5 text-black font-bold uppercase tracking-widest text-xs overflow-hidden"
+                        >
+                            <span className="relative z-10">Apply Now</span>
+                            <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                            <div className="absolute inset-1 border border-green-600"></div>
+                        </button>
             </div>
           ))}
         </div>
