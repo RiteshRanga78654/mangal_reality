@@ -52,8 +52,13 @@ export default function Header() {
       id: 'gallery',
       subLinks: [
         { name: 'Our Videos', href: '/gallery/our-videos' },
+<<<<<<< Updated upstream
         { name: 'Our Creatives', href: '/gallery/creatives' },
         { name: 'Press Coverage', href: '/gallery/press-coverages' },
+=======
+        { name: 'Our Creatives', href: '/gallery/our-creatives' },
+        { name: 'Press Coverage', href: '/gallery/press' },
+>>>>>>> Stashed changes
       ]
     },
     { name: 'Career', href: '/career' },
