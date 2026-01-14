@@ -42,7 +42,7 @@ export default function Header() {
       id: 'projects',
       subLinks: [
         { name: 'Ongoing ', href: '/projects/ongoing' },
-        { name: 'Completed', href: '/projects/completed' },
+        { name: 'Completed', href: '/projects/completed-projects' },
       ]
     },
     { name: 'Why Invest', href: '#' },
@@ -51,14 +51,14 @@ export default function Header() {
       href: '#',
       id: 'gallery',
       subLinks: [
-        { name: 'Our Videos', href: '/gallery/videos' },
+        { name: 'Our Videos', href: '/gallery/our-videos' },
         { name: 'Our Creatives', href: '/gallery/creatives' },
         { name: 'Press Coverage', href: '/gallery/press' },
       ]
     },
-    { name: 'Career', href: '#' },
-    { name: 'Blogs', href: '#' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Career', href: '/career' },
+    { name: 'Blogs', href: '/blog' },
+    { name: 'Contact Us', href: '/contact-us' },
   ];
 
   const toggleMobileMenu = (id) => {
