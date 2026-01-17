@@ -162,6 +162,7 @@
 //     </div>
 //   );
 // }
+
 "use client";
 import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -172,7 +173,7 @@ import {
   User,
   ArrowUpRight,
   Share2,
-  Home
+  Home,
 } from "lucide-react";
 
 // Professional Categories
@@ -195,6 +196,7 @@ const BLOG_POSTS = [
     date: "Jan 12, 2026",
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200",
+    link: "/blog-desc",
   },
   {
     id: 2,
@@ -234,7 +236,7 @@ export default function MangalRealtyBlog() {
 
   return (
     <>
-     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
@@ -249,16 +251,14 @@ export default function MangalRealtyBlog() {
               className="hover:text-amber-200 flex items-center gap-1"
             >
               <Home size={12} />
-               Home
+              Home
             </a>
             <ChevronRight size={12} className="opacity-50" />
             <span className="text-amber-200">The Blogs</span>
           </nav>
-          <h1 className="text-6xl md:text-9xl font-serif  leading-none">
-            
-          </h1>
+          <h1 className="text-6xl md:text-9xl font-serif  leading-none"></h1>
           <h2 className="text-4xl md:text-8xl font-serif  tracking-tight">
-           Blogs
+            Blogs
           </h2>
         </div>
       </section>
@@ -366,18 +366,19 @@ export default function MangalRealtyBlog() {
                     <p className="text-gray-500 text-lg leading-relaxed font-light">
                       {post.excerpt}
                     </p>
-
-                    <div className="flex items-center gap-8 pt-4">
-                      <button className="flex items-center gap-3 text-sm font-bold uppercase tracking-widest group/btn text-[#0a1a10]">
-                        Read Full Article
-                        <div className="p-2.5 bg-gray-100 rounded-full group-hover/btn:bg-[#22c55e] group-hover/btn:text-white transition-all shadow-sm">
-                          <ArrowUpRight size={18} />
-                        </div>
-                      </button>
-                      <button className="text-gray-300 hover:text-[#22c55e] transition-colors">
-                        <Share2 size={18} />
-                      </button>
-                    </div>
+                    <a href={`${post.link}`}>
+                      <div className="flex items-center gap-8 pt-4 cursor-pointer">
+                        <button className="flex items-center gap-3 text-sm font-bold uppercase tracking-widest group/btn text-[#0a1a10]">
+                          Read Full Article
+                          <div className="p-2.5 bg-gray-100 rounded-full group-hover/btn:bg-[#22c55e] group-hover/btn:text-white transition-all shadow-sm">
+                            <ArrowUpRight size={18} />
+                          </div>
+                        </button>
+                        <button className="text-gray-300 hover:text-[#22c55e] transition-colors">
+                          <Share2 size={18} />
+                        </button>
+                      </div>
+                    </a>
                   </div>
                 </motion.article>
               ))}
@@ -418,7 +419,6 @@ export default function MangalRealtyBlog() {
               <button className="px-10 py-4 bg-[#22c55e] hover:bg-[#1ca850] text-white rounded-xl font-bold uppercase tracking-widest transition-all shadow-lg shadow-green-900/20 active:scale-95">
                 Subscribe
               </button>
-              
             </form>
           </div>
         </section>
