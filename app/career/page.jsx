@@ -227,7 +227,7 @@ export default function CareerPage() {
             <span className="inline-flex items-center gap-2 text-[#22c55e] font-bold tracking-[0.4em] uppercase text-[10px] mb-6 bg-white/5 px-4 py-2 rounded-full border border-white/10">
               <Sparkles size={14} /> Join the Evolution
             </span>
-            <h1 className="text-6xl md:text-7xl font-serif text-white mb-8 tracking-tighter leading-[0.85]">
+            <h1 className="text-6xl md:text-7xl  text-white mb-8 tracking-tighter leading-[0.85]"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
               Build Your <span className=" text-[#22c55e]">Legacy.</span>
             </h1>
             <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
@@ -282,7 +282,7 @@ export default function CareerPage() {
       {/* --- INTERACTIVE SECTION: WHY JOIN US --- */}
       <section className="pt-35 pb-25 px-6 max-w-7xl mx-auto relative -mt-20 z-20">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-serif mb-4 tracking-tight">
+          <h2 className="text-[32px] md:text-[60px] font-bold mb-4 tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
             Why Join Us?
           </h2>
           <div className="h-1 w-20 bg-[#22c55e] mx-auto rounded-full" />
@@ -320,7 +320,7 @@ export default function CareerPage() {
       <section className=" px-6 max-w-7xl mx-auto">
         <div className="bg-white rounded-[3rem] p-12 md:p-20 shadow-sm border border-gray-100 flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/3">
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">
+            <h2 className="text-[32px] md:text-[50px] font-bold  mb-4"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
               Our Hiring Process
             </h2>
             <p className="text-gray-500 mb-8">
@@ -353,10 +353,10 @@ export default function CareerPage() {
       {/* --- ALIGNED JOB BOARD --- */}
       <section id="jobs" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-16">
-          <h2 className="text-5xl font-serif tracking-tight">
+          <h2 className="text-[32px] md:text-[60px]  tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
             Current Openings
           </h2>
-          <div className="h-[1px] flex-1 bg-gray-200 mx-10 hidden md:block"></div>
+          <div className="h-[1px] flex-1 bg-[#22c55e] mx-10 hidden md:block"></div>
         </div>
 
         <div className="space-y-6">
@@ -375,23 +375,25 @@ export default function CareerPage() {
                     <MapPin size={12} /> {job.location}
                   </span>
                 </div>
-                <h3 className="text-3xl font-serif mb-2 group-hover:text-[#22c55e] transition-colors">
+                <h3 className="text-3xl  mb-2 group-hover:text-[#22c55e] transition-colors">
                   {job.title}
                 </h3>
-                <p className="text-gray-400 text-sm italic">
+                <p className="text-gray-400 text-sm ">
                   {job.type} Opportunity
                 </p>
               </div>
 
               <button
-                onClick={() => {
+              onClick={() => {
                   setSelectedJob(job);
                   setIsFormOpen(true);
                 }}
-                className="mt-8 md:mt-0 bg-[#0a1a10] text-white px-10 py-5 rounded-2xl font-bold text-[10px] uppercase tracking-widest hover:bg-[#22c55e] hover:text-[#0a1a10] transition-all"
-              >
-                Apply Position
-              </button>
+                            className="group relative cursor-pointer px-12 py-5 text-[#22c55e]  hover:text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+                        >
+                            <span className="relative z-10">Apply Position</span>
+                            <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                            <div className="absolute inset-1 border border-green-600"></div>
+                        </button>
             </motion.div>
           ))}
         </div>

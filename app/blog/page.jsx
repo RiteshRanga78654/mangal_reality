@@ -236,7 +236,7 @@ export default function MangalRealtyBlog() {
 
   return (
     <>
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
@@ -256,8 +256,8 @@ export default function MangalRealtyBlog() {
             <ChevronRight size={12} className="opacity-50" />
             <span className="text-amber-200">The Blogs</span>
           </nav>
-          <h1 className="text-6xl md:text-9xl font-serif  leading-none"></h1>
-          <h2 className="text-4xl md:text-8xl font-serif  tracking-tight">
+          <h1 className="text-6xl md:text-9xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1>
+          <h2 className="text-4xl md:text-8xl   tracking-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
             Blogs
           </h2>
         </div>
@@ -271,8 +271,8 @@ export default function MangalRealtyBlog() {
                 <h4 className="text-[#22c55e] font-bold text-xs uppercase tracking-[0.3em] mb-4">
                   Insights & Updates
                 </h4>
-                <h1 className="text-4xl md:text-6xl font-serif text-[#0a1a10] leading-tight">
-                  Corporate <span className="italic font-light">Journal.</span>
+                <h1 className="text-[32px] md:text-[60px] font-bold text-[#0a1a10] leading-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+                  Corporate <span className=" font-bold">Journal.</span>
                 </h1>
                 <p className="text-gray-500 text-lg mt-4 max-w-xl font-light">
                   Stay informed with the latest market trends, project updates,
@@ -416,8 +416,10 @@ export default function MangalRealtyBlog() {
                 className="flex-1 px-6 py-4 rounded-xl bg-white/5 border border-white/10 outline-none focus:border-[#22c55e] transition-all"
                 placeholder="Corporate Email Address"
               />
-              <button className="px-10 py-4 bg-[#22c55e] hover:bg-[#1ca850] text-white rounded-xl font-bold uppercase tracking-widest transition-all shadow-lg shadow-green-900/20 active:scale-95">
-                Subscribe
+              <button className="group relative px-10 py-4 rounded-xl border border-[#22c55e] text-white font-bold uppercase tracking-widest overflow-hidden active:scale-95 transition-all">
+                <span className="relative z-10">Subscribe</span>
+                {/* Slides in the Main Green Color */}
+                <div className="absolute inset-0 bg-[#22c55e] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
               </button>
             </form>
           </div>
