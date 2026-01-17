@@ -123,7 +123,7 @@ export default function ProjectPage() {
               <ChevronRight size={12} className="opacity-50" />
               <span className="text-green-500">Completed Projects</span>
             </nav>
-            <h2 className="text-4xl md:text-8xl font-serif tracking-tight">
+            <h2 className="text-4xl md:text-8xl tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
              Completed Projects
             </h2>
           </div>

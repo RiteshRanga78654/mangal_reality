@@ -52,7 +52,7 @@ export default function LuxuryGalleryPage() {
       
       <div className="bg-[#FAF9F6] min-h-screen">
         {/* --- HERO SECTION --- */}
-        <section className="relative  h-[80vh] w-full flex items-center justify-center overflow-hidden">
+        <section className="relative  h-[75vh] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
@@ -70,7 +70,7 @@ export default function LuxuryGalleryPage() {
               <ChevronRight size={12} className="opacity-50" />
               <span className="text-green-400">The Gallery</span>
             </nav>
-            <h2 className="text-4xl md:text-8xl font-serif  tracking-tight">
+            <h2 className="text-4xl md:text-8xl   tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
               The Gallery
             </h2>
           </div>
@@ -79,9 +79,9 @@ export default function LuxuryGalleryPage() {
        
 
         {/* --- PHOTO MARQUEE SECTION --- */}
-        <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-6">
+        <section className="py-16 md:py-16 max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h3 className="text-3xl md:text-5xl font-serif text-[#0a1a10] tracking-tight">
+            <h3 className="text-[32px] md:text-[60px] font-bold text-[#0a1a10] tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
               Our Photo Gallery
             </h3>
             <div className="w-20 h-1 bg-[#22c55e] mx-auto mt-4 rounded-full" />
@@ -97,11 +97,14 @@ export default function LuxuryGalleryPage() {
         </section>
 
          {/* --- VIDEO SECTION --- */}
-        <section className="bg-white py-16 md:py-24 border-t border-gray-100">
+        <section className="bg-white py-16 md:py-16 border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6">
-            <h3 className="text-3xl md:text-5xl font-serif text-center text-[#0a1a10] mb-12 md:mb-16 tracking-tight">
+             <div className="text-center mb-12 md:mb-16">
+            <h3 className="text-[32px] md:text-[60px] font-bold text-[#0a1a10] tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
               Our Video Gallery
             </h3>
+            <div className="w-20 h-1 bg-[#22c55e] mx-auto mt-4 rounded-full" />
+          </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
               {videoItems.map((video) => (
