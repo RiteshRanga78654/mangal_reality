@@ -74,13 +74,13 @@ export default function VisionMission() {
           {[
             { 
               title: "Our Vision", 
-              icon: <Eye size={50} />, 
+              icon: <Eye size={40} />, 
               text: "To redefine the luxury landscape by creating sanctuaries that celebrate the delicate balance of high-end living and deep ecological respect.",
               accent: "01"
             },
             { 
               title: "Our Mission", 
-              icon: <Target size={50} />, 
+              icon: <Target size={40} />, 
               text: "To pioneer regenerative architecture, ensuring every Mangal development leaves the earth better than we found it through radical transparency.",
               accent: "02"
             }
@@ -163,8 +163,8 @@ export default function VisionMission() {
           <p className="text-3xl md:text-5xl font-serif leading-tight text-white mb-8">
             "We build legacies that don't cost the <span className="text-[#4ADE80]">Earth</span>."
           </p>
-          <div className="text-white/30 uppercase tracking-[0.3em] text-[10px]">
-            Established 2025 — Mangal Realty 
+          <div className="text-white/30 uppercase tracking-[0.5em] text-[10px]">
+            Established 2026 — Mangal Realty Group
           </div>
         </motion.div>
       </section>

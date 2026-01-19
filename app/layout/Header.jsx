@@ -53,7 +53,7 @@ export default function Header() {
       subLinks: [
         { name: 'Our Videos', href: '/gallery/our-videos' },
         { name: 'Our Creatives', href: '/gallery/creatives' },
-        { name: 'Press Coverage', href: '/gallery/press' },
+        { name: 'Press Coverage', href: '/gallery/press-coverages' },
       ]
     },
     { name: "Career", href: "/career" },
