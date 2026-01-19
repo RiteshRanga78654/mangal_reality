@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* COLUMN 2: EXPLORE */}
           <motion.div variants={itemVariants} className="flex flex-col gap-8">
-            <h3 className="text-white font-bold uppercase tracking-[0.3em] text-xs border-l-2 border-[#22C55E] pl-4">
+            <h3 className="text-white font-bold  tracking-[0.1em] text-xs border-l-2 border-[#22C55E] pl-4">
               Explore
             </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4">
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* COLUMN 3: CONNECT */}
           <motion.div variants={itemVariants} className="flex flex-col gap-8">
-            <h3 className="text-white font-bold uppercase tracking-[0.3em] text-xs border-l-2 border-[#22C55E] pl-4">
+            <h3 className="text-white font-bold  tracking-[0.1em] text-xs border-l-2 border-[#22C55E] pl-4">
               Connect
             </h3>
             <div className="flex flex-col gap-6">
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* COLUMN 4: NEWSLETTER */}
           <motion.div variants={itemVariants} className="flex flex-col gap-8">
-            <h3 className="text-white font-bold uppercase tracking-[0.3em] text-xs border-l-2 border-[#22C55E] pl-4">
+            <h3 className="text-white font-bold  tracking-[0.1em] text-xs border-l-2 border-[#22C55E] pl-4">
               Newsletter
             </h3>
             <div className="flex flex-col gap-4">
@@ -122,13 +122,13 @@ export default function Footer() {
                   className="bg-[#051109] border border-[#22C55E]/20 px-5 py-4 rounded-sm focus:border-[#22C55E] outline-none text-white w-full text-sm transition-all"
                 />
               </div>
-               <button
-                            className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
-                        >
-                            <span className="relative z-10">Subscribe Now</span>
-                            <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-                            <div className="absolute inset-1 border border-green-600"></div>
-                        </button>
+              <button
+                className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+              >
+                <span className="relative z-10">Subscribe Now</span>
+                <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                <div className="absolute inset-1 border border-green-600"></div>
+              </button>
             </div>
           </motion.div>
         </div>

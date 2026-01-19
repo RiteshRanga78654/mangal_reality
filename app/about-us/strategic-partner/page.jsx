@@ -19,19 +19,19 @@ const strategicPartners = [
         linkedin: "https://www.linkedin.com/in/bhaswarpaul/",
         icon: GraduationCap
     },
-    {
-        name: "Harsha Jasrotia",
-        role: "COO & Industry Trainer, IREED Academy",
-        description: [
-            "With an impressive professional experience of more than 18 years, Harsha Jasrotia has proven himself in the sphere of Sales, Business Development and Strategic Leadership. With a strong academic background of IIT Patna and Panjab University, his track record reflects a consistent ability to stay ahead in fast-changing environments.",
-            "During his dynamic corporate journey, he had contributed significantly to both Real Estate and EdTech sectors and held senior positions at Lodha Developers, M3M India, Shiksha.com, Career Launcher, and Phoenix Mills. In each role, he played a pivotal role in business expansion and building high-performing teams.",
-            "Currently, as COO & Sr. Trainer at IREED Academy, he is focused towards mentoring and sharpening young professionals and entrepreneurs through niche Industry ready programs, co-developed with leading Real Estate companies."
-        ],
-        image: "/assets/images/harsh-profile.webp",
-        href: "https://www.ireedindia.com/",
-        linkedin: "https://www.linkedin.com/in/harshjasrotia/",
-        icon: LineChart
-    },
+    // {
+    //     name: "Harsha Jasrotia",
+    //     role: "COO & Industry Trainer, IREED Academy",
+    //     description: [
+    //         "With an impressive professional experience of more than 18 years, Harsha Jasrotia has proven himself in the sphere of Sales, Business Development and Strategic Leadership. With a strong academic background of IIT Patna and Panjab University, his track record reflects a consistent ability to stay ahead in fast-changing environments.",
+    //         "During his dynamic corporate journey, he had contributed significantly to both Real Estate and EdTech sectors and held senior positions at Lodha Developers, M3M India, Shiksha.com, Career Launcher, and Phoenix Mills. In each role, he played a pivotal role in business expansion and building high-performing teams.",
+    //         "Currently, as COO & Sr. Trainer at IREED Academy, he is focused towards mentoring and sharpening young professionals and entrepreneurs through niche Industry ready programs, co-developed with leading Real Estate companies."
+    //     ],
+    //     image: "/assets/images/harsh-profile.webp",
+    //     href: "https://www.ireedindia.com/",
+    //     linkedin: "https://www.linkedin.com/in/harshjasrotia/",
+    //     icon: LineChart
+    // },
     {
         name: "Kamaldeep Prajapati",
         role: "Business Head (Up-Country Business), IREED Academy",
