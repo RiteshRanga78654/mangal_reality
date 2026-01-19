@@ -94,7 +94,7 @@ export default function ProjectPage() {
     <>
       <div className="bg-white">
         {/* Hero Section with Dark Theme #0a1a10 Overlay */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
@@ -107,7 +107,7 @@ export default function ProjectPage() {
 
           <div className="relative z-10 text-center text-white px-6">
             <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
-              <a
+              {/* <a
                 href="/"
                 className="hover:text-green-400 flex items-center gap-1 transition-colors"
               >
@@ -119,11 +119,11 @@ export default function ProjectPage() {
                 className="hover:text-green-400 flex items-center gap-1 transition-colors"
               >
                  Projects
-              </a>
-              <ChevronRight size={12} className="opacity-50" />
-              <span className="text-green-500">Completed Projects</span>
+              </a> */}
+              {/* <ChevronRight size={12} className="opacity-50" />
+              <span className="text-green-500">Completed Projects</span> */}
             </nav>
-            <h2 className="text-4xl md:text-8xl tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+            <h2 className="text-4xl md:text-7xl tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
              Completed Projects
             </h2>
           </div>
