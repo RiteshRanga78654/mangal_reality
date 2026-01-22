@@ -1,123 +1,184 @@
 "use client";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, User } from "lucide-react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Camera, 
+  Play, 
+  Layers, 
+  ArrowUpRight, 
+  Monitor, 
+  Box, 
+  FileText,
+  ChevronRight
+} from 'lucide-react';
 
-const CREATIVES = [
-  { id: "01", name: "Arjun Mehta", role: "Principal Architect", img: "/assets/images/INFOGRAPHIC 22.webp" },
-  { id: "02", name: "Sara Khan", role: "Interior Stylist", img: "/assets/images/INFOGRAPHIC 23.webp" },
-  { id: "03", name: "Vikram Raj", role: "3D Visualizer", img: "/assets/images/INFOGRAPHIC 22.webp" },
-  { id: "04", name: "Ananya Iyer", role: "Urban Planner", img: "/assets/images/INFOGRAPHIC 23.webp" },
+const brandGreen = "#22C55E";
+
+const creativePortfolio = [
+  {
+    id: 1,
+    category: "Architectural Rendering",
+    title: "Signature Skyline Phase I",
+    description: "High-fidelity structural visualization showcasing the integration of glass-active facades and urban greenery.",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+  },
+  {
+    id: 2,
+    category: "Digital Experience",
+    title: "The Genesis Virtual Tour",
+    description: "An immersive 360-degree walkthrough experience designed for international stakeholders and NRI investors.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+    isVideo: true
+  },
+  {
+    id: 3,
+    category: "Corporate Campaign",
+    title: "Trust in Every Brick",
+    description: "National brand campaign highlighting Mangal Realty's three decades of transparency and timely delivery.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1200",
+  }
 ];
 
-export default function ProfessionalResponsiveGallery() {
-  const [hoveredIndex, setHoveredIndex] = useState(0);
-
+export default function OurCreativesFormal() {
   return (
-    <section className="bg-white py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* --- Header --- */}
-        <div className="mb-16 md:mb-24 text-center md:text-left">
-          <p className="text-[#22c55e] text-[10px] font-bold uppercase tracking-[0.4em] mb-4">Our Studio</p>
-          <h2 className="text-4xl md:text-6xl font-serif text-[#0a1a10] tracking-tight">The Creatives</h2>
+    <main className="bg-white font-sans overflow-hidden text-left">
+      
+      {/* 1. INSTITUTIONAL HERO BANNER */}
+      <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-black">
+        <img
+          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
+          alt="Creative Banner"
+          className="absolute z-10 w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 z-15 bg-gradient-to-t from-black via-transparent to-black/60"></div>
+
+        <div className="relative z-20 text-center px-6 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="mt-40"
+          >
+            <span className="text-[10px] uppercase tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span>
+            <h1 className="text-white text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.85]">
+              Our <br />
+              <span className="text-stone-400">Creatives</span>
+            </h1>
+            <div className="w-24 h-1.5 bg-green-500 mx-auto mt-10"></div>
+          </motion.div>
         </div>
+      </section>
 
-        {/* --- Grid Layout --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      {/* 2. PORTFOLIO GRID - FORMAL SYMMETRY */}
+      <section className="relative z-30 -mt-16 py-32 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
           
-          {/* List Section: Stacks on Mobile, 5 Cols on Desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-5 flex flex-col gap-4">
-            {CREATIVES.map((person, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32">
+            {creativePortfolio.map((item, idx) => (
               <motion.div
-                key={person.id}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onClick={() => setHoveredIndex(index)} // Better for touch devices
-                className={`relative p-6 md:p-8 rounded-2xl cursor-pointer transition-all duration-500 border ${
-                  hoveredIndex === index 
-                  ? 'bg-[#0a1a10] border-[#0a1a10] text-white shadow-xl' 
-                  : 'bg-transparent border-gray-100 text-[#0a1a10] hover:border-gray-200'
-                }`}
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="group cursor-pointer"
               >
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className={`text-[10px] font-bold tracking-widest uppercase transition-colors ${
-                      hoveredIndex === index ? 'text-[#22c55e]' : 'text-gray-300'
-                    }`}>
-                      {person.id}
-                    </span>
-                    <h3 className="text-xl md:text-2xl font-serif mt-1">{person.name}</h3>
-                    <p className={`text-xs mt-1 transition-colors ${
-                      hoveredIndex === index ? 'text-gray-400' : 'text-gray-500'
-                    }`}>
-                      {person.role}
-                    </p>
-                  </div>
-                  
-                  {/* Small circle indicator */}
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                    hoveredIndex === index ? 'bg-[#22c55e] text-[#0a1a10]' : 'bg-gray-50 text-gray-300'
-                  }`}>
-                    <ArrowRight size={16} />
-                  </div>
-                </div>
-
-                {/* Mobile-Only Image: Shown inside the card when active on small screens */}
-                <AnimatePresence>
-                  {hoveredIndex === index && (
-                    <motion.div 
-                      initial={{ height: 0, opacity: 0, marginTop: 0 }}
-                      animate={{ height: "auto", opacity: 1, marginTop: 24 }}
-                      exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                      className="lg:hidden overflow-hidden"
-                    >
-                      <img 
-                        src={person.img} 
-                        alt={person.name} 
-                        className="w-full h-64 object-cover rounded-xl"
-                      />
-                    </motion.div>
+                <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-8 shadow-xl bg-stone-100">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-105"
+                  />
+                  {item.isVideo && (
+                    <div className="absolute top-6 right-6 p-3 bg-white/90 backdrop-blur-md rounded-full shadow-lg">
+                      <Play size={16} className="text-green-600 ml-0.5" fill="currentColor" />
+                    </div>
                   )}
-                </AnimatePresence>
+                </div>
+                
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-green-500 mb-4">
+                  {item.category}
+                </p>
+                <h3 className="text-2xl font-bold text-black uppercase tracking-tight mb-4 leading-tight">
+                  {item.title}
+                </h3>
+                <p className="text-stone-500 font-light text-sm leading-relaxed mb-6">
+                  {item.description}
+                </p>
+                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-stone-400 group-hover:text-black transition-colors">
+                  View Detail <ArrowUpRight size={14} style={{ color: brandGreen }} />
+                </div>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Desktop Preview: Hidden on Mobile, Fixed on Desktop */}
-          <div className="hidden lg:block lg:col-span-7 sticky top-32 h-[600px]">
-            <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden bg-gray-50">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={hoveredIndex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="absolute inset-0"
-                >
-                  <img 
-                    src={CREATIVES[hoveredIndex].img} 
-                    alt={CREATIVES[hoveredIndex].name} 
-                    className="w-full h-full object-cover" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a10]/60 via-transparent to-transparent" />
-                  
-                  <div className="absolute bottom-12 left-12 text-white">
-                    <h4 className="text-4xl font-serif mb-2">{CREATIVES[hoveredIndex].name}</h4>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-[1px] bg-[#22c55e]" />
-                      <p className="text-[#22c55e] text-xs font-bold uppercase tracking-widest">
-                        {CREATIVES[hoveredIndex].role}
-                      </p>
+      {/* 3. TECHNICAL SPECIFICATIONS SECTION (FORMAL) */}
+      <section className="py-24 bg-stone-50 border-y border-stone-200  ">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter text-black mb-8 leading-none">
+                Technical <br /> <span className="text-stone-400">Precision</span>
+              </h2>
+              <p className="text-stone-500 text-lg font-light mb-10 leading-relaxed">
+                Our creative department utilizes advanced BIM (Building Information Modeling) and real-time Ray Tracing engines to ensure absolute fidelity between conceptual design and final construction.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                    { icon: Monitor, label: "4K Rendering" },
+                    { icon: Box, label: "VR Integration" },
+                    { icon: Camera, label: "Aerial Photogrammetry" },
+                    { icon: Layers, label: "BIM Modeling" }
+                ].map((spec, i) => (
+                    <div key={i} className="flex items-center gap-3 p-4 bg-white border border-stone-200 rounded-sm">
+                        <spec.icon size={18} style={{ color: brandGreen }} />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-stone-700">{spec.label}</span>
                     </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
+                ))}
+              </div>
+            </div>
+            <div className="relative p-10 bg-white border border-stone-200 shadow-2xl">
+                <div className="absolute top-0 right-0 w-2 h-full bg-green-500"></div>
+                <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Resource Center</h4>
+                <p className="text-xs text-stone-400 mb-8 uppercase tracking-widest">Access our formal asset library for corporate usage.</p>
+                <div className="space-y-4">
+                    <div className="flex justify-between items-center p-4 border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition-colors group">
+                        <div className="flex items-center gap-4">
+                            <FileText size={20} className="text-stone-300 group-hover:text-green-500" />
+                            <span className="text-[10px] font-bold uppercase tracking-widest">Brand Style Guide 2026</span>
+                        </div>
+                        <ChevronRight size={16} className="text-stone-300" />
+                    </div>
+                    <div className="flex justify-between items-center p-4 border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition-colors group">
+                        <div className="flex items-center gap-4">
+                            <Box size={20} className="text-stone-300 group-hover:text-green-500" />
+                            <span className="text-[10px] font-bold uppercase tracking-widest">High-Res Render Archive</span>
+                        </div>
+                        <ChevronRight size={16} className="text-stone-300" />
+                    </div>
+                </div>
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* 4. FORMAL FOOTER CTA */}
+      <section className="py-24 bg-black text-white text-center">
+        <div className="max-w-3xl mx-auto px-6">
+            <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-8 leading-tight">
+              Request Project <br /> <span style={{ color: brandGreen }}>Specifications</span>
+            </h2>
+            <p className="text-stone-400 mb-12 text-sm uppercase tracking-[0.2em] font-light">
+              Official creative and technical dossiers are available for institutional partners.
+            </p>
+            <button className="px-12 py-5 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-green-600 hover:text-white transition-all">
+                Access Media Portal
+            </button>
+        </div>
+      </section>
+
+    </main>
   );
 }
