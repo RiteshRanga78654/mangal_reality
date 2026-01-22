@@ -123,7 +123,7 @@ export default function Footer() {
                 />
               </div>
               <button
-                className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+                className="group relative cursor-pointer px-12 py-5 text-white font-bold  tracking-widest text-xs overflow-hidden"
               >
                 <span className="relative z-10">Subscribe Now</span>
                 <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
