@@ -29,7 +29,11 @@ export default function VisionMission() {
   ];
 
   return (
-    <main ref={containerRef} className="bg-[#0A1A10] text-[#E0E7E0] min-h-screen">
+    <main 
+      ref={containerRef} 
+      className="bg-[#0A1A10] text-[#E0E7E0] min-h-screen font-medium"
+      style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+    >
       
       {/* 1. RESPONSIVE HERO SECTION */}
       <section className="relative h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
@@ -42,7 +46,7 @@ export default function VisionMission() {
             alt="Deep Forest" 
             className="w-full h-full object-cover opacity-40 scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A1A10]/10 via-transparent to-[#0A1A10]" />
+          <div className="absolute inset-0 bg-linear-to-b from-[#0A1A10]/10 via-transparent to-[#0A1A10]" />
         </motion.div>
         
         <motion.div 
@@ -54,11 +58,11 @@ export default function VisionMission() {
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[#4ADE80] uppercase text-[10px] md:text-xs font-bold tracking-[0.5em] block mb-4"
+            className="text-[#4ADE80] text-[10px] md:text-xs font-bold tracking-[0.2em] block mb-4"
           >
             The Soul of Our Work
           </motion.span>
-          <h1 className="text-5xl md:text-8xl lg:text-9xl  text-white mb-8">Our Essence</h1>
+          <h1 className="text-4xl md:text-7xl lg:text-9xl text-white mb-8">Our Essence</h1>
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: "80px" }}
@@ -94,8 +98,8 @@ export default function VisionMission() {
               className="relative p-8 md:p-14 rounded-3xl bg-[#122619]/40 border border-white/10 backdrop-blur-md group"
             >
               <div className="mb-8 text-[#4ADE80]">{card.icon}</div>
-              <h2 className="text-3xl md:text-4xl  text-white mb-6">{card.title}</h2>
-              <p className="text-base md:text-lg leading-relaxed text-[#B0C4B0] font-light italic">
+              <h2 className="text-3xl md:text-4xl text-white mb-6">{card.title}</h2>
+              <p className="text-base md:text-lg leading-relaxed text-[#B0C4B0]">
                 "{card.text}"
               </p>
               <div className="absolute top-8 right-8 text-5xl opacity-[0.05] select-none">
@@ -111,10 +115,10 @@ export default function VisionMission() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
             <div>
-              <h2 className="text-4xl md:text-5xl  text-white mb-2">Non-Negotiables</h2>
+              <h2 className="text-4xl md:text-7xl text-white mb-2">Non-Negotiables</h2>
               <p className="text-[#4ADE80] tracking-[0.2em] text-[10px] md:text-xs uppercase font-bold">The Foundation of Mangal Realty</p>
             </div>
-            <div className="hidden lg:block h-px bg-white/10 flex-grow mx-8 mb-4" />
+            <div className="hidden lg:block h-px bg-white/10 grow mx-8 mb-4" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
@@ -163,7 +167,7 @@ export default function VisionMission() {
           <p className="text-3xl md:text-5xl leading-tight text-white mb-8">
             "We build legacies that don't cost the <span className="text-[#4ADE80]">Earth</span>."
           </p>
-          <div className="text-white/30  tracking-[0.5em] text-[10px]">
+          <div className="text-white/30 tracking-[0.5em] text-[10px]">
             Established 2026 — Mangal Realty Group
           </div>
         </motion.div>

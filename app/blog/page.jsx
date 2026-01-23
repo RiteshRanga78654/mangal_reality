@@ -310,7 +310,7 @@ export default function MangalRealtyBlog() {
                   {activeTab === cat && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#22c55e] rounded-t-full"
+                      className="absolute bottom-0 left-0 right-0 h-0.75 bg-[#22c55e] rounded-t-full"
                     />
                   )}
                 </button>
@@ -333,7 +333,7 @@ export default function MangalRealtyBlog() {
                   className="group grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
                 >
                   {/* Image Container */}
-                  <div className="lg:col-span-5 relative overflow-hidden rounded-2xl aspect-[4/3] shadow-md">
+                  <div className="lg:col-span-5 relative overflow-hidden rounded-2xl aspect-4/3 shadow-md">
                     <img
                       src={post.image}
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"

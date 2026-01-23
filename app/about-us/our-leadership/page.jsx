@@ -1,17 +1,16 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Leaf, ShieldCheck, Globe, Users, Award, ChevronRight } from 'lucide-react';
 
 const brandGreen = "#22C55E";
 
-// --- NEW COUNTER COMPONENT ---
+// --- COUNTER COMPONENT ---
 const Counter = ({ value }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [displayValue, setDisplayValue] = useState(0);
   
-  // Clean the string (e.g., "150+" -> 150)
   const numericValue = parseInt(value.replace(/[^0-9]/g, ''));
   const suffix = value.replace(/[0-9]/g, '');
 
@@ -19,7 +18,7 @@ const Counter = ({ value }) => {
     if (isInView) {
       let start = 0;
       const end = numericValue;
-      const duration = 2000; // 2 seconds
+      const duration = 2000;
       const increment = end / (duration / 16);
 
       const timer = setInterval(() => {
@@ -68,7 +67,10 @@ const stats = [
 
 export default function MangalLeadership() {
   return (
-    <main className="relative bg-white "style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+    <main 
+      className="relative bg-white font-medium" 
+      style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+    >
       
       {/* SECTION 1: HERO */}
       <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-black">
@@ -88,14 +90,14 @@ export default function MangalLeadership() {
               Our Leadership
             </h1>
             <div className="w-24 h-1 mx-auto mt-4" style={{ backgroundColor: brandGreen }}></div>
-            <p className="text-white text-base md:text-lg leading-relaxed mt-6 font-medium max-w-2xl mx-auto drop-shadow-md">
+            <p className="text-white text-base md:text-lg leading-relaxed mt-6 max-w-2xl mx-auto drop-shadow-md">
                Our leadership combines decades of traditional wisdom with a modern approach to urban living and commercial excellence.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* UPDATED SECTION: IMPACT NUMBERS WITH COUNTER & BLACK ICONS */}
+      {/* IMPACT NUMBERS */}
       <section className="relative z-30 -mt-16 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
@@ -108,7 +110,6 @@ export default function MangalLeadership() {
               className="bg-white p-6 shadow-2xl rounded-sm border-b-4 flex flex-col items-center text-center"
               style={{ borderBottomColor: brandGreen }}
             >
-              {/* Icon color changed to Black */}
               <stat.icon size={28} className="mb-3 text-black" />
               <h4 className="text-3xl font-black text-stone-900">
                 <Counter value={stat.value} />
@@ -124,17 +125,17 @@ export default function MangalLeadership() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {leaders.map((leader, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="relative overflow-hidden aspect-[4/5] rounded-lg shadow-lg">
+              <div className="relative overflow-hidden aspect-4/5 rounded-lg shadow-lg">
                 <img 
                   src={leader.image} 
                   alt={leader.name} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
                   <div className="w-full">
                     <h3 className="text-white text-xl font-bold">{leader.name}</h3>
-                    <p className="text-white/70 text-xs mt-1  tracking-widest" style={{ color: brandGreen }}>{leader.role}</p>
-                    <p className="text-white/80 text-sm mt-4 leading-relaxed font-light line-clamp-3">
+                    <p className="text-xs mt-1 tracking-widest" style={{ color: brandGreen }}>{leader.role}</p>
+                    <p className="text-white/80 text-sm mt-4 leading-relaxed line-clamp-3">
                       {leader.description}
                     </p>
                   </div>
@@ -150,7 +151,7 @@ export default function MangalLeadership() {
         <div className="absolute inset-0 bg-stone-900 skew-y-3 origin-right translate-y-20"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-white text-4xl md:text-5xl font-bold  tracking-tighter leading-none mb-6">
+            <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
               A Legacy Built on <br /><span style={{ color: brandGreen }}>Unwavering Trust</span>
             </h2>
             <p className="text-stone-400 text-lg mb-8">
@@ -167,11 +168,11 @@ export default function MangalLeadership() {
           <div className="bg-white/10 backdrop-blur-md p-10 rounded-2xl border border-white/10">
              <div className="grid grid-cols-1 gap-8">
                 <div className="border-l-2 pl-6" style={{ borderColor: brandGreen }}>
-                   <h4 className="text-white font-bold  tracking-widest text-sm">Our Mission</h4>
+                   <h4 className="text-white font-bold tracking-widest text-sm">Our Mission</h4>
                    <p className="text-stone-300 text-sm mt-2">To redefine luxury through architectural innovation and carbon-neutral construction practices by 2030.</p>
                 </div>
                 <div className="border-l-2 pl-6" style={{ borderColor: brandGreen }}>
-                   <h4 className="text-white font-bold  tracking-widest text-sm">Our Philosophy</h4>
+                   <h4 className="text-white font-bold tracking-widest text-sm">Our Philosophy</h4>
                    <p className="text-stone-300 text-sm mt-2">Customer centricity isn't a department; it's the very foundation of every brick we lay.</p>
                 </div>
              </div>
@@ -183,19 +184,19 @@ export default function MangalLeadership() {
       <section className="py-24 bg-stone-50 px-6">
         <div className="max-w-7xl mx-auto">
           <header className="mb-12 text-center mx-auto md:text-center">
-            <h2 className="text-black text-4xl md:text-6xl font-bold tracking-tighter ">Key Management</h2>
+            <h2 className="text-black text-4xl md:text-7xl font-bold tracking-tighter ">Key Management</h2>
             <div className="w-32 h-1 mt-4 mx-auto " style={{ backgroundColor: brandGreen }}></div>
           </header>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {management.map((person, idx) => (
               <div key={idx} className="p-8 bg-white border border-stone-200 rounded-sm flex items-center space-x-6 group hover:shadow-xl transition-all duration-500">
-                <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-stone-100 shadow-md">
+                <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-stone-100 shadow-md">
                   <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <p className="font-bold text-stone-800  text-[16px] tracking-widest leading-tight">{person.name}</p>
-                  <p className="text-[12px] font-bold  tracking-widest mt-1" style={{ color: brandGreen }}>{person.role}</p>
+                  <p className="font-bold text-stone-800 text-[16px] tracking-widest leading-tight">{person.name}</p>
+                  <p className="text-[12px] font-bold tracking-widest mt-1" style={{ color: brandGreen }}>{person.role}</p>
                 </div>
               </div>
             ))}
@@ -207,10 +208,10 @@ export default function MangalLeadership() {
       <section className="py-24 px-6 bg-white overflow-hidden border-t border-stone-100">
         <div className="max-w-5xl mx-auto text-center">
           <Leaf className="mx-auto mb-4" size={40} style={{ color: brandGreen }} />
-          <h2 className="text-4xl md:text-6xl font-bold text-black  tracking-tighter">The Mangal Ethos</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tighter">The Mangal Ethos</h2>
           
           <div className="mt-10">
-            <p className="text-black text-xl md:text-2xl font-light leading-relaxed mb-10 max-w-3xl mx-auto italic">
+            <p className="text-black text-xl md:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto italic">
               "Real estate is not just about buildings; it is about building trust and creating spaces where life thrives."
             </p>
             <div className="flex flex-col items-center">

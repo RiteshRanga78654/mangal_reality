@@ -86,7 +86,7 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <div className="space-y-1">
                 <p className="text-[#4ADE80] text-[10px]  font-bold tracking-widest">Visit us at our office in</p>
-                <p className="text-sm font-light leading-relaxed">D-No: 49, 24-26, Shankaramatam Road, beside UK Parlour<br />Visakhapatnam</p>
+                <p className="text-sm font-light leading-relaxed">D-No: 49, 24-26, Shankaramatam Road, Beside UK Parlour<br />Visakhapatnam</p>
               </div>
 
               <div className="flex flex-col gap-4">
@@ -135,7 +135,7 @@ export default function Footer() {
 
         {/* BOTTOM BAR */}
         <div className="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-[10px] uppercase tracking-[0.1em] text-white-500 font-medium">
+          <p className="text-[10px] uppercase tracking-widest text-white-500 font-medium">
             © 2025 Mangal Realty — Sustainable Luxury.
             <span className="ml-2 text-white ">
               (Powered By <a href="https://www.ireedindia.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#4ADE80] transition-colors">IREED Media</a>)

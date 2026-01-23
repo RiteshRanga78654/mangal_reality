@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Handshake, ArrowUpRight, GraduationCap, LineChart, Briefcase, Quote, Linkedin } from 'lucide-react';
+import { ArrowUpRight, GraduationCap, Briefcase, Linkedin } from 'lucide-react';
 
 const brandGreen = "#22C55E";
 
@@ -19,19 +19,6 @@ const strategicPartners = [
         linkedin: "https://www.linkedin.com/in/bhaswarpaul/",
         icon: GraduationCap
     },
-    // {
-    //     name: "Harsha Jasrotia",
-    //     role: "COO & Industry Trainer, IREED Academy",
-    //     description: [
-    //         "With an impressive professional experience of more than 18 years, Harsha Jasrotia has proven himself in the sphere of Sales, Business Development and Strategic Leadership. With a strong academic background of IIT Patna and Panjab University, his track record reflects a consistent ability to stay ahead in fast-changing environments.",
-    //         "During his dynamic corporate journey, he had contributed significantly to both Real Estate and EdTech sectors and held senior positions at Lodha Developers, M3M India, Shiksha.com, Career Launcher, and Phoenix Mills. In each role, he played a pivotal role in business expansion and building high-performing teams.",
-    //         "Currently, as COO & Sr. Trainer at IREED Academy, he is focused towards mentoring and sharpening young professionals and entrepreneurs through niche Industry ready programs, co-developed with leading Real Estate companies."
-    //     ],
-    //     image: "/assets/images/harsh-profile.webp",
-    //     href: "https://www.ireedindia.com/",
-    //     linkedin: "https://www.linkedin.com/in/harshjasrotia/",
-    //     icon: LineChart
-    // },
     {
         name: "Kamaldeep Prajapati",
         role: "Business Head (Up-Country Business), IREED Academy",
@@ -49,7 +36,10 @@ const strategicPartners = [
 
 export default function StrategicPartners() {
     return (
-        <main className="bg-white font-sans overflow-hidden">
+        <main 
+            className="bg-white font-medium overflow-hidden" 
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+        >
 
             {/* HERO SECTION */}
             <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-black">
@@ -61,24 +51,24 @@ export default function StrategicPartners() {
                 />
 
                 {/* Gradient for text pop */}
-                <div className="absolute inset-0 z-15 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 z-15 bg-linear-to-t from-black via-black/20 to-transparent"></div>
 
                 <div className="relative z-20 text-center px-6 max-w-5xl">
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
-                        /* This margin-top pushes the entire text block lower */
                         className="mt-32 md:mt-48"
                     >
-                        <h1 className="text-white text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.85]">
+                        {/* Heading updated to text-4xl md:text-7xl */}
+                        <h1 className="text-white text-4xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.85]">
                             Strategic <br />
                             <span className="text-stone-400">Collaborations</span>
                         </h1>
 
                         <div className="w-24 h-1.5 mx-auto mt-10" style={{ backgroundColor: brandGreen }}></div>
 
-                        <p className="text-stone-200 text-base md:text-xl leading-relaxed mt-10 font-light max-w-3xl mx-auto drop-shadow-2xl">
+                        <p className="text-stone-200 text-base md:text-xl leading-relaxed mt-10 max-w-3xl mx-auto drop-shadow-2xl">
                             Partnering with distinguished leaders to cultivate a $1 Trillion real estate ecosystem through academic rigor and professional excellence.
                         </p>
 
@@ -91,11 +81,12 @@ export default function StrategicPartners() {
                             <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 font-bold">
                                 Scroll to explore
                             </div>
-                            <div className="w-[1px] h-12 bg-gradient-to-b from-green-500 to-transparent opacity-50"></div>
+                            <div className="w-px h-12 bg-linear-to-b from-green-500 to-transparent opacity-50"></div>
                         </motion.div>
                     </motion.div>
                 </div>
             </section>
+
             {/* DETAILED PARTNERS SECTION */}
             <section className="py-24 px-6 bg-white">
                 <div className="max-w-7xl mx-auto space-y-40">
@@ -117,7 +108,7 @@ export default function StrategicPartners() {
                                         href={partner.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block relative overflow-hidden rounded-xl shadow-2xl aspect-[4/5]"
+                                        className="block relative overflow-hidden rounded-xl shadow-2xl aspect-4/5"
                                     >
                                         <div className="absolute inset-0 z-20 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                                             <div className="bg-white p-5 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform">
@@ -131,7 +122,6 @@ export default function StrategicPartners() {
                                         />
                                     </a>
 
-                                    {/* LinkedIn Shortcut Icon on Photo */}
                                     <a
                                         href={partner.linkedin}
                                         target="_blank"
@@ -157,7 +147,8 @@ export default function StrategicPartners() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6 }}
                                 >
-                                    <h2 className="text-4xl md:text-6xl font-bold text-stone-900 uppercase tracking-tighter mb-2">
+                                    {/* Partner Name Heading updated to text-4xl md:text-7xl */}
+                                    <h2 className="text-4xl md:text-7xl font-bold text-stone-900 uppercase tracking-tighter mb-2">
                                         {partner.name}
                                     </h2>
                                     <p className="text-lg md:text-xl font-bold uppercase tracking-widest mb-10" style={{ color: brandGreen }}>
@@ -166,7 +157,7 @@ export default function StrategicPartners() {
 
                                     <div className="space-y-6 text-stone-600">
                                         {partner.description.map((para, pIdx) => (
-                                            <p key={pIdx} className="text-lg leading-relaxed font-light">
+                                            <p key={pIdx} className="text-lg leading-relaxed">
                                                 {para}
                                             </p>
                                         ))}
@@ -181,8 +172,6 @@ export default function StrategicPartners() {
                                         >
                                             <Linkedin size={14} fill="currentColor" /> Connect on LinkedIn
                                         </a>
-
-                                        {/* Official Partnership Inquiry */}
                                     </div>
                                 </motion.div>
                             </div>
@@ -195,7 +184,8 @@ export default function StrategicPartners() {
             <section className="py-24 bg-stone-900 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-green-500/5 -skew-x-12 translate-x-32"></div>
                 <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-8 leading-none">
+                    {/* Final Heading updated to text-4xl md:text-7xl */}
+                    <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-8 leading-none">
                         Driving the <span style={{ color: brandGreen }}>Future</span> of <br />Indian Real Estate
                     </h2>
                     <div className="flex flex-col md:flex-row justify-center gap-6">
