@@ -250,7 +250,7 @@ const Page = () => {
             playsInline
             className="absolute z-10 w-full h-full object-cover opacity-60"
           >
-            <source src="/assets/videos/slider-video.mp4" type="video/mp4" />
+            <source src="/assets/Reference images/1761819_Panorama_Kartuzy_County_1920x1080.mp4" type="video/mp4" />
           </video>
         </section>
 
@@ -259,15 +259,16 @@ const Page = () => {
           {[
             {
               title: "Pure Nature",
-              img: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2074",
+              img: "/assets/Reference images/2659.jpg",
             },
+            
             {
               title: "Sustainable Life",
-              img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=2070",
+              img: "/assets/Reference images/27.jpg",
             },
             {
               title: "Green Future",
-              img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071",
+              img: "/assets/Reference images/928.jpg",
             },
           ].map((item, i) => (
             <div
