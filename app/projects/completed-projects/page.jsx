@@ -51,7 +51,7 @@ const AnimatedCounter = ({ value, duration = 1500 }) => {
 // --- 2. UNIFIED MANGAL BUTTON COMPONENT ---
 // Implements the specific filling hover effect requested
 const MangalButton = ({ text, href }) => (
-  <Link href={href} className="group relative cursor-pointer px-12 py-5 text-slate-900 font-bold uppercase tracking-[0.2em] text-xs overflow-hidden inline-block text-center transition-colors duration-500">
+  <Link href={href} className="group relative cursor-pointer px-12 py-5 text-black font-bold uppercase tracking-[0.2em] text-xs overflow-hidden inline-block text-center transition-colors duration-500">
     <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
       {text}
     </span>
@@ -176,7 +176,7 @@ const CompletedProjectsPage = () => {
                 <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-none">
                   {project.title}
                 </h2>
-                <p className="text-slate-600 text-lg leading-relaxed italic">"{project.tagline}"</p>
+                <p className="text-blacktext-lg leading-relaxed ">"{project.tagline}"</p>
                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-slate-200">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-emerald-100 rounded-lg text-[#22C55E]"><MapPin size={20} /></div>
