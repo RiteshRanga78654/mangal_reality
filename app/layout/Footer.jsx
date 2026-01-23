@@ -9,7 +9,7 @@ import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram } from "react-icons/f
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });z
   };
 
   const containerVariants = {
