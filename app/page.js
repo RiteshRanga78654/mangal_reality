@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 
 "use client";
 
+=======
+>>>>>>> 5219fe721190031f15a66fb42ddcd38e53295067
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -35,6 +38,8 @@ import {
   ChevronRight,
   Quote,
 } from "lucide-react";
+import Amenities from "./components/Amenities";
+
 
 const Page = () => {
   // --- TESTIMONIAL DATA ---
@@ -406,7 +411,7 @@ const Page = () => {
         </section>
 
         {/* SECTION 5: AMENITIES */}
-        <section className="relative py-16 px-4 overflow-hidden min-h-screen flex items-center">
+        {/* <section className="relative py-16 px-4 overflow-hidden min-h-screen flex items-center">
           <div
             className="absolute inset-0 bg-fixed bg-cover bg-center"
             style={{
@@ -454,7 +459,9 @@ const Page = () => {
               </div>
             )}
           </div>
-        </section>
+        </section> */}
+
+        <Amenities />
 
         {/* SECTION 6: TESTIMONIALS */}
         <section className="bg-white py-16 px-4 sm:px-6 lg:px-12 w-full overflow-hidden">
