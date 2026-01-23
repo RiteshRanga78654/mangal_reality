@@ -46,7 +46,7 @@ export default function VisionMission() {
             alt="Deep Forest" 
             className="w-full h-full object-cover opacity-40 scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A1A10]/10 via-transparent to-[#0A1A10]" />
+          <div className="absolute inset-0 bg-linear-to-b from-[#0A1A10]/10 via-transparent to-[#0A1A10]" />
         </motion.div>
         
         <motion.div 
@@ -118,7 +118,7 @@ export default function VisionMission() {
               <h2 className="text-4xl md:text-7xl text-white mb-2">Non-Negotiables</h2>
               <p className="text-[#4ADE80] tracking-[0.2em] text-[10px] md:text-xs uppercase font-bold">The Foundation of Mangal Realty</p>
             </div>
-            <div className="hidden lg:block h-px bg-white/10 flex-grow mx-8 mb-4" />
+            <div className="hidden lg:block h-px bg-white/10 grow mx-8 mb-4" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">

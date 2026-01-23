@@ -776,7 +776,7 @@ const ContactPage = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   
-                  className="w-full md:w-auto relative group overflow-hidden bg-transparent border-2 border-[#22c55e] text-white hover:text-[white] px-10 py-5  font-black text-[15px] uppercase tracking-[0.1em] flex items-center justify-center gap-4 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full md:w-auto relative group overflow-hidden bg-transparent border-2 border-[#22c55e] text-white hover:text-[white] px-10 py-5  font-black text-[15px] uppercase tracking-widest flex items-center justify-center gap-4 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   
                   <div className="absolute inset-0 bg-[#22c55e] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out" />
@@ -854,7 +854,7 @@ const ContactPage = () => {
       </section>
 
         {/* Map Section */}
-           <div className="max-w-7xl mx-auto h-[400px] mb-25 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+           <div className="max-w-7xl mx-auto h-100 mb-25 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.6725453005513!2d83.301306!3d17.717614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQzJzAzLjQiTiA4M8KwMTgnMDQuNyJF!5e0!3m2!1sen!2sin!4v1625648590000!5m2!1sen!2sin"
                 width="100%"

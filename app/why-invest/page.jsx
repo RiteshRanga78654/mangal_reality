@@ -44,7 +44,7 @@ export default function WhyInvest() {
                         className="w-full h-full object-cover opacity-50"
                     />
                 </motion.div>
-                <div className="absolute inset-0 z-15 bg-gradient-to-b from-black/70 via-transparent to-black"></div>
+                <div className="absolute inset-0 z-15 bg-linear-to-b from-black/70 via-transparent to-black"></div>
 
                 <div className="relative z-20 text-center px-6 max-w-5xl">
                     <motion.div
@@ -103,13 +103,13 @@ export default function WhyInvest() {
                                 transition={{ delay: idx * 0.2 }}
                                 className="group relative"
                             >
-                                <div className="relative overflow-hidden aspect-[4/5] rounded-2xl mb-8 shadow-2xl">
+                                <div className="relative overflow-hidden aspect-4/5 rounded-2xl mb-8 shadow-2xl">
                                     <img
                                         src={reason.image}
                                         alt={reason.title}
                                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-80"></div>
 
                                     <div className="absolute bottom-8 left-8 right-8">
                                         <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4 transform -translate-x-4 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-500">

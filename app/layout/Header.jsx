@@ -74,7 +74,7 @@ export default function Header() {
         }`}
       >
         {/* Container: px-6 for mobile left-alignment, lg:pl-20 for desktop */}
-        <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:pl-20 lg:pr-10">
+        <div className="max-w-360 mx-auto flex items-center justify-between px-6 lg:pl-20 lg:pr-10">
           
           {/* LOGO - Left aligned */}
           <div className="flex items-center">
@@ -159,7 +159,7 @@ export default function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/90 z-[90] backdrop-blur-sm"
+              className="fixed inset-0 bg-black/90 z-90 backdrop-blur-sm"
             />
 
             {/* Content Sidebar */}
@@ -168,7 +168,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-[80%] sm:w-[60%] bg-[#0A1A10] z-[100] shadow-2xl flex flex-col"
+              className="fixed top-0 right-0 h-full w-[80%] sm:w-[60%] bg-[#0A1A10] z-100 shadow-2xl flex flex-col"
             >
               {/* Close Button Header */}
               <div className="flex justify-between items-center p-6 border-b border-white/5">
