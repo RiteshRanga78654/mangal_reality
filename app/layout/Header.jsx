@@ -41,7 +41,7 @@ export default function Header() {
       href: "#",
       id: "projects",
       subLinks: [
-        { name: "Ongoing ", href: "/projects/ongoing" },
+        { name: "Ongoing ", href: "https://the-nature-valley.vercel.app/" },
         { name: "Completed", href: "/projects/completed-projects" },
       ],
     },
