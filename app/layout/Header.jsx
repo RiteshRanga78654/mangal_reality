@@ -45,7 +45,7 @@ export default function Header() {
         { name: "Completed", href: "/projects/completed-projects" },
       ],
     },
-    { name: "Why Invest", href: "/why-invest" },
+    // { name: "Why Invest", href: "/why-invest" },
     {
       name: "Gallery",
       href: "#",
