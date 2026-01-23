@@ -58,7 +58,7 @@ export default function VisionMission() {
           >
             The Soul of Our Work
           </motion.span>
-          <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif text-white mb-8">Our Essence</h1>
+          <h1 className="text-5xl md:text-8xl lg:text-9xl  text-white mb-8">Our Essence</h1>
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: "80px" }}
@@ -94,11 +94,11 @@ export default function VisionMission() {
               className="relative p-8 md:p-14 rounded-3xl bg-[#122619]/40 border border-white/10 backdrop-blur-md group"
             >
               <div className="mb-8 text-[#4ADE80]">{card.icon}</div>
-              <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">{card.title}</h2>
+              <h2 className="text-3xl md:text-4xl  text-white mb-6">{card.title}</h2>
               <p className="text-base md:text-lg leading-relaxed text-[#B0C4B0] font-light italic">
                 "{card.text}"
               </p>
-              <div className="absolute top-8 right-8 text-5xl font-serif opacity-[0.05] select-none">
+              <div className="absolute top-8 right-8 text-5xl opacity-[0.05] select-none">
                 {card.accent}
               </div>
             </motion.div>
@@ -111,7 +111,7 @@ export default function VisionMission() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
             <div>
-              <h2 className="text-4xl md:text-5xl font-serif text-white mb-2">Non-Negotiables</h2>
+              <h2 className="text-4xl md:text-5xl  text-white mb-2">Non-Negotiables</h2>
               <p className="text-[#4ADE80] tracking-[0.2em] text-[10px] md:text-xs uppercase font-bold">The Foundation of Mangal Realty</p>
             </div>
             <div className="hidden lg:block h-px bg-white/10 flex-grow mx-8 mb-4" />
@@ -145,7 +145,7 @@ export default function VisionMission() {
           {ecoFeatures.map((feature, i) => (
             <div key={i} className="flex flex-col items-center space-y-4">
               <div className="text-[#4ADE80] mb-2">{feature.icon}</div>
-              <h4 className="text-white font-serif text-xl">{feature.title}</h4>
+              <h4 className="text-white text-xl">{feature.title}</h4>
               <p className="text-sm text-[#B0C4B0] max-w-xs">{feature.desc}</p>
             </div>
           ))}
@@ -160,7 +160,7 @@ export default function VisionMission() {
           transition={{ duration: 1.5 }}
           className="max-w-4xl"
         >
-          <p className="text-3xl md:text-5xl font-serif leading-tight text-white mb-8">
+          <p className="text-3xl md:text-5xl leading-tight text-white mb-8">
             "We build legacies that don't cost the <span className="text-[#4ADE80]">Earth</span>."
           </p>
           <div className="text-white/30  tracking-[0.5em] text-[10px]">
