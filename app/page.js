@@ -261,6 +261,7 @@ const Page = () => {
               title: "Pure Nature",
               img: "/assets/Reference images/2659.jpg",
             },
+            
             {
               title: "Sustainable Life",
               img: "/assets/Reference images/27.jpg",
