@@ -7,7 +7,6 @@ import {
 } from 'lucide-react';
 
 // --- 1. ANIMATED COUNTER COMPONENT ---
-// Ensures numbers count up properly when scrolled into view
 const AnimatedCounter = ({ value, duration = 1500 }) => {
   const [displayValue, setDisplayValue] = useState(0);
   const nodeRef = useRef(null);
@@ -49,15 +48,12 @@ const AnimatedCounter = ({ value, duration = 1500 }) => {
 };
 
 // --- 2. UNIFIED MANGAL BUTTON COMPONENT ---
-// Implements the specific filling hover effect requested
 const MangalButton = ({ text, href }) => (
-  <Link href={href} className="group relative cursor-pointer px-12 py-5 text-black font-bold uppercase tracking-[0.2em] text-xs overflow-hidden inline-block text-center transition-colors duration-500">
+  <Link href={href} className="group relative cursor-pointer px-12 py-5 text-black font-medium  tracking-[0.2em] text-12px overflow-hidden inline-block text-center transition-colors duration-500">
     <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
       {text}
     </span>
-    {/* Filling background effect */}
     <div className="absolute inset-0 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 z-0"></div>
-    {/* Constant border */}
     <div className="absolute inset-0 border border-[#22C55E]"></div>
   </Link>
 );
@@ -91,7 +87,10 @@ const CompletedProjectsPage = () => {
   ];
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen font-sans antialiased text-slate-900 overflow-x-hidden">
+    <div 
+      className="bg-[#f8fafc] min-h-screen font-medium antialiased text-slate-900 overflow-x-hidden"
+      style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+    >
 
       {/* HERO SECTION */}
       <section className="relative h-[80vh] w-full flex items-center justify-center">
@@ -110,10 +109,11 @@ const CompletedProjectsPage = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-6 mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight uppercase">
+          {/* Main Title updated to text-4xl md:text-7xl */}
+          <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight mt-20 ">
             CRAFTING <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22C55E] to-emerald-300">LEGACIES</span>
           </h1>
-          <p className="text-gray-300 max-w-xl mx-auto text-lg md:text-xl font-light leading-relaxed mb-8">
+          <p className="text-gray-300 max-w-xl mx-auto text-lg md:text-xl leading-relaxed mb-8">
             Where architectural vision meets sustainable reality. Explore our portfolio of successfully delivered landmarks.
           </p>
           <MangalButton text="View Projects" href="#projects" />
@@ -124,29 +124,28 @@ const CompletedProjectsPage = () => {
           <div className="bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-2xl p-8 md:p-12 border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 md:gap-0 md:divide-x md:divide-gray-100">
               <div className="text-center">
-                <p className="text-[#22C55E] text-4xl md:text-5xl font-black mb-1">
+                <p className="text-[#22C55E] text-4xl md:text-5xl font-bold mb-1">
                   <AnimatedCounter value="02" />
                 </p>
-                <p className="text-gray-500 text-[10px] md:text-xs uppercase font-bold tracking-widest">Projects Delivered</p>
+                <p className="text-gray-500 text-[10px] md:text-xs  font-bold tracking-widest">Projects Delivered</p>
               </div>
               <div className="text-center">
-                <p className="text-[#22C55E] text-4xl md:text-5xl font-black mb-1">
+                <p className="text-[#22C55E] text-4xl md:text-5xl font-bold mb-1">
                   <AnimatedCounter value="08+" />
                 </p>
-                <p className="text-gray-500 text-[10px] md:text-xs uppercase font-bold tracking-widest">Acres Developed</p>
+                <p className="text-gray-500 text-[10px] md:text-xs  font-bold tracking-widest">Acres Developed</p>
               </div>
               <div className="text-center">
-                <p className="text-[#22C55E] text-4xl md:text-5xl font-black mb-1">
+                <p className="text-[#22C55E] text-4xl md:text-5xl font-bold mb-1">
                   <AnimatedCounter value="100%" />
                 </p>
-                <p className="text-gray-500 text-[10px] md:text-xs uppercase font-bold tracking-widest">Customer Trust</p>
+                <p className="text-gray-500 text-[10px] md:text-xs font-bold tracking-widest">Customer Trust</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SPACER FOR OVERLAP */}
       <div className="h-32 md:h-40 bg-[#f8fafc]"></div>
 
       {/* PROJECTS GRID */}
@@ -168,26 +167,26 @@ const CompletedProjectsPage = () => {
                   className="w-full h-[400px] md:h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md px-6 py-3 rounded-xl shadow-lg">
-                  <p className="text-[#22C55E] font-black text-xl  uppercase">COMPLETED</p>
+                  <p className="text-[#22C55E] font-bold text-xl ">COMPLETED</p>
                 </div>
               </div>
 
               <div className="w-full lg:w-2/5 space-y-8 text-left">
-                <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-none">
+                {/* Project Title updated to text-4xl md:text-7xl */}
+                <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter  leading-none">
                   {project.title}
                 </h2>
-                <p className="text-blacktext-lg leading-relaxed ">"{project.tagline}"</p>
+                <p className="text-slate-700 text-lg leading-relaxed">"{project.tagline}"</p>
                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-slate-200">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-emerald-100 rounded-lg text-[#22C55E]"><MapPin size={20} /></div>
-                    <div><p className="text-[10px] text-black uppercase font-bold">Location</p><p className="font-bold">{project.location}</p></div>
+                    <div><p className="text-[10px] text-black  font-bold">Location</p><p className="font-bold">{project.location}</p></div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-emerald-100 rounded-lg text-[#22C55E]"><Maximize2 size={20} /></div>
-                    <div><p className="text-[10px] text-black uppercase font-bold">Total Area</p><p className="font-bold">{project.area}</p></div>
+                    <div><p className="text-[10px] text-black  font-bold">Total Area</p><p className="font-bold">{project.area}</p></div>
                   </div>
                 </div>
-                {/* Unified Button with project-specific link */}
                 <MangalButton text="Explore Project" href={project.link} />
               </div>
             </motion.div>
@@ -200,8 +199,9 @@ const CompletedProjectsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl text-left">
-              <h2 className="text-[#22C55E] font-bold tracking-[0.2em]  text-sm mb-4">Investment Excellence</h2>
-              <h3 className="text-4xl md:text-6xl font-black text-white  tracking-tighter">Why Choose <span className="text-[#22C55E]">Mangal Realty</span></h3>
+              <h2 className="text-[#22C55E] font-bold tracking-[0.2em] text-sm mb-4">Investment Excellence</h2>
+              {/* Heading updated to text-4xl md:text-7xl */}
+              <h3 className="text-4xl md:text-7xl font-bold text-white tracking-tighter">Why Choose <span className="text-[#22C55E]">Mangal Realty</span></h3>
             </div>
           </div>
 
@@ -209,14 +209,14 @@ const CompletedProjectsPage = () => {
             <div className="md:col-span-8 bg-gradient-to-br from-[#22C55E] to-emerald-800 p-8 md:p-12 rounded-[2.5rem] flex flex-col justify-between min-h-[400px] relative overflow-hidden group">
               <div className="relative z-10 text-left">
                 <Gem size={48} className="text-white mb-8" />
-                <h3 className="text-3xl md:text-5xl font-black text-white  mb-4">Strategic <br /> Appreciation</h3>
+                <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">Strategic <br /> Appreciation</h3>
                 <p className="text-white max-w-md text-lg opacity-90">Every project is selected for its high growth potential in the North Vizag corridor.</p>
               </div>
               <BarChart3 size={300} className="absolute -bottom-10 -right-10 text-white/5" />
             </div>
 
-            <div className="md:col-span-4 bg-[#22C55E] p-8 rounded-[2.5rem] border border-slate-700 flex flex-col justify-center text-left">
-              <ShieldCheck size={40} className="text-[#22C55E] mb-6" />
+            <div className="md:col-span-4 bg-[#22C55E] p-8 rounded-[2.5rem] flex flex-col justify-center text-left">
+              <ShieldCheck size={40} className="text-white mb-6" />
               <h4 className="text-2xl font-bold text-white mb-4 ">Legally Ironclad</h4>
               <p className="text-white text-sm">100% VMRDA & LP approvals with verified clear titles for every plot.</p>
             </div>
@@ -228,7 +228,8 @@ const CompletedProjectsPage = () => {
       <section className="py-24 bg-white px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-none">The <span className="text-[#22C55E]">Mangal</span> Standard</h2>
+            {/* Heading updated to text-4xl md:text-7xl */}
+            <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none">The <span className="text-[#22C55E]">Mangal</span> Standard</h2>
             <div className="w-20 h-1.5 bg-[#22C55E] mx-auto mt-4"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -248,7 +249,8 @@ const CompletedProjectsPage = () => {
       {/* FINAL CTA */}
       <section className="bg-slate-50 py-24 px-6 text-center border-t border-gray-100">
         <motion.div whileInView={{ scale: [0.95, 1] }} transition={{ duration: 0.5 }}>
-          <h3 className="text-3xl md:text-5xl font-black text-slate-900 mb-10  tracking-tighter leading-none">Stay Updated <br /> for the Next Big Thing?</h3>
+          {/* Heading updated to text-4xl md:text-7xl */}
+          <h3 className="text-4xl md:text-7xl font-bold text-slate-900 mb-10 tracking-tighter leading-none">Stay Updated <br /> for the Next Big Thing?</h3>
           <MangalButton text="Subscribe Now" href="/subscribe" />
         </motion.div>
       </section>

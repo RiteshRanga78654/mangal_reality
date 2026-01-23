@@ -16,7 +16,7 @@ export default function Header() {
   const [mobileMenus, setMobileMenus] = useState({
     about: false,
     projects: false,
-    gallery: false, // Added gallery tracking
+    gallery: false,
   });
 
   useEffect(() => {
@@ -45,14 +45,13 @@ export default function Header() {
         { name: "Completed", href: "/projects/completed-projects" },
       ],
     },
-    // { name: "Why Invest", href: "/why-invest" },
     {
       name: "Gallery",
       href: "#",
       id: "gallery",
       subLinks: [
         { name: 'Our Videos', href: '/gallery/our-videos' },
-        { name: 'Our Creatives', href: '/gallery/creatives' },
+        { name: 'Our Creatives', href: '/gallery/our-creatives' },
         { name: 'Press Coverage', href: '/gallery/press-coverages' },
       ]
     },
@@ -70,14 +69,16 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#0A1A10]/90 backdrop-blur-md py-4 shadow-lg"
-            : "bg-transparent py-8"
+            ? "bg-[#0A1A10]/95 backdrop-blur-md py-4 shadow-lg"
+            : "bg-transparent py-6 lg:py-8"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between pl-20 pr-10">
-          {/* LOGO */}
+        {/* Container: px-6 for mobile left-alignment, lg:pl-20 for desktop */}
+        <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:pl-20 lg:pr-10">
+          
+          {/* LOGO - Left aligned */}
           <div className="flex items-center">
-            <Link href="/" className="relative block w-36 h-12">
+            <Link href="/" className="relative block w-28 md:w-36 h-10 md:h-12">
               <img
                 src="/mangal-realty-logo.png"
                 alt="Mangal Realty"
@@ -87,19 +88,17 @@ export default function Header() {
           </div>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
             {menuItems.map((item) => (
               <div
                 key={item.name}
                 className="relative group"
-                onMouseEnter={() =>
-                  item.subLinks && setActiveDropdown(item.name)
-                }
+                onMouseEnter={() => item.subLinks && setActiveDropdown(item.name)}
                 onMouseLeave={() => item.subLinks && setActiveDropdown(null)}
               >
                 <Link
                   href={item.href}
-                  className="text-white text-[13px] font-medium hover:text-green-400 transition-colors flex items-center gap-1 uppercase tracking-widest py-2"
+                  className="text-white text-[12px] xl:text-[13px] font-medium hover:text-green-400 transition-colors flex items-center gap-1 uppercase tracking-widest py-2"
                 >
                   {item.name}
                   {item.subLinks && (
@@ -118,14 +117,14 @@ export default function Header() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full left-0 mt-2 w-64 bg-[#2b6642]/95 backdrop-blur-md rounded-lg shadow-2xl border border-white/10 overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-64 bg-[#0A1A10] border border-white/10 rounded-xl shadow-2xl overflow-hidden"
                     >
-                      <div className="flex flex-col py-2">
+                      <div className="flex flex-col py-3">
                         {item.subLinks.map((sub) => (
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            className="px-6 py-3 text-white hover:bg-white/10 transition-colors font-medium text-sm"
+                            className="px-6 py-3 text-white hover:bg-white/5 hover:text-green-400 transition-colors font-medium text-sm"
                           >
                             {sub.name}
                           </Link>
@@ -138,13 +137,13 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* MOBILE HAMBURGER */}
+          {/* MOBILE HAMBURGER - Visible on small/med screens */}
           <button
             onClick={() => setIsOpen(true)}
-            className="lg:hidden flex flex-col justify-between w-7 h-5 focus:outline-none group cursor-pointer"
+            className="lg:hidden flex flex-col justify-between w-6 h-4.5 focus:outline-none group cursor-pointer"
           >
             <span className="block h-0.5 w-full bg-white transition-all group-hover:bg-green-400"></span>
-            <span className="block h-0.5 w-full bg-white transition-all group-hover:bg-green-400"></span>
+            <span className="block h-0.5 w-full bg-white transition-all group-hover:bg-green-400 my-1"></span>
             <span className="block h-0.5 w-full bg-white transition-all group-hover:bg-green-400"></span>
           </button>
         </div>
@@ -154,89 +153,96 @@ export default function Header() {
       <AnimatePresence>
         {isOpen && (
           <>
+            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/80 z-[90] backdrop-blur-sm"
+              className="fixed inset-0 bg-black/90 z-[90] backdrop-blur-sm"
             />
 
+            {/* Content Sidebar */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[85%] bg-[#0A1A10] z-[100] shadow-2xl p-10 flex flex-col"
+              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              className="fixed top-0 right-0 h-full w-[80%] sm:w-[60%] bg-[#0A1A10] z-[100] shadow-2xl flex flex-col"
             >
-              <div className="flex justify-end mb-12">
+              {/* Close Button Header */}
+              <div className="flex justify-between items-center p-6 border-b border-white/5">
+                <span className="text-white/40 text-[10px] font-bold tracking-widest uppercase">Menu</span>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-white hover:text-green-400 p-2 border border-white/10 rounded-full"
+                  className="text-white hover:text-green-400 p-2 border border-white/10 rounded-full transition-colors"
                 >
-                  <X size={28} />
+                  <X size={24} />
                 </button>
               </div>
 
-              <nav className="flex flex-col gap-4 overflow-y-auto no-scrollbar">
-                {menuItems.map((item, i) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * i }}
-                  >
-                    {item.subLinks ? (
-                      <div className="flex flex-col">
-                        <button
-                          onClick={() => toggleMobileMenu(item.id)}
-                          className="flex items-center justify-between text-white text-2xl font-serif border-b border-white/10 pb-4 w-full text-left"
+              {/* Navigation Links */}
+              <nav className="flex-1 overflow-y-auto py-8 px-6 no-scrollbar">
+                <div className="flex flex-col gap-6">
+                  {menuItems.map((item, i) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 * i }}
+                    >
+                      {item.subLinks ? (
+                        <div className="flex flex-col">
+                          <button
+                            onClick={() => toggleMobileMenu(item.id)}
+                            className="flex items-center justify-between text-white text-lg font-medium py-2 w-full text-left group"
+                          >
+                            <span className="group-hover:text-green-400 transition-colors uppercase tracking-wider">{item.name}</span>
+                            <ChevronDown
+                              size={18}
+                              className={`text-white/40 transition-transform duration-300 ${
+                                mobileMenus[item.id] ? "rotate-180 text-green-400" : ""
+                              }`}
+                            />
+                          </button>
+                          
+                          <AnimatePresence>
+                            {mobileMenus[item.id] && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                className="overflow-hidden bg-white/5 rounded-xl mt-2"
+                              >
+                                <div className="flex flex-col py-2">
+                                  {item.subLinks.map((sub) => (
+                                    <Link
+                                      key={sub.name}
+                                      href={sub.href}
+                                      onClick={() => setIsOpen(false)}
+                                      className="block px-6 py-4 text-gray-400 hover:text-green-400 hover:bg-white/5 text-sm font-medium transition-all"
+                                    >
+                                      {sub.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="text-white text-lg font-medium block py-2 hover:text-green-400 transition-colors uppercase tracking-wider"
                         >
                           {item.name}
-                          <ChevronDown
-                            className={`transition-transform duration-300 ${
-                              mobileMenus[item.id] ? "rotate-180" : ""
-                            }`}
-                          />
-                        </button>
-                        <AnimatePresence>
-                          {mobileMenus[item.id] && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              className="overflow-hidden bg-white/5 rounded-lg mt-2"
-                            >
-                              {item.subLinks.map((sub) => (
-                                <Link
-                                  key={sub.name}
-                                  href={sub.href}
-                                  onClick={() => setIsOpen(false)}
-                                  className="block px-6 py-4 text-gray-300 hover:text-green-400 border-b border-white/5 last:border-0"
-                                >
-                                  {sub.name}
-                                </Link>
-                              ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="text-white text-2xl font-serif block border-b border-white/10 pb-4"
-                      >
-                        {item.name}
-                      </Link>
-                    )}
-                  </motion.div>
-                ))}
+                        </Link>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
               </nav>
-
-              <div className="mt-auto text-gray-500 text-[10px] uppercase tracking-[0.3em] pt-8">
-                Mangal Realty Group © 2026
-              </div>
             </motion.div>
           </>
         )}
