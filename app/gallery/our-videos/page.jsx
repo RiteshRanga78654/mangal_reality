@@ -49,42 +49,42 @@ export default function LuxuryGalleryPage() {
 
   return (
     <>
-      
-      <div className="bg-[#FAF9F6] min-h-screen">
+      <div 
+        className="bg-[#FAF9F6] min-h-screen font-medium antialiased"
+        style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+      >
         {/* --- HERO SECTION --- */}
-        <section className="relative  h-[75vh] w-full flex items-center justify-center overflow-hidden">
+        <section className="relative h-[60vh] md:h-[75vh] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
               className="w-full h-full object-cover"
               alt="Hero Background"
             />
-            {/* Custom Theme Overlay */}
-            <div className="absolute inset-0 "></div>
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
           <div className="relative z-10 text-center text-white px-6">
-            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
+            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
               <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
                 <Home size={12} /> Home
               </a>
               <ChevronRight size={12} className="opacity-50" />
               <span className="text-green-400">The Gallery</span>
             </nav>
-            <h2 className="text-4xl md:text-8xl   tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+            {/* Standardized Heading: 4xl to 7xl */}
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">
               The Gallery
             </h2>
           </div>
         </section>
 
-       
-
         {/* --- PHOTO MARQUEE SECTION --- */}
-        <section className="py-16 md:py-16 max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h3 className="text-[32px] md:text-[60px] font-bold text-[#0a1a10] tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
-              Our Photo Gallery
+        <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-10 md:mb-16">
+            <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter">
+              Photo Collection
             </h3>
-            <div className="w-20 h-1 bg-[#22c55e] mx-auto mt-4 rounded-full" />
+            <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4 rounded-full" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
@@ -97,16 +97,16 @@ export default function LuxuryGalleryPage() {
         </section>
 
          {/* --- VIDEO SECTION --- */}
-        <section className="bg-white py-16 md:py-16 border-t border-gray-100">
+        <section className="bg-white py-16 md:py-24 border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6">
-             <div className="text-center mb-12 md:mb-16">
-            <h3 className="text-[32px] md:text-[60px] font-bold text-[#0a1a10] tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
-              Our Video Gallery
+             <div className="text-center mb-10 md:mb-16">
+            <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter ">
+              Video Insights
             </h3>
-            <div className="w-20 h-1 bg-[#22c55e] mx-auto mt-4 rounded-full" />
+            <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4 rounded-full" />
           </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
               {videoItems.map((video) => (
                 <motion.div
                   key={video.id}
@@ -121,12 +121,12 @@ export default function LuxuryGalleryPage() {
                       alt={video.title}
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-[#0a1a10]/20 group-hover:bg-[#0a1a10]/40 transition-all">
-                      <div className="w-12 h-8 md:w-14 md:h-10 lg:w-16 lg:h-11 bg-[red] rounded-xl flex items-center justify-center text-white shadow-xl transform transition group-hover:scale-110">
-                        <Play fill="white" className="size-5 md:size-5 lg:size-6" />
+                      <div className="w-12 h-8 md:w-16 md:h-11 bg-[red] rounded-xl flex items-center justify-center text-white shadow-xl transform transition group-hover:scale-110">
+                        <Play fill="white" className="size-5 md:size-6" />
                       </div>
                     </div>
                   </div>
-                  <h4 className="text-md md:text-lg font-semibold text-[#0a1a10] group-hover:text-green-700 transition-colors px-1 line-clamp-2">
+                  <h4 className="text-md md:text-lg font-bold text-[#0a1a10] group-hover:text-green-700 transition-colors px-1 line-clamp-2  tracking-tight">
                     {video.title}
                   </h4>
                 </motion.div>
@@ -171,7 +171,6 @@ export default function LuxuryGalleryPage() {
           )}
         </AnimatePresence>
       </div>
-      
     </>
   );
 }

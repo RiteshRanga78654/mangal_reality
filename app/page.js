@@ -1,5 +1,10 @@
+
+<<<<<<< HEAD
+
 "use client";
 
+=======
+>>>>>>> 5219fe721190031f15a66fb42ddcd38e53295067
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -292,14 +297,17 @@ const Page = () => {
               </h2>
               <div className="w-20 h-1 bg-[#22C55E] mx-auto md:mx-0"></div>
               <p className="text-xl text-black leading-relaxed pt-4 font-medium">
-                Ever wondered what it would be like to live by the Eco & the
-                Luxury Villa?
+                Nature, Curated with Luxury
               </p>
               <p className="text-lg text-black leading-relaxed">
-                Own your slice of serenity at Dates County - an eco-luxury villa
-                plot community offering residential plots for sale in Hyderabad.
-                Nestled in Kandukur - Srisailam Highway, this self-sufficient
-                community offers every necessity within its vast landscape.
+                At Mangal Realty, we craft spaces where refined living exists in effortless harmony with nature - spaces designed to nurture both the body and the mind. Inspired by biophilic design principles, our developments thoughtfully integrate natural light, open air, water elements, and abundant greenery to create environments that feel calm, balanced, and deeply restorative.
+
+              </p>
+              <p className="text-lg text-black leading-relaxed">
+                Every detail is intentionally curated to elevate everyday living - from breathable layouts and serene landscapes to sustainable materials and mindful architecture.
+              </p>
+              <p className="text-lg text-black leading-relaxed">
+                We go beyond conventional luxury to create living experiences rooted in wellness, sustainability, and timeless elegance.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -370,7 +378,7 @@ const Page = () => {
                           <p className="text-green-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">
                             {item.type}
                           </p>
-                          <h3 className="text-white text-2xl md:text-3xl  mb-4 leading-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+                          <h3 className="text-white text-2xl md:text-3xl  mb-4 leading-tight" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
                             {item.title}
                           </h3>
 
@@ -482,9 +490,8 @@ const Page = () => {
                     transition: isTransitioning
                       ? `transform ${transitionTime}ms ease-in-out`
                       : "none",
-                    transform: `translateX(-${
-                      currentIndex * (100 / itemsPerPage)
-                    }%)`,
+                    transform: `translateX(-${currentIndex * (100 / itemsPerPage)
+                      }%)`,
                   }}
                 >
                   <div className="flex w-full">
