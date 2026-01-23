@@ -24,7 +24,7 @@ const videoItems = [
 ];
 
 const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
-  <div className="flex flex-col h-[600px] md:h-[1000px] overflow-hidden gap-4 md:gap-8">
+  <div className="flex flex-col h-150 md:h-250 overflow-hidden gap-4 md:gap-8">
     <motion.div
       animate={{ y: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
       transition={{ ease: "linear", duration: 40, repeat: Infinity }}
@@ -34,7 +34,7 @@ const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
         <motion.div
           key={idx}
           whileHover={{ scale: 0.98 }}
-          className="relative aspect-square w-full rounded-2xl md:rounded-[2rem] overflow-hidden cursor-pointer shadow-xl border-2 md:border-[6px] border-white"
+          className="relative aspect-square w-full rounded-2xl md:rounded-4xl overflow-hidden cursor-pointer shadow-xl border-2 md:border-[6px] border-white"
           onClick={() => onSelect(img)}
         >
           <img src={img.url} alt="Gallery" className="object-cover w-full h-full" />
@@ -142,7 +142,7 @@ export default function LuxuryGalleryPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a1a10]/95 backdrop-blur-md p-4"
+              className="fixed inset-0 z-100 flex items-center justify-center bg-[#0a1a10]/95 backdrop-blur-md p-4"
             >
               <button
                 onClick={() => setSelectedItem(null)}

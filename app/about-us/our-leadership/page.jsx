@@ -125,13 +125,13 @@ export default function MangalLeadership() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {leaders.map((leader, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="relative overflow-hidden aspect-[4/5] rounded-lg shadow-lg">
+              <div className="relative overflow-hidden aspect-4/5 rounded-lg shadow-lg">
                 <img 
                   src={leader.image} 
                   alt={leader.name} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
                   <div className="w-full">
                     <h3 className="text-white text-xl font-bold">{leader.name}</h3>
                     <p className="text-xs mt-1 tracking-widest" style={{ color: brandGreen }}>{leader.role}</p>
@@ -191,7 +191,7 @@ export default function MangalLeadership() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {management.map((person, idx) => (
               <div key={idx} className="p-8 bg-white border border-stone-200 rounded-sm flex items-center space-x-6 group hover:shadow-xl transition-all duration-500">
-                <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-stone-100 shadow-md">
+                <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-stone-100 shadow-md">
                   <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
                 </div>
                 <div>

@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
 
 "use client";
-
-=======
->>>>>>> 5219fe721190031f15a66fb42ddcd38e53295067
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {

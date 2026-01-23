@@ -51,7 +51,7 @@ export default function StrategicPartners() {
                 />
 
                 {/* Gradient for text pop */}
-                <div className="absolute inset-0 z-15 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 z-15 bg-linear-to-t from-black via-black/20 to-transparent"></div>
 
                 <div className="relative z-20 text-center px-6 max-w-5xl">
                     <motion.div
@@ -81,7 +81,7 @@ export default function StrategicPartners() {
                             <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 font-bold">
                                 Scroll to explore
                             </div>
-                            <div className="w-[1px] h-12 bg-gradient-to-b from-green-500 to-transparent opacity-50"></div>
+                            <div className="w-px h-12 bg-linear-to-b from-green-500 to-transparent opacity-50"></div>
                         </motion.div>
                     </motion.div>
                 </div>
@@ -108,7 +108,7 @@ export default function StrategicPartners() {
                                         href={partner.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block relative overflow-hidden rounded-xl shadow-2xl aspect-[4/5]"
+                                        className="block relative overflow-hidden rounded-xl shadow-2xl aspect-4/5"
                                     >
                                         <div className="absolute inset-0 z-20 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                                             <div className="bg-white p-5 rounded-full shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform">
