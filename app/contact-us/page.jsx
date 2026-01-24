@@ -66,7 +66,7 @@ export default function ContactUs() {
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
       {/* 1. HERO SECTION - Height 80vh & Opacity Removed */}
-      <section className="relative h-[80vh] flex items-center bg-[#0a1a10] overflow-hidden">
+      <section className="relative h-[70vh] flex items-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1500"

@@ -54,7 +54,7 @@ export default function LuxuryGalleryPage() {
         style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
       >
         {/* --- HERO SECTION --- */}
-        <section className="relative h-[60vh] md:h-[75vh] w-full flex items-center justify-center overflow-hidden">
+        <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"

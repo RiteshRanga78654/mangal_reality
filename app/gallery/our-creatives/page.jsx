@@ -19,18 +19,20 @@ const brandGreen = "#22C55E";
 const MangalButton = ({ text, onClick, className = "" }) => (
   <button
     onClick={onClick}
-    className={`group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden uppercase transition-all duration-300 w-full sm:w-auto ${className}`}
+    className={`group relative cursor-pointer px-10 py-5 font-bold tracking-[0.1em] text-[10px] md:text-xs overflow-hidden  transition-all duration-300 w-full sm:w-auto ${className}`}
   >
-    <span className="relative z-10 flex items-center justify-center gap-3">
+    {/* 1. Added group-hover:text-white and changed base color to green */}
+    <span className="relative z-10 flex items-center justify-center text-[#22C55E] group-hover:text-white transition-colors duration-300 gap-3">
       {text} <ArrowUpRight size={16} />
     </span>
-    {/* Animated Fill Background */}
+
+    {/* 2. Animated Fill Background */}
     <div className="absolute inset-1 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-    {/* Persistent Inset Border */}
+    
+    {/* 3. Persistent Inset Border */}
     <div className="absolute inset-1 border border-[#22C55E]"></div>
   </button>
 );
-
 const creativePortfolio = [
   {
     id: 1,
@@ -66,7 +68,7 @@ export default function OurCreativesFormal() {
     >
       
       {/* 1. INSTITUTIONAL HERO BANNER */}
-      <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative h-[60vh] md:h-[78vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img
           src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
           alt="Creative Banner"
@@ -79,13 +81,13 @@ export default function OurCreativesFormal() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="mt-40"
+            className="mt-20"
           >
-            <span className="text-[10px] uppercase tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span>
+            {/* <span className="text-[10px] uppercase tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span> */}
             {/* Standardized Heading: text-4xl to 7xl */}
-            <h1 className="text-white text-4xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.85]">
-              Our <br />
-              <span className="text-stone-400">Creatives</span>
+            <h1 className="text-white text-4xl md:text-7xl font-bold  tracking-tighter leading-[0.85]">
+              Our Creatives
+              
             </h1>
             <div className="w-24 h-1.5 bg-green-500 mx-auto mt-10"></div>
           </motion.div>
@@ -121,7 +123,7 @@ export default function OurCreativesFormal() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-green-500 mb-4">
                   {item.category}
                 </p>
-                <h3 className="text-2xl font-bold text-black uppercase tracking-tight mb-4 leading-tight">
+                <h3 className="text-2xl font-bold text-black  tracking-tight mb-4 leading-tight">
                   {item.title}
                 </h3>
                 <p className="text-stone-500 text-sm leading-relaxed mb-8">
@@ -130,7 +132,7 @@ export default function OurCreativesFormal() {
                 
                 {/* TRIGGER BUTTON: Opens Lightbox */}
                 <MangalButton 
-                  text="View Detail" 
+                  text="View Details" 
                   onClick={() => setSelectedImage(item)} 
                 />
               </motion.div>
