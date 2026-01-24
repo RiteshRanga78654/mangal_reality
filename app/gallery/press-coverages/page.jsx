@@ -60,7 +60,7 @@ export default function PressCoverages() {
     <main className="bg-white font-sans overflow-hidden">
       
       {/* 1. HERO SECTION - NEWSROOM STYLE */}
-      <section className="relative h-[84vh] w-full flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img
           src="https://images.unsplash.com/photo-1504711432869-efd597cdd0ef?auto=format&fit=crop&q=80&w=2000"
           alt="Press Banner"
@@ -73,11 +73,11 @@ export default function PressCoverages() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="mt-40"
+            className="mt-20"
           >
-            <h1 className="text-white text-5xl md:text-8xl font-bold uppercase tracking-tighter leading-[0.85]">
-              Press <br />
-              <span className="text-stone-400">Coverages</span>
+            <h1 className="text-white text-5xl md:text-8xl font-semibold  tracking-tighter ">
+              Press 
+              <span className="text-white"> Coverages</span>
             </h1>
             <div className="w-24 h-1.5 mx-auto mt-10" style={{ backgroundColor: brandGreen }}></div>
             <p className="text-stone-200 text-base md:text-xl leading-relaxed mt-10 font-light max-w-2xl mx-auto">
@@ -168,7 +168,7 @@ export default function PressCoverages() {
       <section className="py-24 bg-black text-white border-t border-white/5">
         <div className="max-w-4xl mx-auto px-6 flex flex-col items-center text-center">
           <Newspaper size={48} className="mb-8" style={{ color: brandGreen }} />
-          <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-6">
             Media & Press <span className="text-white ">Resources</span>
           </h2>
           <p className="text-stone-400 mb-12 font-light max-w-xl leading-relaxed">
