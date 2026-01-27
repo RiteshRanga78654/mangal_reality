@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,33 +33,103 @@ import {
   Quote,
 } from "lucide-react";
 import Amenities from "./components/Amenities";
+const StatCounter = ({ endValue, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const countRef = useRef(null);
+  const [hasStarted, setHasStarted] = useState(false);
 
+  // Parse the number from strings like "500+"
+  const numericValue = parseInt(endValue.replace(/\D/g, ""));
+  const suffix = endValue.replace(/[0-9]/g, "");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setHasStarted(true);
+      },
+      { threshold: 0.5 },
+    );
+
+    if (countRef.current) observer.observe(countRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime = null;
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      setCount(Math.floor(progress * numericValue));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [hasStarted, numericValue, duration]);
+
+  return (
+    <span ref={countRef}>
+      {count}
+      {suffix}
+    </span>
+  );
+};
 
 const Page = () => {
+  // --- STATS DATA ---
+  const stats = [
+    { number: "20+", label: "Years of Legacy" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "50+", label: "Team" },
+    { number: "500+", label: "Happy Families" },
+  ];
   // --- TESTIMONIAL DATA ---
   const testimonials = [
     {
       id: 1,
       name: "Abhishek Tripathi",
       role: "Client",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&h=300&auto=format&fit=crop",
+      image:"/assets/images/testi-1.jpg",
+      
       text: "Working with Mangal Reality has been a transformative experience for our company. Their team has been instrumental in guiding our digital strategy and implementing innovative solutions.",
     },
     {
       id: 2,
       name: "Anil Mehta",
       role: "Client",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=300&h=300&auto=format&fit=crop",
+      image:"/assets/images/testi-2.jpg",
       text: "My efforts in app development have changed massively thanks to Mangal Reality. They have tremendously sophisticated technologies that I use to streamline campaigns and improve outcomes.",
     },
     {
       id: 3,
-      name: "Sarah Jenkins",
+      name: "",
       role: "Marketing Director",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&h=300&auto=format&fit=crop",
+      image:"/assets/images/testi-3.jpg",
+      text: "The strategic insights provided were invaluable. We saw a 200% increase in engagement within the first quarter. The team is professional, responsive, and truly cares.",
+    },
+    {
+      id: 4,
+      name: "Rohit Sharma",
+      role: "Client",
+      image:"/assets/images/testi-4.jpg",
+      
+      text: "Working with Mangal Reality has been a transformative experience for our company. Their team has been instrumental in guiding our digital strategy and implementing innovative solutions.",
+    },
+    {
+      id: 5,
+      name: "Sumit Nagar",
+      role: "Client",
+      image:"/assets/images/testi-5.jpg",
+      text: "My efforts in app development have changed massively thanks to Mangal Reality. They have tremendously sophisticated technologies that I use to streamline campaigns and improve outcomes.",
+    },
+    {
+      id: 6,
+      name: "Tanu Aggarwal",
+      role: "Marketing Director",
+      image:"/assets/images/testi-6.jpg",
       text: "The strategic insights provided were invaluable. We saw a 200% increase in engagement within the first quarter. The team is professional, responsive, and truly cares.",
     },
   ];
@@ -187,16 +255,15 @@ const Page = () => {
     { icon: <Palmtree />, title: "Luxury Resorts" },
   ];
 
-
   const PROJECTS = [
     {
       id: 1,
-      slug: "eco-vista-residences",
-      title: "Eco-Vista Residences",
-      location: "Visakhapatnam, AP",
-      status: "Ongoing",
-      area: "2400 - 4500 Sq.Ft",
-      type: "Premium Villa Plots",
+      slug: "the-nature-valley ",
+      title: "The Nature Valley ",
+      location: "Pisini, AP",
+      status: "Phase-2 On Going",
+      area: "45 Acres ",
+      // type: "Premium Villa Plots",
       description:
         "Eco-Vista represents a new era of sustainable luxury. Nestled in a prime location, it offers wide roads, lush green spaces, and state-of-the-art security for your dream home.",
       image:
@@ -210,24 +277,24 @@ const Page = () => {
     },
     {
       id: 2,
-      title: "Green-Leaf County",
-      location: "Hyderabad, TS",
+      title: "The Smart City ",
+      location: "Dakamari , AP",
       status: "Completed",
-      area: "1800 - 3200 Sq.Ft",
-      type: "Sustainable Living",
+      area: "3 Acres",
+      // type: "Sustainable Living",
       image:
         "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800",
       category: "Investment",
     },
     {
       id: 3,
-      title: "The Corporate Square",
-      location: "Visakhapatnam, AP",
-      status: "Upcoming",
-      area: "5000+ Sq.Ft",
-      type: "Commercial Hub",
+      title: "The Jonnada Project ",
+      location: "Jonnada, AP  ",
+      status: "Completed",
+      area: "5 Acres",
+      // type: "Commercial Hub",
       image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800",
+        "/assets/images/jonnada-project.jpg",
       category: "Commercial",
     },
   ];
@@ -235,7 +302,7 @@ const Page = () => {
   const [filter, setFilter] = useState("All");
 
   const filteredProjects = PROJECTS.filter(
-    (p) => filter === "All" || p.category === filter
+    (p) => filter === "All" || p.category === filter,
   );
 
   return (
@@ -250,7 +317,10 @@ const Page = () => {
             playsInline
             className="absolute z-10 w-full h-full object-cover opacity-60"
           >
-            <source src="/assets/Reference images/1761819_Panorama_Kartuzy_County_1920x1080.mp4" type="video/mp4" />
+            <source
+              src="/assets/Reference images/1761819_Panorama_Kartuzy_County_1920x1080.mp4"
+              type="video/mp4"
+            />
           </video>
         </section>
 
@@ -261,7 +331,7 @@ const Page = () => {
               title: "Pure Nature",
               img: "/assets/Reference images/2659.jpg",
             },
-            
+
             {
               title: "Sustainable Life",
               img: "/assets/Reference images/27.jpg",
@@ -285,8 +355,59 @@ const Page = () => {
           ))}
         </section>
 
-        {/* SECTION 3: OVERVIEW */}
+
+        {/* SECTION 3: Who We Are */}
         <section className="py-16 px-4 md:px-12 bg-stone-50">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Content */}
+            <div className="space-y-4 text-center md:text-left">
+              <h2 className="text-[32px] md:text-[60px] font-bold tracking-tight text-black">
+                Who We Are
+              </h2>
+              <div className="w-20 h-1 bg-[#22C55E] mx-auto md:mx-0"></div>
+
+              <p className="text-xl text-black leading-relaxed pt-4 font-medium">
+                Nature, Curated with Luxury
+              </p>
+
+              <div className="space-y-4 text-lg text-black/70 leading-relaxed">
+                <p>
+                  At Mangal Realty, we craft spaces where refined living exists
+                  in effortless harmony with nature...
+                </p>
+                <p>
+                  Every detail is intentionally curated to elevate everyday
+                  living - from breathable layouts and serene landscapes to
+                  sustainable materials and mindful architecture.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Side: Stats Counter Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((item, i) => (
+                <div
+                  key={i}
+                  className="p-8 bg-white border border-stone-200 rounded-sm flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500"
+                >
+                  <div
+                    className="mb-2 text-4xl md:text-5xl font-bold transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"
+                    style={{ color: brandGreen }}
+                  >
+                    <StatCounter endValue={item.number} />
+                  </div>
+                  <p className="font-bold text-stone-800 uppercase text-xs tracking-widest leading-tight">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        
+        {/* SECTION 3: OVERVIEW */}
+        {/* <section className="py-16 px-4 md:px-12 bg-stone-50">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-4 text-center md:text-left">
               <h2 className="text-[32px] md:text-[60px] font-bold tracking text-black">
@@ -297,14 +418,21 @@ const Page = () => {
                 Nature, Curated with Luxury
               </p>
               <p className="text-lg text-black leading-relaxed">
-                At Mangal Realty, we craft spaces where refined living exists in effortless harmony with nature - spaces designed to nurture both the body and the mind. Inspired by biophilic design principles, our developments thoughtfully integrate natural light, open air, water elements, and abundant greenery to create environments that feel calm, balanced, and deeply restorative.
-
+                At Mangal Realty, we craft spaces where refined living exists in
+                effortless harmony with nature - spaces designed to nurture both
+                the body and the mind. Inspired by biophilic design principles,
+                our developments thoughtfully integrate natural light, open air,
+                water elements, and abundant greenery to create environments
+                that feel calm, balanced, and deeply restorative.
               </p>
               <p className="text-lg text-black leading-relaxed">
-                Every detail is intentionally curated to elevate everyday living - from breathable layouts and serene landscapes to sustainable materials and mindful architecture.
+                Every detail is intentionally curated to elevate everyday living
+                - from breathable layouts and serene landscapes to sustainable
+                materials and mindful architecture.
               </p>
               <p className="text-lg text-black leading-relaxed">
-                We go beyond conventional luxury to create living experiences rooted in wellness, sustainability, and timeless elegance.
+                We go beyond conventional luxury to create living experiences
+                rooted in wellness, sustainability, and timeless elegance.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -329,7 +457,7 @@ const Page = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* SECTION 4: PROJECTS */}
         <section className="py-20 max-w-7xl mx-auto px-6">
@@ -375,7 +503,12 @@ const Page = () => {
                           <p className="text-green-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">
                             {item.type}
                           </p>
-                          <h3 className="text-white text-2xl md:text-3xl  mb-4 leading-tight" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
+                          <h3
+                            className="text-white text-2xl md:text-3xl  mb-4 leading-tight"
+                            style={{
+                              fontFamily: "Arial, Helvetica, sans-serif",
+                            }}
+                          >
                             {item.title}
                           </h3>
 
@@ -408,56 +541,6 @@ const Page = () => {
         </section>
 
         {/* SECTION 5: AMENITIES */}
-        {/* <section className="relative py-16 px-4 overflow-hidden min-h-screen flex items-center">
-          <div
-            className="absolute inset-0 bg-fixed bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2000')",
-              backgroundAttachment: "fixed",
-            }}
-          ></div>
-          <div className="relative z-10 max-w-7xl mx-auto w-full">
-            <header className="mb-12 text-center md:text-left">
-              <h2 className="text-white text-[32px] md:text-[60px] font-bold tracking-tighter">
-                Explore Amenities
-              </h2>
-              <div
-                className="w-32 h-1 mt-4 mx-auto md:mx-0"
-                style={{ backgroundColor: brandGreen }}
-              ></div>
-            </header>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
-              {amenities.slice(0, visibleCount).map((item, i) => (
-                <div
-                  key={i}
-                  className="group relative aspect-square border border-white/10 flex flex-col items-center justify-center overflow-hidden cursor-pointer m-2"
-                >
-                  <div
-                    className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"
-                    style={{ backgroundColor: brandGreen }}
-                  ></div>
-                  <div className="relative z-10 text-[green] group-hover:text-white transition-all duration-300 scale-175 mb-6 group-hover:animate-bounce">
-                    {React.cloneElement(item.icon, { strokeWidth: 1.2 })}
-                  </div>
-                  <span className="relative z-10 text-white group-hover:text-white text-[14px] font-bold tracking-widest text-center px-2">
-                    {item.title}
-                  </span>
-                </div>
-              ))}
-            </div>
-            {visibleCount < amenities.length && (
-              <div className="mt-16 text-center">
-                <button className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden">
-                  <span className="relative z-10">View All Facilities</span>
-                  <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-                  <div className="absolute inset-1 border border-green-600"></div>
-                </button>
-              </div>
-            )}
-          </div>
-        </section> */}
-
         <Amenities />
 
         {/* SECTION 6: TESTIMONIALS */}
@@ -487,8 +570,9 @@ const Page = () => {
                     transition: isTransitioning
                       ? `transform ${transitionTime}ms ease-in-out`
                       : "none",
-                    transform: `translateX(-${currentIndex * (100 / itemsPerPage)
-                      }%)`,
+                    transform: `translateX(-${
+                      currentIndex * (100 / itemsPerPage)
+                    }%)`,
                   }}
                 >
                   <div className="flex w-full">
