@@ -55,7 +55,45 @@ export default function AmenitiesSection() {
           {/* Vertical Divider (Desktop Only) */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
 
-          {/* --- LEFT SIDE: AMENITIES --- */}
+            {/* --- Left SIDE: FACILITIES --- */}
+          <div className="flex flex-col">
+            <header className="mb-10 text-center lg:text-left">
+              <h2 className="text-white text-[32px] md:text-[50px] font-bold tracking-tighter uppercase">
+                Facilities
+              </h2>
+              <div className="w-24 h-1 mt-2 mx-auto lg:mx-0" style={{ backgroundColor: brandGreen }}></div>
+            </header>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {facilities.slice(0, facilitiesCount).map((item, i) => (
+                <div key={i} className="group relative aspect-square border border-white/10 flex flex-col items-center justify-center overflow-hidden cursor-pointer">
+                  <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" style={{ backgroundColor: brandGreen }}></div>
+                  <div className="relative z-10 text-[#22c55e] group-hover:text-white transition-all duration-300 mb-4 group-hover:animate-bounce">
+                    {React.cloneElement(item.icon, { size: 36, strokeWidth: 1.2 })}
+                  </div>
+                  <span className="relative z-10 text-white text-[11px] md:text-[13px] font-bold tracking-widest text-center px-2 uppercase">
+                    {item.title}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Button for Facilities */}
+            {facilitiesCount < facilities.length && (
+              <div className="mt-10 text-center lg:text-left">
+                <button 
+                  onClick={() => setFacilitiesCount(facilities.length)}
+                  className="group relative cursor-pointer px-8 py-4 text-white font-bold uppercase tracking-widest text-[10px] overflow-hidden"
+                >
+                  <span className="relative z-10">View All Facilities</span>
+                  <div className="absolute inset-0 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                  <div className="absolute inset-0 border border-green-600"></div>
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* --- Right SIDE: AMENITIES --- */}
           <div className="flex flex-col">
             <header className="mb-10 text-center lg:text-left">
               <h2 className="text-white text-[32px] md:text-[50px] font-bold tracking-tighter uppercase">
@@ -93,43 +131,7 @@ export default function AmenitiesSection() {
             )}
           </div>
 
-          {/* --- RIGHT SIDE: FACILITIES --- */}
-          <div className="flex flex-col">
-            <header className="mb-10 text-center lg:text-left">
-              <h2 className="text-white text-[32px] md:text-[50px] font-bold tracking-tighter uppercase">
-                Facilities
-              </h2>
-              <div className="w-24 h-1 mt-2 mx-auto lg:mx-0" style={{ backgroundColor: brandGreen }}></div>
-            </header>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {facilities.slice(0, facilitiesCount).map((item, i) => (
-                <div key={i} className="group relative aspect-square border border-white/10 flex flex-col items-center justify-center overflow-hidden cursor-pointer">
-                  <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" style={{ backgroundColor: brandGreen }}></div>
-                  <div className="relative z-10 text-[#22c55e] group-hover:text-white transition-all duration-300 mb-4 group-hover:animate-bounce">
-                    {React.cloneElement(item.icon, { size: 36, strokeWidth: 1.2 })}
-                  </div>
-                  <span className="relative z-10 text-white text-[11px] md:text-[13px] font-bold tracking-widest text-center px-2 uppercase">
-                    {item.title}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Button for Facilities */}
-            {facilitiesCount < facilities.length && (
-              <div className="mt-10 text-center lg:text-left">
-                <button 
-                  onClick={() => setFacilitiesCount(facilities.length)}
-                  className="group relative cursor-pointer px-8 py-4 text-white font-bold uppercase tracking-widest text-[10px] overflow-hidden"
-                >
-                  <span className="relative z-10">View All Facilities</span>
-                  <div className="absolute inset-0 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-                  <div className="absolute inset-0 border border-green-600"></div>
-                </button>
-              </div>
-            )}
-          </div>
+        
 
         </div>
       </div>

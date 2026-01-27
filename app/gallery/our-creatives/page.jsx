@@ -150,7 +150,7 @@ export default function OurCreativesFormal() {
               <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter text-black mb-8 leading-none">
                 Technical <br /> <span className="text-stone-400">Precision</span>
               </h2>
-              <p className="text-stone-500 text-lg mb-10 leading-relaxed">
+              <p className="text-stone-500 text-lg mb-10  leading-relaxed">
                 Our creative department utilizes advanced BIM and real-time Ray Tracing engines to ensure absolute fidelity.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
