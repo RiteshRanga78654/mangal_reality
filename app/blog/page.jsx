@@ -245,21 +245,28 @@ export default function MangalRealtyBlog() {
           />
         </div>
         <div className="relative z-10 text-center text-white px-6">
+           <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                    >
           <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
             <a
               href="/"
-              className="hover:text-amber-200 flex items-center gap-1"
+              className="hover:text-[#22C55E] flex items-center gap-1"
             >
               <Home size={12} />
               Home
             </a>
             <ChevronRight size={12} className="opacity-50" />
-            <span className="text-amber-200">The Blogs</span>
+            <span className="text-white">The Blogs</span>
           </nav>
-          <h1 className="text-6xl md:text-9xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1>
+          {/* <h1 className="text-6xl md:text-9xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1> */}
           <h2 className="text-4xl md:text-8xl   tracking-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
             Blogs
           </h2>
+          <div className="h-1 w-20 bg-[#22c55e] mx-auto my-8" />
+          </motion.div>
         </div>
       </section>
       <div className="bg-[#FFFFFF] text-[#0a1a10] min-h-screen font-sans">
@@ -274,6 +281,7 @@ export default function MangalRealtyBlog() {
                 <h1 className="text-[32px] md:text-[60px] font-bold text-[#0a1a10] leading-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
                   Corporate <span className=" font-bold">Journal.</span>
                 </h1>
+                <div className="w-25 h-1.5 bg-[#22C55E] mt-4 mb-4"></div>
                 <p className="text-gray-500 text-lg mt-4 max-w-xl font-light">
                   Stay informed with the latest market trends, project updates,
                   and investment strategies from the desk of Mangal Realty.
@@ -359,7 +367,7 @@ export default function MangalRealtyBlog() {
                       </span>
                     </div>
 
-                    <h3 className="text-3xl md:text-4xl font-serif leading-tight group-hover:text-[#22c55e] transition-colors cursor-pointer text-[#0a1a10]">
+                    <h3 className="text-3xl md:text-4xl font-Arial, Helvetica, sans-serif leading-tight group-hover:text-[#22c55e] transition-colors cursor-pointer text-[#0a1a10]">
                       {post.title}
                     </h3>
 
@@ -388,7 +396,7 @@ export default function MangalRealtyBlog() {
           {/* Empty State */}
           {filtered.length === 0 && (
             <div className="text-center py-40 border-2 border-dashed border-gray-100 rounded-3xl">
-              <h3 className="text-2xl font-serif text-gray-400">
+              <h3 className="text-2xl font-Arial, Helvetica, sans-serif text-gray-400">
                 No matching insights found.
               </h3>
             </div>
@@ -396,12 +404,13 @@ export default function MangalRealtyBlog() {
         </main>
 
         {/* 3. NEWSLETTER CTA */}
-        <section className="bg-[#0a1a10] text-white py-24 px-6 mb-20 rounded-[2rem] max-w-7xl mx-auto shadow-2xl overflow-hidden relative">
+        <div className="pb-20">
+        <section className="bg-[#0a1a10] text-white py-24 px-6 rounded-[2rem] max-w-7xl mx-auto shadow-2xl overflow-hidden relative">
           {/* Thematic Glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#22c55e] blur-[150px] opacity-20" />
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-Arial, Helvetica, sans-serif mb-6 leading-tight">
               Subscribe for Exclusive Market{" "}
               <span className="text-[#22c55e]">Intelligence.</span>
             </h2>
@@ -424,6 +433,7 @@ export default function MangalRealtyBlog() {
             </form>
           </div>
         </section>
+      </div>
       </div>
     </>
   );

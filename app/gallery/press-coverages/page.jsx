@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Newspaper, ArrowUpRight, Calendar, Share2, ExternalLink, Filter } from 'lucide-react';
+import { Newspaper, ArrowUpRight, Calendar, Share2, ExternalLink, Filter,Home,ChevronRight } from 'lucide-react';
 
 const brandGreen = "#22C55E";
 
@@ -66,25 +66,34 @@ export default function PressCoverages() {
           alt="Press Banner"
           className="absolute z-10 w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 z-15 bg-gradient-to-t from-black via-transparent to-black/60"></div>
+        <div className="absolute "></div>
 
         <div className="relative z-20 text-center px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2 }}
-            className="mt-20"
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className=""
           >
-            <h1 className="text-white text-5xl md:text-8xl font-semibold  tracking-tighter ">
-              Press 
-              <span className="text-white"> Coverages</span>
-            </h1>
-            <div className="w-24 h-1.5 mx-auto mt-10" style={{ backgroundColor: brandGreen }}></div>
-            <p className="text-stone-200 text-base md:text-xl leading-relaxed mt-10 font-light max-w-2xl mx-auto">
-              Our journey, milestones, and impact as captured by the world's leading media houses.
-            </p>
+            {/* <span className="text-[10px] uppercase tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span> */}
+            {/* Standardized Heading: text-4xl to 7xl */}
+            <div className="relative z-10 text-center text-white px-6">
+            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+              <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
+                <Home size={12} /> Home
+              </a>
+              <ChevronRight size={12} className="opacity-50" />
+              <span className="text-white">Gallery</span>
+            </nav>
+            {/* Standardized Heading: 4xl to 7xl */}
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">
+               Press Coverages
+            </h2>
+            <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
+          </div>
           </motion.div>
         </div>
+
       </section>
 
       {/* 2. FILTER & NEWS GRID */}
