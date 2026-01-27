@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
-  MapPin, Maximize2, ShieldCheck, Leaf, Map, Zap, Gem, BarChart3
+  MapPin, Maximize2, ShieldCheck, Leaf, Map, Zap, Gem, BarChart3,Home,ChevronRight 
 } from 'lucide-react';
 
 // --- 1. ANIMATED COUNTER COMPONENT ---
@@ -49,14 +49,15 @@ const AnimatedCounter = ({ value, duration = 1500 }) => {
 
 // --- 2. UNIFIED MANGAL BUTTON COMPONENT ---
 const MangalButton = ({ text, href }) => (
-  <Link href={href} className="group relative cursor-pointer px-12 py-5 text-black font-medium  tracking-[0.2em] text-12px overflow-hidden inline-block text-center transition-colors duration-500">
+  <Link href={href} className="group relative cursor-pointer px-8 py-5 text-[#22c55e]  hover:text-white font-bold uppercase tracking-widest text-xs overflow-hidden">
     <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
       {text}
     </span>
-    <div className="absolute inset-0 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 z-0"></div>
-    <div className="absolute inset-0 border border-[#22C55E]"></div>
+    <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+    <div className="absolute inset-1 border border-green-600"></div>
   </Link>
 );
+
 
 // --- 3. MAIN COMPLETED PROJECTS PAGE ---
 const CompletedProjectsPage = () => {
@@ -100,24 +101,49 @@ const CompletedProjectsPage = () => {
             className="w-full h-full object-cover"
             alt="Mangal Realty Banner"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#f8fafc]"></div>
+          <div className="absolute "></div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-6 mb-16"
         >
           {/* Main Title updated to text-4xl md:text-7xl */}
-          <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight mt-20 ">
+          {/* <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight mt-20 ">
             CRAFTING <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22C55E] to-emerald-300">LEGACIES</span>
-          </h1>
-          <p className="text-gray-300 max-w-xl mx-auto text-lg md:text-xl leading-relaxed mb-8">
+          </h1> */}
+          {/* <p className="text-gray-300 max-w-xl mx-auto text-lg md:text-xl leading-relaxed mb-8">
             Where architectural vision meets sustainable reality. Explore our portfolio of successfully delivered landmarks.
-          </p>
-          <MangalButton text="View Projects" href="#projects" />
-        </motion.div>
+          </p> */}
+          {/* <MangalButton text="View Projects" href="#projects" />
+        </motion.div>  */}
+        <div className="relative z-20 text-center px-6 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className=""
+          >
+            <div className="relative z-10 text-center text-white px-6">
+            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+              <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
+                <Home size={12} /> Home
+              </a>
+              <ChevronRight size={12} className="opacity-50" />
+              <span className="text-white">Completed Projects</span>
+            </nav>
+            {/* Standardized Heading: 4xl to 7xl */}
+            <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
+               Crafting Legacies
+            </h2>
+            <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
+          </div>
+          <MangalButton text="View Projects" href="#projects"  />
+          
+          </motion.div>
+        </div>
 
         {/* FLOATING STATS BAR */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90%] max-w-5xl z-30">

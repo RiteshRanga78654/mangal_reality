@@ -3,24 +3,83 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Play, Home, ChevronRight } from "lucide-react";
 
-
 // --- DUMMY DATA ---
 const galleryPhotos = [
-  { id: 1, type: "image", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200" },
-  { id: 2, type: "image", url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200" },
-  { id: 3, type: "image", url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200" },
-  { id: 4, type: "image", url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200" },
-  { id: 5, type: "image", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200" },
-  { id: 6, type: "image", url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200" },
+  {
+    id: 1,
+    type: "image",
+    url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
+  },
+  {
+    id: 2,
+    type: "image",
+    url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200",
+  },
+  {
+    id: 3,
+    type: "image",
+    url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200",
+  },
+  {
+    id: 4,
+    type: "image",
+    url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200",
+  },
+  {
+    id: 5,
+    type: "image",
+    url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200",
+  },
+  {
+    id: 6,
+    type: "image",
+    url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200",
+  },
 ];
 
 const videoItems = [
-  { id: 101, title: "Invest in Dates County – A Future Built on Nature", id_yt: "dQw4w9WgXcQ", thumb: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=600" },
-  { id: 102, title: "Dates County: Your Sustainable Haven", id_yt: "dQw4w9WgXcQ", thumb: "https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&w=600" },
-  { id: 103, title: "Welcome to Dates County: Eco-Friendly Living", id_yt: "dQw4w9WgXcQ", thumb: "https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&w=600" },
-  { id: 104, title: "Customer Experience in Planet Green", id_yt: "dQw4w9WgXcQ", thumb: "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600" },
-  { id: 105, title: "Walk Through Video of Planet Green Layout", id_yt: "dQw4w9WgXcQ", thumb: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600" },
-  { id: 106, title: "Dates County Hyderabad | Villa Plots", id_yt: "dQw4w9WgXcQ", thumb: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600" },
+  {
+    id: 101,
+    title: "Invest in Dates County – A Future Built on Nature",
+    id_yt: "dQw4w9WgXcQ",
+    thumb:
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=600",
+  },
+  {
+    id: 102,
+    title: "Dates County: Your Sustainable Haven",
+    id_yt: "dQw4w9WgXcQ",
+    thumb:
+      "https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&w=600",
+  },
+  {
+    id: 103,
+    title: "Welcome to Dates County: Eco-Friendly Living",
+    id_yt: "dQw4w9WgXcQ",
+    thumb:
+      "https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&w=600",
+  },
+  {
+    id: 104,
+    title: "Customer Experience in Planet Green",
+    id_yt: "dQw4w9WgXcQ",
+    thumb:
+      "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600",
+  },
+  {
+    id: 105,
+    title: "Walk Through Video of Planet Green Layout",
+    id_yt: "dQw4w9WgXcQ",
+    thumb:
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
+  },
+  {
+    id: 106,
+    title: "Dates County Hyderabad | Villa Plots",
+    id_yt: "dQw4w9WgXcQ",
+    thumb:
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
+  },
 ];
 
 const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
@@ -37,7 +96,11 @@ const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
           className="relative aspect-square w-full rounded-2xl md:rounded-4xl overflow-hidden cursor-pointer shadow-xl border-2 md:border-[6px] border-white"
           onClick={() => onSelect(img)}
         >
-          <img src={img.url} alt="Gallery" className="object-cover w-full h-full" />
+          <img
+            src={img.url}
+            alt="Gallery"
+            className="object-cover w-full h-full"
+          />
         </motion.div>
       ))}
     </motion.div>
@@ -49,32 +112,43 @@ export default function LuxuryGalleryPage() {
 
   return (
     <>
-      <div 
+      <div
         className="bg-[#FAF9F6] min-h-screen font-medium antialiased"
         style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
       >
         {/* --- HERO SECTION --- */}
         <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
-              className="w-full h-full object-cover"
-              alt="Hero Background"
-            />
-            <div className="absolute inset-0 bg-black/40"></div>
-          </div>
-          <div className="relative z-10 text-center text-white px-6">
-            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
-              <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
-                <Home size={12} /> Home
-              </a>
-              <ChevronRight size={12} className="opacity-50" />
-              <span className="text-green-400">The Gallery</span>
-            </nav>
-            {/* Standardized Heading: 4xl to 7xl */}
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">
-              The Gallery
-            </h2>
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
+            className="w-full h-full object-cover"
+            alt="Hero Background"
+          />
+          <div className="absolute"></div>
+          <div className="absolute z-20 text-center px-6 max-w-5xl">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className=""
+            >
+              <div className="relative z-10 text-center text-white px-6">
+                <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+                  <a
+                    href="/"
+                    className="hover:text-green-400 flex items-center gap-1 transition-colors"
+                  >
+                    <Home size={12} /> Home
+                  </a>
+                  <ChevronRight size={12} className="opacity-50" />
+                  <span className="text-white">Gallery</span>
+                </nav>
+                {/* Standardized Heading: 4xl to 7xl */}
+                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">
+                  Our Videos
+                </h2>
+                <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -84,27 +158,31 @@ export default function LuxuryGalleryPage() {
             <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter">
               Photo Collection
             </h3>
-            <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4 rounded-full" />
+            <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4 " />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
             <MarqueeColumn items={galleryPhotos} onSelect={setSelectedItem} />
-            <MarqueeColumn items={galleryPhotos} reverse={true} onSelect={setSelectedItem} />
+            <MarqueeColumn
+              items={galleryPhotos}
+              reverse={true}
+              onSelect={setSelectedItem}
+            />
             <div className="hidden md:block">
               <MarqueeColumn items={galleryPhotos} onSelect={setSelectedItem} />
             </div>
           </div>
         </section>
 
-         {/* --- VIDEO SECTION --- */}
+        {/* --- VIDEO SECTION --- */}
         <section className="bg-white py-16 md:py-24 border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6">
-             <div className="text-center mb-10 md:mb-16">
-            <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter ">
-              Video Insights
-            </h3>
-            <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4 rounded-full" />
-          </div>
+            <div className="text-center mb-10 md:mb-16">
+              <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter ">
+                Video Insights
+              </h3>
+              <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4" />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
               {videoItems.map((video) => (
@@ -157,7 +235,11 @@ export default function LuxuryGalleryPage() {
                 className="w-full max-w-6xl aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-black"
               >
                 {selectedItem.type === "image" ? (
-                  <img src={selectedItem.url} className="w-full h-full object-contain" alt="View" />
+                  <img
+                    src={selectedItem.url}
+                    className="w-full h-full object-contain"
+                    alt="View"
+                  />
                 ) : (
                   <iframe
                     className="w-full h-full"

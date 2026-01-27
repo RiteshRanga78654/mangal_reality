@@ -6,7 +6,7 @@ import {
   MapPin,
   Clock,
   ArrowRight,
-  X,
+  X,Home,
   Upload,
   Send,
   Heart,
@@ -208,14 +208,14 @@ export default function CareerPage() {
   return (
     <div className="bg-[#FAF9F6] min-h-screen text-[#0a1a10]">
       {/* --- DARK HERO SECTION --- */}
-      <section className="relative min-h-[80vh] flex items-center bg-[#0a1a10] overflow-hidden">
+      <section className="relative min-h-[75vh] flex items-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920"
-            className="w-full h-full object-cover opacity-50"
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
+            className="w-full h-full object-cover"
             alt="Architecture"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1a10] via-[#0a1a10]/80 to-[#FAF9F6]" />
+          <div className="absolute " />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20 text-center">
@@ -224,26 +224,37 @@ export default function CareerPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-flex items-center gap-2 text-[#22c55e] font-bold tracking-[0.4em] uppercase text-[10px] mb-6 bg-white/5 px-4 py-2 rounded-full border border-white/10">
-              <Sparkles size={14} /> Join the Evolution
-            </span>
+          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
+            <a
+              href="/"
+              className="hover:text-[#22c55e]  text-white flex items-center gap-1"
+            >
+              <Home size={12} />
+              Home
+            </a>
+            <ChevronRight size={12} className="text-white " />
+            <span className="text-white">Career</span>
+          </nav>
             <h1 className="text-6xl md:text-7xl  text-white mb-8 tracking-tighter leading-[0.85]"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
-              Build Your <span className=" text-[#22c55e]">Legacy.</span>
+              Build Your <span className=" text-white">Legacy.</span>
             </h1>
-            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
+            <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
+            {/* <p className="text-white text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
               We don't just build homes; we build careers. Join a team dedicated
               to excellence and sustainable innovation.
-            </p>
+            </p> */}
+            
             <button
-              onClick={() =>
+             onClick={() =>
                 document
                   .getElementById("jobs")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-white text-[#0a1a10] px-10 py-5 rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-[#22c55e] transition-all hover:scale-105 active:scale-95 shadow-xl"
-            >
-              Explore Openings
-            </button>
+                  .scrollIntoView({ behavior: "smooth" })}
+                            className="group relative cursor-pointer px-8 py-5 text-[#22c55e]  hover:text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+                        >
+                            <span className="relative z-10">Explore Openings</span>
+                            <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                            <div className="absolute inset-1 border border-green-600"></div>
+                        </button>
           </motion.div>
         </div>
       </section>
@@ -285,7 +296,7 @@ export default function CareerPage() {
           <h2 className="text-[32px] md:text-[60px] font-bold mb-4 tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
             Why Join Us?
           </h2>
-          <div className="h-1 w-20 bg-[#22c55e] mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-[#22c55e] mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -306,7 +317,7 @@ export default function CareerPage() {
                 <div className="w-12 h-12 bg-[#22c55e] rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-[#22c55e]/20 group-hover:rotate-12 transition-transform">
                   {b.icon}
                 </div>
-                <h4 className="text-2xl font-serif mb-3 ">{b.title}</h4>
+                <h4 className="text-2xl font-Arial, Helvetica, sans-serif mb-3 ">{b.title}</h4>
                 <p className="text-gray-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   {b.desc}
                 </p>
@@ -334,7 +345,7 @@ export default function CareerPage() {
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-10">
             {STEPS.map((step, i) => (
               <div key={i} className="flex gap-6">
-                <div className="text-3xl font-serif text-gray-200">{i + 1}</div>
+                <div className="text-3xl font-Arial, Helvetica, sans-serif text-gray-200">{i + 1}</div>
                 <div>
                   <h4 className="text-xl font-bold mb-2 flex items-center gap-2">
                     <span className="text-[#22c55e]">{step.icon}</span>{" "}
@@ -353,9 +364,9 @@ export default function CareerPage() {
       {/* --- ALIGNED JOB BOARD --- */}
       <section id="jobs" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-16">
-          <h2 className="text-[32px] md:text-[60px]  tracking-tight"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
-            Current Openings
-          </h2>
+          <h2 className="text-[32px] md:text-[60px] font-bold  mb-4"style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+              Current Openings
+            </h2>
           <div className="h-[1px] flex-1 bg-[#22c55e] mx-10 hidden md:block"></div>
         </div>
 
@@ -388,7 +399,7 @@ export default function CareerPage() {
                   setSelectedJob(job);
                   setIsFormOpen(true);
                 }}
-                            className="group relative cursor-pointer px-12 py-5 text-[#22c55e]  hover:text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+                            className="group relative cursor-pointer px-12 py-5 text-[#22c55e]  group-hover:text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
                         >
                             <span className="relative z-10">Apply Position</span>
                             <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
@@ -427,7 +438,7 @@ export default function CareerPage() {
                 <p className="text-[#0a1a10] text-[10px] font-black uppercase tracking-[0.3em] mb-2">
                   Joining our team
                 </p>
-                <h3 className="text-4xl font-serif ">{selectedJob?.title}</h3>
+                <h3 className="text-4xl font-Arial, Helvetica, sans-serif ">{selectedJob?.title}</h3>
                 <div className="flex gap-4 text-xs text-white mt-4">
                   <span className="flex items-center gap-1">
                     <Building2 size={14} /> {selectedJob?.department}

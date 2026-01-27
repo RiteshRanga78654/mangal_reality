@@ -10,6 +10,7 @@ import {
   Briefcase,
   GraduationCap,
   ChevronRight,
+  Home,
   ArrowUpRight,Linkedin
 } from "lucide-react";
 
@@ -150,7 +151,7 @@ export default function MangalLeadership() {
           className="absolute z-10 w-full h-full object-cover opacity-50"
         />
         <div className="absolute inset-0 z-15 bg-black/30"></div>
-        <div className="relative z-20 text-center px-6 max-w-4xl">
+        {/* <div className="relative z-20 text-center px-6 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -163,10 +164,35 @@ export default function MangalLeadership() {
               className="w-24 h-1 mx-auto mt-4"
               style={{ backgroundColor: brandGreen }}
             ></div>
-            <p className="text-white text-base md:text-lg leading-relaxed mt-6 max-w-2xl mx-auto drop-shadow-md">
+            {/* <p className="text-white text-base md:text-lg leading-relaxed mt-6 max-w-2xl mx-auto drop-shadow-md">
               Our leadership combines decades of traditional wisdom with a
               modern approach to urban living and commercial excellence.
-            </p>
+            </p> */}
+          {/* </motion.div>
+        </div>  */}
+        <div className="relative z-20 text-center px-6 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className=""
+          >
+            <div className="relative z-10 text-center text-white px-6">
+            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+              <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
+                <Home size={12} /> Home
+              </a>
+              <ChevronRight size={12} className="opacity-50" />
+              <span className="text-white">About Us</span>
+            </nav>
+            {/* Standardized Heading: 4xl to 7xl */}
+            <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
+               Our Leadership</h2>
+          </div>
+          <div
+              className="w-24 h-1 mx-auto mt-4"
+              style={{ backgroundColor: brandGreen }}
+            ></div>
           </motion.div>
         </div>
       </section>
@@ -221,7 +247,7 @@ export default function MangalLeadership() {
           ))}
         </div>
       </section> */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-24 mt-10 px-6 bg-white">
         <div className="max-w-7xl mx-auto space-y-40">
           {strategicPartners.map((partner, index) => (
             <div
@@ -429,10 +455,7 @@ export default function MangalLeadership() {
               trust and creating spaces where life thrives."
             </p>
             <div className="flex flex-col items-center">
-              <div
-                className="w-8 h-1"
-                style={{ backgroundColor: brandGreen }}
-              ></div>
+              <div className="h-1 w-20 bg-[#22c55e] mx-auto rounded-full" />
             </div>
           </div>
         </div>

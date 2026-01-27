@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Target, Eye, Leaf, Shield, Sparkles, Trees, Wind, Droplets } from 'lucide-react';
+import { Target, Eye, Leaf, Shield, Sparkles, Trees, Wind, Droplets,Home,ChevronRight } from 'lucide-react';
 import { useRef } from 'react';
 
 export default function VisionMission() {
@@ -49,7 +49,7 @@ export default function VisionMission() {
           <div className="absolute inset-0 bg-linear-to-b from-[#0A1A10]/10 via-transparent to-[#0A1A10]" />
         </motion.div>
         
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2 }}
@@ -69,7 +69,38 @@ export default function VisionMission() {
             transition={{ delay: 0.5, duration: 1 }}
             className="h-1 bg-[#4ADE80] mx-auto"
           />
-        </motion.div>
+        </motion.div> */}
+        {/* <div className="relative z-20 text-center px-6 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className=""
+          >
+            
+            <div
+              className="w-24 h-1 mx-auto mt-4"
+              style={{ backgroundColor: brandGreen }}
+            ></div>
+          </motion.div>
+        </div> */}
+        <div className="relative z-10 text-center text-white px-6">
+              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+                <a
+                  href="/"
+                  className="hover:text-green-400 flex items-center gap-1 transition-colors"
+                >
+                  <Home size={12} /> Home
+                </a>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-white">About Us</span>
+              </nav>
+              {/* Standardized Heading: 4xl to 7xl */}
+              <h1 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
+                Our Essence
+              </h1>
+              <div className="h-1 w-20 bg-[#22c55e] mx-auto" />
+            </div>
       </section>
 
       {/* 2. VISION & MISSION - RESPONSIVE CARDS */}

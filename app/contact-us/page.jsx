@@ -13,6 +13,7 @@ import {
   Headphones
 } from "lucide-react";
 import Swal from "sweetalert2";
+import { Home, ChevronRight } from "lucide-react";
 
 const brandGreen = "#22C55E";
 
@@ -69,20 +70,38 @@ export default function ContactUs() {
       <section className="relative h-[70vh] flex items-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1500"
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
             className="w-full h-full object-cover"
             alt="Office"
           />
           {/* Dark gradient for text readability without white opacity */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+          <div className="absolute inset-0" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-            {/* <span className="inline-block text-[#22c55e] font-bold tracking-[0.4em]  text-[10px] mb-6">Connect with us</span> */}
-            <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-tighter  leading-none">
-              Get In <span className="text-[#22c55e]">Touch.</span>
+           <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                              >
+           <div className="relative z-10 text-center text-white px-6">
+          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
+            <a
+              href="/"
+              className="hover:text-[#22c55e] flex items-center gap-1"
+            >
+              <Home size={12} />
+              Home
+            </a>
+            <ChevronRight size={12} className="opacity-50" />
+            <span className="text-white">Contact Us</span>
+          </nav>
+          <h1 className="text-6xl md:text-9xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1>
+          <h1 className="text-4xl md:text-8xl text-white mb-8 tracking-tighter  leading-none">
+              Get In Touch.
             </h1>
-          </motion.div>
+            <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
+        </div>
+        </motion.div>
         </div>
       </section>
 
@@ -93,7 +112,7 @@ export default function ContactUs() {
           {/* LEFT: CONTACT INFO - Text Black */}
           <div className="lg:col-span-5 space-y-12 text-left">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold  tracking-tighter mb-6 text-black">Corporate <br /> <span className="text-[#22C55E]">Headquarters</span></h2>
+              <h2 className="text-[32px] md:text-[60px] font-bold text-black">Corporate <br /> <span className="text-[#22C55E]">Headquarters</span></h2>
               <div className="w-16 h-1.5 bg-[#22C55E] mb-8"></div>
               <p className="text-black leading-relaxed max-w-sm">
                 Have questions about our upcoming projects or investment opportunities? Reach out to our dedicated support team.
