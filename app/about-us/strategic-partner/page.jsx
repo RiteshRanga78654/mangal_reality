@@ -118,7 +118,7 @@ export default function StrategicPartners() {
                                         <img
                                             src={partner.image}
                                             alt={partner.name}
-                                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-110"
+                                            className="w-full h-full object-cover  group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-110"
                                         />
                                     </a>
 
@@ -163,7 +163,7 @@ export default function StrategicPartners() {
                                         ))}
                                     </div>
 
-                                    <div className="mt-12 pt-10 border-t border-stone-100 flex flex-wrap items-center gap-8">
+                                    <div className="mb-12 pt-5 pb-10 border-b border-stone-200 flex flex-wrap items-center gap-8">
                                         <a
                                             href={partner.linkedin}
                                             target="_blank"

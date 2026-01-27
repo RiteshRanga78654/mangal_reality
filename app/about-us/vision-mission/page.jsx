@@ -125,7 +125,10 @@ export default function VisionMission() {
             {[
               { icon: <Leaf />, title: "Regenerative", desc: "We actively restore natural habitats through our building footprint." },
               { icon: <Shield />, title: "Total Trust", desc: "Every stone and promise is etched in uncompromising honesty." },
-              { icon: <Sparkles />, title: "Curated Craft", desc: "Architecture that breathes. We prioritize artisanal precision." }
+              { icon: <Sparkles />, title: "Curated Craft", desc: "Architecture that breathes. We prioritize artisanal precision." },
+              { icon: <Trees />, title: "Reforestation", desc: "10 trees planted for every home sold." },
+              { icon: <Wind />, title: "Clean Air", desc: "Medical-grade air filtration in every room." },
+              { icon: <Droplets />, title: "Water Saving", desc: "100% greywater recycling systems." }
             ].map((val, idx) => (
               <motion.div
                 key={idx}
@@ -144,7 +147,7 @@ export default function VisionMission() {
       </section>
 
       {/* 4. ECO-STATISTICS SECTION */}
-      <section className="py-20 border-y border-white/5 bg-[#0A1A10]">
+      {/* <section className="py-20 border-y border-white/5 bg-[#0A1A10]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24 text-center">
           {ecoFeatures.map((feature, i) => (
             <div key={i} className="flex flex-col items-center space-y-4">
@@ -154,7 +157,7 @@ export default function VisionMission() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* 5. THE PROMISE - ALIGNED TEXT REVEAL */}
       <section className="py-40 flex items-center justify-center text-center px-6">
