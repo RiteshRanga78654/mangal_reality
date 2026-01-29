@@ -49,7 +49,7 @@ const AnimatedCounter = ({ value, duration = 1500 }) => {
 
 // --- 2. UNIFIED MANGAL BUTTON COMPONENT ---
 const MangalButton = ({ text, href }) => (
-  <Link href={href} className="group relative cursor-pointer px-8 py-5 text-[#22c55e]  hover:text-white font-bold uppercase tracking-widest text-xs overflow-hidden">
+  <Link href={href} className="group relative cursor-pointer px-8 py-5 text-[#22c55e]  hover:text-white font-bold tracking-widest text-xs overflow-hidden">
     <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
       {text}
     </span>
@@ -71,7 +71,7 @@ const CompletedProjectsPage = () => {
       link: "/the-smart-city" 
     },
     {
-      title: "The Jonnada Project",
+      title: "The Green Medows",
       location: "Jonnada",
       area: "5 Acres",
       tagline: "Expansive green living across five acres of excellence.",
@@ -94,7 +94,7 @@ const CompletedProjectsPage = () => {
     >
 
       {/* HERO SECTION */}
-      <section className="relative h-[80vh] w-full flex items-center justify-center">
+      <section className="relative h-[70vh] w-full flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
@@ -140,7 +140,7 @@ const CompletedProjectsPage = () => {
             </h2>
             <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
           </div>
-          <MangalButton text="View Projects" href="#projects"  />
+          {/* <MangalButton text="View Projects" href="#projects"  /> */}
           
           </motion.div>
         </div>

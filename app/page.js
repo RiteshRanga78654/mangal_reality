@@ -396,7 +396,7 @@ const Page = () => {
                   >
                     <StatCounter endValue={item.number} />
                   </div>
-                  <p className="font-bold text-stone-800 uppercase text-xs tracking-widest leading-tight">
+                  <p className="font-bold text-stone-800  text-xs tracking-widest leading-tight">
                     {item.label}
                   </p>
                 </div>
@@ -492,7 +492,7 @@ const Page = () => {
 
                       {/* Status Badge */}
                       <div className="absolute top-6 left-6">
-                        <span className="bg-[#22c55e] text-white px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
+                        <span className="bg-[#22c55e] text-white px-4 py-1.5 rounded-full text-[10px] font-bold  tracking-widest shadow-lg">
                           {item.status}
                         </span>
                       </div>
@@ -500,7 +500,7 @@ const Page = () => {
                       {/* Overlay Info */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a10] via-[#0a1a10]/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500">
                         <div className="absolute bottom-0 p-8 w-full">
-                          <p className="text-green-400 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">
+                          <p className="text-green-400 text-[10px] font-bold  tracking-[0.3em] mb-2">
                             {item.type}
                           </p>
                           <h3

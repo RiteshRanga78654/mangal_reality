@@ -41,7 +41,12 @@ export default function Header() {
       href: "#",
       id: "projects",
       subLinks: [
-        { name: "Ongoing ", href: "https://the-nature-valley.vercel.app/" },
+        { 
+          name: "Ongoing ", 
+          href: "https://the-nature-valley.vercel.app/",
+          target: "_blank", // Added for new tab
+          rel: "noopener noreferrer" // Security best practice
+        },
         { name: "Completed", href: "/projects/completed-projects" },
       ],
     },
@@ -73,10 +78,8 @@ export default function Header() {
             : "bg-transparent py-6 lg:py-8"
         }`}
       >
-        {/* Container: px-6 for mobile left-alignment, lg:pl-20 for desktop */}
         <div className="max-w-360 mx-auto flex items-center justify-between px-6 lg:pl-20 lg:pr-10">
           
-          {/* LOGO - Left aligned */}
           <div className="flex items-center">
             <Link href="/" className="relative block w-28 md:w-36 h-10 md:h-12">
               <img
@@ -87,7 +90,6 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
             {menuItems.map((item) => (
               <div
@@ -124,6 +126,8 @@ export default function Header() {
                           <Link
                             key={sub.name}
                             href={sub.href}
+                            target={sub.target || "_self"} // Applied here
+                            rel={sub.rel || ""} // Applied here
                             className="px-6 py-3 text-white hover:bg-white/5 hover:text-green-400 transition-colors font-medium text-sm"
                           >
                             {sub.name}
@@ -137,7 +141,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* MOBILE HAMBURGER - Visible on small/med screens */}
           <button
             onClick={() => setIsOpen(true)}
             className="lg:hidden flex flex-col justify-between w-6 h-4.5 focus:outline-none group cursor-pointer"
@@ -149,11 +152,9 @@ export default function Header() {
         </div>
       </header>
 
-      {/* MOBILE DRAWER */}
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -162,7 +163,6 @@ export default function Header() {
               className="fixed inset-0 bg-black/90 z-90 backdrop-blur-sm"
             />
 
-            {/* Content Sidebar */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
@@ -170,7 +170,6 @@ export default function Header() {
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               className="fixed top-0 right-0 h-full w-[80%] sm:w-[60%] bg-[#0A1A10] z-100 shadow-2xl flex flex-col"
             >
-              {/* Close Button Header */}
               <div className="flex justify-between items-center p-6 border-b border-white/5">
                 <span className="text-white/40 text-[10px] font-bold tracking-widest uppercase">Menu</span>
                 <button
@@ -181,7 +180,6 @@ export default function Header() {
                 </button>
               </div>
 
-              {/* Navigation Links */}
               <nav className="flex-1 overflow-y-auto py-8 px-6 no-scrollbar">
                 <div className="flex flex-col gap-6">
                   {menuItems.map((item, i) => (
@@ -219,6 +217,8 @@ export default function Header() {
                                     <Link
                                       key={sub.name}
                                       href={sub.href}
+                                      target={sub.target || "_self"} // Applied here for mobile
+                                      rel={sub.rel || ""} // Applied here for mobile
                                       onClick={() => setIsOpen(false)}
                                       className="block px-6 py-4 text-gray-400 hover:text-green-400 hover:bg-white/5 text-sm font-medium transition-all"
                                     >

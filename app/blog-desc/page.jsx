@@ -40,20 +40,20 @@ export default function SingleBlogPage() {
     <div style={arialSans} className="bg-white min-h-screen text-[#0a1a10]">
       {/* --- TOP NAVIGATION BAR --- */}
       <div className="max-w-7xl mx-auto px-6 pt-12">
-        <button className="group flex items-center gap-2 text-[10px] text-gray-400 hover:text-[#22c55e] transition-colors mb-8 uppercase tracking-[0.3em] font-black">
+        <button className="group flex items-center gap-2 text-[10px] text-gray-400 hover:text-[#22c55e] transition-colors mb-8  tracking-[0.3em] font-black">
           <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to Journal
         </button>
 
         {/* TITLE & META */}
         <div className="max-w-4xl">
-          <span className="bg-[#22c55e]/10 text-[#22c55e] px-4 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest mb-6 inline-block">
+          <span className="bg-[#22c55e]/10 text-[#22c55e] px-4 py-1.5 rounded-lg text-[10px] font-black  tracking-widest mb-6 inline-block">
             {CURRENT_POST.category}
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-[1.1]">
             {CURRENT_POST.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-6 text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-12 border-b border-gray-100 pb-8">
+          <div className="flex flex-wrap items-center gap-6 text-[11px] font-bold  tracking-widest text-gray-400 mb-12 border-b border-gray-100 pb-8">
             <div className="flex items-center gap-2">
               <User size={14} className="text-[#22c55e]" />
               <span className="text-[#0a1a10]">{CURRENT_POST.author}</span>
@@ -101,7 +101,7 @@ export default function SingleBlogPage() {
             {/* TAGS AREA */}
             <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-3">
               {CURRENT_POST.tags.map(tag => (
-                <span key={tag} className="px-5 py-2 bg-gray-50 text-[11px] font-bold uppercase tracking-widest rounded-full hover:bg-[#22c55e] hover:text-white transition-all cursor-pointer">
+                <span key={tag} className="px-5 py-2 bg-gray-50 text-[11px] font-bold  tracking-widest rounded-full hover:bg-[#22c55e] hover:text-white transition-all cursor-pointer">
                   #{tag}
                 </span>
               ))}
@@ -113,7 +113,7 @@ export default function SingleBlogPage() {
             
             {/* SOCIAL SHARE */}
             <div className="bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm">
-              <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-6">Share Perspective</h4>
+              <h4 className="text-[10px] font-black text-gray-400  tracking-[0.2em] mb-6">Share Perspective</h4>
               <div className="flex gap-3">
                 {[<Linkedin />, <Twitter />, <Facebook />, <Instagram />].map((icon, idx) => (
                   <button key={idx} className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-[#22c55e] hover:text-white transition-all shadow-sm">
@@ -131,8 +131,8 @@ export default function SingleBlogPage() {
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200" alt="Author" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <h4 className="text-white font-bold text-lg">Marketing Desk</h4>
-                <p className="text-[#22c55e] text-[10px] font-black uppercase tracking-widest mb-6">Strategic Updates</p>
-                <button className="w-full bg-[#22c55e] text-[#0a1a10] py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-white transition-all">
+                <p className="text-[#22c55e] text-[10px] font-black  tracking-widest mb-6">Strategic Updates</p>
+                <button className="w-full bg-[#22c55e] text-[#0a1a10] py-4 rounded-xl font-black text-[10px]  tracking-[0.2em] hover:bg-white transition-all">
                   Follow Insights
                 </button>
               </div>
@@ -144,7 +144,7 @@ export default function SingleBlogPage() {
               <p className="text-sm text-gray-500 mb-6">Get the next journal entry directly in your inbox.</p>
               <div className="space-y-3">
                 <input className="w-full px-5 py-4 bg-white rounded-xl border-none text-sm outline-none focus:ring-2 focus:ring-[#22c55e]/50" placeholder="Email Address" />
-                <button className="w-full bg-[#0a1a10] text-white py-4 rounded-xl font-bold text-[10px] uppercase tracking-widest hover:bg-[#22c55e] transition-all">
+                <button className="w-full bg-[#0a1a10] text-white py-4 rounded-xl font-bold text-[10px]  tracking-widest hover:bg-[#22c55e] transition-all">
                   Subscribe
                 </button>
               </div>
