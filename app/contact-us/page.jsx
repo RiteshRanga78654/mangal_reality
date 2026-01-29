@@ -84,7 +84,7 @@ export default function ContactUs() {
                                 transition={{ duration: 0.8 }}
                               >
            <div className="relative z-10 text-center text-white px-6">
-          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
+          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em]">
             <a
               href="/"
               className="hover:text-[#22c55e] flex items-center gap-1"
@@ -216,7 +216,7 @@ export default function ContactUs() {
       </section>
 
       {/* 3. MAP SECTION - Full Width */}
-      <section className="h-[450px] w-full bg-stone-200">
+      <section className="h-[400px] w-full bg-stone-200">
         <iframe
           title="Mangal Realty Location"
           className="w-full h-full grayscale hover:grayscale-0 transition-all duration-1000"

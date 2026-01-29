@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, GraduationCap, Briefcase, Linkedin,Home,ChevronRight } from "lucide-react";
+import { ArrowUpRight, GraduationCap, Briefcase, Linkedin, Home, ChevronRight } from "lucide-react";
 
 const brandGreen = "#22C55E";
 
@@ -60,7 +60,7 @@ export default function StrategicPartners() {
             className="mt-32 md:mt-48"
           >
             {/* Heading updated to text-4xl md:text-7xl */}
-            {/* <h1 className="text-white text-4xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.85]">
+        {/* <h1 className="text-white text-4xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.85]">
               Strategic <br />
               <span className="text-stone-400">Collaborations</span>
             </h1>
@@ -169,7 +169,7 @@ export default function StrategicPartners() {
                     style={{ borderColor: brandGreen }}
                   >
                     <partner.icon size={24} className="mb-2" />
-                    <p className="text-[10px] uppercase tracking-widest font-bold opacity-60">
+                    <p className="text-[10px]  tracking-widest font-bold opacity-60">
                       Strategic Lead
                     </p>
                     <p className="text-sm font-bold">{partner.name}</p>
@@ -186,11 +186,11 @@ export default function StrategicPartners() {
                   transition={{ duration: 0.6 }}
                 >
                   {/* Partner Name Heading updated to text-4xl md:text-7xl */}
-                  <h2 className="text-4xl md:text-7xl font-bold text-stone-900 uppercase tracking-tighter mb-2">
+                  <h2 className="text-4xl md:text-7xl font-bold text-stone-900 tracking-tighter mb-2">
                     {partner.name}
                   </h2>
                   <p
-                    className="text-lg md:text-xl font-bold uppercase tracking-widest mb-10"
+                    className="text-lg md:text-xl font-bold  tracking-widest mb-10"
                     style={{ color: brandGreen }}
                   >
                     {partner.role}
@@ -209,7 +209,7 @@ export default function StrategicPartners() {
                       href={partner.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-[#0A66C2] font-bold uppercase tracking-widest text-[10px] border border-[#0A66C2]/20 px-4 py-2 rounded-md hover:bg-[#0A66C2] hover:text-white transition-all"
+                      className="flex items-center gap-2 text-[#0A66C2] font-bold  tracking-widest text-[10px] border border-[#0A66C2]/20 px-4 py-2 rounded-md hover:bg-[#0A66C2] hover:text-white transition-all"
                     >
                       <Linkedin size={14} fill="currentColor" /> Connect on
                       LinkedIn
@@ -227,22 +227,31 @@ export default function StrategicPartners() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-green-500/5 -skew-x-12 translate-x-32"></div>
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           {/* Final Heading updated to text-4xl md:text-7xl */}
-          <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-8 leading-none">
+          <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-8 leading-none">
             Driving the <span style={{ color: brandGreen }}>Future</span> of{" "}
             <br />
             Indian Real Estate
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-6">
-            <button className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden">
+            {/* <button className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden">
               <span className="relative z-10">Our Methodology</span>
               <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
               <div className="absolute inset-1 border border-green-600"></div>
-            </button>
-            <button className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden">
-              <span className="relative z-10">Contact Strategic Office</span>
-              <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-              <div className="absolute inset-1 border border-green-600"></div>
-            </button>
+            </button> */}
+            <a
+              href="https://www.ireedindia.com/contact-us"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="group relative cursor-pointer px-12 py-5 text-white font-bold  tracking-widest text-xs overflow-hidden">
+                <span className="relative z-10">Contact Strategic Office</span>
+
+                <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+
+                <div className="absolute inset-1 border border-green-600"></div>
+              </button>
+            </a>
+
           </div>
         </div>
       </section>

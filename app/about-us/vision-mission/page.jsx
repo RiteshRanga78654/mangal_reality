@@ -85,7 +85,7 @@ export default function VisionMission() {
           </motion.div>
         </div> */}
         <div className="relative z-10 text-center text-white px-6">
-              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.1em] ">
                 <a
                   href="/"
                   className="hover:text-green-400 flex items-center gap-1 transition-colors"
@@ -147,7 +147,7 @@ export default function VisionMission() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
             <div>
               <h2 className="text-4xl md:text-7xl text-white mb-2">Non-Negotiables</h2>
-              <p className="text-[#4ADE80] tracking-[0.2em] text-[10px] md:text-xs uppercase font-bold">The Foundation of Mangal Realty</p>
+              <p className="text-[#4ADE80] tracking-[0.1em] text-[10px] md:text-xs font-bold">The Foundation of Mangal Realty</p>
             </div>
             <div className="hidden lg:block h-px bg-white/10 grow mx-8 mb-4" />
           </div>

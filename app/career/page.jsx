@@ -224,7 +224,7 @@ export default function CareerPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
+          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.1em] uppercase">
             <a
               href="/"
               className="hover:text-[#22c55e]  text-white flex items-center gap-1"

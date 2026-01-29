@@ -52,21 +52,6 @@ const Counter = ({ value }) => {
     </span>
   );
 };
-
-// const leaders = [
-//   {
-//     name: 'Mr. Rajesh Mangal',
-//     role: 'Founder & Chairman',
-//     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800',
-//     description: 'A visionary with over 30 years in the real estate sector, shaping the skyline with integrity and excellence.'
-//   },
-//   {
-//     name: 'Sanjay Mangal',
-//     role: 'Managing Director',
-//     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800',
-//     description: 'Leading the digital transformation and sustainable development initiatives across our luxury portfolio.'
-//   }
-// ];
 const strategicPartners = [
   {
     name: "Rajesh Mangal",
@@ -130,12 +115,12 @@ const management = [
   },
 ];
 
-const stats = [
-  { label: "Years of Legacy", value: "30+", icon: Award },
-  { label: "Projects Delivered", value: "150+", icon: ShieldCheck },
-  { label: "Happy Families", value: "5000+", icon: Users },
-  { label: "Square Ft. Developed", value: "12M+", icon: Globe },
-];
+// const stats = [
+//   { label: "Years of Legacy", value: "30+", icon: Award },
+//   { label: "Projects Delivered", value: "150+", icon: ShieldCheck },
+//   { label: "Happy Families", value: "5000+", icon: Users },
+//   { label: "Square Ft. Developed", value: "12M+", icon: Globe },
+// ];
 
 export default function MangalLeadership() {
   return (
@@ -198,7 +183,7 @@ export default function MangalLeadership() {
       </section>
 
       {/* IMPACT NUMBERS */}
-      <section className="relative z-30 -mt-16 px-6 max-w-7xl mx-auto">
+      {/* <section className="relative z-30 -mt-16 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
             <motion.div
@@ -220,7 +205,7 @@ export default function MangalLeadership() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 2: FOUNDERS */}
       {/* <section className="py-24 px-6 max-w-7xl mx-auto">

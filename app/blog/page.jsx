@@ -275,7 +275,7 @@ export default function MangalRealtyBlog() {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
               <div className="max-w-3xl">
-                <h4 className="text-[#22c55e] font-bold text-xs uppercase tracking-[0.3em] mb-4">
+                <h4 className="text-[#22c55e] font-bold text-xs  tracking-[0.1em] mb-4">
                   Insights & Updates
                 </h4>
                 <h1 className="text-[32px] md:text-[60px] font-bold text-[#0a1a10] leading-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
@@ -308,7 +308,7 @@ export default function MangalRealtyBlog() {
                 <button
                   key={cat}
                   onClick={() => setActiveTab(cat)}
-                  className={`pb-5 text-[11px] font-bold uppercase tracking-[0.2em] transition-all relative ${
+                  className={`pb-5 text-[11px] font-bold  tracking-[0.1em] transition-all relative ${
                     activeTab === cat
                       ? "text-[#22c55e]"
                       : "text-gray-400 hover:text-[#0a1a10]"
@@ -348,7 +348,7 @@ export default function MangalRealtyBlog() {
                       alt={post.title}
                     />
                     <div className="absolute top-6 left-6">
-                      <span className="bg-white/95 backdrop-blur px-4 py-1.5 rounded-lg text-[10px] font-bold text-[#0a1a10] uppercase tracking-widest shadow-sm border border-gray-100">
+                      <span className="bg-white/95 backdrop-blur px-4 py-1.5 rounded-lg text-[10px] font-bold text-[#0a1a10]  tracking-widest shadow-sm border border-gray-100">
                         {post.category}
                       </span>
                     </div>
@@ -356,7 +356,7 @@ export default function MangalRealtyBlog() {
 
                   {/* Content Container */}
                   <div className="lg:col-span-7 space-y-6">
-                    <div className="flex items-center gap-6 text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                    <div className="flex items-center gap-6 text-[11px] font-bold text-gray-400  tracking-widest">
                       <span className="flex items-center gap-2">
                         <Calendar size={14} className="text-[#22c55e]" />{" "}
                         {post.date}
@@ -376,7 +376,7 @@ export default function MangalRealtyBlog() {
                     </p>
                     <a href={`${post.link}`}>
                       <div className="flex items-center gap-8 pt-4 cursor-pointer">
-                        <button className="flex items-center gap-3 text-sm font-bold uppercase tracking-widest group/btn text-[#0a1a10]">
+                        <button className="flex items-center gap-3 text-sm font-bold  tracking-widest group/btn text-[#0a1a10]">
                           Read Full Article
                           <div className="p-2.5 bg-gray-100 rounded-full group-hover/btn:bg-[#22c55e] group-hover/btn:text-white transition-all shadow-sm">
                             <ArrowUpRight size={18} />
@@ -425,7 +425,7 @@ export default function MangalRealtyBlog() {
                 className="flex-1 px-6 py-4 rounded-xl bg-white/5 border border-white/10 outline-none focus:border-[#22c55e] transition-all"
                 placeholder="Corporate Email Address"
               />
-              <button className="group relative px-10 py-4 rounded-xl border border-[#22c55e] text-white font-bold uppercase tracking-widest overflow-hidden active:scale-95 transition-all">
+              <button className="group relative px-10 py-4 rounded-xl border border-[#22c55e] text-white font-bold  tracking-widest overflow-hidden active:scale-95 transition-all">
                 <span className="relative z-10">Subscribe</span>
                 {/* Slides in the Main Green Color */}
                 <div className="absolute inset-0 bg-[#22c55e] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
