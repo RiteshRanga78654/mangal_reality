@@ -43,7 +43,7 @@ export default function Header() {
       subLinks: [
         { 
           name: "Ongoing ", 
-          href: "https://the-nature-valley.vercel.app/",
+          href: "https://the-nature-city.vercel.app/",
           target: "_blank", // Added for new tab
           rel: "noopener noreferrer" // Security best practice
         },
