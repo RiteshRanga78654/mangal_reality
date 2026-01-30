@@ -51,11 +51,11 @@ export default function Header() {
       ],
     },
     {
-      name: "Gallery",
+      name: "Resources",
       href: "#",
       id: "gallery",
       subLinks: [
-        { name: 'Our Videos', href: '/gallery/our-videos' },
+        { name: 'Our Gallery', href: '/gallery/our-gallery' },
         { name: 'Our Creatives', href: '/gallery/our-creatives' },
         { name: 'Press Coverage', href: '/gallery/press-coverages' },
       ]
