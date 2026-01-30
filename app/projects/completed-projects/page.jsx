@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
-  MapPin, Maximize2, ShieldCheck, Leaf, Map, Zap, Gem, BarChart3,Home,ChevronRight 
+  MapPin, Maximize2, ShieldCheck, Leaf, Map, Zap, Gem, BarChart3, Home, ChevronRight
 } from 'lucide-react';
 
 // --- 1. ANIMATED COUNTER COMPONENT ---
@@ -21,7 +21,7 @@ const AnimatedCounter = ({ value, duration = 1500 }) => {
           const end = parseInt(value.replace(/\D/g, ''));
           const totalFrames = Math.round(duration / 16);
           const increment = end / totalFrames;
-          
+
           const timer = setInterval(() => {
             start += increment;
             if (start >= end) {
@@ -63,15 +63,23 @@ const MangalButton = ({ text, href }) => (
 const CompletedProjectsPage = () => {
   const projects = [
     {
+      title: "The Nature Valley Phase 1",
+      location: "Bhogapuram",
+      area: "12 Acres",
+      tagline: "Where serene landscapes meet future-ready infrastructure.",
+      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000",
+      link: "/the-nature-valley-phase1"
+    },
+    {
       title: "The Smart City",
       location: "Dakamari",
       area: "3 Acres",
       tagline: "Intelligence meets luxury in the heart of Dakamari.",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000",
-      link: "/the-smart-city" 
+      link: "/the-smart-city"
     },
     {
-      title: "The Green Medows",
+      title: "The Green Meadows",
       location: "Jonnada",
       area: "5 Acres",
       tagline: "Expansive green living across five acres of excellence.",
@@ -88,7 +96,7 @@ const CompletedProjectsPage = () => {
   ];
 
   return (
-    <div 
+    <div
       className="bg-[#f8fafc] min-h-screen font-medium antialiased text-slate-900 overflow-x-hidden"
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
@@ -104,44 +112,25 @@ const CompletedProjectsPage = () => {
           <div className="absolute "></div>
         </div>
 
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 text-center px-6 mb-16"
-        >
-          {/* Main Title updated to text-4xl md:text-7xl */}
-          {/* <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight mt-20 ">
-            CRAFTING <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22C55E] to-emerald-300">LEGACIES</span>
-          </h1> */}
-          {/* <p className="text-gray-300 max-w-xl mx-auto text-lg md:text-xl leading-relaxed mb-8">
-            Where architectural vision meets sustainable reality. Explore our portfolio of successfully delivered landmarks.
-          </p> */}
-          {/* <MangalButton text="View Projects" href="#projects" />
-        </motion.div>  */}
         <div className="relative z-20 text-center px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className=""
           >
             <div className="relative z-10 text-center text-white px-6">
-            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
-              <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
-                <Home size={12} /> Home
-              </a>
-              <ChevronRight size={12} className="opacity-50" />
-              <span className="text-white">Completed Projects</span>
-            </nav>
-            {/* Standardized Heading: 4xl to 7xl */}
-            <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
-               Crafting Legacies
-            </h2>
-            <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
-          </div>
-          {/* <MangalButton text="View Projects" href="#projects"  /> */}
-          
+              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+                <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
+                  <Home size={12} /> Home
+                </a>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-white">Completed Projects</span>
+              </nav>
+              <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
+                Crafting Legacies
+              </h2>
+              <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
+            </div>
           </motion.div>
         </div>
 
@@ -151,13 +140,13 @@ const CompletedProjectsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 md:gap-0 md:divide-x md:divide-gray-100">
               <div className="text-center">
                 <p className="text-[#22C55E] text-4xl md:text-5xl font-bold mb-1">
-                  <AnimatedCounter value="02" />
+                  <AnimatedCounter value="03" />
                 </p>
                 <p className="text-gray-500 text-[10px] md:text-xs  font-bold tracking-widest">Projects Delivered</p>
               </div>
               <div className="text-center">
                 <p className="text-[#22C55E] text-4xl md:text-5xl font-bold mb-1">
-                  <AnimatedCounter value="08+" />
+                  <AnimatedCounter value="20+" />
                 </p>
                 <p className="text-gray-500 text-[10px] md:text-xs  font-bold tracking-widest">Acres Developed</p>
               </div>
@@ -198,7 +187,6 @@ const CompletedProjectsPage = () => {
               </div>
 
               <div className="w-full lg:w-2/5 space-y-8 text-left">
-                {/* Project Title updated to text-4xl md:text-7xl */}
                 <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter  leading-none">
                   {project.title}
                 </h2>
@@ -226,7 +214,6 @@ const CompletedProjectsPage = () => {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div className="max-w-2xl text-left">
               <h2 className="text-[#22C55E] font-bold tracking-[0.2em] text-sm mb-4">Investment Excellence</h2>
-              {/* Heading updated to text-4xl md:text-7xl */}
               <h3 className="text-4xl md:text-7xl font-bold text-white tracking-tighter">Why Choose <span className="text-[#22C55E]">Mangal Realty</span></h3>
             </div>
           </div>
@@ -254,7 +241,6 @@ const CompletedProjectsPage = () => {
       <section className="py-24 bg-white px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            {/* Heading updated to text-4xl md:text-7xl */}
             <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none">The <span className="text-[#22C55E]">Mangal</span> Standard</h2>
             <div className="w-20 h-1.5 bg-[#22C55E] mx-auto mt-4"></div>
           </div>
@@ -275,7 +261,6 @@ const CompletedProjectsPage = () => {
       {/* FINAL CTA */}
       <section className="bg-slate-50 py-24 px-6 text-center border-t border-gray-100">
         <motion.div whileInView={{ scale: [0.95, 1] }} transition={{ duration: 0.5 }}>
-          {/* Heading updated to text-4xl md:text-7xl */}
           <h3 className="text-4xl md:text-7xl font-bold text-slate-900 mb-10 tracking-tighter leading-none">Stay Updated <br /> for the Next Big Thing?</h3>
           <MangalButton text="Subscribe Now" href="/subscribe" />
         </motion.div>
