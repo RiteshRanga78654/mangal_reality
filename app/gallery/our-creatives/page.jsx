@@ -152,11 +152,11 @@ export default function OurCreativesFormal() {
       </section>
 
       {/* 3. TECHNICAL SPECIFICATIONS */}
-      <section className="py-16 lg:py-24 bg-stone-50 border-y border-stone-200">
+      {/* <section className="py-16 lg:py-24 bg-stone-50 border-y border-stone-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="text-left">
-              {/* Standardized Heading */}
+              
               <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter text-black mb-8 leading-none">
                 Technical <br /> <span className="text-stone-400">Precision</span>
               </h2>
@@ -199,7 +199,7 @@ export default function OurCreativesFormal() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 4. FORMAL FOOTER CTA */}
       <section className="py-16 lg:py-24 bg-black text-white text-center">
