@@ -204,14 +204,14 @@ const Page = () => {
 
   const PROJECTS = [
     {
-      id: 4,
-      slug: "nature-valley-phase-1",
-      title: "The Nature Valley Phase 1",
+      id: 5,
+      slug: "the-nature-city",
+      title: "The Nature City",
       location: "Pisini, AP",
-      status: "Completed",
-      area: "25 Acres",
-      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
-      link: "/the-nature-valley-phase1" // ADD YOUR LINK HERE
+      status: "On Going",
+      area: "100 Acres ",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200",
+      link: "https://the-nature-city.vercel.app/" // ADD YOUR LINK HERE
     },
     {
       id: 1,
@@ -221,8 +221,19 @@ const Page = () => {
       status: "On Going",
       area: "45 Acres ",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
-      link: "https://the-nature-valley.vercel.app/" // ADD YOUR LINK HERE
+      // link: "/" // ADD YOUR LINK HERE
     },
+    {
+      id: 4,
+      slug: "nature-valley-phase-1",
+      title: "The Nature Valley Phase 1",
+      location: "Pisini, AP",
+      status: "Completed",
+      area: "25 Acres",
+      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
+      link: "/the-nature-valley-phase1" // ADD YOUR LINK HERE
+    },
+    
     {
       id: 2,
       slug: "smart-city",
@@ -335,7 +346,7 @@ const Page = () => {
                   onMouseLeave={() => setHoveredId(null)}
                   animate={{ flex: hoveredId === project.id ? 2.5 : 1 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative group cursor-pointer overflow-hidden rounded-[2rem] bg-[#0a1a10] min-h-[400px] lg:min-h-0"
+                  className="relative group cursor-pointer overflow-hidden rounded-[1.5rem] bg-[#0a1a10] min-h-[400px] lg:min-h-0"
                 >
                   {/* Link wrapper for the whole card */}
                   <a href={project.link} className="absolute inset-0 z-0">
@@ -348,7 +359,7 @@ const Page = () => {
                   </a>
 
                   <div className="absolute top-8 left-8 z-10 pointer-events-none">
-                    <span className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase">
+                    <span className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-widest ">
                       {project.status}
                     </span>
                   </div>
@@ -387,7 +398,7 @@ const Page = () => {
                   <AnimatePresence>
                     {hoveredId !== project.id && (
                       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap -rotate-90 pointer-events-none">
-                        <p className="text-white/30 text-2xl font-bold tracking-[0.2em] uppercase">{project.title.split(' ').slice(-1)}</p>
+                        <p className="text-white/30 text-2xl font-bold tracking-[0.1em] ">{project.title.split(' ').slice(-1)}</p>
                       </motion.div>
                     )}
                   </AnimatePresence>
