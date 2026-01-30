@@ -374,7 +374,7 @@ const Page = () => {
                             </div>
                             <a 
                               href={project.link} 
-                              className="inline-flex items-center gap-3 bg-white text-[#0a1a10] px-8 py-4 rounded-full font-bold text-sm hover:bg-[#22c55e] hover:text-white transition-colors duration-300"
+                              className="inline-flex items-center gap-3 bg-white text-[#0a1a10] px-8 py-4  font-bold text-sm hover:bg-[#22c55e] hover:text-white transition-colors duration-300"
                             >
                               Explore Details <ArrowRight size={18} />
                             </a>
