@@ -272,26 +272,52 @@ const Page = () => {
         {/* SECTION 3: Who We Are */}
         <section className="py-16 px-4 md:px-12 bg-stone-50">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side: Content */}
             <div className="space-y-4 text-center md:text-left">
-              <h2 className="text-4xl md:text-7xl font-bold tracking-tight text-black">Who We Are</h2>
+              <h2 className="text-4xl md:text-7xl font-bold tracking-tight text-black">
+                Who We Are
+              </h2>
               <div className="w-20 h-1 bg-[#22C55E] mx-auto md:mx-0"></div>
-              <p className="text-xl text-black leading-relaxed pt-4 font-medium">Nature, Curated with Luxury</p>
+
+              <p className="text-xl text-black leading-relaxed pt-4 font-medium">
+                Nature, Curated with Luxury
+              </p>
+
               <div className="space-y-4 text-lg text-black/70 leading-relaxed">
-                <p>At Mangal Realty, we craft spaces where refined living exists in harmony with nature...</p>
+                <p>
+                  At Mangal Realty, we craft spaces where refined living exists
+                  in effortless harmony with nature.
+                </p>
+                <p>
+                  Every detail is intentionally curated to elevate everyday
+                  living - from breathable layouts and serene landscapes to
+                  sustainable materials and mindful architecture.
+                </p>
               </div>
             </div>
+
+            {/* Right Side: Stats Counter Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((item, i) => (
-                <div key={i} className="p-8 bg-white border border-stone-200 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
-                  <div className="mb-2 text-4xl md:text-5xl font-bold group-hover:animate-bounce" style={{ color: brandGreen }}>
+                <div
+                  key={i}
+                  className="p-8 bg-white border border-stone-200 rounded-sm flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500"
+                >
+                  <div
+                    className="mb-2 text-4xl md:text-5xl font-bold transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"
+                    style={{ color: brandGreen }}
+                  >
                     <StatCounter endValue={item.number} />
                   </div>
-                  <p className="font-bold text-stone-800 text-xs tracking-widest leading-tight">{item.label}</p>
+                  <p className="font-bold text-stone-800  text-xs tracking-widest leading-tight">
+                    {item.label}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
 
         {/* SECTION 4: PROJECTS (INTERACTIVE EXPANDING GRID) */}
         <section className="py-24 bg-white overflow-hidden">
