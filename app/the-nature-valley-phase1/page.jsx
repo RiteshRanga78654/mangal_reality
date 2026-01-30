@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Plus, Minus, Star, ShieldCheck, TreePine, Landmark, 
-  TrendingUp, Phone, Mail, ArrowRight, Waves, Zap, Fence, 
+import {
+  Plus, Minus, Star, ShieldCheck, TreePine, Landmark,
+  TrendingUp, Phone, Mail, ArrowRight, Waves, Zap, Fence,
   Quote, MapPin, Maximize2
 } from 'lucide-react';
 
@@ -16,7 +16,7 @@ const NatureValleyPhase1 = () => {
   const MangalButton = ({ children, onClick, className = "" }) => (
     <button
       onClick={onClick}
-      className={`group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden  transition-all duration-300 w-full sm:w-auto ${className}`}
+      className={`group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.1em] text-[10px] md:text-xs overflow-hidden  transition-all duration-300 w-full sm:w-auto ${className}`}
     >
       <span className="relative z-10 flex items-center justify-center gap-3">
         {children}
@@ -27,16 +27,16 @@ const NatureValleyPhase1 = () => {
   );
 
   const projectStats = [
-    { label: "VMRDA Approved", value: "Phase 1", icon: <Landmark />, sub: "Clear Title Layout" }, 
-    { label: "Location", value: "Bhogapuram", icon: <MapPin />, sub: "Near NH-16 Highway" }, 
-    { label: "Total Area", value: "12 Acres", icon: <Maximize2 />, sub: "Premium Open Plots" } 
+    { label: "VMRDA Approved", value: "Phase 1", icon: <Landmark />, sub: "Clear Title Layout" },
+    { label: "Location", value: "Bhogapuram", icon: <MapPin />, sub: "Near NH-16 Highway" },
+    { label: "Total Area", value: "12 Acres", icon: <Maximize2 />, sub: "Premium Open Plots" }
   ];
 
   const highlights = [
-    { title: "Gated Security", icon: <ShieldCheck />, desc: "Secured entrance with compound wall and 24/7 watch." }, 
-    { title: "Prime Infra", icon: <Fence />, desc: "Grand Entrance Arch & Wide 40ft Blacktop Roads." }, 
+    { title: "Gated Security", icon: <ShieldCheck />, desc: "Secured entrance with compound wall and 24/7 watch." },
+    { title: "Prime Infra", icon: <Fence />, desc: "Grand Entrance Arch & Wide 40ft Blacktop Roads." },
     { title: "Water & Power", icon: <Waves />, desc: "Dedicated Water Tank & underground drainage system." },
-    { title: "Lush Greenery", icon: <TreePine />, desc: "Avenue plantation and multiple designer parks." } 
+    { title: "Lush Greenery", icon: <TreePine />, desc: "Avenue plantation and multiple designer parks." }
   ];
 
   const testimonials = [
@@ -57,16 +57,16 @@ const NatureValleyPhase1 = () => {
   }, [testimonials.length]);
 
   return (
-    <div 
+    <div
       className="bg-[#f8fafc] min-h-screen font-medium antialiased text-slate-900 overflow-x-hidden"
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row bg-[#0A1A10] overflow-hidden">
         <div className="w-full lg:w-2/3 h-[45vh] lg:h-screen relative">
-          <img 
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1500" 
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1500"
             className="w-full h-full object-cover opacity-60"
             alt="Nature Valley Phase 1"
           />
@@ -135,7 +135,7 @@ const NatureValleyPhase1 = () => {
               {showMoreLandmarks ? "Close Details" : "Growth Landmarks"}
             </MangalButton>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
             <div className="md:col-span-2 h-[300px] lg:h-[450px] relative overflow-hidden group">
               <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" alt="Bhogapuram View" />
@@ -145,7 +145,7 @@ const NatureValleyPhase1 = () => {
                 <h4 className="text-2xl md:text-4xl font-bold ">International Airport Corridor</h4>
               </div>
             </div>
-            
+
             <div className="h-[300px] lg:h-[450px] relative overflow-hidden group">
               <img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Connectivity" />
               <div className="absolute inset-0 bg-[#22C55E]/20 group-hover:bg-[#22C55E]/40 transition-colors"></div>
@@ -156,9 +156,9 @@ const NatureValleyPhase1 = () => {
 
             <AnimatePresence>
               {showMoreLandmarks && (
-                <motion.div 
-                  initial={{ opacity: 0, height: 0 }} 
-                  animate={{ opacity: 1, height: 'auto' }} 
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   className="h-[250px] lg:h-[350px] relative overflow-hidden md:col-span-3"
                 >
@@ -173,7 +173,7 @@ const NatureValleyPhase1 = () => {
 
             <div className={`transition-all duration-700 bg-white p-8 lg:p-12 flex flex-col justify-center text-left md:col-span-3 ${!showMoreLandmarks && 'lg:col-span-2'}`}>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
-                {[{l: "Airport Site", d: "8 KM"}, {l: "Tagarapuvalsa", d: "12 KM"}, {l: "Miracle City", d: "5 KM"}, {l: "Vizag City", d: "35 KM"}].map((item, i) => (
+                {[{ l: "Airport Site", d: "8 KM" }, { l: "Tagarapuvalsa", d: "12 KM" }, { l: "Miracle City", d: "5 KM" }, { l: "Vizag City", d: "35 KM" }].map((item, i) => (
                   <div key={i} className="flex flex-col border-l-2 border-[#22C55E] pl-4">
                     <span className="text-[9px]  font-bold text-slate-400 tracking-wider mb-1">{item.l}</span>
                     <span className="text-xl lg:text-3xl font-bold text-black">{item.d}</span>
@@ -193,7 +193,7 @@ const NatureValleyPhase1 = () => {
               <Quote className="absolute -top-10 -left-6 text-[#22C55E] opacity-10" size={120} />
               <div className="relative z-10">
                 <h3 className="text-4xl md:text-7xl font-bold  tracking-tighter leading-none mb-8">Client <br /><span className="text-[#22C55E]">Success</span></h3>
-                
+
                 <div className={`transition-all duration-500 min-h-[150px] ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
                   <p className="text-lg md:text-2xl font-medium text-slate-800 leading-relaxed mb-8 italic">
                     "{testimonials[testimonialIndex].text}"
@@ -220,8 +220,8 @@ const NatureValleyPhase1 = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 h-[300px] lg:h-[450px]">
-               <div className="h-full shadow-2xl"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Nature Valley" /></div>
-               <div className="h-full shadow-2xl translate-y-8"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Greenery" /></div>
+              <div className="h-full shadow-2xl"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Nature Valley" /></div>
+              <div className="h-full shadow-2xl translate-y-8"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Greenery" /></div>
             </div>
           </div>
         </div>
@@ -229,27 +229,35 @@ const NatureValleyPhase1 = () => {
 
       {/* 6. CONTACT FOOTER */}
       <footer className="py-16 lg:py-24 px-6 bg-[#0A1A10] text-center text-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-10 leading-none">Ready for the <br /> <span className="text-[#22C55E]">Next Phase?</span></h2>
-            
-            <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
-               <div className="flex items-center gap-3 font-bold  tracking-[0.2em] text-[10px] md:text-xs">
-                 <Mail className="text-[#22C55E]" size={18} /> info@mangalreality.com
-               </div>
-               <div className="flex items-center gap-3 font-bold tracking-[0.2em] text-[10px] md:text-xs">
-                 <Phone className="text-[#22C55E]" size={18} /> +91 9429690913
-               </div>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-10 leading-none">Ready for the <br /> <span className="text-[#22C55E]">Next Phase?</span></h2>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <MangalButton>Enquire for Phase 2</MangalButton>
-              <MangalButton>Get Location Map</MangalButton>
+          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
+            <div className="flex items-center gap-3 font-bold  tracking-[0.1em] text-[10px] md:text-xs">
+              <Mail className="text-[#22C55E]" size={18} /> info@mangalreality.com
             </div>
-            
-            <p className="mt-16 text-[9px] text-slate-600 tracking-[0.4em] font-bold">
-              © 2024 Mangal Realty. Nature Valley Phase 1 - Bhogapuram
-            </p>
+            <div className="flex items-center gap-3 font-bold tracking-[0.1em] text-[10px] md:text-xs">
+              <Phone className="text-[#22C55E]" size={18} /> +91 9429690913
+            </div>
           </div>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            {/* Link to your Contact Form or WhatsApp */}
+            <a href="/contact-us" className="contents">
+              <MangalButton>Enquire for Phase 2</MangalButton>
+            </a>
+
+            {/* Link to Google Maps or a PDF/Image Map */}
+            <a
+              href="https://maps.google.com/?q=Pisini+Andhra+Pradesh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contents"
+            >
+              <MangalButton>Get Location Map</MangalButton>
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );

@@ -58,7 +58,7 @@ export default function AmenitiesSection() {
             {/* --- Left SIDE: FACILITIES --- */}
           <div className="flex flex-col">
             <header className="mb-10 text-center lg:text-left">
-              <h2 className="text-white text-[32px] md:text-[50px] font-bold tracking-tighter ">
+              <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter ">
                 Facilities
               </h2>
               <div className="w-24 h-1 mt-2 mx-auto lg:mx-0" style={{ backgroundColor: brandGreen }}></div>
@@ -83,7 +83,7 @@ export default function AmenitiesSection() {
               <div className="mt-10 text-center lg:text-left">
                 <button 
                   onClick={() => setFacilitiesCount(facilities.length)}
-                  className="group relative cursor-pointer px-8 py-4 text-white font-bold  tracking-widest text-[10px] overflow-hidden"
+                  className="group relative cursor-pointer px-8 py-4 text-white font-bold  tracking-widest text-[12px] overflow-hidden"
                 >
                   <span className="relative z-10">View All Facilities</span>
                   <div className="absolute inset-0 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
@@ -96,7 +96,7 @@ export default function AmenitiesSection() {
           {/* --- Right SIDE: AMENITIES --- */}
           <div className="flex flex-col">
             <header className="mb-10 text-center lg:text-left">
-              <h2 className="text-white text-[32px] md:text-[50px] font-bold tracking-tighter ">
+              <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter ">
                 Amenities
               </h2>
               <div className="w-24 h-1 mt-2 mx-auto lg:mx-0" style={{ backgroundColor: brandGreen }}></div>
@@ -121,7 +121,7 @@ export default function AmenitiesSection() {
               <div className="mt-10 text-center lg:text-left">
                 <button 
                   onClick={() => setAmenitiesCount(amenities.length)}
-                  className="group relative cursor-pointer px-8 py-4 text-white font-bold  tracking-widest text-[10px] overflow-hidden"
+                  className="group relative cursor-pointer px-8 py-4 text-white font-bold  tracking-widest text-[12px] overflow-hidden"
                 >
                   <span className="relative z-10">View All Amenities</span>
                   <div className="absolute inset-0 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>

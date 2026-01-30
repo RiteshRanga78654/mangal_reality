@@ -83,7 +83,7 @@ const videoItems = [
 ];
 
 const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
-  <div className="flex flex-col h-150 md:h-250 overflow-hidden gap-4 md:gap-8">
+  <div className="flex flex-col h-[600px] md:h-[1000px] overflow-hidden gap-4 md:gap-8">
     <motion.div
       animate={{ y: reverse ? ["-50%", "0%"] : ["0%", "-50%"] }}
       transition={{ ease: "linear", duration: 40, repeat: Infinity }}
@@ -93,7 +93,7 @@ const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
         <motion.div
           key={idx}
           whileHover={{ scale: 0.98 }}
-          className="relative aspect-square w-full rounded-2xl md:rounded-4xl overflow-hidden cursor-pointer shadow-xl border-2 md:border-[6px] border-white"
+          className="relative aspect-square w-full rounded-2xl md:rounded-[2.5rem] overflow-hidden cursor-pointer shadow-xl border-2 md:border-[6px] border-white"
           onClick={() => onSelect(img)}
         >
           <img
@@ -123,16 +123,15 @@ export default function LuxuryGalleryPage() {
             className="w-full h-full object-cover"
             alt="Hero Background"
           />
-          <div className="absolute"></div>
+          <div className="absolute inset-0 bg-black/30" />
           <div className="absolute z-20 text-center px-6 max-w-5xl">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className=""
             >
               <div className="relative z-10 text-center text-white px-6">
-                <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+                <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase">
                   <a
                     href="/"
                     className="hover:text-green-400 flex items-center gap-1 transition-colors"
@@ -142,9 +141,8 @@ export default function LuxuryGalleryPage() {
                   <ChevronRight size={12} className="opacity-50" />
                   <span className="text-white">Gallery</span>
                 </nav>
-                {/* Standardized Heading: 4xl to 7xl */}
-                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">
-                  Our Videos
+                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none">
+                  Our Gallery
                 </h2>
                 <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
               </div>
@@ -199,12 +197,12 @@ export default function LuxuryGalleryPage() {
                       alt={video.title}
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-[#0a1a10]/20 group-hover:bg-[#0a1a10]/40 transition-all">
-                      <div className="w-12 h-8 md:w-16 md:h-11 bg-[red] rounded-xl flex items-center justify-center text-white shadow-xl transform transition group-hover:scale-110">
+                      <div className="w-12 h-8 md:w-16 md:h-11 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-xl transform transition group-hover:scale-110">
                         <Play fill="white" className="size-5 md:size-6" />
                       </div>
                     </div>
                   </div>
-                  <h4 className="text-md md:text-lg font-bold text-[#0a1a10] group-hover:text-green-700 transition-colors px-1 line-clamp-2  tracking-tight">
+                  <h4 className="text-md md:text-lg font-bold text-[#0a1a10] group-hover:text-green-700 transition-colors px-1 line-clamp-2 tracking-tight">
                     {video.title}
                   </h4>
                 </motion.div>
@@ -220,7 +218,7 @@ export default function LuxuryGalleryPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-100 flex items-center justify-center bg-[#0a1a10]/95 backdrop-blur-md p-4"
+              className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0a1a10]/95 backdrop-blur-md p-4"
             >
               <button
                 onClick={() => setSelectedItem(null)}

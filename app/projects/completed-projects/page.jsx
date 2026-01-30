@@ -84,7 +84,7 @@ const CompletedProjectsPage = () => {
       area: "5 Acres",
       tagline: "Expansive green living across five acres of excellence.",
       image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=1000",
-      link: "/the-jonnada-project"
+      link: "/the-green-meadows"
     }
   ];
 
