@@ -9,7 +9,7 @@ import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram } from "react-icons/f
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });z
+    window.scrollTo({ top: 0, behavior: 'smooth' }); z
   };
 
   const containerVariants = {
@@ -66,13 +66,26 @@ export default function Footer() {
 
           {/* COLUMN 2: EXPLORE */}
           <motion.div variants={itemVariants} className="flex flex-col gap-8">
-            <h3 className="text-white font-bold  tracking-[0.1em] text-xs border-l-2 border-[#22C55E] pl-4">
+            <h3 className="text-white font-bold tracking-[0.1em] text-xs border-l-2 border-[#22C55E] pl-4">
               Explore
             </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4">
-              {['About Us', 'Projects', 'Why Invest', 'Gallery', 'Contact', 'Awards', 'Blogs', 'Privacy'].map((item) => (
-                <Link key={item} href="#" className="hover:text-[#4ADE80] transition-all duration-300 text-sm font-medium hover:translate-x-1">
-                  {item}
+              {[
+                { name: 'Our Leadership', slug: '/about-us/our-leadership' },
+                { name: 'Ongoing Projects', slug: 'https://the-nature-city.vercel.app/' },
+                { name: 'Our Gallery', slug: '/gallery/our-gallery' },
+                { name: 'Completed Projects', slug: '/projects/completed-projects' },
+                { name: 'Our Creatives', slug: '/gallery/our-creatives' },
+                { name: 'Press Coverage', slug: '/gallery/press-coverages' },
+                { name: 'Privacy Policy', slug: '/privacy-policy' },
+                { name: 'Contact Us', slug: '/contact-us' },
+              ].map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.slug}
+                  className="hover:text-[#4ADE80] transition-all duration-300 text-sm font-medium hover:translate-x-1"
+                >
+                  {item.name}
                 </Link>
               ))}
             </div>

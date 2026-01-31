@@ -110,13 +110,13 @@ export default function VisionMission() {
             { 
               title: "Our Vision", 
               icon: <Eye size={40} />, 
-              text: "To redefine the luxury landscape by creating sanctuaries that celebrate the delicate balance of high-end living and deep ecological respect.",
+              text: "To transform communities where every family thrives, where children grow surrounded by nature's healing embrace and spaces that inspire connection, cultivate wellness, and create legacies of joy.",
               accent: "01"
             },
             { 
               title: "Our Mission", 
               icon: <Target size={40} />, 
-              text: "To pioneer regenerative architecture, ensuring every Mangal development leaves the earth better than we found it through radical transparency.",
+              text: "To deliver family-centered developments that integrate experience like holistic wellness daily that prioritizes health, fosters joyful moments, and leaves the earth better than we found it.",
               accent: "02"
             }
           ].map((card, i) => (
@@ -154,12 +154,12 @@ export default function VisionMission() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
             {[
-              { icon: <Leaf />, title: "Regenerative", desc: "We actively restore natural habitats through our building footprint." },
-              { icon: <Shield />, title: "Total Trust", desc: "Every stone and promise is etched in uncompromising honesty." },
-              { icon: <Sparkles />, title: "Curated Craft", desc: "Architecture that breathes. We prioritize artisanal precision." },
-              { icon: <Trees />, title: "Reforestation", desc: "10 trees planted for every home sold." },
-              { icon: <Wind />, title: "Clean Air", desc: "Medical-grade air filtration in every room." },
-              { icon: <Droplets />, title: "Water Saving", desc: "100% greywater recycling systems." }
+              { icon: <Leaf />, title: "Holistic Family Wellness", desc: "Health, happiness, and harmony aren't much to ask, they're basic . Family health is paramount." },
+              { icon: <Shield />, title: "Safe Heaven", desc: "Protected havens where families feel Secure, nurturing environments and peace of mind is built into every corner." },
+              { icon: <Sparkles />, title: "Mindful Architecture", desc: "Spaces that honor both nature and human needs.Refined living that elevates the soul." },
+              { icon: <Trees />, title: "Authentic Nature", desc: "Leading with sustainability and Architecture that breathes with the land that heal." },
+              { icon: <Wind />, title: "Living Legacy", desc: "Environmental leadership through action & Elevated living rooted in values." },
+              { icon: <Droplets />, title: "Luxury with Purpose", desc: "Building lasting legacies.Creating homes with integrity, responsibility, and vision" }
             ].map((val, idx) => (
               <motion.div
                 key={idx}
