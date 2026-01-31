@@ -112,7 +112,7 @@ export default function ContactUs() {
           {/* LEFT: CONTACT INFO - Text Black */}
           <div className="lg:col-span-5 space-y-12 text-left">
             <div>
-              <h2 className="text-[32px] md:text-[60px] font-bold text-black">Corporate <br /> <span className="text-[#22C55E]">Headquarters</span></h2>
+              <h2 className="text-4xl md:text-7xl font-bold text-black">Corporate <br /> <span className="text-[#22C55E]">Headquarters</span></h2>
               <div className="w-16 h-1.5 bg-[#22C55E] mb-8"></div>
               <p className="text-black leading-relaxed max-w-sm">
                 Have questions about our upcoming projects or investment opportunities? Reach out to our dedicated support team.
