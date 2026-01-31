@@ -211,29 +211,29 @@ const Page = () => {
       status: "On Going",
       area: "100 Acres ",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200",
-      link: "https://the-nature-city.vercel.app/" // ADD YOUR LINK HERE
+      link: "https://the-nature-city.vercel.app/" 
     },
     {
       id: 1,
       slug: "the-nature-valley",
-      title: "The Nature Valley Phase 2",
+      title: "The Nature Valley (Phase 2)",
       location: "Pisini, AP",
       status: "On Going",
       area: "45 Acres ",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
-      // link: "/" // ADD YOUR LINK HERE
+      link: "/the-nature-valley-phase2" 
     },
     {
       id: 4,
       slug: "nature-valley-phase-1",
-      title: "The Nature Valley Phase 1",
+      title: "The Nature Valley (Phase 1)",
       location: "Pisini, AP",
       status: "Completed",
       area: "25 Acres",
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
-      link: "/the-nature-valley-phase1" // ADD YOUR LINK HERE
+      link: "/the-nature-valley-phase1" 
     },
-    
+
     {
       id: 2,
       slug: "smart-city",
@@ -242,7 +242,7 @@ const Page = () => {
       status: "Completed",
       area: "3 Acres",
       image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800",
-      link: "/the-smart-city" // ADD YOUR LINK HERE
+      link: "/the-smart-city" 
     },
     {
       id: 3,
@@ -252,7 +252,29 @@ const Page = () => {
       status: "Completed",
       area: "5 Acres",
       image: "/assets/images/jonnada-project.jpg",
-      link: "/the-green-meadows" // ADD YOUR LINK HERE
+      link: "/the-green-meadows" 
+    },
+  ];
+
+  // STICKY SECTION DATA
+  const STICKY_CONTENT = [
+    { 
+      label: "Nature Embrace", 
+      title: "Family's Grace", 
+      desc: "At Mangal Realty, we craft spaces where wellness isn't a program — it's a way of life.",
+      img: "/assets/Reference images/2659.jpg" 
+    },
+    { 
+      label: "Gather. Grow. Glow.", 
+      title: "Authentic Living", 
+      desc: "In the heart of Miyawaki Forest invite families to reconnect with what matters — simplicity, authenticity, laughter.",
+      img: "/assets/Reference images/27.jpg" 
+    },
+    { 
+      label: "Where Roots Grow Deep.", 
+      title: "Where Hearts Grow Strong.", 
+      desc: "Mangal Realty is creating spaces where health blooms, joy thrives, and legacies grow.",
+      img: "/assets/Reference images/928.jpg" 
     },
   ];
 
@@ -268,14 +290,24 @@ const Page = () => {
 
         {/* SECTION 2: STICKY IMAGES */}
         <section className="relative">
-          {[
-            { title: "Pure Nature", img: "/assets/Reference images/2659.jpg" },
-            { title: "Sustainable Life", img: "/assets/Reference images/27.jpg" },
-            { title: "Green Future", img: "/assets/Reference images/928.jpg" },
-          ].map((item, i) => (
+          {STICKY_CONTENT.map((item, i) => (
             <div key={i} className="sticky top-0 h-screen w-full overflow-hidden">
               <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 bg-black/40 z-[11]"></div>
+              
+              {/* Overlay Content with exactly your code's font styles */}
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6 text-white">
+                <span className="text-xl leading-relaxed mb-4 font-medium uppercase tracking-widest">
+                  {item.label}
+                </span>
+                <h2 className="text-4xl md:text-7xl font-bold tracking-tight mb-4">
+                  {item.title}
+                </h2>
+                <div className="w-20 h-1 bg-[#22C55E] mx-auto mb-6"></div>
+                <p className="max-w-3xl text-lg md:text-xl font-medium leading-relaxed opacity-90">
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
         </section>
@@ -329,8 +361,7 @@ const Page = () => {
           </div>
         </section>
 
-
-        {/* SECTION 4: PROJECTS (INTERACTIVE EXPANDING GRID) */}
+        {/* SECTION 4: PROJECTS */}
         <section className="py-24 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col items-center mb-16 text-center">
@@ -348,7 +379,6 @@ const Page = () => {
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                   className="relative group cursor-pointer overflow-hidden rounded-[1.5rem] bg-[#0a1a10] min-h-[400px] lg:min-h-0"
                 >
-                  {/* Link wrapper for the whole card */}
                   <a href={project.link} className="absolute inset-0 z-0">
                     <motion.img
                       src={project.image}
@@ -365,8 +395,8 @@ const Page = () => {
                   </div>
 
                   <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 pointer-events-none">
-                    <motion.div 
-                      animate={{ y: hoveredId === project.id ? 0 : 20, opacity: hoveredId === project.id ? 1 : 0.8 }} 
+                    <motion.div
+                      animate={{ y: hoveredId === project.id ? 0 : 20, opacity: hoveredId === project.id ? 1 : 0.8 }}
                       className="space-y-4 pointer-events-auto"
                     >
                       <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight max-w-[250px]">{project.title}</h3>
@@ -383,11 +413,12 @@ const Page = () => {
                                 <span className="text-sm font-medium">{project.area}</span>
                               </div>
                             </div>
-                            <a 
-                              href={project.link} 
-                              className="inline-flex items-center gap-3 bg-white text-[#0a1a10] px-8 py-4  font-bold text-sm hover:bg-[#22c55e] hover:text-white transition-colors duration-300"
-                            >
-                              Explore Details <ArrowRight size={18} />
+                            <a href={project.link} className="relative inline-flex items-center gap-3 px-12 py-5 text-white font-bold text-xs tracking-widest overflow-hidden group/btn">
+                              <span className="relative z-10 flex items-center gap-2">
+                                Explore Details <ArrowRight size={18} />
+                              </span>
+                              <div className="absolute inset-1 bg-[#22c55e] scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
+                              <div className="absolute inset-1 border border-[#22c55e]" />
                             </a>
                           </motion.div>
                         )}
