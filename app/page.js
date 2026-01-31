@@ -211,7 +211,7 @@ const Page = () => {
       status: "On Going",
       area: "100 Acres ",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200",
-      link: "https://the-nature-city.vercel.app/" 
+      link: "https://the-nature-city.vercel.app/"
     },
     {
       id: 1,
@@ -221,7 +221,7 @@ const Page = () => {
       status: "On Going",
       area: "45 Acres ",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
-      link: "/the-nature-valley-phase2" 
+      link: "/the-nature-valley-phase2"
     },
     {
       id: 4,
@@ -231,7 +231,7 @@ const Page = () => {
       status: "Completed",
       area: "25 Acres",
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
-      link: "/the-nature-valley-phase1" 
+      link: "/the-nature-valley-phase1"
     },
 
     {
@@ -242,7 +242,7 @@ const Page = () => {
       status: "Completed",
       area: "3 Acres",
       image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800",
-      link: "/the-smart-city" 
+      link: "/the-smart-city"
     },
     {
       id: 3,
@@ -252,29 +252,29 @@ const Page = () => {
       status: "Completed",
       area: "5 Acres",
       image: "/assets/images/jonnada-project.jpg",
-      link: "/the-green-meadows" 
+      link: "/the-green-meadows"
     },
   ];
 
   // STICKY SECTION DATA
   const STICKY_CONTENT = [
-    { 
-      label: "Nature Embrace", 
-      title: "Family's Grace", 
+    {
+      label: "Nature Embrace",
+      title: "Family's Grace",
       desc: "At Mangal Realty, we craft spaces where wellness isn't a program — it's a way of life.",
-      img: "/assets/Reference images/2659.jpg" 
+      img: "/assets/Reference images/2659.jpg"
     },
-    { 
-      label: "Gather. Grow. Glow.", 
-      title: "Authentic Living", 
+    {
+      label: "Gather. Grow. Glow.",
+      title: "Authentic Living",
       desc: "In the heart of Miyawaki Forest invite families to reconnect with what matters — simplicity, authenticity, laughter.",
-      img: "/assets/Reference images/27.jpg" 
+      img: "/assets/Reference images/27.jpg"
     },
-    { 
-      label: "Where Roots Grow Deep.", 
-      title: "Where Hearts Grow Strong.", 
+    {
+      label: "Where Roots Grow Deep.",
+      title: "Where Hearts Grow Strong.",
       desc: "Mangal Realty is creating spaces where health blooms, joy thrives, and legacies grow.",
-      img: "/assets/Reference images/928.jpg" 
+      img: "/assets/Reference images/928.jpg"
     },
   ];
 
@@ -294,7 +294,7 @@ const Page = () => {
             <div key={i} className="sticky top-0 h-screen w-full overflow-hidden">
               <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/40 z-[11]"></div>
-              
+
               {/* Overlay Content with exactly your code's font styles */}
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6 text-white">
                 <span className="text-xl leading-relaxed mb-4 font-medium uppercase tracking-widest">
@@ -323,18 +323,21 @@ const Page = () => {
               <div className="w-20 h-1 bg-[#22C55E] mx-auto md:mx-0"></div>
 
               <p className="text-xl text-black leading-relaxed pt-4 font-medium">
-                Nature, Curated with Luxury
+                Where Roots Grow Deep. Where Hearts Grow Strong
               </p>
 
               <div className="space-y-4 text-lg text-black/70 leading-relaxed">
                 <p>
-                  At Mangal Realty, we craft spaces where refined living exists
-                  in effortless harmony with nature.
+                  At Mangal Realty, we heartily believe a home is more than just concrete walls,it's where
+                  families' healthiest, happiest chapter begins.
                 </p>
                 <p>
-                  Every detail is intentionally curated to elevate everyday
-                  living - from breathable layouts and serene landscapes to
-                  sustainable materials and mindful architecture.
+                 We don't just build homes; we nurture environments where wellness is woven into everyday living.
+
+                </p>
+                <p>
+                  We create  spaces where sustainable design supports families to grow healthy, happy,
+                  and whole—together with nature.
                 </p>
               </div>
             </div>
@@ -362,9 +365,9 @@ const Page = () => {
         </section>
 
         {/* SECTION 4: PROJECTS */}
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-white overflow-hidden ">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col items-center mb-16 text-center">
+            <div className="flex flex-col items-center mb-16 text-center mt-[-3rem]">
               <h2 className="text-4xl md:text-7xl font-bold leading-tight text-[#0a1a10]">Current Projects</h2>
               <div className="w-24 h-1 bg-[#22C55E] mx-auto mb-4"></div>
             </div>
