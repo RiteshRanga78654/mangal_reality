@@ -60,7 +60,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm leading-relaxed font-light tracking-wide text-[#B0C4B0]">
-              Leading the revolution in sustainable luxury. We cultivate environments where modern architecture meets the serenity of nature.
+              Shaping the next generation of sustainable luxury.We design living experiences where architectural excellence that seamlessly blend modern innovation with nature's tranquility.
+
             </p>
           </motion.div>
 

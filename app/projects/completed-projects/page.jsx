@@ -66,7 +66,7 @@ const CompletedProjectsPage = () => {
       title: "The Nature Valley Phase 1",
       location: "Bhogapuram",
       area: "12 Acres",
-      tagline: "Where serene landscapes meet future-ready infrastructure.",
+      tagline: "Experience the Luxurious Green Side of Life.",
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000",
       link: "/the-nature-valley-phase1"
     },
@@ -74,7 +74,7 @@ const CompletedProjectsPage = () => {
       title: "The Smart City",
       location: "Dakamari",
       area: "3 Acres",
-      tagline: "Intelligence meets luxury in the heart of Dakamari.",
+      tagline: "Intelligence Meets Luxury in the Heart of Dakamari.",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000",
       link: "/the-smart-city"
     },
@@ -82,7 +82,7 @@ const CompletedProjectsPage = () => {
       title: "The Green Meadows",
       location: "Jonnada",
       area: "5 Acres",
-      tagline: "Expansive green living across five acres of excellence.",
+      tagline: "Expansive Green Living Across Five Acres of Excellence.",
       image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=1000",
       link: "/the-green-meadows"
     }
@@ -127,7 +127,8 @@ const CompletedProjectsPage = () => {
                 <span className="text-white">Completed Projects</span>
               </nav>
               <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
-                Crafting Legacies
+                Where Families Flourish and Dreams Take Root
+
               </h2>
               <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
             </div>
