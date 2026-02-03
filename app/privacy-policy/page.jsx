@@ -11,25 +11,25 @@ const PrivacyPolicy = () => {
       id: "collection",
       title: "Data Collection",
       icon: <Eye size={24} />,
-      content: "We collect information that identifies, relates to, or could reasonably be linked with you. This includes identifiers such as your real name, alias, postal address, unique personal identifier, online identifier, and Internet Protocol address."
+      content: "To help you discover a home that truly fits your lifestyle, we collect information about you. Think of us as your partners in finding the perfect home.We promise: we only ask for information that genuinely helps us serve you better."
     },
     {
       id: "usage",
       title: "Strategic Usage",
       icon: <FileText size={24} />,
-      content: "At Mangal Realty, we use your data to personalize your property search experience, process your inquiries efficiently, and keep you informed about the sustainable architectural developments within our portfolio."
+      content: "Imagine browsing properties that actually match what you're looking for we curate your experience so you're not overwhelmed, just genuinely helped."
     },
     {
       id: "security",
       title: "Security Protocols",
       icon: <Lock size={24} />,
-      content: "Your privacy is our legacy. We employ enterprise-grade encryption and secure socket layer technology (SSL) to ensure that your personal information is protected from unauthorized access or disclosure."
+      content: "Your data security isn't an afterthought, it's foundational to our operations.Your information is locked down with bank-level encryption with Multi-Layer Encryption,SSL Technology, Regular Audits and Access Restrictions."
     },
     {
       id: "rights",
       title: "User Rights",
       icon: <Scale size={24} />,
-      content: "You maintain the absolute right to access, rectify, or request the deletion of your personal data. Our team is committed to responding to transparency requests within 30 days of receipt."
+      content: "You're Always in Charge. View your data anytime , Update incorrect information , Delete your data (when legally possible) , Opt out of marketing emails and  Download your information."
     }
   ];
 
@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
             </h1>
             <div className="h-1 w-32 bg-[#22C55E] mx-auto mb-8" />
             <p className="max-w-xl mx-auto text-lg md:text-xl font-light opacity-90 leading-relaxed">
-              Preserving your trust with the same care we use to preserve nature.
+              “Your family's trust is the foundation of our community”
             </p>
           </motion.div>
         </div>
