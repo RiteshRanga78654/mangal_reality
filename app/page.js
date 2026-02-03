@@ -89,40 +89,40 @@ const Page = () => {
   ];
 
   const testimonials = [
-    {
-      id: 1,
-      name: "Abhishek Tripathi",
-      role: "Client",
-      image: "/assets/images/testi-1.jpg",
-      text: "Working with Mangal Reality has been a transformative experience for our company. Their team has been instrumental in guiding our digital strategy and implementing innovative solutions.",
-    },
+    // {
+    //   id: 1,
+    //   name: "Abhishek Tripathi",
+    //   role: "Client",
+    //   image: "/assets/images/testi-1.jpg",
+    //   text: "Working with Mangal Reality has been a transformative experience for our company. Their team has been instrumental in guiding our digital strategy and implementing innovative solutions.",
+    // },
     {
       id: 2,
       name: "Anil Mehta",
       role: "Client",
       image: "/assets/images/testi-2.jpg",
-      text: "My efforts in app development have changed massively thanks to Mangal Reality. They have tremendously sophisticated technologies that I use to streamline campaigns and improve outcomes.",
+      text: "The personalized strategies provided were outstanding.The team's dedication to understanding our family's unique needs made all the difference. A 200% increase in property engagement within the first quarter.",
     },
     {
       id: 3,
       name: "Tanu Aggarwal",
       role: "Marketing Director",
       image: "/assets/images/testi-3.jpg",
-      text: "The strategic insights provided were invaluable. We saw a 200% increase in engagement within the first quarter. The team is professional, responsive, and truly cares.",
+      text: "Working with Mangal Reality has redefined what's possible for our business..Their expertise in digital strategy and innovative solutions has helped us better connect with families seeking their dream homes.",
     },
     {
       id: 4,
       name: "Rohit Sharma",
       role: "Client",
       image: "/assets/images/testi-4.jpg",
-      text: "Working with Mangal Reality has been a transformative experience for our company. Their team has been instrumental in guiding our digital strategy and implementing innovative solutions.",
+      text: "Collaborating with Mangal Reality has been a pivotal experience for our organization.Their advanced tools and dedication to helping families find perfect homes have made all the difference in my success.",
     },
     {
       id: 5,
       name: "Sumit Nagar",
       role: "Client",
       image: "/assets/images/testi-5.jpg",
-      text: "My efforts in app development have changed massively thanks to Mangal Reality. They have tremendously sophisticated technologies that I use to streamline campaigns and improve outcomes.",
+      text: "Mangal Reality has been instrumental in our company's evolution.Their strategic insights and family-focused solutions have enabled us to grow while maintaining the personal touch that families appreciate and trust.",
     },
     {
       id: 6,
@@ -472,7 +472,7 @@ const Page = () => {
                             <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#22c55e] rounded-sm"></div>
                           </div>
                           <div className="flex-1 z-10">
-                            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 italic">"{item.text}"</p>
+                            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 ">"{item.text}"</p>
                             <div>
                               <h4 className="text-[#0a1a10] font-bold text-lg tracking-wide">{item.name}</h4>
                               <p className="text-[#22c55e] text-sm font-medium">{item.role}</p>
