@@ -526,7 +526,7 @@ const Page = () => {
             </div>
 
             <div className="flex md:hidden justify-center mt-8 text-black">
-              <NavControls prev={prevSlide} next={nextSlide}  />
+              <NavControls prev={prevSlide} next={nextSlide}   />
             </div>
           </div>
         </section>
