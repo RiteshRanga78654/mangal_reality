@@ -67,7 +67,7 @@ export default function ContactUs() {
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
       {/* 1. HERO SECTION - Height 80vh & Opacity Removed */}
-      <section className="relative h-[70vh] flex items-center bg-[#0a1a10] overflow-hidden">
+      <section className="relative h-[72vh] flex items-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
@@ -95,8 +95,8 @@ export default function ContactUs() {
             <ChevronRight size={12} className="opacity-50" />
             <span className="text-white">Contact Us</span>
           </nav>
-          <h1 className="text-6xl md:text-9xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1>
-          <h1 className="text-4xl md:text-8xl text-white mb-8 tracking-tighter  leading-none">
+          <h1 className="text-4xl md:text-7xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1>
+          <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-tighter  leading-none">
               Get In Touch.
             </h1>
             <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />

@@ -60,7 +60,7 @@ export default function PressCoverages() {
     <main className="bg-white font-sans overflow-hidden">
       
       {/* 1. HERO SECTION - NEWSROOM STYLE */}
-      <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img
           src="https://images.unsplash.com/photo-1504711432869-efd597cdd0ef?auto=format&fit=crop&q=80&w=2000"
           alt="Press Banner"
@@ -83,7 +83,7 @@ export default function PressCoverages() {
                 <Home size={12} /> Home
               </a>
               <ChevronRight size={12} className="opacity-50" />
-              <span className="text-white">Gallery</span>
+              <span className="text-[#22c55e]">Gallery</span>
             </nav>
             {/* Standardized Heading: 4xl to 7xl */}
             <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">

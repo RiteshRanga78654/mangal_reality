@@ -129,7 +129,7 @@ export default function MangalLeadership() {
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
       {/* SECTION 1: HERO */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative h-[72vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
           alt="Banner"
@@ -168,7 +168,7 @@ export default function MangalLeadership() {
                 <Home size={12} /> Home
               </a>
               <ChevronRight size={12} className="opacity-50" />
-              <span className="text-white">About Us</span>
+              <span className="text-[#22c55e]">About Us</span>
             </nav>
             {/* Standardized Heading: 4xl to 7xl */}
             <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">

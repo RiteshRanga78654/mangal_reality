@@ -5,82 +5,13 @@ import { X, Play, Home, ChevronRight } from "lucide-react";
 
 // --- DUMMY DATA ---
 const galleryPhotos = [
-  {
-    id: 1,
-    type: "image",
-    url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
-  },
-  {
-    id: 2,
-    type: "image",
-    url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200",
-  },
-  {
-    id: 3,
-    type: "image",
-    url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200",
-  },
-  {
-    id: 4,
-    type: "image",
-    url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200",
-  },
-  {
-    id: 5,
-    type: "image",
-    url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200",
-  },
-  {
-    id: 6,
-    type: "image",
-    url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200",
-  },
+  { id: 1, type: "image", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200" },
+  { id: 2, type: "image", url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200" },
+  { id: 3, type: "image", url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200" },
+  { id: 4, type: "image", url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200" },
+  { id: 5, type: "image", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200" },
+  { id: 6, type: "image", url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200" },
 ];
-
-// const videoItems = [
-//   {
-//     id: 101,
-//     title: "Invest in Dates County – A Future Built on Nature",
-//     id_yt: "dQw4w9WgXcQ",
-//     thumb:
-//       "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=600",
-//   },
-//   {
-//     id: 102,
-//     title: "Dates County: Your Sustainable Haven",
-//     id_yt: "dQw4w9WgXcQ",
-//     thumb:
-//       "https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&w=600",
-//   },
-//   {
-//     id: 103,
-//     title: "Welcome to Dates County: Eco-Friendly Living",
-//     id_yt: "dQw4w9WgXcQ",
-//     thumb:
-//       "https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&w=600",
-//   },
-//   {
-//     id: 104,
-//     title: "Customer Experience in Planet Green",
-//     id_yt: "dQw4w9WgXcQ",
-//     thumb:
-//       "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600",
-//   },
-//   {
-//     id: 105,
-//     title: "Walk Through Video of Planet Green Layout",
-//     id_yt: "dQw4w9WgXcQ",
-//     thumb:
-//       "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
-//   },
-//   {
-//     id: 106,
-//     title: "Dates County Hyderabad | Villa Plots",
-//     id_yt: "dQw4w9WgXcQ",
-//     thumb:
-//       "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
-//   },
-// ];
 
 const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
   <div className="flex flex-col h-[600px] md:h-[1000px] overflow-hidden gap-4 md:gap-8">
@@ -93,13 +24,13 @@ const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
         <motion.div
           key={idx}
           whileHover={{ scale: 0.98 }}
-          className="relative aspect-square w-full rounded-2xl md:rounded-[2.5rem] overflow-hidden cursor-pointer shadow-xl border-2 md:border-[6px] border-white"
+          className="relative aspect-square w-full rounded-none overflow-hidden cursor-pointer shadow-xl border-2 md:border-[6px] border-white"
           onClick={() => onSelect(img)}
         >
           <img
             src={img.url}
             alt="Gallery"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
           />
         </motion.div>
       ))}
@@ -113,50 +44,60 @@ export default function LuxuryGalleryPage() {
   return (
     <>
       <div
-        className="bg-[#FAF9F6] min-h-screen font-medium antialiased"
+        className="bg-white min-h-screen font-medium antialiased text-slate-900 rounded-none overflow-x-hidden"
         style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
       >
-        {/* --- HERO SECTION --- */}
-        <section className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
-            className="w-full h-full object-cover"
-            alt="Hero Background"
-          />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute z-20 text-center px-6 max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
+        {/* --- 1. HERO SECTION (Updated to match Video Page size/style) --- */}
+        <section className="relative h-[72vh] flex items-center justify-center bg-[#0a1a10] overflow-hidden pt-20">
+          <div className="absolute inset-0 z-0 opacity-40">
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"
+              className="w-full h-full object-cover scale-105"
+              alt="Hero Background"
+            />
+            {/* Symmetrical Gradient for centering text visibility */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0a1a10]/60 via-transparent to-[#0a1a10]/60" />
+          </div>
+
+          <div className="relative z-10 px-6 text-center text-white max-w-5xl">
+            <motion.nav 
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em] opacity-80"
             >
-              <div className="relative z-10 text-center text-white px-6">
-                <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase">
-                  <a
-                    href="/"
-                    className="hover:text-green-400 flex items-center gap-1 transition-colors"
-                  >
-                    <Home size={12} /> Home
-                  </a>
-                  <ChevronRight size={12} className="opacity-50" />
-                  <span className="text-white">Gallery</span>
-                </nav>
-                <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none">
-                  Our Gallery
-                </h2>
-                <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
-              </div>
-            </motion.div>
+              <Home size={14} /><span className="text-white"> Home</span> 
+              <ChevronRight size={12} /> 
+             
+              <span className="text-emerald-400">Gallery</span>
+            </motion.nav>
+
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-7xl font-bold tracking-tighter leading-none  mb-8"
+            >
+              Our Gallery
+            </motion.h1>
+
+            <motion.div 
+               initial={{ width: 0 }}
+               animate={{ width: "100px" }}
+               className="h-1.5 bg-[#22C55E] mx-auto" 
+            />
           </div>
         </section>
 
-        {/* --- PHOTO MARQUEE SECTION --- */}
-        <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-10 md:mb-16">
-            <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter">
-              Photo Collection
-            </h3>
-            <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4 " />
+        {/* --- 2. PHOTO MARQUEE SECTION --- */}
+        <section className="py-24 max-w-7xl mx-auto px-4 md:px-6 bg-white">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 border-b border-slate-100 pb-12 gap-6 text-center md:text-left">
+            <div>
+              <p className="text-[#22C55E] text-[10px] font-bold tracking-[0.3em] uppercase mb-4">Visual Journey</p>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase text-slate-900 leading-none">Photo <br className="hidden md:block"/> Collection</h2>
+            </div>
+            <div className="max-w-xs text-slate-400 text-[10px] md:text-xs tracking-widest leading-loose uppercase md:text-right">
+                Explore the textures, landscapes, and architectural details that define Mangal Realty.
+            </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
@@ -172,46 +113,7 @@ export default function LuxuryGalleryPage() {
           </div>
         </section>
 
-        {/* --- VIDEO SECTION --- */}
-        {/* <section className="bg-white py-16 md:py-24 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-10 md:mb-16">
-              <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter ">
-                Video Insights
-              </h3>
-              <div className="w-20 h-1.5 bg-[#22c55e] mx-auto mt-4" />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
-              {videoItems.map((video) => (
-                <motion.div
-                  key={video.id}
-                  whileHover={{ y: -8 }}
-                  className="group cursor-pointer"
-                  onClick={() => setSelectedItem({ ...video, type: "video" })}
-                >
-                  <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-xl mb-4">
-                    <img
-                      src={video.thumb}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-                      alt={video.title}
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-[#0a1a10]/20 group-hover:bg-[#0a1a10]/40 transition-all">
-                      <div className="w-12 h-8 md:w-16 md:h-11 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-xl transform transition group-hover:scale-110">
-                        <Play fill="white" className="size-5 md:size-6" />
-                      </div>
-                    </div>
-                  </div>
-                  <h4 className="text-md md:text-lg font-bold text-[#0a1a10] group-hover:text-green-700 transition-colors px-1 line-clamp-2 tracking-tight">
-                    {video.title}
-                  </h4>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-        {/* --- LIGHTBOX MODAL --- */}
+        {/* --- 3. LIGHTBOX MODAL --- */}
         <AnimatePresence>
           {selectedItem && (
             <motion.div
@@ -222,30 +124,21 @@ export default function LuxuryGalleryPage() {
             >
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 p-2 rounded-full z-10"
+                className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 p-2 rounded-none z-10"
               >
-                <X size={24} />
+                <X size={32} />
               </button>
 
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="w-full max-w-6xl aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-black"
+                className="w-full max-w-6xl aspect-auto max-h-[85vh] rounded-none overflow-hidden shadow-2xl border border-white/10 bg-black"
               >
-                {selectedItem.type === "image" ? (
-                  <img
-                    src={selectedItem.url}
-                    className="w-full h-full object-contain"
-                    alt="View"
-                  />
-                ) : (
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${selectedItem.id_yt}?autoplay=1&rel=0`}
-                    allow="autoplay; encrypted-media; fullscreen"
-                    allowFullScreen
-                  />
-                )}
+                <img
+                  src={selectedItem.url}
+                  className="w-full h-full object-contain"
+                  alt="Gallery Full View"
+                />
               </motion.div>
             </motion.div>
           )}
