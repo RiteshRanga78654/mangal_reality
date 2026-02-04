@@ -37,50 +37,50 @@ const galleryPhotos = [
   },
 ];
 
-const videoItems = [
-  {
-    id: 101,
-    title: "Invest in Dates County – A Future Built on Nature",
-    id_yt: "dQw4w9WgXcQ",
-    thumb:
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=600",
-  },
-  {
-    id: 102,
-    title: "Dates County: Your Sustainable Haven",
-    id_yt: "dQw4w9WgXcQ",
-    thumb:
-      "https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&w=600",
-  },
-  {
-    id: 103,
-    title: "Welcome to Dates County: Eco-Friendly Living",
-    id_yt: "dQw4w9WgXcQ",
-    thumb:
-      "https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&w=600",
-  },
-  {
-    id: 104,
-    title: "Customer Experience in Planet Green",
-    id_yt: "dQw4w9WgXcQ",
-    thumb:
-      "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600",
-  },
-  {
-    id: 105,
-    title: "Walk Through Video of Planet Green Layout",
-    id_yt: "dQw4w9WgXcQ",
-    thumb:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
-  },
-  {
-    id: 106,
-    title: "Dates County Hyderabad | Villa Plots",
-    id_yt: "dQw4w9WgXcQ",
-    thumb:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
-  },
-];
+// const videoItems = [
+//   {
+//     id: 101,
+//     title: "Invest in Dates County – A Future Built on Nature",
+//     id_yt: "dQw4w9WgXcQ",
+//     thumb:
+//       "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=600",
+//   },
+//   {
+//     id: 102,
+//     title: "Dates County: Your Sustainable Haven",
+//     id_yt: "dQw4w9WgXcQ",
+//     thumb:
+//       "https://images.unsplash.com/photo-1510797215324-95aa89f43c33?auto=format&fit=crop&w=600",
+//   },
+//   {
+//     id: 103,
+//     title: "Welcome to Dates County: Eco-Friendly Living",
+//     id_yt: "dQw4w9WgXcQ",
+//     thumb:
+//       "https://images.unsplash.com/photo-1444464666168-49d633b867ad?auto=format&fit=crop&w=600",
+//   },
+//   {
+//     id: 104,
+//     title: "Customer Experience in Planet Green",
+//     id_yt: "dQw4w9WgXcQ",
+//     thumb:
+//       "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600",
+//   },
+//   {
+//     id: 105,
+//     title: "Walk Through Video of Planet Green Layout",
+//     id_yt: "dQw4w9WgXcQ",
+//     thumb:
+//       "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
+//   },
+//   {
+//     id: 106,
+//     title: "Dates County Hyderabad | Villa Plots",
+//     id_yt: "dQw4w9WgXcQ",
+//     thumb:
+//       "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600",
+//   },
+// ];
 
 const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
   <div className="flex flex-col h-[600px] md:h-[1000px] overflow-hidden gap-4 md:gap-8">
@@ -173,7 +173,7 @@ export default function LuxuryGalleryPage() {
         </section>
 
         {/* --- VIDEO SECTION --- */}
-        <section className="bg-white py-16 md:py-24 border-t border-gray-100">
+        {/* <section className="bg-white py-16 md:py-24 border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10 md:mb-16">
               <h3 className="text-4xl md:text-7xl font-bold text-[#0a1a10] tracking-tighter ">
@@ -209,7 +209,7 @@ export default function LuxuryGalleryPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* --- LIGHTBOX MODAL --- */}
         <AnimatePresence>

@@ -50,7 +50,7 @@ const newsArticles = [
 
 export default function PressCoverages() {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Corporate', 'Award', 'Sustainability'];
+  const categories = [ 'Corporate', 'Award', 'Sustainability'];
 
   const filteredNews = filter === 'All' 
     ? newsArticles 
@@ -106,7 +106,7 @@ export default function PressCoverages() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-8 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
+                className={`px-8 py-2 rounded-full cursor-pointer text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
                   filter === cat ? 'bg-black text-white' : 'text-stone-400 hover:text-black'
                 }`}
               >
