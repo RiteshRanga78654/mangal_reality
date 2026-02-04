@@ -41,7 +41,7 @@ export default function StrategicPartners() {
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
       {/* HERO SECTION */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative h-[72vh] w-full flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image */}
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"

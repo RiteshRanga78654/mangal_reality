@@ -102,7 +102,7 @@ const CompletedProjectsPage = () => {
     >
 
       {/* HERO SECTION */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center">
+      <section className="relative h-[72vh] w-full flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
@@ -124,7 +124,7 @@ const CompletedProjectsPage = () => {
                   <Home size={12} /> Home
                 </a>
                 <ChevronRight size={12} className="opacity-50" />
-                <span className="text-white">Completed Projects</span>
+                <span className="text-[#22c55e]">Completed Projects</span>
               </nav>
               <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
                 Where Families Flourish and Dreams Take Root

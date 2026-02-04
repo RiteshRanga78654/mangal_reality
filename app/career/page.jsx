@@ -188,7 +188,7 @@ export default function CareerPage() {
 
   return (
     <div className="bg-[#FAF9F6] min-h-screen text-[#0a1a10]">
-      <section className="relative min-h-[75vh] flex items-center bg-[#0a1a10] overflow-hidden">
+      <section className="relative min-h-[72vh] flex items-center bg-[#0a1a10] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920"

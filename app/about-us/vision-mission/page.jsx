@@ -30,7 +30,7 @@ export default function VisionMission() {
     >
       
       {/* 1. HERO SECTION - 80VH WHITE THEME */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-slate-50">
+      <section className="relative h-[72vh] flex items-center justify-center overflow-hidden bg-slate-50">
         <motion.div 
           style={{ y: useTransform(scrollYProgress, [0, 0.4], [0, 100]) }}
           className="absolute inset-0 z-0"
