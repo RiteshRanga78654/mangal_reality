@@ -183,12 +183,12 @@ const SmartCityPremium = () => {
       </section>
 
       {/* 4. CONNECTIVITY HUB */}
-      <section className="py-24 bg-white px-6">
+      <section className="py-24 bg-white px-6 mt-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
             <div className="text-left max-w-2xl">
               {/* Standardized Heading */}
-              <h2 className="text-4xl md:text-7xl font-bold text-black tracking-tighter leading-none">
+              <h2 className="text-3xl md:text-7xl font-bold text-black tracking-tighter leading-none">
                 The <span className="text-[#22C55E]">Connectivity</span> Hub
               </h2>
               <p className="text-slate-900 mt-6 text-xl font-bold uppercase tracking-tight border-[#22C55E] pl-6">
@@ -214,13 +214,13 @@ const SmartCityPremium = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 h-[400px] relative -[3rem] overflow-hidden group shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1592595894519-32219f2e6028?auto=format&fit=crop&q=80&w=1200"
+                src="/assets/images/Bhogapuram_Airport_Vizag.webp"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 alt="Bhogapuram Airport"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-left">
-                <span className="bg-[#22C55E] text-white px-4 py-1 -full text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">5 Minutes Drive</span>
+                <span className="bg-[#22C55E] text-white px-4 py-1 -full text-[10px] font-bold tracking-widest mb-4 inline-block">5 Minutes Drive</span>
                 <h4 className="text font-bold text-white uppercase ">Bhogapuram International Airport</h4>
               </div>
             </div>
@@ -234,8 +234,8 @@ const SmartCityPremium = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A10] via-[#0A1A10]/40 to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-left">
                 <Building2 size={48} className="text-[#22C55E] mb-4 opacity-80" />
-                <span className="text-[#22C55E] text-[10px] font-bold uppercase tracking-widest mb-2 block">10 Minutes Drive</span>
-                <h4 className="text font-bold text-white uppercase leading-none">IT SEZ Corridor</h4>
+                <span className="text-[#22C55E] text-[10px] font-bold  tracking-widest mb-2 block">10 Minutes Drive</span>
+                <h4 className="text font-bold text-white  leading-none">IT SEZ Corridor</h4>
               </div>
             </div>
 
@@ -269,7 +269,7 @@ const SmartCityPremium = () => {
               )}
             </AnimatePresence>
 
-            <div className={`transition-all duration-700 h-[350px] bg-white border border-slate-100 p-12 -[3rem] flex flex-col justify-center shadow-2xl text-left ${showMoreLandmarks ? 'md:col-span-1' : 'md:col-span-2'}`}>
+            {/* <div className={`transition-all duration-700 h-[150px] bg-white border border-slate-100 p-12 -[3rem] flex flex-col justify-center shadow-2xl text-left ${showMoreLandmarks ? 'md:col-span-1' : 'md:col-span-2'}`}>
               <div className={`grid gap-x-12 gap-y-6 w-full ${showMoreLandmarks ? 'grid-cols-1' : 'grid-cols-2'}`}>
                 {[{ l: "Vizag CMR", d: "35 Mins" }, { l: "Madhurawada", d: "20 Mins" }].map((item, i) => (
                   <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2 bg-slate-50/50 -r-xl">
@@ -278,13 +278,13 @@ const SmartCityPremium = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* 5. INVESTMENT CHECKLIST */}
-      <section className="py-24 bg-[#0A1A10] text-white -[4rem] mx-6 lg:mx-12 mb-24 px-8 relative overflow-hidden">
+      <section className="py-24 bg-[#0A1A10] text-white mx-6 lg:mx-14 mb-24 px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10 text-left">
           <div className="w-full lg:w-3/5">
             {/* Standardized Heading */}
@@ -309,8 +309,8 @@ const SmartCityPremium = () => {
           <div className="w-full lg:w-2/5 flex flex-col gap-6">
             <div className="bg-white/5 border border-white/10 p-10 -[2.5rem] backdrop-blur-xl">
               <ShieldCheck className="text-[#22C55E] mb-6" size={48} />
-              <p className="text-slate-400 text-sm leading-relaxed mb-8">
-                Smart City Dakamarri stands as a testament to Mangal Realty's commitment to quality and transparency.
+              <p className="text-white text-sm leading-relaxed mb-8">
+                Our track record speaks to our commitment to quality, timely delivery, and customer satisfaction. When you choose us, you choose a partner invested in your family's success.
               </p>
               <MangalButton text="Get Final Pricing" href="/quote" />
             </div>
