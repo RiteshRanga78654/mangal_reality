@@ -122,7 +122,7 @@ const OngoingProjectsPage = () => {
                        <span className="text-white">Ongoing Projects</span>
                      </nav>
                      <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
-                       Where Families Flourish and Dreams Take Root
+                       A place where togetherness grows and hopes begin
        
                      </h2>
                      <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
