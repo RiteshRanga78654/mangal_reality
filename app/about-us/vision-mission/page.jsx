@@ -1,20 +1,19 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Target, Eye, Leaf, Shield, Sparkles, Trees, Wind, Droplets,Home,ChevronRight } from 'lucide-react';
+import { Target, Eye, Leaf, Shield, Sparkles, Trees, Wind, Droplets, Home, ChevronRight } from 'lucide-react';
 import { useRef } from 'react';
 
 export default function VisionMission() {
   const containerRef = useRef(null);
   
-  // Parallax effect for the hero section
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
       y: 0, 
@@ -22,100 +21,62 @@ export default function VisionMission() {
     }
   };
 
-  const ecoFeatures = [
-    { icon: <Trees size={32} />, title: "Reforestation", desc: "10 trees planted for every home sold." },
-    { icon: <Wind size={32} />, title: "Clean Air", desc: "Medical-grade air filtration in every room." },
-    { icon: <Droplets size={32} />, title: "Water Saving", desc: "100% greywater recycling systems." }
-  ];
+  const brandGreen = "#15803d"; // Deep emerald for better visibility on white
 
   return (
     <main 
       ref={containerRef} 
-      className="bg-[#0A1A10] text-[#E0E7E0] min-h-screen font-medium"
-      style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+      className="bg-white text-slate-900 min-h-screen font-sans"
     >
       
-      {/* 1. RESPONSIVE HERO SECTION */}
-      <section className="relative h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
+      {/* 1. HERO SECTION - 80VH WHITE THEME */}
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-slate-50">
         <motion.div 
-          style={{ y: useTransform(scrollYProgress, [0, 0.4], [0, 150]) }}
+          style={{ y: useTransform(scrollYProgress, [0, 0.4], [0, 100]) }}
           className="absolute inset-0 z-0"
         >
           <img 
             src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80" 
-            alt="Deep Forest" 
-            className="w-full h-full object-cover opacity-40 scale-110"
+            alt="Nature" 
+            className="w-full h-80vh  "
           />
-          <div className="absolute inset-0 bg-linear-to-b from-[#0A1A10]/10 via-transparent to-[#0A1A10]" />
+          {/* Subtle white gradient for text clarity */}
+          <div className="absolute inset-0 from-white/20 via-transparent to-white" />
         </motion.div>
         
-        {/* <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2 }}
-          className="relative z-10 text-center px-4"
-        >
-          <motion.span 
+        <div className="relative z-10 text-center px-6">
+          <nav className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-white">
+            <a href="/" className="hover:text-emerald-700 flex items-center gap-1 transition-colors">
+              <Home size={12} /> Home
+            </a>
+            <ChevronRight size={12} className="opacity-40" />
+            <span className="text-white">About Us</span>
+          </nav>
+
+          <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[#4ADE80] text-[10px] md:text-xs font-bold tracking-[0.2em] block mb-4"
+            className="text-4xl md:text-7xl font-bold tracking-tighter text-white mb-8"
           >
-            The Soul of Our Work
-          </motion.span>
-          <h1 className="text-4xl md:text-7xl lg:text-9xl text-white mb-8">Our Essence</h1>
-          <motion.div 
-            initial={{ width: 0 }}
-            animate={{ width: "80px" }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="h-1 bg-[#4ADE80] mx-auto"
-          />
-        </motion.div> */}
-        {/* <div className="relative z-20 text-center px-6 max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className=""
-          >
-            
-            <div
-              className="w-24 h-1 mx-auto mt-4"
-              style={{ backgroundColor: brandGreen }}
-            ></div>
-          </motion.div>
-        </div> */}
-        <div className="relative z-10 text-center text-white px-6">
-              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.1em] ">
-                <a
-                  href="/"
-                  className="hover:text-green-400 flex items-center gap-1 transition-colors"
-                >
-                  <Home size={12} /> Home
-                </a>
-                <ChevronRight size={12} className="opacity-50" />
-                <span className="text-white">About Us</span>
-              </nav>
-              {/* Standardized Heading: 4xl to 7xl */}
-              <h1 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
-                Our Essence
-              </h1>
-              <div className="h-1 w-20 bg-[#22c55e] mx-auto" />
-            </div>
+            Our Essence
+          </motion.h1>
+          <div className="h-1.5 w-24 bg-emerald-600 mx-auto" />
+        </div>
       </section>
 
-      {/* 2. VISION & MISSION - RESPONSIVE CARDS */}
-      <section className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+      {/* 2. VISION & MISSION - CLEAN CARDS */}
+      <section className="max-w-7xl mx-auto px-6 py-24 md:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {[
             { 
               title: "Our Vision", 
-              icon: <Eye size={40} />, 
+              icon: <Eye size={36} />, 
               text: "To transform communities where every family thrives, where children grow surrounded by nature's healing embrace and spaces that inspire connection, cultivate wellness, and create legacies of joy.",
               accent: "01"
             },
             { 
               title: "Our Mission", 
-              icon: <Target size={40} />, 
+              icon: <Target size={36} />, 
               text: "To deliver family-centered developments that integrate experience like holistic wellness daily that prioritizes health, fosters joyful moments, and leaves the earth better than we found it.",
               accent: "02"
             }
@@ -124,16 +85,16 @@ export default function VisionMission() {
               key={i}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               variants={fadeInUp}
-              className="relative p-8 md:p-14 rounded-3xl bg-[#122619]/40 border border-white/10 backdrop-blur-md group"
+              className="relative p-10 md:p-16 rounded-2xl bg-slate-50 border border-slate-200 group hover:shadow-xl transition-all duration-500"
             >
-              <div className="mb-8 text-[#4ADE80]">{card.icon}</div>
-              <h2 className="text-3xl md:text-4xl text-white mb-6">{card.title}</h2>
-              <p className="text-base md:text-lg leading-relaxed text-[#B0C4B0]">
+              <div className="mb-8 text-emerald-600">{card.icon}</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{card.title}</h2>
+              <p className="text-lg leading-relaxed text-slate-600 italic">
                 "{card.text}"
               </p>
-              <div className="absolute top-8 right-8 text-5xl opacity-[0.05] select-none">
+              <div className="absolute top-10 right-10 text-6xl font-black text-slate-100 select-none group-hover:text-emerald-50 transition-colors">
                 {card.accent}
               </div>
             </motion.div>
@@ -141,68 +102,57 @@ export default function VisionMission() {
         </div>
       </section>
 
-      {/* 3. CORE VALUES - FULLY ALIGNED GRID */}
-      <section className="py-20 lg:py-32 bg-[#08140C]">
+      {/* 3. CORE VALUES - GRID ON WHITE */}
+      <section className="py-24 md:py-32 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-4">
             <div>
-              <h2 className="text-4xl md:text-7xl text-white mb-2">Non-Negotiables</h2>
-              <p className="text-[#4ADE80] tracking-[0.1em] text-[10px] md:text-xs font-bold">The Foundation of Mangal Realty</p>
+              <h2 className="text-4xl md:text-7xl font-bold text-slate-900 mb-4">Non-Negotiables</h2>
+              <p className="text-emerald-700 tracking-[0.2em] text-[10px] md:text-xs font-bold uppercase">The Foundation of Mangal Realty</p>
             </div>
-            <div className="hidden lg:block h-px bg-white/10 grow mx-8 mb-4" />
+            <div className="hidden lg:block h-px bg-slate-200 grow mx-12 mb-4" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <Leaf />, title: "Holistic Family Wellness", desc: "Health, happiness, and harmony aren't much to ask, they're basic . Family health is paramount." },
+              { icon: <Leaf />, title: "Holistic Family Wellness", desc: "Health, happiness, and harmony aren't much to ask, they're basic. Family health is paramount." },
               { icon: <Shield />, title: "Safe Heaven", desc: "Protected havens where families feel Secure, nurturing environments and peace of mind is built into every corner." },
-              { icon: <Sparkles />, title: "Mindful Architecture", desc: "Spaces that honor both nature and human needs.Refined living that elevates the soul." },
+              { icon: <Sparkles />, title: "Mindful Architecture", desc: "Spaces that honor both nature and human needs. Refined living that elevates the soul." },
               { icon: <Trees />, title: "Authentic Nature", desc: "Leading with sustainability and Architecture that breathes with the land that heal." },
               { icon: <Wind />, title: "Living Legacy", desc: "Environmental leadership through action & Elevated living rooted in values." },
-              { icon: <Droplets />, title: "Luxury with Purpose", desc: "Building lasting legacies.Creating homes with integrity, responsibility, and vision" }
+              { icon: <Droplets />, title: "Luxury with Purpose", desc: "Building lasting legacies. Creating homes with integrity, responsibility, and vision." }
             ].map((val, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -8 }}
-                className="p-8 lg:p-12 bg-[#0A1A10] border border-white/5 rounded-2xl transition-all hover:border-[#4ADE80]/30"
+                whileHover={{ y: -10 }}
+                className="p-10 bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all group"
               >
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-8 text-[#4ADE80]">
+                <div className="w-14 h-14 rounded-lg bg-emerald-50 flex items-center justify-center mb-8 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
                   {val.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-4 tracking-tighter">{val.title}</h3>
-                <p className="text-[#B0C4B0] text-sm leading-relaxed">{val.desc}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">{val.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{val.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. ECO-STATISTICS SECTION */}
-      {/* <section className="py-20 border-y border-white/5 bg-[#0A1A10]">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24 text-center">
-          {ecoFeatures.map((feature, i) => (
-            <div key={i} className="flex flex-col items-center space-y-4">
-              <div className="text-[#4ADE80] mb-2">{feature.icon}</div>
-              <h4 className="text-white text-xl">{feature.title}</h4>
-              <p className="text-sm text-[#B0C4B0] max-w-xs">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-      {/* 5. THE PROMISE - ALIGNED TEXT REVEAL */}
-      <section className="py-40 flex items-center justify-center text-center px-6">
+      {/* 5. THE PROMISE - CLEAN TEXT REVEAL */}
+      <section className="py-48 flex items-center justify-center text-center px-6 bg-white">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1 }}
           className="max-w-4xl"
         >
-          <p className="text-3xl md:text-5xl leading-tight text-white mb-8">
-            "We build legacies that don't cost the <span className="text-[#4ADE80]">Earth</span>."
+          <p className="text-3xl md:text-6xl font-bold leading-tight text-slate-900 mb-10 tracking-tighter">
+            "We build legacies that don't <br className="hidden md:block"/> cost the <span className="text-emerald-600">Earth</span>."
           </p>
-          <div className="text-white/30 tracking-[0.5em] text-[10px]">
+          <div className="flex items-center justify-center gap-4 text-slate-400 tracking-[0.3em] text-[10px] font-bold uppercase">
+            <div className="h-px w-10 bg-slate-200" />
             Established 2026 — Mangal Realty Group
+            <div className="h-px w-10 bg-slate-200" />
           </div>
         </motion.div>
       </section>

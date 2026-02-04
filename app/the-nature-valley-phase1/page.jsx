@@ -74,11 +74,11 @@ const NatureValleyPhase1 = () => {
 
         <div className="w-full lg:w-1/3 flex items-center px-6 md:px-12 py-12 lg:py-20 bg-[#0A1A10]">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="w-full text-left">
-            <h2 className="text-[#22C55E] font-bold tracking-[0.3em] text-[10px] mb-4">Mangal Realty Legacy</h2>
-            <h1 className="text-4xl md:text-7xl font-bold text-white leading-none  mb-6 tracking-tighter">
-              Nature <br /> <span className="text-[#22C55E]">Valley</span>
+            {/* <h2 className="text-[#22C55E] font-bold tracking-[0.3em] text-[10px] mb-4">Mangal Realty Legacy</h2> */}
+            <h1 className="text-3xl md:text-5xl font-bold text-white leading-none  mb-6 tracking-tighter">
+              Nature Valley <br /> <span className="text-[#22C55E]">Phase 1</span>
             </h1>
-            <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed italic max-w-md">
+            <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed  max-w-md">
               "Experience the Green Side of Life." Successfully completed premium plot project in Bhogapuram.
             </p>
             <MangalButton>
@@ -128,7 +128,7 @@ const NatureValleyPhase1 = () => {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
             <div className="max-w-2xl">
               <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">Location <span className="text-[#22C55E]">Advantage</span></h2>
-              <p className="text-slate-400 mt-4 md:mt-6 text-base md:text-lg italic">Situated at the heart of the Bhogapuram International Airport growth corridor.</p>
+              <p className="text-slate-400 mt-4 md:mt-6 text-base md:text-lg ">Situated at the heart of the Bhogapuram International Airport growth corridor.</p>
             </div>
             <MangalButton onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}>
               {showMoreLandmarks ? <Minus size={16} /> : <Plus size={16} />}
@@ -195,7 +195,7 @@ const NatureValleyPhase1 = () => {
                 <h3 className="text-4xl md:text-7xl font-bold  tracking-tighter leading-none mb-8">Client <br /><span className="text-[#22C55E]">Success</span></h3>
 
                 <div className={`transition-all duration-500 min-h-[150px] ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
-                  <p className="text-lg md:text-2xl font-medium text-slate-800 leading-relaxed mb-8 italic">
+                  <p className="text-lg md:text-2xl font-medium text-slate-800 leading-relaxed mb-8 ">
                     "{testimonials[testimonialIndex].text}"
                   </p>
                   <div className="flex items-center gap-4">

@@ -54,12 +54,12 @@ const Counter = ({ value }) => {
 };
 const strategicPartners = [
   {
-    name: "Rajesh Mangal",
+    name: "Sunil Choudhary",
     role: "Founder & Chairman",
     description: [
-      "Bhaswar Paul is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
-      "Bhaswar has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
-      "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
+      // "Sunil Choudhary is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
+      // "Sunil has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
+      // "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
     ],
     image: "/assets/images/rajesh.jpg",
     href: "https://www.ireedindia.com/",
@@ -67,12 +67,12 @@ const strategicPartners = [
     icon: GraduationCap,
   },
   {
-    name: "Sanjay Mangal",
+    name: "Hemang Choudhary",
     role: "Managing Director",
     description: [
-      "Kamaldeep Prajapati is a prolific business professional and trainer, helping various up and coming as well as invaluable brands with his expertise across luxury sales, high octane corporate event facilitation, and operations management. In his glorious 5-year stint, he has forged strategic partnerships with more than 50 institutions across India.",
-      "He is determined to generate a skilled workforce contributing to India's real estate sector, which is evaluated to reach a staggering USD 1 Trillion mark by 2030. He has also trained 2000+ students across his domains of excellence, a testimony to his ability to engage with diverse audience groups.",
-      "Currently, as a Business Head (Up-Country Expansions) and Trainer at IREED Academy, he is determined about shaping the future of Real Estate Education in India. He is passionate about driving magnificent career opportunities for younger generations.",
+      // "Hemang Choudhary is a prolific business professional and trainer, helping various up and coming as well as invaluable brands with his expertise across luxury sales, high octane corporate event facilitation, and operations management. In his glorious 5-year stint, he has forged strategic partnerships with more than 50 institutions across India.",
+      // "He is determined to generate a skilled workforce contributing to India's real estate sector, which is evaluated to reach a staggering USD 1 Trillion mark by 2030. He has also trained 2000+ students across his domains of excellence, a testimony to his ability to engage with diverse audience groups.",
+      // "Currently, as a Business Head (Up-Country Expansions) and Trainer at IREED Academy, he is determined about shaping the future of Real Estate Education in India. He is passionate about driving magnificent career opportunities for younger generations.",
     ],
     image: "/assets/images/sanjay.jpg",
     href: "https://www.ireedindia.com/",
@@ -83,9 +83,9 @@ const strategicPartners = [
     name: "Vebhore Bagria",
     role: "Chief Financial Officer",
     description: [
-      "Bhaswar Paul is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
-      "Bhaswar has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
-      "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
+      // "Bhaswar Paul is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
+      // "Bhaswar has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
+      // "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
     ],
     image: "/assets/images/vebhore.jpg",
     href: "https://www.ireedindia.com/",

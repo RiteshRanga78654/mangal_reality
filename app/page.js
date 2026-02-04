@@ -3,34 +3,11 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Maximize,
-  TreePine,
-  Wifi,
-  Globe,
-  Car,
-  Map,
-  Wallet,
-  ShowerHead,
-  Users,
-  Stethoscope,
-  Waves,
-  Mountain,
-  Wind,
-  Flame,
-  Trash2,
-  Gamepad2,
-  Bath,
-  Utensils,
-  UserPlus,
-  MapPin,
-  Trees,
-  Leaf,
-  Home,
-  Landmark,
-  Palmtree,
   ArrowRight,
   ChevronLeft,
   ChevronRight,
   Quote,
+  MapPin,
 } from "lucide-react";
 import Amenities from "./components/Amenities";
 
@@ -89,13 +66,13 @@ const Page = () => {
   ];
 
   const testimonials = [
-    // {
-    //   id: 1,
-    //   name: "Abhishek Tripathi",
-    //   role: "Client",
-    //   image: "/assets/images/testi-1.jpg",
-    //   text: "Working with Mangal Reality has been a transformative experience for our company. Their team has been instrumental in guiding our digital strategy and implementing innovative solutions.",
-    // },
+    {
+      id: 1,
+      name: "Abhishek Tripathi",
+      role: "Client",
+      image: "/assets/images/testi-1.jpg",
+      text: "Choosing The Smart City was easy after meeting the Mangal Reality team. Mangal Reality's dedication to family-oriented living is evident in every detail of this project. From the planning stages to post-purchase support, their team has been there for us. We're grateful to be part of this wonderful community in Dakamari The completed project speaks for itself ,quality construction, thoughtful planning, and a community atmosphere that's perfect for raising children. Thank you for helping us find our dream home!",
+    },
     {
       id: 2,
       name: "Anil Mehta",
@@ -233,7 +210,6 @@ const Page = () => {
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
       link: "/the-nature-valley-phase1"
     },
-
     {
       id: 2,
       slug: "smart-city",
@@ -256,7 +232,37 @@ const Page = () => {
     },
   ];
 
-  // STICKY SECTION DATA
+  // CAROUSEL LOGIC FOR PROJECTS
+  const [projectIndex, setProjectIndex] = useState(0);
+  const [projectsVisible, setProjectsVisible] = useState(3);
+  const [isProjectPaused, setIsProjectPaused] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) setProjectsVisible(1);
+      else if (window.innerWidth < 1024) setProjectsVisible(2);
+      else setProjectsVisible(3);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const nextProject = useCallback(() => {
+    setProjectIndex((prev) => (prev + 1 >= PROJECTS.length - (projectsVisible - 1) ? 0 : prev + 1));
+  }, [projectsVisible]);
+
+  const prevProject = () => {
+    setProjectIndex((prev) => (prev === 0 ? PROJECTS.length - projectsVisible : prev - 1));
+  };
+
+  useEffect(() => {
+    if (!isProjectPaused) {
+      const interval = setInterval(nextProject, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isProjectPaused, nextProject]);
+
   const STICKY_CONTENT = [
     {
       label: "Nature Embrace",
@@ -294,8 +300,6 @@ const Page = () => {
             <div key={i} className="sticky top-0 h-screen w-full overflow-hidden">
               <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/40 z-[11]"></div>
-
-              {/* Overlay Content with exactly your code's font styles */}
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6 text-white">
                 <span className="text-xl leading-relaxed mb-4 font-medium uppercase tracking-widest">
                   {item.label}
@@ -315,34 +319,28 @@ const Page = () => {
         {/* SECTION 3: Who We Are */}
         <section className="py-16 px-4 md:px-12 bg-stone-50">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Side: Content */}
             <div className="space-y-4 text-center md:text-left">
               <h2 className="text-4xl md:text-7xl font-bold tracking-tight text-black">
                 Who We Are
               </h2>
               <div className="w-20 h-1 bg-[#22C55E] mx-auto md:mx-0"></div>
-
               <p className="text-xl text-black leading-relaxed pt-4 font-medium">
                 Where Roots Grow Deep. Where Hearts Grow Strong
               </p>
-
               <div className="space-y-4 text-lg text-black/70 leading-relaxed">
                 <p>
                   At Mangal Realty, we heartily believe a home is more than just concrete walls,it's where
                   families' healthiest, happiest chapter begins.
                 </p>
                 <p>
-                 We don't just build homes; we nurture environments where wellness is woven into everyday living.
-
+                  We don't just build homes; we nurture environments where wellness is woven into everyday living.
                 </p>
                 <p>
-                  We create  spaces where sustainable design supports families to grow healthy, happy,
+                  We create spaces where sustainable design supports families to grow healthy, happy,
                   and whole—together with nature.
                 </p>
               </div>
             </div>
-
-            {/* Right Side: Stats Counter Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((item, i) => (
                 <div
@@ -355,7 +353,7 @@ const Page = () => {
                   >
                     <StatCounter endValue={item.number} />
                   </div>
-                  <p className="font-bold text-stone-800  text-xs tracking-widest leading-tight">
+                  <p className="font-bold text-stone-800 text-xs tracking-widest leading-tight">
                     {item.label}
                   </p>
                 </div>
@@ -364,7 +362,7 @@ const Page = () => {
           </div>
         </section>
 
-        {/* SECTION 4: PROJECTS */}
+        {/* SECTION 4: PROJECTS CAROUSEL */}
         <section className="py-24 bg-white overflow-hidden ">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col items-center mb-16 text-center mt-[-3rem]">
@@ -372,72 +370,96 @@ const Page = () => {
               <div className="w-24 h-1 bg-[#22C55E] mx-auto mb-4"></div>
             </div>
 
-            <div className="flex flex-col lg:flex-row h-auto lg:h-[700px] gap-4">
-              {PROJECTS.map((project) => (
-                <motion.div
-                  key={project.id}
-                  onMouseEnter={() => setHoveredId(project.id)}
-                  onMouseLeave={() => setHoveredId(null)}
-                  animate={{ flex: hoveredId === project.id ? 2.5 : 1 }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative group cursor-pointer overflow-hidden rounded-[1.5rem] bg-[#0a1a10] min-h-[400px] lg:min-h-0"
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsProjectPaused(true)}
+              onMouseLeave={() => setIsProjectPaused(false)}
+            >
+              <div className="overflow-hidden">
+                <div 
+                  className="flex transition-transform duration-700 ease-in-out"
+                  style={{ transform: `translateX(-${projectIndex * (100 / projectsVisible)}%)` }}
                 >
-                  <a href={project.link} className="absolute inset-0 z-0">
-                    <motion.img
-                      src={project.image}
-                      alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
-                      style={{ filter: "brightness(0.8)" }}
-                    />
-                  </a>
-
-                  <div className="absolute top-8 left-8 z-10 pointer-events-none">
-                    <span className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-widest ">
-                      {project.status}
-                    </span>
-                  </div>
-
-                  <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 pointer-events-none">
-                    <motion.div
-                      animate={{ y: hoveredId === project.id ? 0 : 20, opacity: hoveredId === project.id ? 1 : 0.8 }}
-                      className="space-y-4 pointer-events-auto"
+                  {PROJECTS.map((project) => (
+                    <div 
+                      key={project.id} 
+                      className="px-2 flex-shrink-0"
+                      style={{ width: `${100 / projectsVisible}%` }}
                     >
-                      <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight max-w-[250px]">{project.title}</h3>
-                      <AnimatePresence>
-                        {hoveredId === project.id && (
-                          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="space-y-6 overflow-hidden">
-                            <div className="flex gap-8 text-white/70">
-                              <div className="flex items-center gap-2">
-                                <MapPin size={18} className="text-[#22c55e]" />
-                                <span className="text-sm font-medium">{project.location}</span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <Maximize size={18} className="text-[#22c55e]" />
-                                <span className="text-sm font-medium">{project.area}</span>
-                              </div>
-                            </div>
-                            <a href={project.link} className="relative inline-flex items-center gap-3 px-12 py-5 text-white font-bold text-xs tracking-widest overflow-hidden group/btn">
-                              <span className="relative z-10 flex items-center gap-2">
-                                Explore Details <ArrowRight size={18} />
-                              </span>
-                              <div className="absolute inset-1 bg-[#22c55e] scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
-                              <div className="absolute inset-1 border border-[#22c55e]" />
-                            </a>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
-                  </div>
+                      <motion.div
+                        onMouseEnter={() => setHoveredId(project.id)}
+                        onMouseLeave={() => setHoveredId(null)}
+                        className="relative group cursor-pointer overflow-hidden rounded-[1.5rem] bg-[#0a1a10] h-[450px]"
+                      >
+                        <a href={project.link} className="absolute inset-0 z-0">
+                          <motion.img
+                            src={project.image}
+                            alt={project.title}
+                            className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                            style={{ filter: "brightness(0.8)" }}
+                          />
+                        </a>
 
-                  <AnimatePresence>
-                    {hoveredId !== project.id && (
-                      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap -rotate-90 pointer-events-none">
-                        <p className="text-white/30 text-2xl font-bold tracking-[0.1em] ">{project.title.split(' ').slice(-1)}</p>
+                        <div className="absolute top-8 left-8 z-10 pointer-events-none">
+                          <span className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-4 py-2 rounded-full text-xs font-bold tracking-widest ">
+                            {project.status}
+                          </span>
+                        </div>
+
+                        <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10 pointer-events-none">
+                          <motion.div
+                            animate={{ y: hoveredId === project.id ? 0 : 20, opacity: 1 }}
+                            className="space-y-4 pointer-events-auto"
+                          >
+                            <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">{project.title}</h3>
+                            <AnimatePresence>
+                              {hoveredId === project.id && (
+                                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="space-y-6 overflow-hidden">
+                                  <div className="flex gap-4 text-white">
+                                    <div className="flex items-center gap-2">
+                                      <MapPin size={16} className="text-[#22c55e]" />
+                                      <span className="text-xs font-medium">{project.location}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                      <Maximize size={16} className="text-[#22c55e]" />
+                                      <span className="text-xs font-medium">{project.area}</span>
+                                    </div>
+                                  </div>
+                                  <a href={project.link} className="relative inline-flex items-center gap-2 px-8 py-4 text-white font-bold text-[10px] tracking-widest overflow-hidden group/btn">
+                                    <span className="relative z-10 flex items-center gap-2">
+                                      Explore Details <ArrowRight size={14} />
+                                    </span>
+                                    <div className="absolute inset-0 bg-[#22c55e] scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
+                                    <div className="absolute inset-0 border border-[#22c55e]" />
+                                  </a>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        </div>
                       </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* PROJECT NAVIGATION */}
+              <div className="flex justify-center gap-4 mt-12">
+                <button
+                  onClick={prevProject}
+                  style={{ borderColor: brandGreen }}
+                  className="w-12 h-12 border flex items-center justify-center hover:bg-[#22c55e] transition-colors rounded-sm group"
+                >
+                  <ChevronLeft className="w-6 h-6 text-[#22c55e] group-hover:text-white" />
+                </button>
+                <button
+                  onClick={nextProject}
+                  style={{ borderColor: brandGreen }}
+                  className="w-12 h-12 border flex items-center justify-center hover:bg-[#22c55e] transition-colors rounded-sm group"
+                >
+                  <ChevronRight className="w-6 h-6 text-[#22c55e] group-hover:text-white" />
+                </button>
+              </div>
             </div>
           </div>
         </section>
