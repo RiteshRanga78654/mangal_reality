@@ -44,7 +44,7 @@ export default function Header() {
         { 
           name: "Ongoing ", 
           href: "/projects/ongoing-projects",
-          target: "_blank", // Added for new tab
+          
           rel: "noopener noreferrer" // Security best practice
         },
         { name: "Completed", href: "/projects/completed-projects" },
