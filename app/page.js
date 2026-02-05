@@ -480,20 +480,20 @@ const Page = () => {
                   <div className="flex w-full">
                     {extendedTestimonials.map((item, index) => (
                       <div key={`${item.id}-${index}`} className="flex-shrink-0 px-4" style={{ width: `${100 / itemsPerPage}%` }}>
-                        {/* Square Box - Height grows with content but padding is minimized */}
-                        <div className="bg-[#f8fafc] p-6 rounded-none border border-slate-200 flex flex-col gap-6 text-left relative group hover:border-[#22C55E]/50 transition-all">
+                        {/* Fixed Height Card: Added h-[320px] and flex-col justify-between */}
+                        <div className="bg-[#f8fafc] p-6 h-[320px] rounded-none border border-slate-200 flex flex-col justify-between text-left relative group hover:border-[#22C55E]/50 transition-all">
 
                           <Quote className="absolute top-4 right-4 w-8 h-8 text-slate-200 group-hover:text-[#22c55e]/20" />
 
-                          {/* Testimonial Text - Full visibility */}
-                          <div className="z-10">
-                            <p className="text-black text-sm md:text-base leading-relaxed ">
+                          {/* Scrollable Text Area: Added overflow-y-auto to keep box size static */}
+                          <div className="z-10 mt-4 overflow-y-auto pr-2 custom-scrollbar">
+                            <p className="text-black text-sm md:text-base leading-relaxed">
                               "{item.text}"
                             </p>
                           </div>
 
-                          {/* Bottom Row: Image and Info aligned to save vertical space */}
-                          <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
+                          {/* Bottom Row: Always sticks to the bottom because of justify-between */}
+                          <div className="flex items-center gap-4 pt-4 border-t border-slate-100 flex-shrink-0">
                             <div className="relative flex-shrink-0">
                               <div className="w-12 h-12 md:w-14 md:h-14 bg-white overflow-hidden rounded-none border border-slate-200">
                                 <img
@@ -520,13 +520,13 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="hidden md:flex justify-center mt-8 pr-4 text-[#22c55e] ">
-                <NavControls prev={prevSlide} next={nextSlide}  />
+              <div className="hidden md:flex justify-center mt-8 pr-4 text-[#22c55e]">
+                <NavControls prev={prevSlide} next={nextSlide} />
               </div>
             </div>
 
             <div className="flex md:hidden justify-center mt-8 text-black">
-              <NavControls prev={prevSlide} next={nextSlide}   />
+              <NavControls prev={prevSlide} next={nextSlide} />
             </div>
           </div>
         </section>

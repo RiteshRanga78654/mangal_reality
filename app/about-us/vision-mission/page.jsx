@@ -91,7 +91,7 @@ export default function VisionMission() {
             >
               <div className="mb-8 text-emerald-600">{card.icon}</div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{card.title}</h2>
-              <p className="text-lg leading-relaxed text-slate-600 italic">
+              <p className="text-lg leading-relaxed text-black ">
                 "{card.text}"
               </p>
               <div className="absolute top-10 right-10 text-6xl font-black text-slate-100 select-none group-hover:text-emerald-50 transition-colors">
