@@ -28,7 +28,7 @@ const newsArticles = [
   },
   {
     id: 3,
-    category: "Sustainability",
+    category: "Events",
     title: "Green Building Initiatives: How Mangal is Reducing Carbon Footprints",
     source: "Forbes India",
     date: "Aug 15, 2025",
@@ -50,7 +50,7 @@ const newsArticles = [
 
 export default function PressCoverages() {
   const [filter, setFilter] = useState('All');
-  const categories = [ 'Corporate', 'Award', 'Sustainability'];
+  const categories = [ 'Corporate', 'Award', 'Event'];
 
   const filteredNews = filter === 'All' 
     ? newsArticles 
@@ -75,7 +75,7 @@ export default function PressCoverages() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className=""
           >
-            {/* <span className="text-[10px] uppercase tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span> */}
+            {/* <span className="text-[10px]  tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span> */}
             {/* Standardized Heading: text-4xl to 7xl */}
             <div className="relative z-10 text-center text-white px-6">
             <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
@@ -106,7 +106,7 @@ export default function PressCoverages() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-8 py-2 rounded-full cursor-pointer text-[10px] font-bold uppercase tracking-widest transition-all duration-300 ${
+                className={`px-8 py-2 rounded-full cursor-pointer text-[10px] font-bold  tracking-widest transition-all duration-300 ${
                   filter === cat ? 'bg-black text-white' : 'text-stone-400 hover:text-black'
                 }`}
               >
@@ -141,10 +141,10 @@ export default function PressCoverages() {
                   <div className="w-full md:w-3/5 flex flex-col justify-between py-2">
                     <div>
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-white border border-stone-200 rounded-md" style={{ color: brandGreen }}>
+                        <span className="text-[10px] font-bold  tracking-widest px-3 py-1 bg-white border border-stone-200 rounded-md" style={{ color: brandGreen }}>
                           {article.category}
                         </span>
-                        <span className="text-[10px] text-stone-400 font-bold uppercase tracking-widest flex items-center gap-1">
+                        <span className="text-[10px] text-stone-400 font-bold  tracking-widest flex items-center gap-1">
                           <Calendar size={12} /> {article.date}
                         </span>
                       </div>
@@ -157,7 +157,7 @@ export default function PressCoverages() {
                     </div>
 
                     <div className="mt-6 flex items-center justify-between">
-                      <span className="text-xs font-black uppercase tracking-tighter text-stone-900 italic">
+                      <span className="text-xs font-black  tracking-tighter text-stone-900 italic">
                         {article.source}
                       </span>
                       <div className="flex gap-4">
@@ -184,10 +184,10 @@ export default function PressCoverages() {
             Download our official media kit including high-resolution logos, executive headshots, and project renders for press usage.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-             <button className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-stone-200 transition-all">
+             <button className="px-10 py-4 bg-white text-black font-bold  tracking-widest text-xs rounded-full hover:bg-stone-200 transition-all">
                 Download Media Kit
              </button>
-             <button className="px-10 py-4 border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-white/10 transition-all">
+             <button className="px-10 py-4 border border-white/20 text-white font-bold  tracking-widest text-xs rounded-full hover:bg-white/10 transition-all">
                 Contact PR Office
              </button>
           </div>
