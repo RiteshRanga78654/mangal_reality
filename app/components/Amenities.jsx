@@ -1,43 +1,66 @@
 "use client";
 import React, { useState } from 'react';
 import { 
-  TreePine, Wifi, Globe, Car, Map, Wallet, 
-  ShowerHead, Users, Stethoscope, Waves, 
-  Mountain, Wind, Flame, Gamepad2, Bath, 
-  Utensils, UserPlus, Trash2 
+  TreePine, Wifi, Globe, Car, Map, Wallet, 
+  ShowerHead, Users, Stethoscope, Waves, 
+  Mountain, Wind, Flame, Gamepad2, Bath, 
+  Utensils, UserPlus, Trash2,
+  Bike, Zap, Tent, Heart, Landmark, Ship, 
+  Binoculars, Palette, ShieldCheck, Camera, 
+  Activity, Music, Trophy, BatteryCharging, Droplets
 } from 'lucide-react';
 
 export default function AmenitiesSection() {
-  const brandGreen = "#22c55e";
+  const brandGreen = "#22c55e";
 
-  // State to track how many items to show for each side
-  const [amenitiesCount, setAmenitiesCount] = useState(6);
-  const [facilitiesCount, setFacilitiesCount] = useState(6);
+  // State to track how many items to show for each side
+  const [amenitiesCount, setAmenitiesCount] = useState(6);
+  const [facilitiesCount, setFacilitiesCount] = useState(6);
 
-  const amenities = [
-    { icon: <TreePine />, title: "Plantation Walks" },
-    { icon: <Waves />, title: "Natural Rivulet" },
-    { icon: <Mountain />, title: "Trekking" },
-    { icon: <Flame />, title: "Campfire" },
-    { icon: <Gamepad2 />, title: "Indoor Games" },
-    { icon: <Utensils />, title: "BBQ" },
-    { icon: <Trash2 />, title: "Farm Animals" },
-    { icon: <Map />, title: "Local Tours" },
-    { icon: <Wallet />, title: "Guide on Demand" },
-  ];
+  const amenities = [
+    { icon: <TreePine />, title: "Plantation Walks" },
+    { icon: <Waves />, title: "Natural Rivulet" },
+    { icon: <Mountain />, title: "Trekking" },
+    { icon: <Flame />, title: "Campfire" },
+    { icon: <Gamepad2 />, title: "Indoor Games" },
+    { icon: <Utensils />, title: "BBQ" },
+    { icon: <Trash2 />, title: "Farm Animals" },
+    { icon: <Map />, title: "Local Tours" },
+//     { icon: <Wallet />, title: "Guide on Demand" },
+    { icon: <Bike />, title: "Sky Cycling" },
+    // { icon: <Zap />, title: "Ziplining" },
+    { icon: <Trophy />, title: "Go-Karting Track" },
+    { icon: <Tent />, title: "Bubble Tent" },
+    { icon: <Heart />, title: "Laughing Park" },
+    { icon: <Landmark />, title: "Temple" },
+    { icon: <Ship />, title: "Boating in Ponds" },
+    { icon: <Binoculars />, title: "Sky Gazing Deck" },
+    // { icon: <Palette />, title: "Art & Craft Room" },
+    { icon: <Users />, title: "Senior Citizen Park" },
+    { icon: <Camera />, title: "Selfie Point" },
+    { icon: <TreePine />, title: "Plantation" },
+  ];
 
-  const facilities = [
-    { icon: <Wifi />, title: "Free Wifi" },
-    { icon: <Globe />, title: "Travel Desk" },
-    { icon: <Car />, title: "Car Parking" },
-    { icon: <ShowerHead />, title: "Premium bathroom" },
-    { icon: <Users />, title: "Conference Room" },
-    { icon: <Stethoscope />, title: "Doctor on Call" },
-    { icon: <Wind />, title: "Hair Dryer" },
-    { icon: <Bath />, title: "24hr Hot Water" },
-    { icon: <UserPlus />, title: "Group Booking" },
-  ];
-
+  const facilities = [
+    { icon: <Wifi />, title: "Free Wifi" },
+    { icon: <Globe />, title: "Travel Desk" },
+    { icon: <Car />, title: "Car Parking" },
+    { icon: <ShowerHead />, title: "Premium bathroom" },
+    { icon: <Users />, title: "Conference Room" },
+    { icon: <Stethoscope />, title: "Doctor on Call" },
+    { icon: <Wind />, title: "Hair Dryer" },
+    { icon: <Bath />, title: "24hr Hot Water" },
+    { icon: <UserPlus />, title: "Group Booking" },
+    { icon: <Users />, title: "Club House" },
+    { icon: <ShieldCheck />, title: "24/7 Security" },
+    { icon: <Stethoscope />, title: "Emergency Room" },
+    { icon: <Activity />, title: "Yoga & Aerobic Areas" },
+    { icon: <Music />, title: "Party Hall & Lawn" },
+    { icon: <Trophy />, title: "Multiple Sports Courts" },
+    { icon: <BatteryCharging />, title: "EV Charging Station" },
+    { icon: <Droplets />, title: "Water Treatment Plant" },
+    { icon: <Wind />, title: "Borewells" },
+  ];
   return (
     <section className="relative py-20 px-4 overflow-hidden min-h-screen flex items-center">
       {/* Background Overlay */}
