@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Plus, Minus, Star, ShieldCheck, TreePine, Landmark,
   TrendingUp, Phone, Mail, ArrowRight, Waves, Zap, Fence,
-  Quote
+  Quote, Maximize2
 } from 'lucide-react';
 
 const GreenMeadowsJonnada = () => {
@@ -28,7 +28,14 @@ const GreenMeadowsJonnada = () => {
 
   const projectStats = [
     { label: "VMRDA Approved", value: "LP: 71/2020", icon: <Landmark />, sub: "VMRDA/DPMS Approved" },
-    { label: "Price", value: "₹13,999", icon: <TrendingUp />, sub: "Per Sq. Yard" },
+    { 
+    label: "Total Area", 
+    value: "17 Acres", 
+    prefix: "",
+    suffix: " Acres",
+    icon: <Maximize2 />, 
+    sub: "Premium Open Plots" 
+  },
     { label: "ROI Status", value: "18%", icon: <Zap />, sub: "Expected Returns" }
   ];
 
