@@ -50,17 +50,17 @@ const SmartCityPremium = () => {
   const testimonials = [
     {
       name: "Ravi Teja",
-      text: "Investing in Smart City Dakamarri was a clear choice. The proximity to the airport and the high quality of infrastructure already in place made it a secure long-term asset.",
+      text:"Ten-minute commute to my IT office, yet I live in a peaceful, green community. Perfect work-life balance.What made the difference was seeing the completed infrastructure not promises, but actual roads, actual drainage, actual security.",
       role: "Software Architect"
     },
     {
       name: "Ananya Rao",
-      text: "As an NRI, I was looking for a transparent and reliable developer. The progress at the site is impressive, and the green spaces are exactly what I wanted.",
+      text: "The appreciation potential here is extraordinary.Mangal Realty changed my perspective entirely. Every document was clear, every approval was verified, and the infrastructure was actually complete. I brought three of my friends to visit, and two have already purchased plots.",
       role: "Investment Banker"
     },
     {
       name: "Suresh Kumar",
-      text: "The value appreciation in this corridor is unmatched. Being just 5 minutes from the International Airport makes this the best investment in Vizag.",
+      text: "The value appreciation in this corridor is unmatched. The VMRDA approval and RERA registration gave us confidence, but the 40feet roads and children's play area won our hearts.Being just 5 minutes from the International Airport makes this the best investment in Vizag.",
       role: "Business Owner"
     }
   ];
@@ -144,44 +144,85 @@ const SmartCityPremium = () => {
 
       {/* 3. PREMIUM HIGHLIGHTS */}
       <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
+        {/* 1. INFRASTRUCTURE HEADER */}
         <div className="text-center mb-16">
-          {/* Standardized Heading - Slate for visibility on white */}
-          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none text-slate-900">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none text-slate-900 uppercase">
             Elite <span className="text-[#15803d]">Infrastructure</span>
           </h2>
           <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* INFRASTRUCTURE GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {[
-            { title: "60ft Main Road", icon: <Layout />, desc: "Proposed 60ft wide access roads for effortless transit." },
-            { title: "40ft Internal", icon: <Navigation />, desc: "Extensive 40ft wide internal blacktop road network." },
-            { title: "Green Zones", icon: <TreePine />, desc: "Designated public open space spanning 670.48." },
-            { title: "Legal Safety", icon: <ShieldCheck />, desc: "VMRDA Approved with spot registration available." }
+            { title: "60ft Main Road", icon: <Layout />, desc: "Morning Wellness Routines jogs along tree-lined 60-feet roads." },
+            { title: "40ft Internal", icon: <Navigation />, desc: "Smart City Dakamari is surrounded by 12 prestigious engineering and medical colleges." },
+            { title: "Green Zones", icon: <TreePine />, desc: "Every aspect has been planned with your family's comfort in mind." },
+            { title: "Legal Safety", icon: <ShieldCheck />, desc: "VMRDA approved. RERA registered. Near the international airport. In the IT corridor." }
           ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-white p-10 -[2rem] border border-slate-100 shadow-sm transition-all duration-500 group text-left hover:bg-[#15803d] cursor-pointer"
+              className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm transition-all duration-500 group text-left hover:bg-[#15803d] cursor-pointer"
             >
-              {/* Icon: Turns white on hover */}
               <div className="text-[#15803d] mb-6 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                 {item.icon}
               </div>
-
-              {/* Title: Turns white on hover */}
               <h4 className="text-xl font-bold uppercase mb-3 tracking-tight text-slate-900 group-hover:text-white transition-colors duration-300">
                 {item.title}
               </h4>
-
-              {/* Description: Turns white/light-gray on hover */}
               <p className="text-slate-500 text-sm leading-relaxed group-hover:text-emerald-50 transition-colors duration-300">
                 {item.desc}
               </p>
             </div>
           ))}
         </div>
-      </section>
 
+        {/* 2. CONNECTIVITY HEADER */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-slate-900 uppercase">
+            Just Minutes From <span className="text-[#15803d]">Everywhere</span>
+          </h2>
+          <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
+        </div>
+
+        {/* CONNECTIVITY GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              title: "Bhogapuram Airport",
+              time: "5 Minutes",
+              desc: "The new international airport transforms property values and lifestyle convenience."
+            },
+            {
+              title: "IT SEZ Corridor",
+              time: "10 Minutes",
+              desc: "Join tech professionals who've discovered the perfect work-life balance."
+            },
+            {
+              title: "Vizag CMR",
+              time: "35 Minutes",
+              desc: "Premium shopping, healthcare, and entertainment without the city chaos."
+            },
+            {
+              title: "NH-45 Access",
+              time: "600 Meters",
+              desc: "Direct highway access for effortless and rapid travel."
+            }
+          ].map((item, idx) => (
+            <div key={idx} className="flex flex-col border-l-4 border-[#15803d] pl-6 py-4 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group rounded-r-2xl">
+              <span className="text-[10px] uppercase font-black text-slate-400 tracking-[0.2em] mb-1 group-hover:text-[#15803d] transition-colors">
+                {item.title}
+              </span>
+              <span className="text-3xl lg:text-4xl font-black text-[#15803d] tracking-tighter mb-2">
+                {item.time}
+              </span>
+              <p className="text-slate-600 text-xs leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
       {/* 4. CONNECTIVITY HUB */}
       <section className="py-24 bg-white px-6 mt-6">
         <div className="max-w-7xl mx-auto">

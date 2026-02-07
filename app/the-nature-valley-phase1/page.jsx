@@ -79,7 +79,10 @@ const NatureValleyPhase1 = () => {
               Nature Valley <br /> <span className="text-[#22C55E]">Phase 1</span>
             </h1>
             <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed  max-w-md">
-              "Experience the Green Side of Life." Successfully completed premium plot project in Bhogapuram.
+              "Experience the Green Side of Life."  
+            </p>
+            <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed  max-w-md">
+              The Nature Valley, a testament to our vision of harmonious living nestled in the serene landscape of Bhogapuram.
             </p>
             <MangalButton>
               View Brochure <ArrowRight size={16} />
