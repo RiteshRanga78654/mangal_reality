@@ -7,7 +7,7 @@ import {
   ShieldCheck, Layout, Navigation,
   Phone, Mail, CheckCircle,
   TreePine, Landmark, TrendingUp,
-  Plus, Minus, Quote, Star, Stethoscope, ShoppingBag
+  Plus, Minus, Quote, Star, Stethoscope, ShoppingBag, Maximize2
 } from 'lucide-react';
 
 
@@ -50,7 +50,7 @@ const SmartCityPremium = () => {
   const testimonials = [
     {
       name: "Ravi Teja",
-      text:"Ten-minute commute to my IT office, yet I live in a peaceful, green community. Perfect work-life balance.What made the difference was seeing the completed infrastructure not promises, but actual roads, actual drainage, actual security.",
+      text: "Ten-minute commute to my IT office, yet I live in a peaceful, green community. Perfect work-life balance.What made the difference was seeing the completed infrastructure not promises, but actual roads, actual drainage, actual security.",
       role: "Software Architect"
     },
     {
@@ -121,11 +121,18 @@ const SmartCityPremium = () => {
       {/* 2. STATS OVERLAY */}
       <section className="px-6 -mt-16 lg:-mt-24 relative z-30">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white shadow-2xl  p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
-            <TrendingUp className="text-[#22C55E] mb-4" />
-            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left">Pricing From</p>
-            <h2 className="text-4xl font-bold text-black leading-none tracking-tighter text-left">₹<AnimatedCounter value="15000" /></h2>
-            <p className="text-slate-500 text-xs mt-2 font-bold text-left">Per Sq. Yard</p>
+          <div className="bg-white shadow-2xl p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
+            <TrendingUp className="text-[#22C55E] mb-4" size={24} />
+            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left uppercase">
+              Total Area
+            </p>
+            <h2 className="text-4xl font-bold text-black leading-none tracking-tighter text-left flex items-center gap-2">
+              {/* Use your AnimatedCounter here for the "17" and manually add "Acres" */}
+              <AnimatedCounter value="3" /> Acres
+            </h2>
+            <p className="text-slate-500 text-xs mt-2 font-bold text-left">
+              Premium Open Plots
+            </p>
           </div>
           <div className="bg-white shadow-2xl  p-10 transition-transform hover:-translate-y-2">
             <CheckCircle className="text-[#22C55E] mb-4" />
