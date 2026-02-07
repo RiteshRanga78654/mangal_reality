@@ -1,66 +1,73 @@
 "use client";
 import React, { useState } from 'react';
 import { 
-  TreePine, Wifi, Globe, Car, Map, Wallet, 
-  ShowerHead, Users, Stethoscope, Waves, 
-  Mountain, Wind, Flame, Gamepad2, Bath, 
-  Utensils, UserPlus, Trash2,
+  TreePine, Wifi, Globe, Car, Map, Wallet, 
+  ShowerHead, Users, Stethoscope, Waves, 
+  Mountain, Wind, Flame, Gamepad2, Bath, 
+  Utensils, UserPlus, Trash2,
   Bike, Zap, Tent, Heart, Landmark, Ship, 
   Binoculars, Palette, ShieldCheck, Camera, 
-  Activity, Music, Trophy, BatteryCharging, Droplets
+  Activity, Music, Trophy, BatteryCharging, Droplets,
+  Dumbbell, Leaf, Flower2, Home, Footprints, 
+  Sun, BookOpen, Coffee, Waves as Pool, 
+  AlertCircle, SunMedium, Construction, 
+  Stethoscope as Clinic, FastForward, 
+  Users2, Radiation, Trees
 } from 'lucide-react';
 
 export default function AmenitiesSection() {
-  const brandGreen = "#22c55e";
+  const brandGreen = "#22c55e";
 
-  // State to track how many items to show for each side
-  const [amenitiesCount, setAmenitiesCount] = useState(6);
-  const [facilitiesCount, setFacilitiesCount] = useState(6);
+  // State to track how many items to show for each side
+  const [amenitiesCount, setAmenitiesCount] = useState(6);
+  const [facilitiesCount, setFacilitiesCount] = useState(6);
 
-  const amenities = [
-    { icon: <TreePine />, title: "Plantation Walks" },
-    { icon: <Waves />, title: "Natural Rivulet" },
-    { icon: <Mountain />, title: "Trekking" },
-    { icon: <Flame />, title: "Campfire" },
-    { icon: <Gamepad2 />, title: "Indoor Games" },
-    { icon: <Utensils />, title: "BBQ" },
-    { icon: <Trash2 />, title: "Farm Animals" },
-    { icon: <Map />, title: "Local Tours" },
-//     { icon: <Wallet />, title: "Guide on Demand" },
-    { icon: <Bike />, title: "Sky Cycling" },
-    // { icon: <Zap />, title: "Ziplining" },
-    { icon: <Trophy />, title: "Go-Karting Track" },
-    { icon: <Tent />, title: "Bubble Tent" },
-    { icon: <Heart />, title: "Laughing Park" },
-    { icon: <Landmark />, title: "Temple" },
-    { icon: <Ship />, title: "Boating in Ponds" },
-    { icon: <Binoculars />, title: "Sky Gazing Deck" },
-    // { icon: <Palette />, title: "Art & Craft Room" },
-    { icon: <Users />, title: "Senior Citizen Park" },
-    { icon: <Camera />, title: "Selfie Point" },
-    { icon: <TreePine />, title: "Plantation" },
-  ];
-
-  const facilities = [
-    { icon: <Wifi />, title: "Free Wifi" },
-    { icon: <Globe />, title: "Travel Desk" },
-    { icon: <Car />, title: "Car Parking" },
-    { icon: <ShowerHead />, title: "Premium bathroom" },
-    { icon: <Users />, title: "Conference Room" },
-    { icon: <Stethoscope />, title: "Doctor on Call" },
-    { icon: <Wind />, title: "Hair Dryer" },
-    { icon: <Bath />, title: "24hr Hot Water" },
-    { icon: <UserPlus />, title: "Group Booking" },
+  const amenities = [
     { icon: <Users />, title: "Club House" },
-    { icon: <ShieldCheck />, title: "24/7 Security" },
-    { icon: <Stethoscope />, title: "Emergency Room" },
-    { icon: <Activity />, title: "Yoga & Aerobic Areas" },
-    { icon: <Music />, title: "Party Hall & Lawn" },
+    { icon: <Users2 />, title: "Senior Citizen Park" },
     { icon: <Trophy />, title: "Multiple Sports Courts" },
-    { icon: <BatteryCharging />, title: "EV Charging Station" },
+    { icon: <Activity />, title: "Adventure Zone" },
+    { icon: <Landmark />, title: "Temple & Goshala" },
+    { icon: <Dumbbell />, title: "Premium Fitness Facilities" },
+    { icon: <Leaf />, title: "Organic Gardens" },
+    { icon: <Flower2 />, title: "Cultural & Activity Lawns" },
+    { icon: <Home />, title: "Luxury Farm House" },
+    { icon: <Ship />, title: "Boating Facility" },
+    { icon: <Footprints />, title: "Wellness Pathways" },
+    { icon: <Sun />, title: "Vitamin-D Zone" },
+    { icon: <Music />, title: "Amphitheatre" },
+    { icon: <BookOpen />, title: "Reading Lounge" },
+    { icon: <Pool />, title: "Aqua Gym" },
+    { icon: <Activity />, title: "Meditation Room" },
+    { icon: <Heart />, title: "Massage Centre" },
+    { icon: <Coffee />, title: "Cafeteria" },
+    { icon: <Pool />, title: "Kids Play Pool" },
+    { icon: <Camera />, title: "Selfie Point" },
+  ];
+
+  const facilities = [
+    { icon: <AlertCircle />, title: "Emergency Room" },
+    { icon: <Wifi />, title: "24/7 Free Wifi" },
+    { icon: <BatteryCharging />, title: "EV Charging Stations" },
+    { icon: <ShieldCheck />, title: "24/7 CCTV Security" },
+    { icon: <SunMedium />, title: "Solar Energy System" },
     { icon: <Droplets />, title: "Water Treatment Plant" },
-    { icon: <Wind />, title: "Borewells" },
-  ];
+    { icon: <Clinic />, title: "Society Clinic" },
+    { icon: <FastForward />, title: "Skating Rink" },
+    { icon: <Flame />, title: "Camp Fire Zone" },
+    { icon: <Heart />, title: "Special Care Centre" },
+    { icon: <Footprints />, title: "Walking Track" },
+    { icon: <Trees />, title: "Forest Trail" },
+    { icon: <Activity />, title: "Zumba Room" },
+    { icon: <Wind />, title: "Aerobic Area" },
+    { icon: <Users />, title: "Conference Room" },
+    { icon: <Droplets />, title: "Borewells" },
+    { icon: <Car />, title: "Car Parking" },
+    { icon: <Globe />, title: "Travel Desk" },
+    { icon: <Bath />, title: "24hr Hot Water" },
+    { icon: <Stethoscope />, title: "First Aid Centre" },
+  ];
+
   return (
     <section className="relative py-20 px-4 overflow-hidden min-h-screen flex items-center">
       {/* Background Overlay */}
@@ -78,10 +85,10 @@ export default function AmenitiesSection() {
           {/* Vertical Divider (Desktop Only) */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
 
-            {/* --- Left SIDE: FACILITIES --- */}
+          {/* --- Left SIDE: FACILITIES --- */}
           <div className="flex flex-col">
             <header className="mb-10 text-center lg:text-left">
-              <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter ">
+              <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter uppercase ">
                 Facilities
               </h2>
               <div className="w-24 h-1 mt-2 mx-auto lg:mx-0" style={{ backgroundColor: brandGreen }}></div>
@@ -94,7 +101,7 @@ export default function AmenitiesSection() {
                   <div className="relative z-10 text-[#22c55e] group-hover:text-white transition-all duration-300 mb-4 group-hover:animate-bounce">
                     {React.cloneElement(item.icon, { size: 36, strokeWidth: 1.2 })}
                   </div>
-                  <span className="relative z-10 text-white text-[11px] md:text-[13px] font-bold tracking-widest text-center px-2 ">
+                  <span className="relative z-10 text-white text-[11px] md:text-[13px] font-bold tracking-widest text-center px-2 uppercase">
                     {item.title}
                   </span>
                 </div>
@@ -108,7 +115,7 @@ export default function AmenitiesSection() {
                   onClick={() => setFacilitiesCount(facilities.length)}
                   className="group relative cursor-pointer px-8 py-4 text-white font-bold  tracking-widest text-[12px] overflow-hidden"
                 >
-                  <span className="relative z-10">View All Facilities</span>
+                  <span className="relative z-10">VIEW ALL FACILITIES</span>
                   <div className="absolute inset-0 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                   <div className="absolute inset-0 border border-green-600"></div>
                 </button>
@@ -119,7 +126,7 @@ export default function AmenitiesSection() {
           {/* --- Right SIDE: AMENITIES --- */}
           <div className="flex flex-col">
             <header className="mb-10 text-center lg:text-left">
-              <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter ">
+              <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter uppercase">
                 Amenities
               </h2>
               <div className="w-24 h-1 mt-2 mx-auto lg:mx-0" style={{ backgroundColor: brandGreen }}></div>
@@ -132,7 +139,7 @@ export default function AmenitiesSection() {
                   <div className="relative z-10 text-[#22c55e] group-hover:text-white transition-all duration-300 mb-4 group-hover:animate-bounce">
                     {React.cloneElement(item.icon, { size: 36, strokeWidth: 1.2 })}
                   </div>
-                  <span className="relative z-10 text-white text-[11px] md:text-[13px] font-bold tracking-widest text-center px-2 ">
+                  <span className="relative z-10 text-white text-[11px] md:text-[13px] font-bold tracking-widest text-center px-2 uppercase">
                     {item.title}
                   </span>
                 </div>
@@ -146,16 +153,13 @@ export default function AmenitiesSection() {
                   onClick={() => setAmenitiesCount(amenities.length)}
                   className="group relative cursor-pointer px-8 py-4 text-white font-bold  tracking-widest text-[12px] overflow-hidden"
                 >
-                  <span className="relative z-10">View All Amenities</span>
+                  <span className="relative z-10">VIEW ALL AMENITIES</span>
                   <div className="absolute inset-0 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
                   <div className="absolute inset-0 border border-green-600"></div>
                 </button>
               </div>
             )}
           </div>
-
-        
-
         </div>
       </div>
     </section>

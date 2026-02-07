@@ -21,7 +21,7 @@ export default function VisionMission() {
     }
   };
 
-  const brandGreen = "#15803d"; // Deep emerald for better visibility on white
+  const brandGreen = "#15803d"; 
 
   return (
     <main 

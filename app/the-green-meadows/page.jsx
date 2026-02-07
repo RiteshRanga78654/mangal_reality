@@ -33,10 +33,10 @@ const GreenMeadowsJonnada = () => {
   ];
 
   const highlights = [
-    { title: "24/7 Security", icon: <ShieldCheck />, desc: "CCTV surveillance and professional security teams." },
-    { title: "Elite Infrastructure", icon: <Fence />, desc: "Grand Entrance Arch, Compound Wall & BT Roads." },
-    { title: "Modern Utilities", icon: <Waves />, desc: "Advanced Drainage System & Completed Electrical Work." },
-    { title: "Green Living", icon: <TreePine />, desc: "Vastu-compliant plots with Avenue Plantation & Parks." }
+    { title: "24/7 Security", icon: <ShieldCheck />, desc: "Your family's safety is never compromised. Your insurance premiums stay reasonable." },
+    { title: "Elite Infrastructure", icon: <Fence />, desc: "Built to Last, Designed to Impress.Grand entrance arch everything ready for immediate construction." },
+    { title: "Modern Utilities", icon: <Waves />, desc: "Good utilities are invisible ,they just work.Advanced utilities and smart systems that contemporary families expect." },
+    { title: "Green Living", icon: <TreePine />, desc: "Spaces That Bring People Together. The playground fills with laughter,The parks host weekend picnics where community bonds form." }
   ];
 
   const testimonials = [
@@ -82,9 +82,7 @@ const GreenMeadowsJonnada = () => {
               “Expansive Green Living Across Five Acres of Excellence”
             </p>
             <p className="text-white text-base leading-relaxed max-w-md mb-4">
-              The Green Meadows is a 5-acre completed project that exemplifies our dedication
-              to creating spacious, nature-integrated living environments. This project
-              achieves a perfect balance between space, greenery, and community.
+              The Green Meadows is a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments. This project is a balance between space, greenery, & community.
             </p>
             <MangalButton>
               On Spot Registration <ArrowRight size={16} />
@@ -163,67 +161,78 @@ const GreenMeadowsJonnada = () => {
       </section>
 
       {/* 4. THE CONNECTIVITY HUB */}
-      <section className="py-16 lg:py-24 bg-[#0A1A10] px-6 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">Location <span className="text-[#22C55E]">Corridor</span></h2>
-              <p className="text-white mt-4 md:mt-6 text-base md:text-lg ">Everything Within Comfortable Reach.</p>
-            </div>
-            <MangalButton onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}>
-              {showMoreLandmarks ? <Minus size={16} /> : <Plus size={16} />}
-              {showMoreLandmarks ? "Close Map" : "View Distance Map"}
-            </MangalButton>
-          </div>
+     {/* 4. THE CONNECTIVITY HUB */}
+<section className="py-16 lg:py-24 bg-[#0A1A10] px-6 text-white">
+  <div className="max-w-7xl mx-auto">
+    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
+      <div className="max-w-2xl">
+        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">
+          Location <span className="text-[#22C55E]">Corridor</span>
+        </h2>
+        <p className="text-white mt-4 md:mt-6 text-base md:text-lg ">
+          Everything Within Comfortable Reach.
+        </p>
+      </div>
+      <MangalButton onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}>
+        {showMoreLandmarks ? <Minus size={16} /> : <Plus size={16} />}
+        {showMoreLandmarks ? "Close Map" : "View Distance Map"}
+      </MangalButton>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-            <div className="md:col-span-2 h-[300px] lg:h-[450px] relative overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" alt="Educational Hub" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-left">
-                <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold uppercase mb-3 inline-block tracking-widest">Educational Hub</span>
-                <h4 className="text-2xl md:text-4xl font-bold uppercase">Lendi, Raghu & VITAM</h4>
-              </div>
-            </div>
-
-            <div className="h-[300px] lg:h-[450px] relative overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Airport" />
-              <div className="absolute inset-0 bg-[#22C55E]/20 group-hover:bg-[#22C55E]/40 transition-colors"></div>
-              <div className="absolute bottom-8 left-8 text-left">
-                <h4 className="text-2xl md:text-3xl font-bold uppercase text-white leading-none">15 KM TO <br /> AIRPORT</h4>
-              </div>
-            </div>
-
-            {/* <AnimatePresence>
-              {showMoreLandmarks && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="h-[250px] lg:h-[350px] relative overflow-hidden md:col-span-3"
-                >
-                  <img src="https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Temple" />
-                  <div className="absolute inset-0 bg-black/60 p-8 flex flex-col justify-end text-left">
-                    <h4 className="text-xl md:text-2xl font-bold uppercase text-[#22C55E]">Padmanabham</h4>
-                    <p className="text-white text-xs">10 Minutes Drive to Temple</p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence> */}
-
-            <div className={`transition-all duration-700 bg-white p-8 lg:p-12 flex flex-col justify-center text-left md:col-span-3 ${!showMoreLandmarks && 'lg:col-span-2'}`}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
-                {[{ l: "Revidi Junction", d: "3 KM" }, { l: "Highway", d: "5 KM" }, { l: "Lake Palace", d: "9 KM" }, { l: "Madhurawada", d: "25 KM" }].map((item, i) => (
-                  <div key={i} className="flex flex-col border-l-2 border-[#22C55E] pl-4">
-                    <span className="text-[9px] uppercase font-bold text-slate-400 tracking-wider mb-1">{item.l}</span>
-                    <span className="text-xl lg:text-3xl font-bold text-black">{item.d}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+      {/* IMAGE BOX */}
+      <div className="lg:col-span-8 h-[300px] lg:h-[450px] relative overflow-hidden group">
+        <img 
+          src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000" 
+          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" 
+          alt="Educational Hub" 
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div className="absolute bottom-6 left-6 text-left">
+          <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold uppercase mb-3 inline-block tracking-widest">
+            Educational Hub
+          </span>
+          <h4 className="text-2xl md:text-4xl font-bold uppercase">Lendi, Raghu & VITAM</h4>
         </div>
-      </section>
+      </div>
+
+      {/* RIGHT SIDE TEXT (Top Right in your image) */}
+      <div className="lg:col-span-4 flex flex-col justify-center text-left space-y-8 p-4 lg:p-0">
+        <div>
+            {/* <div className="w-full h-6 bg-[#064e3b] mb-6 hidden lg:block opacity-40"></div> Dark Green accent bar like image */}
+            <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-200">
+                “Safety, schools, space, and community, everything needed for children to thrive and families to flourish.”
+            </p>
+        </div>
+        
+        <p className="text-slate-200 text-xl md:text-2xl leading-relaxed">
+            Visit us to walk through tree-lined avenues and discover why families and investors alike are choosing this exceptional community.
+        </p>
+      </div>
+
+      {/* DISTANCE MARKERS (Bottom row in your image) */}
+      <div className="lg:col-span-12 bg-white p-8 lg:p-14 flex flex-col justify-center text-left mt-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
+          {[
+            { l: "Revidi Junction", d: "3 KM" }, 
+            { l: "Highway", d: "5 KM" }, 
+            { l: "Lake Palace", d: "9 KM" }, 
+            { l: "Madhurawada", d: "25 KM" }
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2">
+              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em] mb-2">
+                {item.l}
+              </span>
+              <span className="text-3xl lg:text-5xl font-black text-black tracking-tighter">
+                {item.d}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 5. TESTIMONIALS */}
       <section className="py-16 lg:py-24 px-6 bg-white overflow-hidden">
