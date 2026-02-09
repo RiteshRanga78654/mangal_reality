@@ -69,16 +69,16 @@ const Page = () => {
     {
       id: 1,
       name: "Abhishek Tripathi",
-      role: "Client",
+      role: "Happy Resident & Investor, Smart City, Dakamarri",
       image: "/assets/images/testi-1.jpg",
-      text: "Purchasing and moving to our sweet plots at The Smart City in Dakamari was the one of the best decisions for our family. The 2-acre completed project offers everything that we need within our reach. Mangal Reality's commitment to great quality and their genuine care for families made the entire process smooth and stress-free. The community here shares similar family values, making it feel like home from day one. We couldn't be happier!",
+      text: "We had been monitoring the real estate market in Vizag for two years, waiting for the right time to enter. Smart City Dakamarri fulfilled all the criteria: the infrastructure is already completed, it is connected to NH-45, close to the airport, and registration is immediate. The 2-acre land ensures a compact community, but the location provides benefits of a large project. With the Bhogapuram Airport ready for operation and the development of the coastal corridor in full swing, the growth path of our land's value is very promising. Our children can play safely in this area, and our investment is growing steadily ;that's the benefit of Smart City.",
     },
     {
       id: 2,
       name: "Anil Mehta",
-      role: "Client",
+      role: "Smart Investor & Plot Owner, Smart City, Dakamarri",
       image: "/assets/images/testi-2.jpg",
-      text: "We explored several options before choosing The Green Meadows, and Mangal Reality gave us the freedom to find exactly what we needed and wanted.The  5 acre completed smart development showcases Mangal Reality's attention to every minute detail,feature and commitment to quality. The family values they practice aren't just words  they live them.Our home here is not just a property; it's where our family's future begins.",
+      text: "After scrutinizing various investment opportunities in the Vizag corridor, Smart City Dakamarri stood out as the best choice. Its proximity to NH-45, only 600 meters away, and just 5 minutes from Bhogapuram International Airport makes it an unbeatable location advantage.Mangal Reality's honest business practices and the plot's advantageous location near the IT SEZ made this investment opportunity the best choice for our family's future.This is not just a plot; it's a valuable asset in Vizag's fastest-growing corridor.",
     },
     {
       id: 3,
@@ -90,16 +90,17 @@ const Page = () => {
     {
       id: 4,
       name: "Rohit Sharma",
-      role: "Client",
+      role: "Long-term Investor & Resident, The Nature Valley, Pisini",
       image: "/assets/images/testi-4.jpg",
-      text: "What impressed us most about Mangal Reality was their patience in showing us different projects from The Smart City to The Green Meadows. They never pressured us and respected our timeline and budget while fulfilling all our needs.  We finally settled on our beautiful home in Jonnada, and couldn't be happier with our choice.Our home here is not just a property; it's where our family's future begins.",
+      text: "The Nature Valley offers unparalleled value for money. The 47-acre land enables the provision of amenities that are impossible in smaller projects 61+ amenities such as water bodies, dense greenery, and state-of-the-art infrastructure. Strategically located at the heart of Vizag, Vizianagaram, and Srikakulam, we are at the center of the industrial growth triangle of this region. The planned development strategy of Mangal Reality (17+30 acres) is a sign of forward thinking. This is legacy planning, not real estate purchase.",
     },
     {
       id: 5,
       name: "Sumit Nagar",
-      role: "Client",
+      role: "Satisfied Investor, Green Meadows, Jonnada",
       image: "/assets/images/testi-5.jpg",
-      text: "Choosing The Smart City was easy after meeting the Mangal Reality team. Mangal Reality's dedication to family-oriented living is evident in every detail of this project. From the planning stages to post-purchase support, their team has been there for us. We're grateful to be part of this wonderful community in Dakamarri .The completed project speaks for itself ,quality construction, thoughtful planning, and a community atmosphere that's perfect for raising children. Thank you for helping us find our dream home!",
+      text: "After analyzing connectivity, budget, and growth opportunities, we shortlisted Green Meadows in Jonnada .What won over my family was the opportunity to see their completed Smart City project firsthand. The quality they promised was the quality they delivered. Our Green Meadows ,Jonnada plot has already appreciated by 18% in the first year itself. Being 250 meters away from the highway ensures instant connectivity to Vizag and Vizianagaram without shelling out premium rates for being on the highway."
+
     },
 
   ];
@@ -180,7 +181,7 @@ const Page = () => {
       title: "The Nature City",
       location: "Pisini, AP",
       status: "On Going",
-      area: "100 Acres ",
+      area: "43 Acres ",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200",
       link: "https://the-nature-city.vercel.app/"
     },
@@ -190,7 +191,7 @@ const Page = () => {
       title: "The Nature Valley (Phase 2)",
       location: "Pisini, AP",
       status: "On Going",
-      area: "45 Acres ",
+      area: "8 Acres ",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
       link: "/the-nature-valley-phase2"
     },
@@ -200,7 +201,7 @@ const Page = () => {
       title: "The Nature Valley (Phase 1)",
       location: "Pisini, AP",
       status: "Completed",
-      area: "25 Acres",
+      area: "17 Acres",
       image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200",
       link: "/the-nature-valley-phase1"
     },
@@ -261,19 +262,19 @@ const Page = () => {
     {
       label: "Nature Embrace",
       title: "Family's Grace",
-      desc: "At Mangal Realty, we craft spaces where wellness isn't a program — it's a way of life.",
+      desc: "At Mangal Realty, we craft spaces where wellness isn't a program; it's a way of life.",
       img: "/assets/Reference images/2659.jpg"
     },
     {
       label: "Gather. Grow. Glow.",
       title: "Authentic Living",
-      desc: "In the heart of Miyawaki Forest invite families to reconnect with what matters — simplicity, authenticity, laughter.",
+      desc: "In the heart of Miyawaki Forest invites families to reconnect with what matters is simplicity, authenticity and laughter around the dinner table.",
       img: "/assets/Reference images/27.jpg"
     },
     {
       label: "Where Roots Grow Deep.",
       title: "Where Hearts Grow Strong.",
-      desc: "Mangal Realty is creating spaces where health blooms, joy thrives, and legacies grow.",
+      desc: "Mangal Reality is creating spaces where health blooms, joy thrives, and legacies grow.",
       img: "/assets/Reference images/928.jpg"
     },
   ];
@@ -323,15 +324,14 @@ const Page = () => {
               </p>
               <div className="space-y-4 text-lg text-black/70 leading-relaxed">
                 <p>
-                  At Mangal Realty, we heartily believe a home is more than just concrete walls,it's where
-                  families' healthiest, happiest chapter begins.
+                  Mangal Realty, India's No.1 Eco-Luxury Real Estate Developer in Vizag, Andhra Pradesh. We create future-ready plotted developments and premium villas across prime Visakhapatnam locations. Our RERA-approved, IGBC Platinum-certified projects feature sustainable design, modern sports amenities, and adventure zones perfect for families seeking elevated lifestyles.
                 </p>
-                <p>
+                {/* <p>
                   We don't just build homes; we nurture environments where wellness is woven into everyday living.
-                </p>
+                </p> */}
                 <p>
-                  We create spaces where sustainable design supports families to grow healthy, happy,
-                  and whole—together with nature.
+                 With a customer-first approach, Mangal Realty delivers sustainable communities where families enjoy elevated living and investors benefit from high-growth real estate opportunities in Vizag.
+
                 </p>
               </div>
             </div>
