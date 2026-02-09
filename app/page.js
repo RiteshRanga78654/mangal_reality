@@ -71,43 +71,37 @@ const Page = () => {
       name: "Abhishek Tripathi",
       role: "Client",
       image: "/assets/images/testi-1.jpg",
-      text: "Choosing The Smart City was easy after meeting the Mangal Reality team. Mangal Reality's dedication to family-oriented living is evident in every detail of this project. From the planning stages to post-purchase support, their team has been there for us. We're grateful to be part of this wonderful community in Dakamari The completed project speaks for itself ,quality construction, thoughtful planning, and a community atmosphere that's perfect for raising children. Thank you for helping us find our dream home!",
+      text: "Purchasing and moving to our sweet plots at The Smart City in Dakamari was the one of the best decisions for our family. The 2-acre completed project offers everything that we need within our reach. Mangal Reality's commitment to great quality and their genuine care for families made the entire process smooth and stress-free. The community here shares similar family values, making it feel like home from day one. We couldn't be happier!",
     },
     {
       id: 2,
       name: "Anil Mehta",
       role: "Client",
       image: "/assets/images/testi-2.jpg",
-      text: "The personalized strategies provided were outstanding.The team's dedication to understanding our family's unique needs made all the difference. A 200% increase in property engagement within the first quarter.",
+      text: "We explored several options before choosing The Green Meadows, and Mangal Reality gave us the freedom to find exactly what we needed and wanted.The  5 acre completed smart development showcases Mangal Reality's attention to every minute detail,feature and commitment to quality. The family values they practice aren't just words  they live them.Our home here is not just a property; it's where our family's future begins.",
     },
     {
       id: 3,
-      name: "Tanu Aggarwal",
+      name: "Ashish Aggarwal",
       role: "Marketing Director",
       image: "/assets/images/testi-3.jpg",
-      text: "Working with Mangal Reality has redefined what's possible for our business..Their expertise in digital strategy and innovative solutions has helped us better connect with families seeking their dream homes.",
+      text: "After visiting The Nature Valley in Pisini, we knew we had found our forever home. Mangal Reality didn't just sell us property; their team's dedication to understanding our family's needs made all the difference. Their transparency, professionalism, and the variety of options they provided made us confident in our investment. Our 45 acre community feels like an extended family.We're grateful for their guidance and highly recommend them to anyone seeking a family oriented home.",
     },
     {
       id: 4,
       name: "Rohit Sharma",
       role: "Client",
       image: "/assets/images/testi-4.jpg",
-      text: "Collaborating with Mangal Reality has been a pivotal experience for our organization.Their advanced tools and dedication to helping families find perfect homes have made all the difference in my success.",
+      text: "What impressed us most about Mangal Reality was their patience in showing us different projects from The Smart City to The Green Meadows. They never pressured us and respected our timeline and budget while fulfilling all our needs.  We finally settled on our beautiful home in Jonnada, and couldn't be happier with our choice.Our home here is not just a property; it's where our family's future begins.",
     },
     {
       id: 5,
       name: "Sumit Nagar",
       role: "Client",
       image: "/assets/images/testi-5.jpg",
-      text: "Mangal Reality has been instrumental in our company's evolution.Their strategic insights and family-focused solutions have enabled us to grow while maintaining the personal touch that families appreciate and trust.",
+      text: "Choosing The Smart City was easy after meeting the Mangal Reality team. Mangal Reality's dedication to family-oriented living is evident in every detail of this project. From the planning stages to post-purchase support, their team has been there for us. We're grateful to be part of this wonderful community in Dakamarri .The completed project speaks for itself ,quality construction, thoughtful planning, and a community atmosphere that's perfect for raising children. Thank you for helping us find our dream home!",
     },
-    {
-      id: 6,
-      name: "Tanu Aggarwal",
-      role: "Marketing Director",
-      image: "/assets/images/testi-6.jpg",
-      text: "The strategic insights provided were invaluable. We saw a 200% increase in engagement within the first quarter. The team is professional, responsive, and truly cares.",
-    },
+
   ];
 
   const extendedTestimonials = [...testimonials, ...testimonials];
@@ -370,19 +364,19 @@ const Page = () => {
               <div className="w-24 h-1 bg-[#22C55E] mx-auto mb-4"></div>
             </div>
 
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsProjectPaused(true)}
               onMouseLeave={() => setIsProjectPaused(false)}
             >
               <div className="overflow-hidden">
-                <div 
+                <div
                   className="flex transition-transform duration-700 ease-in-out"
                   style={{ transform: `translateX(-${projectIndex * (100 / projectsVisible)}%)` }}
                 >
                   {PROJECTS.map((project) => (
-                    <div 
-                      key={project.id} 
+                    <div
+                      key={project.id}
                       className="px-2 flex-shrink-0"
                       style={{ width: `${100 / projectsVisible}%` }}
                     >
@@ -470,9 +464,10 @@ const Page = () => {
         <section className="bg-white py-16 px-4 sm:px-6 lg:px-12 w-full overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center mb-12 text-center">
-              <h2 className="text-4xl md:text-7xl font-bold leading-tight text-[#0a1a10]">Testimonials</h2>
-              <div className="w-24 h-1 bg-[#22C55E] mx-auto mb-4"></div>
+              <h2 className="text-4xl md:text-7xl font-bold leading-tight text-[#0a1a10] tracking-tighter uppercase">Testimonials</h2>
+              <div className="w-24 h-1.5 bg-[#22C55E] mx-auto mb-4 rounded-none"></div>
             </div>
+
             <div className="relative w-full" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
               <div className="overflow-hidden">
                 <div
@@ -485,19 +480,37 @@ const Page = () => {
                   <div className="flex w-full">
                     {extendedTestimonials.map((item, index) => (
                       <div key={`${item.id}-${index}`} className="flex-shrink-0 px-4" style={{ width: `${100 / itemsPerPage}%` }}>
-                        <div className="bg-[#f3f4f6] p-8 rounded-lg shadow-xl border border-gray-100 h-full flex flex-col md:flex-row gap-6 items-center text-left relative group">
-                          <Quote className="absolute top-4 right-4 w-10 h-10 text-gray-200 group-hover:text-[#22c55e]/20" />
-                          <div className="relative flex-shrink-0">
-                            <div className="w-24 h-24 md:w-28 md:h-28 bg-white overflow-hidden rounded-sm border-2 border-gray-200">
-                              <img src={item.image} alt={item.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                            </div>
-                            <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#22c55e] rounded-sm"></div>
+                        {/* Fixed Height Card: Added h-[320px] and flex-col justify-between */}
+                        <div className="bg-[#f8fafc] p-6 h-[320px] rounded-none border border-slate-200 flex flex-col justify-between text-left relative group hover:border-[#22C55E]/50 transition-all">
+
+                          <Quote className="absolute top-4 right-4 w-8 h-8 text-slate-200 group-hover:text-[#22c55e]/20" />
+
+                          {/* Scrollable Text Area: Added overflow-y-auto to keep box size static */}
+                          <div className="z-10 mt-4 overflow-y-auto pr-2 custom-scrollbar">
+                            <p className="text-black text-sm md:text-base leading-relaxed">
+                              "{item.text}"
+                            </p>
                           </div>
-                          <div className="flex-1 z-10">
-                            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 ">"{item.text}"</p>
-                            <div>
-                              <h4 className="text-[#0a1a10] font-bold text-lg tracking-wide">{item.name}</h4>
-                              <p className="text-[#22c55e] text-sm font-medium">{item.role}</p>
+
+                          {/* Bottom Row: Always sticks to the bottom because of justify-between */}
+                          <div className="flex items-center gap-4 pt-4 border-t border-slate-100 flex-shrink-0">
+                            <div className="relative flex-shrink-0">
+                              <div className="w-12 h-12 md:w-14 md:h-14 bg-white overflow-hidden rounded-none border border-slate-200">
+                                <img
+                                  src={item.image}
+                                  alt={item.name}
+                                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                />
+                              </div>
+                            </div>
+
+                            <div className="flex-1">
+                              <h4 className="text-[#0a1a10] font-bold text-sm md:text-base tracking-tight uppercase leading-none">
+                                {item.name}
+                              </h4>
+                              <p className="text-[#22c55e] text-[10px] font-bold tracking-widest uppercase mt-1">
+                                {item.role}
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -506,12 +519,14 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden md:flex justify-end mt-8 pr-4">
-                <NavControls prev={prevSlide} next={nextSlide} brandGreen={brandGreen} />
+
+              <div className="hidden md:flex justify-center mt-8 pr-4 text-[#22c55e]">
+                <NavControls prev={prevSlide} next={nextSlide} />
               </div>
             </div>
-            <div className="flex md:hidden justify-center mt-8">
-              <NavControls prev={prevSlide} next={nextSlide} brandGreen={brandGreen} />
+
+            <div className="flex md:hidden justify-center mt-8 text-black">
+              <NavControls prev={prevSlide} next={nextSlide} />
             </div>
           </div>
         </section>

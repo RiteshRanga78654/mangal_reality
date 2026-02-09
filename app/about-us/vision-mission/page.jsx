@@ -30,7 +30,7 @@ export default function VisionMission() {
     >
       
       {/* 1. HERO SECTION - 80VH WHITE THEME */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-slate-50">
+      <section className="relative h-[72vh] flex items-center justify-center overflow-hidden bg-slate-50">
         <motion.div 
           style={{ y: useTransform(scrollYProgress, [0, 0.4], [0, 100]) }}
           className="absolute inset-0 z-0"
@@ -91,7 +91,7 @@ export default function VisionMission() {
             >
               <div className="mb-8 text-emerald-600">{card.icon}</div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{card.title}</h2>
-              <p className="text-lg leading-relaxed text-slate-600 italic">
+              <p className="text-lg leading-relaxed text-black ">
                 "{card.text}"
               </p>
               <div className="absolute top-10 right-10 text-6xl font-black text-slate-100 select-none group-hover:text-emerald-50 transition-colors">

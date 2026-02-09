@@ -69,7 +69,7 @@ export default function OurCreativesFormal() {
     >
       
       {/* 1. INSTITUTIONAL HERO BANNER */}
-      <section className="relative h-[60vh] md:h-[78vh] w-full flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative h-[60vh] md:h-[82vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img
           src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
           alt="Creative Banner"
@@ -92,7 +92,7 @@ export default function OurCreativesFormal() {
                 <Home size={12} /> Home
               </a>
               <ChevronRight size={12} className="opacity-50" />
-              <span className="text-white">Gallery</span>
+              <span className="text-[#22c55e]">Gallery</span>
             </nav>
             {/* Standardized Heading: 4xl to 7xl */}
             <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">

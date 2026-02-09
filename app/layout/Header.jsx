@@ -44,7 +44,7 @@ export default function Header() {
         { 
           name: "Ongoing ", 
           href: "/projects/ongoing-projects",
-          target: "_blank", // Added for new tab
+          
           rel: "noopener noreferrer" // Security best practice
         },
         { name: "Completed", href: "/projects/completed-projects" },
@@ -56,6 +56,7 @@ export default function Header() {
       id: "gallery",
       subLinks: [
         { name: 'Our Gallery', href: '/gallery/our-gallery' },
+        { name: 'Our Videos', href: '/gallery/our-videos' },
         { name: 'Our Creatives', href: '/gallery/our-creatives' },
         { name: 'Press Coverage', href: '/gallery/press-coverages' },
       ]

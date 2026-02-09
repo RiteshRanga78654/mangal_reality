@@ -102,7 +102,7 @@ const CompletedProjectsPage = () => {
     >
 
       {/* HERO SECTION */}
-      <section className="relative h-[70vh] w-full flex items-center justify-center">
+      <section className="relative h-[72vh] w-full flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
@@ -118,13 +118,13 @@ const CompletedProjectsPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <div className="relative z-10 text-center text-white px-6">
-              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+            <div className="relative z-10 text-center text-white px-6 mt-10">
+              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.1em] ">
                 <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
                   <Home size={12} /> Home
                 </a>
                 <ChevronRight size={12} className="opacity-50" />
-                <span className="text-white">Completed Projects</span>
+                <span className="text-[#22c55e]">Completed Projects</span>
               </nav>
               <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
                 Where Families Flourish and Dreams Take Root
@@ -239,25 +239,40 @@ const CompletedProjectsPage = () => {
       </section>
 
       {/* THE MANGAL STANDARD FEATURES */}
-      <section className="py-24 bg-white px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none">The <span className="text-[#22C55E]">Mangal</span> Standard</h2>
-            <div className="w-20 h-1.5 bg-[#22C55E] mx-auto mt-4"></div>
+     <section className="py-24 bg-white px-6">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none">
+        The <span className="text-[#22C55E]">Mangal</span> Standard
+      </h2>
+      <div className="w-20 h-1.5 bg-[#22C55E] mx-auto mt-4"></div>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map((item, idx) => (
+        <div 
+          key={idx} 
+          className="p-8 border border-gray-100 rounded-3xl transition-all duration-500 group text-left hover:bg-[#22C55E] hover:shadow-2xl hover:border-[#22C55E] cursor-pointer"
+        >
+          {/* Icon: Turns white on hover */}
+          <div className="text-[#22C55E] mb-6 transform group-hover:scale-110 group-hover:text-white transition-all duration-300">
+            {item.icon}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((item, idx) => (
-              <div key={idx} className="p-8 border border-gray-100 rounded-3xl hover:shadow-2xl hover:border-[#22C55E]/30 transition-all duration-300 group text-left">
-                <div className="text-[#22C55E] mb-6 transform group-hover:scale-110 transition-transform">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+
+          {/* Title: Turns white on hover */}
+          <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-white transition-colors duration-300">
+            {item.title}
+          </h3>
+
+          {/* Description: Turns white/light-gray on hover */}
+          <p className="text-gray-500 text-sm leading-relaxed group-hover:text-emerald-50 transition-colors duration-300">
+            {item.desc}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* FINAL CTA */}
       <section className="bg-slate-50 py-24 px-6 text-center border-t border-gray-100">
