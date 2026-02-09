@@ -179,9 +179,9 @@ const Page = () => {
       id: 5,
       slug: "the-nature-city",
       title: "The Nature City",
-      location: "Pisini, AP",
+      location: "Vizianagaram, AP",
       status: "On Going",
-      area: "43 Acres ",
+      area: "90+ Acres",
       image: "/assets/images/WhatsApp Image 2026-01-29 at 11.12.55 AM (1).jpeg",
       link: "https://the-nature-city.vercel.app/"
     },
@@ -191,7 +191,7 @@ const Page = () => {
       title: "The Nature Valley (Phase 2)",
       location: "Pisini, AP",
       status: "On Going",
-      area: "8 Acres ",
+      area: "30 Acres ",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
       link: "/the-nature-valley-phase2"
     },
