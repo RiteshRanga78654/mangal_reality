@@ -75,20 +75,20 @@ const OngoingProjectsPage = () => {
       id: 1,
       title: "The Nature City",
       tagline: "Experience the harmony of luxury and nature in a sprawling green landscape.",
-      location: "Pisini, AP",
+      location: "Vizianagaram, AP",
       status: "Phase 1: Roads & Plotting",
     
-      area: "100 Acres",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200",
+      area: "90+ Acres",
+      image: "/assets/images/WhatsApp Image 2026-01-29 at 11.12.55 AM (1).jpeg",
       link: "https://the-nature-city.vercel.app/"
     },
     {
       id: 2,
-      title: "The Nature Valley Phase-2",
+      title: "The Nature Valley (Phase-2)",
       tagline: "A boutique residential community designed for peace and sustainable living.",
       location: "Pisini, AP",
       status: "Phase 2: Landscaping",
-      area: "45 Acres",
+      area: "30 Acres",
       image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
       link: "/the-nature-valley-phase2"
     }
