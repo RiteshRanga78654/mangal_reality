@@ -182,7 +182,7 @@ const Page = () => {
       location: "Pisini, AP",
       status: "On Going",
       area: "43 Acres ",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200",
+      image: "/assets/images/WhatsApp Image 2026-01-29 at 11.12.55 AM (1).jpeg",
       link: "https://the-nature-city.vercel.app/"
     },
     {
