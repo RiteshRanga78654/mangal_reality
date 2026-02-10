@@ -84,7 +84,7 @@ const Page = () => {
     {
       id: 3,
       name: "Ashish Aggarwal",
-      role: "Marketing Director",
+      role: "Satisfied Investor, Green Meadows, Jonnada",
       image: "/assets/images/testi-3.jpg",
       text: "Just 250 meters away from the highway, and I must say, the location of Green Meadows is just perfect! Plus, with the airport already up and running, not to mention the coastal corridor project, we can say that the property we own in this 6-acre gated community is already worth a smart investment!",
     },
@@ -299,7 +299,7 @@ const Page = () => {
                 <span className="text-xl leading-relaxed mb-4 font-medium uppercase tracking-widest">
                   {item.label}
                 </span>
-                <h2 className="text-4xl md:text-7xl font-bold tracking-tight mb-4">
+                <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
                   {item.title}
                 </h2>
                 <div className="w-20 h-1 bg-[#22C55E] mx-auto mb-6"></div>
@@ -315,7 +315,7 @@ const Page = () => {
         <section className="py-16 px-4 md:px-12 bg-stone-50">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-4 text-center md:text-left">
-              <h2 className="text-4xl md:text-7xl font-bold tracking-tight text-black">
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-black">
                 Who We Are
               </h2>
               <div className="w-20 h-1 bg-[#22C55E] mx-auto md:mx-0"></div>
@@ -324,22 +324,22 @@ const Page = () => {
               </p>
               <div className="space-y-4 text-lg text-black/70 leading-relaxed">
                 <p>
-                  Mangal Realty, India's No.1 Eco-Luxury Real Estate Developer in Vizag, Andhra Pradesh. We create future-ready plotted developments and premium villas across prime Visakhapatnam locations. Our RERA-approved, IGBC Platinum-certified projects feature sustainable design, modern sports amenities, and adventure zones perfect for families seeking elevated lifestyles.
+                 Mangal Realty, India's No.1 Eco-Luxury Real Estate Developer in Vizag, Andhra Pradesh. We create future-ready plotted developments and premium villas across prime Visakhapatnam locations. Our RERA-approved, IGBC Platinum-certified projects feature sustainable design, modern sports amenities, and adventure zones perfect for families seeking elevated lifestyles.
                 </p>
                 {/* <p>
                   We don't just build homes; we nurture environments where wellness is woven into everyday living.
                 </p> */}
-                <p>
-                 With a customer-first approach, Mangal Realty delivers sustainable communities where families enjoy elevated living and investors benefit from high-growth real estate opportunities in Vizag.
+                {/* <p>
+                  With a customer-first approach, Mangal Realty delivers sustainable communities where families enjoy elevated living and investors benefit from high-growth real estate opportunities in Vizag.
 
-                </p>
+                </p> */}
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {stats.map((item, i) => (
                 <div
                   key={i}
-                  className="p-8 bg-white border border-stone-200 rounded-sm flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500"
+                  className="p-12 bg-white border border-stone-200 rounded-sm flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500"
                 >
                   <div
                     className="mb-2 text-4xl md:text-5xl font-bold transition-all duration-300 group-hover:scale-110 group-hover:animate-bounce"
@@ -360,7 +360,7 @@ const Page = () => {
         <section className="py-24 bg-white overflow-hidden ">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col items-center mb-16 text-center mt-[-3rem]">
-              <h2 className="text-4xl md:text-7xl font-bold leading-tight text-[#0a1a10]">Current Projects</h2>
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-[#0a1a10]">Current Projects</h2>
               <div className="w-24 h-1 bg-[#22C55E] mx-auto mb-4"></div>
             </div>
 
@@ -464,7 +464,7 @@ const Page = () => {
         <section className="bg-white py-16 px-4 sm:px-6 lg:px-12 w-full overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center mb-12 text-center">
-              <h2 className="text-4xl md:text-7xl font-bold leading-tight text-[#0a1a10] tracking-tighter uppercase">Testimonials</h2>
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-[#0a1a10] tracking-tighter uppercase">Testimonials</h2>
               <div className="w-24 h-1.5 bg-[#22C55E] mx-auto mb-4 rounded-none"></div>
             </div>
 

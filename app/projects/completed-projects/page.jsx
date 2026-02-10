@@ -63,8 +63,8 @@ const MangalButton = ({ text, href }) => (
 const CompletedProjectsPage = () => {
   const projects = [
     {
-      title: "The Nature Valley Phase 1",
-      location: "Bhogapuram",
+      title: "The Nature Valley (Phase 1)",
+      location: "Pisini",
       area: "17 Acres",
       tagline: "Experience the Luxurious Green Side of Life.",
       description: "The Nature Valley, a testament to our vision of harmonious living nestled in the serene landscape of Bhogapuram.",
@@ -128,8 +128,8 @@ const CompletedProjectsPage = () => {
                 <ChevronRight size={12} className="opacity-50" />
                 <span className="text-[#22c55e]">Completed Projects</span>
               </nav>
-              <h1 className="text-4xl md:text-7xl mb-8 font-bold tracking-tighter leading-[1.1]">
-                Where Families Flourish and <br className="hidden md:block" /> Dreams Take Root
+              <h1 className="text-4xl md:text-6xl mb-8 font-bold tracking-tighter leading-[1.1]">
+                Completed Projects<br className="hidden md:block" /> 
               </h1>
              <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
             </div>
@@ -137,7 +137,7 @@ const CompletedProjectsPage = () => {
         </div>
 
         {/* FLOATING STATS BAR */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90%] max-w-6xl z-30">
+        {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90%] max-w-6xl z-30">
           <div className="bg-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] rounded-[2rem] p-8 md:p-14 border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 md:gap-0 md:divide-x md:divide-gray-100">
               <div className="text-center px-4">
@@ -160,13 +160,13 @@ const CompletedProjectsPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <div className="h-40 md:h-56 bg-[#f8fafc]"></div>
 
       {/* PROJECTS GRID */}
-      <section id="projects" className="py-20 px-6 max-w-7xl mx-auto">
+      <section id="projects" className="py-20 px-6 max-w-7xl mx-auto mt-[-180px]">
         <div className="flex flex-col gap-32 md:gap-48">
           {projects.map((project, index) => (
             <motion.div
@@ -187,16 +187,15 @@ const CompletedProjectsPage = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
-                <div className="absolute -bottom-6 -right-6 md:right-10 z-20 bg-white px-8 py-5 rounded-2xl shadow-xl border border-gray-50">
-                  <p className="text-[#22C55E] font-black text-xs tracking-widest uppercase">Certified Status</p>
-                  <p className="text-slate-900 font-bold text-xl uppercase">Completed</p>
-                </div>
+                <div className="absolute top-6 left-6 z-20 bg-white px-5 py-2 rounded-full shadow-md">
+                    <p className="text-[#22C55E] font-bold text-xs tracking-widest "> Completed </p>
+                  </div>
               </div>
 
               {/* Content Side */}
               <div className="w-full lg:w-1/2 space-y-8">
                 <div className="space-y-4">
-                    <h2 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-[0.9]">
+                    <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-[0.9]">
                     {project.title}
                     </h2>
                     <p className="text-[#22C55E] text-lg font-bold tracking-wide">"{project.tagline}"</p>
@@ -233,45 +232,46 @@ const CompletedProjectsPage = () => {
       </section>
 
       {/* WHY INVEST SECTION */}
-      <section className="bg-[#0A1A10] py-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20 text-center md:text-left">
-              <h2 className="text-[#22C55E] font-black tracking-[0.3em] text-sm mb-6 uppercase">Investment Excellence</h2>
-              <h3 className="text-5xl md:text-8xl font-bold text-white tracking-tighter leading-none">
-                Why Choose <br className="hidden lg:block" /> 
-                <span className="text-[#22C55E]">Mangal Realty</span>
-              </h3>
-          </div>
+   <section className="bg-[#0A1A10] py-16 px-6"> {/* Reduced section padding from 24 to 16 */}
+  <div className="max-w-7xl mx-auto">
+    <div className="mb-10 text-center md:text-left">
+      <h2 className="text-[#22C55E] font-black tracking-[0.2em] text-xs mb-3 ">Investment Excellence</h2>
+      <h3 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
+        Why Choose <span className="text-[#22C55E]">Mangal Realty</span>
+      </h3>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div className="md:col-span-8 bg-gradient-to-br from-[#22C55E] to-emerald-900 p-10 md:p-16 rounded-[3rem] flex flex-col justify-between min-h-[450px] relative overflow-hidden group">
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-10">
-                    <Gem size={32} className="text-white" />
-                </div>
-                <h3 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Strategic <br /> Appreciation</h3>
-                <p className="text-white/80 max-w-md text-xl leading-relaxed">Every project is selected for its high growth potential in the North Vizag corridor, ensuring maximum ROI for our partners.</p>
-              </div>
-              <BarChart3 size={400} className="absolute -bottom-20 -right-20 text-white/5" />
-            </div>
-
-            <div className="md:col-span-4 bg-[#1a3324] border border-white/5 p-10 md:p-16 rounded-[3rem] flex flex-col justify-center text-left">
-              <div className="w-16 h-16 bg-[#22C55E]/20 rounded-2xl flex items-center justify-center mb-8">
-                <ShieldCheck size={32} className="text-[#22C55E]" />
-              </div>
-              <h4 className="text-3xl font-bold text-white mb-6 ">Legally Ironclad</h4>
-              <p className="text-gray-400 text-lg leading-relaxed">100% VMRDA & LP approvals with verified clear titles and RERA compliance for every square foot.</p>
-            </div>
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-6"> {/* Reduced gap from 8 to 6 */}
+      {/* Box 1: Removed min-height, reduced padding to p-8/p-10 */}
+      <div className="md:col-span-8 bg-gradient-to-br from-[#22C55E] to-emerald-900 p-8 md:p-10 rounded-[2rem] flex flex-col relative overflow-hidden group">
+        <div className="relative z-10">
+          <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-6">
+              <Gem size={24} className="text-white" />
           </div>
+          <h3 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight">Strategic Appreciation</h3>
+          <p className="text-white/80 max-w-md text-base leading-snug">Every project is selected for high growth in the North Vizag corridor, ensuring maximum ROI.</p>
         </div>
-      </section>
+        <BarChart3 size={200} className="absolute -bottom-5 -right-5 text-white/5" />
+      </div>
+
+      {/* Box 2: Matches Box 1 padding and style */}
+      <div className="md:col-span-4 bg-[#1a3324] border border-white/5 p-8 md:p-10 rounded-[2rem] flex flex-col justify-center text-left">
+        <div className="w-12 h-12 bg-[#22C55E]/20 rounded-xl flex items-center justify-center mb-6">
+          <ShieldCheck size={24} className="text-[#22C55E]" />
+        </div>
+        <h4 className="text-xl font-bold text-white mb-3">Legally Ironclad</h4>
+        <p className="text-gray-400 text-sm leading-relaxed">100% VMRDA & LP approvals with verified clear titles and RERA compliance.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* THE MANGAL STANDARD FEATURES */}
       <section className="py-32 bg-white px-6">
         <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
-            <h2 className="text-5xl md:text-8xl font-bold text-slate-900 tracking-tighter leading-none uppercase">
-                The <span className="text-[#22C55E]">Mangal</span> <br /> Standard
+            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none mt-[-16px]">
+                The <span className="text-[#22C55E]">Mangal</span>  Realty
             </h2>
             <div className="w-32 h-2 bg-[#22C55E] mx-auto mt-8"></div>
             </div>
@@ -302,10 +302,10 @@ const CompletedProjectsPage = () => {
       {/* FINAL CTA */}
       <section className="bg-[#f8fafc] py-32 px-6 text-center border-t border-gray-200">
         <motion.div whileInView={{ opacity: [0, 1], y: [20, 0] }} transition={{ duration: 0.8 }}>
-          <h3 className="text-5xl md:text-8xl font-bold text-slate-900 mb-12 tracking-tighter leading-[0.9]">
+          <h3 className="text-4xl md:text-6xl font-bold text-slate-900 mb-12 tracking-tighter leading-[0.9]">
             Stay Updated for <br /> the Next Big Thing
           </h3>
-          <MangalButton text="Get Early Access" href="/subscribe" />
+          <MangalButton text="Get Early Access" href="/contact-us" />
         </motion.div>
       </section>
 

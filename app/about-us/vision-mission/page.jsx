@@ -56,7 +56,7 @@ export default function VisionMission() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-7xl font-bold tracking-tighter text-white mb-8"
+            className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-8"
           >
             Our Essence
           </motion.h1>
@@ -108,7 +108,7 @@ export default function VisionMission() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-4">
             <div>
-              <h2 className="text-4xl md:text-7xl font-bold text-slate-900 mb-4 -mt-20">Non-Negotiables</h2>
+              <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4 -mt-20">Non-Negotiables</h2>
               <p className="text-emerald-700 tracking-[0.2em] text-[10px] md:text-xs font-bold uppercase">The Foundation of Mangal Realty</p>
             </div>
             <div className="hidden lg:block h-px bg-slate-200 grow mx-12 mb-4" />
@@ -148,12 +148,12 @@ export default function VisionMission() {
           transition={{ duration: 1 }}
           className="max-w-4xl"
         >
-          <p className="text-3xl md:text-6xl font-bold leading-tight text-slate-900 mb-10 tracking-tighter">
+          <p className="text-3xl md:text-5xl font-bold leading-tight text-slate-900 mb-10 tracking-tighter">
             "We build legacies that don't <br className="hidden md:block" /> cost the <span className="text-emerald-600">Earth</span>."
           </p>
           <div className="flex items-center justify-center gap-4 text-slate-400 tracking-[0.3em] text-[10px] font-bold uppercase">
             <div className="h-px w-10 bg-slate-200" />
-            Established 2026 — Mangal Realty Group
+            Established 2026 — Mangal Realty 
             <div className="h-px w-10 bg-slate-200" />
           </div>
         </motion.div>

@@ -27,9 +27,9 @@ const NatureValleyPhase2 = () => {
   );
 
   const projectStats = [
-    { label: "VMRDA Approved", value: "Phase 1", icon: <Landmark />, sub: "Clear Title Layout" },
-    { label: "Location", value: "Bhogapuram", icon: <MapPin />, sub: "Near NH-16 Highway" },
-    { label: "Total Area", value: "12 Acres", icon: <Maximize2 />, sub: "Premium Open Plots" }
+    { label: "VMRDA Approved", value: "Phase 2", icon: <Landmark />, sub: "Clear Title Layout" },
+    { label: "Location", value: "Pisini", icon: <MapPin />, sub: "Near NH-16 Highway" },
+    { label: "Total Area", value: "30 Acres", icon: <Maximize2 />, sub: "Premium Open Plots" }
   ];
 
   const highlights = [
@@ -42,7 +42,7 @@ const NatureValleyPhase2 = () => {
   const testimonials = [
     { name: "Rajesh Kumar", text: "Investing in Bhogapuram through Mangal Realty was the best decision. The development speed is unmatched.", role: "Business Owner" },
     { name: "Anitha Reddy", text: "The Nature Valley truly lives up to its name. It's peaceful yet so close to the upcoming airport hub.", role: "Home Maker" },
-    { name: "Suresh Mani", text: "Phase 1 completion was seamless. The spot registration process was handled very professionally.", role: "Tech Lead" }
+    { name: "Suresh Mani", text: "Phase 2 completion was seamless. The spot registration process was handled very professionally.", role: "Tech Lead" }
   ];
 
   useEffect(() => {
@@ -68,15 +68,15 @@ const NatureValleyPhase2 = () => {
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1500"
             className="w-full h-full object-cover opacity-60"
-            alt="Nature Valley Phase 1"
+            alt="Nature Valley Phase 2"
           />
         </div>
 
         <div className="w-full lg:w-1/3 flex items-center px-6 md:px-12 py-12 lg:py-20 bg-[#0A1A10]">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="w-full text-left">
-            <h2 className="text-[#22C55E] font-bold tracking-[0.3em] text-[10px] mb-4">Mangal Realty Legacy</h2>
-            <h1 className="text-4xl md:text-7xl font-bold text-white leading-none  mb-6 tracking-tighter">
-              Nature <br /> <span className="text-[#22C55E]">Valley</span>
+            <h2 className="text-[#22C55E] font-bold tracking-[0.3em] text-[10px] mb-4">Mangal Realty</h2>
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-none  mb-6 tracking-tighter">
+              Nature <br /> <span className="text-[#22C55E]">Valley (Phase 2)</span>
             </h1>
             <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed italic max-w-md">
               "Experience the Green Side of Life." Successfully completed premium plot project in Bhogapuram.
@@ -90,7 +90,7 @@ const NatureValleyPhase2 = () => {
 
       {/* 2. STATS GRID */}
       <section className="px-6 -mt-10 lg:-mt-16 relative z-30">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
           {projectStats.map((stat, i) => (
             <div key={i} className="bg-white shadow-xl p-8 lg:p-10 border-b-8 border-[#22C55E] group text-left">
               <div className="text-[#22C55E] mb-3 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
@@ -103,10 +103,10 @@ const NatureValleyPhase2 = () => {
       </section>
 
       {/* 3. PROJECT HIGHLIGHTS */}
-      <section className="py-16 lg:py-24 px-6 max-w-7xl mx-auto">
+      <section className="py-16 lg:py-24 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 lg:mb-16 gap-6 text-left">
           <div className="w-full">
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">Phase 1 <br className="hidden md:block" /><span className="text-[#22C55E]">Completed</span></h2>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none ">Phase 2 <br className="hidden md:block" /><span className="text-[#22C55E]"></span></h2>
             <div className="w-16 md:w-20 h-2 bg-[#22C55E] mt-4 md:mt-6"></div>
           </div>
           <p className="max-w-md text-slate-500 text-sm md:text-base">100% Sold Out & Delivered. A serene landscape featuring futuristic amenities and highway connectivity.</p>
@@ -124,10 +124,10 @@ const NatureValleyPhase2 = () => {
 
       {/* 4. THE CONNECTIVITY HUB */}
       <section className="py-16 lg:py-24 bg-[#0A1A10] px-6 text-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
             <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">Location <span className="text-[#22C55E]">Advantage</span></h2>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none ">Location <span className="text-[#22C55E]">Advantage</span></h2>
               <p className="text-slate-400 mt-4 md:mt-6 text-base md:text-lg italic">Situated at the heart of the Bhogapuram International Airport growth corridor.</p>
             </div>
             <MangalButton onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}>
@@ -138,7 +138,7 @@ const NatureValleyPhase2 = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
             <div className="md:col-span-2 h-[300px] lg:h-[450px] relative overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" alt="Bhogapuram View" />
+              <img src="/assets/images/airport-vizag.jpeg" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" alt="Bhogapuram View" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-left">
                 <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold  mb-3 inline-block tracking-widest">Future Hub</span>
@@ -147,7 +147,7 @@ const NatureValleyPhase2 = () => {
             </div>
 
             <div className="h-[300px] lg:h-[450px] relative overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Connectivity" />
+              <img src="/assets/images/highway-pic.jpeg" className="w-full h-full object-cover" alt="Connectivity" />
               <div className="absolute inset-0 bg-[#22C55E]/20 group-hover:bg-[#22C55E]/40 transition-colors"></div>
               <div className="absolute bottom-8 left-8 text-left">
                 <h4 className="text-2xl md:text-3xl font-bold text-white leading-none">5 MIN TO <br /> HIGHWAY</h4>
@@ -187,12 +187,12 @@ const NatureValleyPhase2 = () => {
 
       {/* 5. TESTIMONIALS */}
       <section className="py-16 lg:py-24 px-6 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative text-left">
               <Quote className="absolute -top-10 -left-6 text-[#22C55E] opacity-10" size={120} />
               <div className="relative z-10">
-                <h3 className="text-4xl md:text-7xl font-bold  tracking-tighter leading-none mb-8">Client <br /><span className="text-[#22C55E]">Success</span></h3>
+                <h3 className="text-4xl md:text-6xl font-bold  tracking-tighter leading-none mb-8">Client <br /><span className="text-[#22C55E]">Success</span></h3>
 
                 <div className={`transition-all duration-500 min-h-[150px] ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
                   <p className="text-lg md:text-2xl font-medium text-slate-800 leading-relaxed mb-8 italic">
@@ -230,7 +230,7 @@ const NatureValleyPhase2 = () => {
       {/* 6. CONTACT FOOTER */}
       <footer className="py-16 lg:py-24 px-6 bg-[#0A1A10] text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-10 leading-none">Ready for the <br /> <span className="text-[#22C55E]">Next Phase?</span></h2>
+          <h2 className="text-4xl md:text-6xl font-bold  tracking-tighter mb-10 leading-none">Ready for  <br /> <span className="text-[#22C55E]">this Phase?</span></h2>
 
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
             <div className="flex items-center gap-3 font-bold  tracking-[0.1em] text-[10px] md:text-xs">

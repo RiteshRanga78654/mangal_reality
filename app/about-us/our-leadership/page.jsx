@@ -142,7 +142,7 @@ export default function MangalLeadership() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-white text-5xl md:text-7xl font-bold tracking-tighter">
+            <h1 className="text-white text-5xl md:text-6xl font-bold tracking-tighter">
               Our Leadership
             </h1>
             <div
@@ -170,8 +170,8 @@ export default function MangalLeadership() {
               <ChevronRight size={12} className="opacity-50" />
               <span className="text-[#22c55e]">About Us</span>
             </nav>
-            {/* Standardized Heading: 4xl to 7xl */}
-            <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
+            {/* Standardized Heading: 4xl to 6xl */}
+            <h2 className="text-4xl md:text-6xl mb-10 font-bold tracking-tighter  leading-none">
                Our Leadership</h2>
           </div>
            <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
@@ -180,7 +180,7 @@ export default function MangalLeadership() {
       </section>
 
       {/* IMPACT NUMBERS */}
-      {/* <section className="relative z-30 -mt-16 px-6 max-w-7xl mx-auto">
+      {/* <section className="relative z-30 -mt-16 px-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
             <motion.div
@@ -205,7 +205,7 @@ export default function MangalLeadership() {
       </section> */}
 
       {/* SECTION 2: FOUNDERS */}
-      {/* <section className="py-24 px-6 max-w-7xl mx-auto">
+      {/* <section className="py-24 px-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {leaders.map((leader, index) => (
             <div key={index} className="group cursor-pointer">
@@ -230,7 +230,7 @@ export default function MangalLeadership() {
         </div>
       </section> */}
       <section className="py-24 mt-10 px-6 bg-white">
-        <div className="max-w-7xl mx-auto space-y-40">
+        <div className="max-w-6xl mx-auto space-y-40">
           {strategicPartners.map((partner, index) => (
             <div
               key={index}
@@ -272,7 +272,7 @@ export default function MangalLeadership() {
                     <Linkedin size={20} fill="currentColor" />
                   </a>
 
-                  <div
+                  {/* <div
                     className="absolute -bottom-6 -left-6 bg-stone-900 text-white p-6 rounded-lg hidden md:block shadow-2xl border-l-4"
                     style={{ borderColor: brandGreen }}
                   >
@@ -281,7 +281,7 @@ export default function MangalLeadership() {
                       Strategic Lead
                     </p>
                     <p className="text-sm font-bold">{partner.name}</p>
-                  </div>
+                  </div> */}
                 </motion.div>
               </div>
 
@@ -293,8 +293,8 @@ export default function MangalLeadership() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  {/* Partner Name Heading updated to text-4xl md:text-7xl */}
-                  <h2 className="text-4xl md:text-7xl font-bold text-stone-900  tracking-tighter mb-2">
+                  {/* Partner Name Heading updated to text-4xl md:text-6xl */}
+                  <h2 className="text-4xl md:text-6xl font-bold text-stone-900  tracking-tighter mb-2">
                     {partner.name}
                   </h2>
                   <p
@@ -333,9 +333,9 @@ export default function MangalLeadership() {
       {/* SECTION: GOVERNANCE */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-stone-900 skew-y-3 origin-right translate-y-20"></div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-white text-4xl md:text-7xl font-bold tracking-tighter leading-none mb-6">
+            <h2 className="text-white text-4xl md:text-6xl font-bold tracking-tighter leading-none mb-6">
               A Legacy Built on <br />
               <span style={{ color: brandGreen }}>Unwavering Trust</span>
             </h2>
@@ -397,9 +397,9 @@ export default function MangalLeadership() {
 
       {/* SECTION 3: KEY MANAGEMENT */}
       {/* <section className="py-24 bg-stone-50 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <header className="mb-12 text-center mx-auto md:text-center">
-            <h2 className="text-black text-4xl md:text-7xl font-bold tracking-tighter ">Key Management</h2>
+            <h2 className="text-black text-4xl md:text-6xl font-bold tracking-tighter ">Key Management</h2>
             <div className="w-32 h-1 mt-4 mx-auto " style={{ backgroundColor: brandGreen }}></div>
           </header>
           
@@ -428,12 +428,12 @@ export default function MangalLeadership() {
             style={{ color: brandGreen }}
           />
           <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tighter">
-            The Mangal Ethos
+            Mangal Realty Ethos
           </h2>
 
           <div className="mt-10">
-            <p className="text-black text-xl md:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto italic">
-              "Real estate is not just about buildings; it is about building
+            <p className="text-black text-xl md:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto">
+              "Real Estate is not just about buildings; it is about building
               trust and creating spaces where life thrives."
             </p>
             <div className="flex flex-col items-center">

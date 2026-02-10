@@ -84,7 +84,7 @@ const OngoingProjectsPage = () => {
     },
     {
       id: 2,
-      title: "The Nature Valley (Phase-2)",
+      title: "The Nature Valley (Phase 2)",
       tagline: "A boutique residential community designed for peace and sustainable living.",
       location: "Pisini, AP",
       status: "Phase 2: Landscaping",
@@ -121,8 +121,8 @@ const OngoingProjectsPage = () => {
                        <ChevronRight size={12} className="opacity-50" />
                        <span className="text-[#22c55e]">Ongoing Projects</span>
                      </nav>
-                     <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
-                       A place where togetherness grows and hopes begin
+                     <h2 className="text-4xl md:text-6xl mb-10 font-bold tracking-tighter  leading-none">
+                       Ongoing Projects
        
                      </h2>
                      <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
@@ -187,7 +187,7 @@ const OngoingProjectsPage = () => {
               <div className="w-full lg:w-1/2 space-y-8">
                 <div className="space-y-4">
                    {/* <span className="text-[#22c55e] font-bold tracking-[0.3em] text-xs  mb-2">Project Details</span> */}
-                   <h2 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none">
+                   <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none">
                     {project.title}
                   </h2>
                 </div>
