@@ -208,7 +208,7 @@ export default function CareerPage() {
                 <Home size={12} /> Home
               </a>
               <ChevronRight size={12} className="text-white " />
-              <span className="text-white">Career</span>
+             <span className="text-emerald-400">Career</span>
             </nav>
             <h1 className="text-5xl md:text-7xl text-white mb-8 font-bold tracking-tight leading-[0.85]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
               Grow With <span className=" text-white">Purpose</span>

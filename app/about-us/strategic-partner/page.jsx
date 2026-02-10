@@ -105,7 +105,7 @@ export default function StrategicPartners() {
                   <Home size={12} /> Home
                 </a>
                 <ChevronRight size={12} className="opacity-50" />
-                <span className="text-white">About Us</span>
+               <span className="text-emerald-400">About Us</span>
               </nav>
               {/* Standardized Heading: 4xl to 7xl */}
               <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
