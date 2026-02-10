@@ -60,8 +60,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm leading-relaxed font-light tracking-wide text-[#B0C4B0]">
-              Shaping the next generation of sustainable luxury.We design living experiences where architectural excellence that seamlessly blend modern innovation with nature's tranquility.
-
+              Shaping the next generation of sustainable luxury, we create refined living experiences that blend architectural excellence, modern innovation, and nature’s tranquility.
             </p>
           </motion.div>
 
@@ -100,7 +99,7 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <div className="space-y-1">
                 <p className="text-[#4ADE80] text-[10px]  font-bold tracking-widest">Visit us at our office in</p>
-                <p className="text-sm font-light leading-relaxed">D-No: 49, 24-26, Shankaramatam Road, Beside UK Parlour<br />Visakhapatnam</p>
+                <p className="text-sm font-light leading-relaxed"> Mangal Realty, D-No: 49, 24-26, Shankaramatam Road, Beside UK Parlour<br />Visakhapatnam, Andhra Pradesh - 530016</p>
               </div>
 
               <div className="flex flex-col gap-4">
