@@ -276,7 +276,7 @@ const GreenMeadowsJonnada = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 h-[300px] lg:h-[450px]">
-              <div className="h-full shadow-2xl"><img src="https://images.unsplash.com/photo-1582408921715-18e7806367c1?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Real Estate" /></div>
+              <div className="h-full shadow-2xl"><img src="/assets/images/house-pic.jpg" className="w-full h-full object-cover" alt="Real Estate" /></div>
               <div className="h-full shadow-2xl translate-y-8"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Modern House" /></div>
             </div>
           </div>

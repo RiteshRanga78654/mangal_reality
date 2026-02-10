@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Amenities from "./components/Amenities";
 
+
 const StatCounter = ({ endValue, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const countRef = useRef(null);
@@ -259,19 +260,19 @@ const Page = () => {
 
   const STICKY_CONTENT = [
     {
-      label: "Nature Embrace",
-      title: "Family's Grace",
-      desc: "At Mangal Realty, we craft spaces where wellness isn't a program; it's a way of life.",
+      label: "Gather. Grow. Glow",
+      title: "Nature Embrace Family's Grace",
+      desc: "In the heart of Miyawaki Forest invites families to reconnect with what matters is simplicity, authenticity and laughter around the dinner table.",
       img: "/assets/images/banner-1.jpeg"
     },
     {
-      label: "",
+      label: "Roots. Breathes. Blooms.",
       title: "Authentic Living",
-      desc: "In the heart of Miyawaki Forest invites families to reconnect with what matters is simplicity, authenticity and laughter around the dinner table.",
+      desc: "Harvest from 100+ native varieties, enjoy fresh Gaushala milk daily, and pluck-and-cook vegetables in fully-equipped kitchens. IGBC-certified green living with nature.",
       img: "/assets/images/banner-2.jpeg"
     },
     {
-      label: "",
+      label: "Rise. Run. Win.",
       title: "Where Every Game Counts.",
       desc: "Mangal Reality is engineering spaces where sport and adventurers go farther every single day.",
       img: "/assets/images/banner-3.jpeg"
