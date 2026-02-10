@@ -28,7 +28,7 @@ const NatureValleyPhase1 = () => {
 
   const projectStats = [
     { label: "VMRDA Approved", value: "Phase 1", icon: <Landmark />, sub: "Clear Title Layout" },
-    { label: "Location", value: "Bhogapuram", icon: <MapPin />, sub: "Near NH-16 Highway" },
+    { label: "Location", value: "Pisini", icon: <MapPin />, sub: "Near NH-16 Highway" },
     { label: "Total Area", value: "17 Acres", icon: <Maximize2 />, sub: "Premium Open Plots" }
   ];
 
