@@ -203,7 +203,7 @@ export default function CareerPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.1em] uppercase">
+            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.1em] ">
               <a href="/" className="hover:text-[#22c55e] text-white flex items-center gap-1">
                 <Home size={12} /> Home
               </a>
@@ -213,7 +213,7 @@ export default function CareerPage() {
             <h1 className="text-5xl md:text-7xl text-white mb-8 font-bold tracking-tight leading-[0.85]" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
               Grow With <span className=" text-white">Purpose</span>
             </h1>
-            <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
+           <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
           </motion.div>
         </div>
       </section>

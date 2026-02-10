@@ -125,7 +125,7 @@ const OngoingProjectsPage = () => {
                        A place where togetherness grows and hopes begin
        
                      </h2>
-                     <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
+                     <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
                    </div>
                  </motion.div>
                </div>

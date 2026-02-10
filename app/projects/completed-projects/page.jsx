@@ -121,7 +121,7 @@ const CompletedProjectsPage = () => {
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <div className="relative z-10 text-center text-white px-6">
-              <nav className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-sm font-bold tracking-[0.2em] uppercase">
+              <nav className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
                 <Link href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
                   <Home size={12} /> Home
                 </Link>
@@ -131,7 +131,7 @@ const CompletedProjectsPage = () => {
               <h1 className="text-4xl md:text-7xl mb-8 font-bold tracking-tighter leading-[1.1]">
                 Where Families Flourish and <br className="hidden md:block" /> Dreams Take Root
               </h1>
-              <div className="h-1.5 w-24 bg-[#22c55e] mx-auto" />
+             <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
             </div>
           </motion.div>
         </div>

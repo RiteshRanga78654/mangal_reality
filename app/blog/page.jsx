@@ -250,7 +250,7 @@ export default function MangalRealtyBlog() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8 }}
                     >
-          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] uppercase">
+          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-medium tracking-[0.2em] ">
             <a
               href="/"
               className="hover:text-[#22C55E] flex items-center gap-1"
@@ -262,7 +262,7 @@ export default function MangalRealtyBlog() {
             <span className="text-white">The Blogs</span>
           </nav>
           {/* <h1 className="text-6xl md:text-9xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1> */}
-          <h2 className="text-4xl md:text-8xl   tracking-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+          <h2 className="text-4xl md:text-7xl   tracking-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
             Blogs
           </h2>
           <div className="h-1 w-20 bg-[#22c55e] mx-auto my-8" />

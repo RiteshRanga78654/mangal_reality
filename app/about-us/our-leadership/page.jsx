@@ -174,10 +174,7 @@ export default function MangalLeadership() {
             <h2 className="text-4xl md:text-7xl mb-10 font-bold tracking-tighter  leading-none">
                Our Leadership</h2>
           </div>
-          <div
-              className="w-24 h-1 mx-auto mt-4"
-              style={{ backgroundColor: brandGreen }}
-            ></div>
+           <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
           </motion.div>
         </div>
       </section>

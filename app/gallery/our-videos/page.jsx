@@ -102,11 +102,7 @@ const AlternativeVideoGallery = () => {
             Our  Videos
           </motion.h1>
 
-          <motion.div 
-             initial={{ width: 0 }}
-             animate={{ width: "100px" }}
-             className="h-1.5 bg-[#22C55E] mx-auto" 
-          />
+          <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
         </div>
       </section>
 

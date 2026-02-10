@@ -45,12 +45,12 @@ export default function VisionMission() {
         </motion.div>
 
         <div className="relative z-10 text-center px-6">
-          <nav className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-white">
+          <nav className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em]  text-white">
             <a href="/" className="hover:text-emerald-700 flex items-center gap-1 transition-colors">
               <Home size={12} /> Home
             </a>
             <ChevronRight size={12} className="opacity-40" />
-            <span className="text-white">About Us</span>
+            <span className="text-[#22c55e]">About Us</span>
           </nav>
 
           <motion.h1
@@ -60,7 +60,7 @@ export default function VisionMission() {
           >
             Our Essence
           </motion.h1>
-          <div className="h-1.5 w-24 bg-emerald-600 mx-auto" />
+           <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
         </div>
       </section>
 
