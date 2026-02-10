@@ -93,7 +93,7 @@ export default function ContactUs() {
               Home
             </a>
             <ChevronRight size={12} className="opacity-50" />
-            <span className="text-white">Contact Us</span>
+            <span className="text-emerald-400">Contact Us</span>
           </nav>
           <h1 className="text-4xl md:text-7xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1>
           <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-tighter  leading-none">
