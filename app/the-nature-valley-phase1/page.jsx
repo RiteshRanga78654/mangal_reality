@@ -206,7 +206,7 @@ const NatureValleyPhase1 = () => {
             </div>
 
             <div className="h-[300px] lg:h-[450px] relative overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Connectivity" />
+              <img src="/assets/images/highway-pic.jpeg" className="w-full h-full object-cover" alt="Connectivity" />
               <div className="absolute inset-0 bg-[#22C55E]/20 group-hover:bg-[#22C55E]/40 transition-colors"></div>
               <div className="absolute bottom-8 left-8 text-left">
                 <h4 className="text-2xl md:text-3xl font-bold text-white leading-none uppercase tracking-tighter">5 MIN TO <br /> HIGHWAY</h4>
