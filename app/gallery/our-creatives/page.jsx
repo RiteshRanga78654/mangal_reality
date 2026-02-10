@@ -42,14 +42,14 @@ const creativePortfolio = [
     description: "High-fidelity structural visualization showcasing the integration of glass-active facades and urban greenery.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
   },
-  {
-    id: 2,
-    category: "Digital Experience",
-    title: "The Genesis Virtual Tour",
-    description: "An immersive 360-degree walkthrough experience designed for international stakeholders and NRI investors.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
-    isVideo: true
-  },
+  // {
+  //   id: 2,
+  //   category: "Digital Experience",
+  //   title: "The Genesis Virtual Tour",
+  //   description: "An immersive 360-degree walkthrough experience designed for international stakeholders and NRI investors.",
+  //   image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
+  //   isVideo: true
+  // },
   {
     id: 3,
     category: "Corporate Campaign",
@@ -141,10 +141,10 @@ export default function OurCreativesFormal() {
                 </p>
                 
                 {/* TRIGGER BUTTON: Opens Lightbox */}
-                <MangalButton 
+                {/* <MangalButton 
                   text="View Details" 
                   onClick={() => setSelectedImage(item)} 
-                />
+                /> */}
               </motion.div>
             ))}
           </div>
