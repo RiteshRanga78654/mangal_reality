@@ -197,7 +197,7 @@ const NatureValleyPhase1 = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
             <div className="md:col-span-2 h-[300px] lg:h-[450px] relative overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" alt="Bhogapuram View" />
+              <img src="/assets/images/airport-vizag.jpeg" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" alt="Bhogapuram View" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-left">
                 <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold mb-3 inline-block tracking-widest uppercase">Future Hub</span>
