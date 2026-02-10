@@ -71,36 +71,35 @@ const Page = () => {
       name: "Abhishek Tripathi",
       role: "Happy Resident & Investor, Smart City, Dakamarri",
       image: "/assets/images/testi-1.jpg",
-      text: "We had been monitoring the real estate market in Vizag for two years, waiting for the right time to enter. Smart City Dakamarri fulfilled all the criteria: the infrastructure is already completed, it is connected to NH-45, close to the airport, and registration is immediate. The 2-acre land ensures a compact community, but the location provides benefits of a large project. With the Bhogapuram Airport ready for operation and the development of the coastal corridor in full swing, the growth path of our land's value is very promising. Our children can play safely in this area, and our investment is growing steadily ;that's the benefit of Smart City.",
+      text: "After research for two years, we were very clear that Smart City Dakamarri is the true winner. We need infrastructure, connectivity to NH-45, an airport nearby, and speedy registration. We required all these facilities, and our children are playing safely. Our investment is growing gradually. This is what makes Smart City a true winner!",
     },
     {
       id: 2,
       name: "Anil Mehta",
       role: "Smart Investor & Plot Owner, Smart City, Dakamarri",
       image: "/assets/images/testi-2.jpg",
-      text: "After scrutinizing various investment opportunities in the Vizag corridor, Smart City Dakamarri stood out as the best choice. Its proximity to NH-45, only 600 meters away, and just 5 minutes from Bhogapuram International Airport makes it an unbeatable location advantage.Mangal Reality's honest business practices and the plot's advantageous location near the IT SEZ made this investment opportunity the best choice for our family's future.This is not just a plot; it's a valuable asset in Vizag's fastest-growing corridor.",
+      text: "After scrutinizing various investment opportunities in the Vizag corridor, Smart City Dakamarri ticked all our boxes  just 600 meters away from NH-45 and merely 5 minutes away from Bhogapuram Airport. The transparency of Mangal Reality and the accessibility of the plot to IT SEZ did the trick. This is not merely a plot of land - this is our family’s future in Vizag's fastest growth area!",
     },
     {
       id: 3,
       name: "Ashish Aggarwal",
       role: "Marketing Director",
       image: "/assets/images/testi-3.jpg",
-      text: "After visiting The Nature Valley in Pisini, we knew we had found our forever home. Mangal Reality didn't just sell us property; their team's dedication to understanding our family's needs made all the difference. Their transparency, professionalism, and the variety of options they provided made us confident in our investment. Our 45 acre community feels like an extended family.We're grateful for their guidance and highly recommend them to anyone seeking a family oriented home.",
+      text: "Just 250 meters away from the highway, and I must say, the location of Green Meadows is just perfect! Plus, with the airport already up and running, not to mention the coastal corridor project, we can say that the property we own in this 6-acre gated community is already worth a smart investment!",
     },
     {
       id: 4,
       name: "Rohit Sharma",
       role: "Long-term Investor & Resident, The Nature Valley, Pisini",
       image: "/assets/images/testi-4.jpg",
-      text: "The Nature Valley offers unparalleled value for money. The 47-acre land enables the provision of amenities that are impossible in smaller projects 61+ amenities such as water bodies, dense greenery, and state-of-the-art infrastructure. Strategically located at the heart of Vizag, Vizianagaram, and Srikakulam, we are at the center of the industrial growth triangle of this region. The planned development strategy of Mangal Reality (17+30 acres) is a sign of forward thinking. This is legacy planning, not real estate purchase.",
+      text: "The value of the 47 acres of property at Nature Valley, unmatched in the world: 61+ amenities not to be found elsewhere. This location is the hub of the industrial triangle of Vizag, Vizianagaram, and Srikakulam districts. Well, well, well, now this is called legacy planning. This is progressive planning, and we are proud to be a part of this!",
     },
     {
       id: 5,
       name: "Sumit Nagar",
       role: "Satisfied Investor, Green Meadows, Jonnada",
       image: "/assets/images/testi-5.jpg",
-      text: "After analyzing connectivity, budget, and growth opportunities, we shortlisted Green Meadows in Jonnada .What won over my family was the opportunity to see their completed Smart City project firsthand. The quality they promised was the quality they delivered. Our Green Meadows ,Jonnada plot has already appreciated by 18% in the first year itself. Being 250 meters away from the highway ensures instant connectivity to Vizag and Vizianagaram without shelling out premium rates for being on the highway."
-
+      text: "We have visited and seen Mangal Reality's Smart City project completed and were impressed  they indeed deliver what they promise! Our investment in Green Meadows also appreciated by 18% in the first year itself. It is just 250 meters away from the highway with great connectivity at no premium cost!",
     },
 
   ];
@@ -263,19 +262,19 @@ const Page = () => {
       label: "Nature Embrace",
       title: "Family's Grace",
       desc: "At Mangal Realty, we craft spaces where wellness isn't a program; it's a way of life.",
-      img: "/assets/Reference images/2659.jpg"
+      img: "/assets/images/banner-1.jpeg"
     },
     {
-      label: "Gather. Grow. Glow.",
+      label: "",
       title: "Authentic Living",
       desc: "In the heart of Miyawaki Forest invites families to reconnect with what matters is simplicity, authenticity and laughter around the dinner table.",
-      img: "/assets/Reference images/27.jpg"
+      img: "/assets/images/banner-2.jpeg"
     },
     {
-      label: "Where Roots Grow Deep.",
-      title: "Where Hearts Grow Strong.",
-      desc: "Mangal Reality is creating spaces where health blooms, joy thrives, and legacies grow.",
-      img: "/assets/Reference images/928.jpg"
+      label: "",
+      title: "Where Every Game Counts.",
+      desc: "Mangal Reality is engineering spaces where sport and adventurers go farther every single day.",
+      img: "/assets/images/banner-3.jpeg"
     },
   ];
 

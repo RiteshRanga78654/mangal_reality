@@ -6,7 +6,7 @@ import { useRef } from 'react';
 
 export default function VisionMission() {
   const containerRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
@@ -14,36 +14,36 @@ export default function VisionMission() {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
     }
   };
 
-  const brandGreen = "#15803d"; 
+  const brandGreen = "#15803d";
 
   return (
-    <main 
-      ref={containerRef} 
+    <main
+      ref={containerRef}
       className="bg-white text-slate-900 min-h-screen font-sans"
     >
-      
+
       {/* 1. HERO SECTION - 80VH WHITE THEME */}
       <section className="relative h-[72vh] flex items-center justify-center overflow-hidden bg-slate-50">
-        <motion.div 
+        <motion.div
           style={{ y: useTransform(scrollYProgress, [0, 0.4], [0, 100]) }}
           className="absolute inset-0 z-0"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80" 
-            alt="Nature" 
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80"
+            alt="Nature"
             className="w-full h-80vh  "
           />
           {/* Subtle white gradient for text clarity */}
           <div className="absolute inset-0 from-white/20 via-transparent to-white" />
         </motion.div>
-        
+
         <div className="relative z-10 text-center px-6">
           <nav className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-white">
             <a href="/" className="hover:text-emerald-700 flex items-center gap-1 transition-colors">
@@ -53,7 +53,7 @@ export default function VisionMission() {
             <span className="text-white">About Us</span>
           </nav>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-7xl font-bold tracking-tighter text-white mb-8"
@@ -65,23 +65,24 @@ export default function VisionMission() {
       </section>
 
       {/* 2. VISION & MISSION - CLEAN CARDS */}
-      <section className="max-w-7xl mx-auto px-6 py-24 md:py-32">
+
+      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {[
-            { 
-              title: "Our Vision", 
-              icon: <Eye size={36} />, 
+            {
+              title: "Our Vision",
+              icon: <Eye size={36} />,
               text: "To transform communities where every family thrives, where children grow surrounded by nature's healing embrace and spaces that inspire connection, cultivate wellness, and create legacies of joy.",
               accent: "01"
             },
-            { 
-              title: "Our Mission", 
-              icon: <Target size={36} />, 
+            {
+              title: "Our Mission",
+              icon: <Target size={36} />,
               text: "To deliver family-centered developments that integrate experience like holistic wellness daily that prioritizes health, fosters joyful moments, and leaves the earth better than we found it.",
               accent: "02"
             }
           ].map((card, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial="hidden"
               whileInView="visible"
@@ -107,7 +108,7 @@ export default function VisionMission() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-4">
             <div>
-              <h2 className="text-4xl md:text-7xl font-bold text-slate-900 mb-4">Non-Negotiables</h2>
+              <h2 className="text-4xl md:text-7xl font-bold text-slate-900 mb-4 -mt-20">Non-Negotiables</h2>
               <p className="text-emerald-700 tracking-[0.2em] text-[10px] md:text-xs font-bold uppercase">The Foundation of Mangal Realty</p>
             </div>
             <div className="hidden lg:block h-px bg-slate-200 grow mx-12 mb-4" />
@@ -139,7 +140,8 @@ export default function VisionMission() {
       </section>
 
       {/* 5. THE PROMISE - CLEAN TEXT REVEAL */}
-      <section className="py-48 flex items-center justify-center text-center px-6 bg-white">
+
+      <section className="py-20 flex items-center justify-center text-center px-6 bg-white">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -147,7 +149,7 @@ export default function VisionMission() {
           className="max-w-4xl"
         >
           <p className="text-3xl md:text-6xl font-bold leading-tight text-slate-900 mb-10 tracking-tighter">
-            "We build legacies that don't <br className="hidden md:block"/> cost the <span className="text-emerald-600">Earth</span>."
+            "We build legacies that don't <br className="hidden md:block" /> cost the <span className="text-emerald-600">Earth</span>."
           </p>
           <div className="flex items-center justify-center gap-4 text-slate-400 tracking-[0.3em] text-[10px] font-bold uppercase">
             <div className="h-px w-10 bg-slate-200" />
