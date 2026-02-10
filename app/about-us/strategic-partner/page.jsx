@@ -112,10 +112,7 @@ export default function StrategicPartners() {
                 Strategic Partners
               </h2>
             </div>
-            <div
-              className="w-24 h-1 mx-auto mt-4"
-              style={{ backgroundColor: brandGreen }}
-            ></div>
+             <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
           </motion.div>
         </div>
       </section>
