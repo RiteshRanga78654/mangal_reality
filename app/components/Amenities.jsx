@@ -70,7 +70,7 @@ export default function AmenitiesSection() {
 
             <div className="mt-10 text-center lg:text-left">
               <a 
-                href="/amenities" 
+                href="/facilites" 
                 className="inline-block group relative cursor-pointer px-8 py-4 text-white font-bold tracking-widest text-[12px] overflow-hidden"
               >
                 <span className="relative z-10">View All Facilites</span>
