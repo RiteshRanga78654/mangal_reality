@@ -96,7 +96,7 @@ export default function ContactUs() {
             <span className="text-emerald-400">Contact Us</span>
           </nav>
           <h1 className="text-4xl md:text-7xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1>
-          <h1 className="text-4xl md:text-7xl text-white mb-8 tracking-tighter  leading-none">
+          <h1 className="text-4xl md:text-6xl text-white mb-8 tracking-tighter  font-bold leading-none">
               Get In Touch.
             </h1>
             <div className="h-1 w-20 bg-[#22c55e] my-8 mx-auto" />
@@ -133,7 +133,7 @@ export default function ContactUs() {
                   )
                 },
                 { icon: <Phone />, title: "Call Us", content: "+91 040-4400033" },
-                { icon: <Mail />, title: "Email", content: "info@mangalreality.com" },
+                { icon: <Mail />, title: "Email", content: "info@mangalRealty.com" },
                 // { icon: <Clock />, title: "Hours", content: "Mon - Sat: 9:00 AM - 7:00 PM" }
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 items-start group">

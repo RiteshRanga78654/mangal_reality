@@ -40,9 +40,9 @@ const NatureValleyPhase2 = () => {
   ];
 
   const testimonials = [
-    { name: "Rajesh Kumar", text: "Investing in Bhogapuram through Mangal Realty was the best decision. The development speed is unmatched.", role: "Business Owner" },
-    { name: "Anitha Reddy", text: "The Nature Valley truly lives up to its name. It's peaceful yet so close to the upcoming airport hub.", role: "Home Maker" },
-    { name: "Suresh Mani", text: "Phase 2 completion was seamless. The spot registration process was handled very professionally.", role: "Tech Lead" }
+    { name: "Rajesh Kumar", text: "After seeing how Phase 1 turned out, the location in Pisini is a hidden gem. No stress, no delays. Phase 2 is shaping up even better than I imagined.", role: "Business Owner" },
+    { name: "Anitha Reddy", text: "We wanted a place where our children could grow up close to nature but still have all modern comforts.Nature Valley Phase 2 gave us that confidence with its rapid development pace and transparent updates.", role: "Home Maker" },
+    { name: "Suresh Mani", text: "I visited 6 townships before choosing this one. None of them had the same level of greenery planning, wide open spaces, and attention to the natural landscape. Phase 2 is special.", role: "Tech Lead" }
   ];
 
   useEffect(() => {
@@ -195,7 +195,7 @@ const NatureValleyPhase2 = () => {
                 <h3 className="text-4xl md:text-6xl font-bold  tracking-tighter leading-none mb-8">Client <br /><span className="text-[#22C55E]">Success</span></h3>
 
                 <div className={`transition-all duration-500 min-h-[150px] ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
-                  <p className="text-lg md:text-2xl font-medium text-slate-800 leading-relaxed mb-8 italic">
+                  <p className="text-lg md:text-2xl font-medium text-black leading-relaxed mb-8">
                     "{testimonials[testimonialIndex].text}"
                   </p>
                   <div className="flex items-center gap-4">
@@ -234,7 +234,7 @@ const NatureValleyPhase2 = () => {
 
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
             <div className="flex items-center gap-3 font-bold  tracking-[0.1em] text-[10px] md:text-xs">
-              <Mail className="text-[#22C55E]" size={18} /> info@mangalreality.com
+              <Mail className="text-[#22C55E]" size={18} /> info@mangalRealty.com
             </div>
             <div className="flex items-center gap-3 font-bold tracking-[0.1em] text-[10px] md:text-xs">
               <Phone className="text-[#22C55E]" size={18} /> +91 9429690913

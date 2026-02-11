@@ -259,10 +259,10 @@ export default function MangalRealtyBlog() {
               Home
             </a>
             <ChevronRight size={12} className="opacity-50" />
-            <span className="text-emerald-400">The Blogs</span>
+            <span className="text-emerald-400 ">The Blogs</span>
           </nav>
           {/* <h1 className="text-6xl md:text-9xl   leading-none" style={{fontFamily:"Arial, Helvetica, sans-serif"}}></h1> */}
-          <h2 className="text-4xl md:text-7xl   tracking-tight" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
+          <h2 className="text-4xl md:text-6xl   tracking-tight  font-bold" style={{fontFamily:"Arial, Helvetica, sans-serif"}}>
             Blogs
           </h2>
           <div className="h-1 w-20 bg-[#22c55e] mx-auto my-8" />
