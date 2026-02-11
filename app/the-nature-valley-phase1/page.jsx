@@ -101,14 +101,14 @@ const NatureValleyPhase1 = () => {
           <img
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1500"
             className="w-full h-full object-cover opacity-60"
-            alt="Nature Valley Phase 1"
+            alt="Nature Valley (Phase 1)"
           />
         </div>
 
         <div className="w-full lg:w-1/3 flex items-center px-6 md:px-12 py-12 lg:py-20 bg-[#0A1A10]">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="w-full text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-none mb-6 tracking-tighter uppercase">
-              Nature Valley <br /> <span className="text-[#22C55E]">Phase 1</span>
+              Nature Valley <br /> <span className="text-[#22C55E]">(Phase 1)</span>
             </h1>
             <p className="text-slate-300 text-base md:text-lg mb-8 leading-relaxed max-w-md italic">
               "Experience the Green Side of Life."  
