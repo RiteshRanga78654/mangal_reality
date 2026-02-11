@@ -74,7 +74,8 @@ const OngoingProjectsPage = () => {
     {
       id: 1,
       title: "The Nature City",
-      tagline: "Experience the harmony of luxury and nature in a sprawling green landscape.",
+      description: "Experience the harmony of luxury and nature in a sprawling green landscape.",
+      tagline: "A City Built by Nature, Designed for You.",
       location: "Vizianagaram, AP",
       status: "Phase 1: Roads & Plotting",
     
@@ -85,7 +86,8 @@ const OngoingProjectsPage = () => {
     {
       id: 2,
       title: "The Nature Valley (Phase 2)",
-      tagline: "A boutique residential community designed for peace and sustainable living.",
+      description: "A boutique residential community designed for peace and sustainable living.",
+      tagline: "Continue the Legacy. Elevate the Living.",
       location: "Pisini, AP",
       status: "Phase 2: Landscaping",
       area: "30 Acres",
@@ -175,6 +177,7 @@ const OngoingProjectsPage = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-1000 hover:scale-110"
                   />
+                  
                   <div className="absolute top-6 left-6 z-20 bg-white px-5 py-2 rounded-full shadow-md">
                     <p className="text-[#22C55E] font-bold text-xs tracking-widest ">Active Phase</p>
                   </div>
@@ -191,10 +194,12 @@ const OngoingProjectsPage = () => {
                     {project.title}
                   </h2>
                 </div>
+                <p className="text-[#22C55E] text-lg font-bold tracking-wide">"{project.tagline}"</p>
                 
                 <p className="text-slate-500 text-lg leading-relaxed max-w-lg">
-                  {project.tagline}
+                  {project.description}
                 </p>
+                
 
                 <div className="grid grid-cols-2 gap-8 py-8 border-y border-slate-200">
                   <div className="flex items-center gap-4">

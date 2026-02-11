@@ -58,7 +58,7 @@ export default function VisionMission() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-8"
           >
-            Our Essence
+            Vission & Mission
           </motion.h1>
            <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
         </div>

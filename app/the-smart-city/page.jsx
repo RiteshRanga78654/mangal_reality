@@ -440,7 +440,7 @@ const SmartCityPremium = () => {
           <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-10 leading-none text-black">Invest in the <br /> <span className="text-[#22C55E]">Smart Future</span></h2>
           <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-16">
             <div className="flex items-center gap-3 font-bold text-black">
-              <Mail className="text-[#22C55E]" size={24} /> info@mangalreality.com
+              <Mail className="text-[#22C55E]" size={24} /> info@mangalRealty.com
             </div>
             <div className="flex items-center gap-3 font-bold text-black">
               <Phone className="text-[#22C55E]" size={24} /> +91 040-4400033

@@ -79,7 +79,7 @@ const Page = () => {
       name: "Anil Mehta",
       role: "Smart Investor & Plot Owner, Smart City, Dakamarri",
       image: "/assets/images/testi-2.jpg",
-      text: "After scrutinizing various investment opportunities in the Vizag corridor, Smart City Dakamarri ticked all our boxes  just 600 meters away from NH-45 and merely 5 minutes away from Bhogapuram Airport. The transparency of Mangal Reality and the accessibility of the plot to IT SEZ did the trick. This is not merely a plot of land - this is our family’s future in Vizag's fastest growth area!",
+      text: "After scrutinizing various investment opportunities in the Vizag corridor, Smart City Dakamarri ticked all our boxes  just 600 meters away from NH-45 and merely 5 minutes away from Bhogapuram Airport. The transparency of Mangal Realty and the accessibility of the plot to IT SEZ did the trick. This is not merely a plot of land - this is our family’s future in Vizag's fastest growth area!",
     },
     {
       id: 3,
@@ -100,7 +100,7 @@ const Page = () => {
       name: "Sumit Nagar",
       role: "Satisfied Investor, Green Meadows, Jonnada",
       image: "/assets/images/testi-5.jpg",
-      text: "We have visited and seen Mangal Reality's Smart City project completed and were impressed  they indeed deliver what they promise! Our investment in Green Meadows also appreciated by 18% in the first year itself. It is just 250 meters away from the highway with great connectivity at no premium cost!",
+      text: "We have visited and seen Mangal Realty's Smart City project completed and were impressed  they indeed deliver what they promise! Our investment in Green Meadows also appreciated by 18% in the first year itself. It is just 250 meters away from the highway with great connectivity at no premium cost!",
     },
 
   ];
@@ -261,8 +261,8 @@ const Page = () => {
   const STICKY_CONTENT = [
     {
       label: "Gather. Grow. Glow",
-      title: "Nature Embrace Family's Grace",
-      desc: "In the heart of Miyawaki Forest invites families to reconnect with what matters is simplicity, authenticity and laughter around the dinner table.",
+      title: "Nature Embrace Family Grace",
+      desc: "In the heart of Miyawaki Forest invites families to reconnect with what matters is simplicity, authenticity, and laughter around the dinner table.",
       img: "/assets/images/banner-1.jpeg"
     },
     {
@@ -274,7 +274,7 @@ const Page = () => {
     {
       label: "Rise. Run. Win.",
       title: "Where Every Game Counts.",
-      desc: "Mangal Reality is engineering spaces where sport and adventurers go farther every single day.",
+      desc: "Mangal Realty is engineering spaces where athletes and adventurers go further every single day.",
       img: "/assets/images/banner-3.jpeg"
     },
   ];
