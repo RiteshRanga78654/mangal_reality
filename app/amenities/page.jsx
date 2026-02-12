@@ -56,7 +56,7 @@ export default function AmenitiesPage() {
             <span className="text-[#22c55e]">Amenities</span>
           </nav>
           <h1 className="text-white text-5xl md:text-7xl font-bold tracking-tighter ">
-            Luxury <span style={{ color: brandGreen }}>Amenities</span>
+            Amenities <span style={{ color: brandGreen }}></span>
           </h1>
         </div>
       </header>

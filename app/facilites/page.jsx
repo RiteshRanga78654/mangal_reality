@@ -56,7 +56,7 @@ export default function FacilitiesPage() {
             <span className="text-[#22c55e]">Facilities</span>
           </nav>
           <h1 className="text-white text-5xl md:text-7xl font-bold tracking-tighter ">
-            Premier <span style={{ color: brandGreen }}>Facilities</span>
+           Facilities<span style={{ color: brandGreen }}></span>
           </h1>
         </div>
       </header>

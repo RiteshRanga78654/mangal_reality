@@ -47,14 +47,19 @@ const AnimatedCounter = ({ value, duration = 1500 }) => {
   );
 };
 
-// --- 2. UNIFIED MANGAL BUTTON COMPONENT ---
+// --- 2. FIXED MANGAL BUTTON COMPONENT ---
 const MangalButton = ({ text, href }) => (
-  <Link href={href} className="group relative inline-block cursor-pointer px-10 py-5 text-[#22c55e] hover:text-white font-bold tracking-widest text-xs overflow-hidden">
-    <span className="relative z-10 transition-colors duration-500">
+  <Link 
+    href={href} 
+    className="group relative inline-flex items-center justify-center px-10 py-5 overflow-hidden transition-all duration-500 ease-in-out border border-[#22c55e]"
+  >
+    {/* This layer handles the background slide ONLY on button hover */}
+    <span className="absolute inset-0 bg-[#22c55e] transition-transform duration-500 ease-out transform scale-x-0 origin-left group-hover:scale-x-100"></span>
+    
+    {/* This layer handles the text color change */}
+    <span className="relative z-10 text-[#22c55e] font-bold tracking-widest text-xs transition-colors duration-500 group-hover:text-white uppercase">
       {text}
     </span>
-    <div className="absolute inset-0 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-    <div className="absolute inset-0 border border-green-600"></div>
   </Link>
 );
 
@@ -85,8 +90,8 @@ const CompletedProjectsPage = () => {
       location: "Jonnada",
       area: "5 Acres",
       tagline: "Expansive Green Living Across Five Acres of Excellence.",
-      description: "The Green Meadows a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments. This project is a balance between space, greenery, & community.",
-      image: "/assets/images/jonnada-project.jpg",
+      description: "The Green Meadows a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments.",
+      image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=1000",
       link: "/the-green-meadows"
     }
   ];
@@ -129,38 +134,12 @@ const CompletedProjectsPage = () => {
                 <span className="text-[#22c55e]">Completed Projects</span>
               </nav>
               <h1 className="text-4xl md:text-6xl mb-8 font-bold tracking-tighter leading-[1.1]">
-                Completed Projects<br className="hidden md:block" /> 
+                Completed Projects
               </h1>
-             <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
+              <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
             </div>
           </motion.div>
         </div>
-
-        {/* FLOATING STATS BAR */}
-        {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90%] max-w-6xl z-30">
-          <div className="bg-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] rounded-[2rem] p-8 md:p-14 border border-gray-100">
-            <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 md:gap-0 md:divide-x md:divide-gray-100">
-              <div className="text-center px-4">
-                <p className="text-[#22C55E] text-5xl md:text-6xl font-bold mb-2">
-                  <AnimatedCounter value="03" />
-                </p>
-                <p className="text-gray-500 text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">Projects Delivered</p>
-              </div>
-              <div className="text-center px-4">
-                <p className="text-[#22C55E] text-5xl md:text-6xl font-bold mb-2">
-                  <AnimatedCounter value="25+" />
-                </p>
-                <p className="text-gray-500 text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">Acres Developed</p>
-              </div>
-              <div className="text-center px-4">
-                <p className="text-[#22C55E] text-5xl md:text-6xl font-bold mb-2">
-                  <AnimatedCounter value="100%" />
-                </p>
-                <p className="text-gray-500 text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">Customer Trust</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </section>
 
       <div className="h-40 md:h-56 bg-[#f8fafc]"></div>
@@ -175,15 +154,15 @@ const CompletedProjectsPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               key={index}
-              className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-16 group`}
+              className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-16`}
             >
               {/* Image Side */}
-              <div className="w-full lg:w-1/2 relative">
+              <div className="w-full lg:w-1/2 relative group/img">
                 <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
                     <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-[450px] md:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                    className="w-full h-[450px] md:h-[600px] object-cover transform group-hover/img:scale-105 transition-transform duration-1000"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
@@ -232,46 +211,44 @@ const CompletedProjectsPage = () => {
       </section>
 
       {/* WHY INVEST SECTION */}
-   <section className="bg-[#0A1A10] py-16 px-6"> {/* Reduced section padding from 24 to 16 */}
-  <div className="max-w-7xl mx-auto">
-    <div className="mb-10 text-center md:text-left">
-      <h2 className="text-[#22C55E] font-black tracking-[0.2em] text-xs mb-3 ">Investment Excellence</h2>
-      <h3 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
-        Why Choose <span className="text-[#22C55E]">Mangal Realty</span>
-      </h3>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-6"> {/* Reduced gap from 8 to 6 */}
-      {/* Box 1: Removed min-height, reduced padding to p-8/p-10 */}
-      <div className="md:col-span-8 bg-gradient-to-br from-[#22C55E] to-emerald-900 p-8 md:p-10 rounded-[2rem] flex flex-col relative overflow-hidden group">
-        <div className="relative z-10">
-          <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-6">
-              <Gem size={24} className="text-white" />
+      <section className="bg-[#0A1A10] py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 text-center md:text-left">
+            <h2 className="text-[#22C55E] font-black tracking-[0.2em] text-xs mb-3 ">Investment Excellence</h2>
+            <h3 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
+              Why Choose <span className="text-[#22C55E]">Mangal Realty</span>
+            </h3>
           </div>
-          <h3 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight">Strategic Appreciation</h3>
-          <p className="text-white/80 max-w-md text-base leading-snug">Every project is selected for high growth in the North Vizag corridor, ensuring maximum ROI.</p>
-        </div>
-        <BarChart3 size={200} className="absolute -bottom-5 -right-5 text-white/5" />
-      </div>
 
-      {/* Box 2: Matches Box 1 padding and style */}
-      <div className="md:col-span-4 bg-[#1a3324] border border-white/5 p-8 md:p-10 rounded-[2rem] flex flex-col justify-center text-left">
-        <div className="w-12 h-12 bg-[#22C55E]/20 rounded-xl flex items-center justify-center mb-6">
-          <ShieldCheck size={24} className="text-[#22C55E]" />
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div className="md:col-span-8 bg-gradient-to-br from-[#22C55E] to-emerald-900 p-8 md:p-10 rounded-[2rem] flex flex-col relative overflow-hidden">
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-6">
+                    <Gem size={24} className="text-white" />
+                </div>
+                <h3 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight">Strategic Appreciation</h3>
+                <p className="text-white/80 max-w-md text-base leading-snug">Every project is selected for high growth in the North Vizag corridor, ensuring maximum ROI.</p>
+              </div>
+              <BarChart3 size={200} className="absolute -bottom-5 -right-5 text-white/5" />
+            </div>
+
+            <div className="md:col-span-4 bg-[#1a3324] border border-white/5 p-8 md:p-10 rounded-[2rem] flex flex-col justify-center text-left">
+              <div className="w-12 h-12 bg-[#22C55E]/20 rounded-xl flex items-center justify-center mb-6">
+                <ShieldCheck size={24} className="text-[#22C55E]" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3">Legally Ironclad</h4>
+              <p className="text-gray-400 text-sm leading-relaxed">100% VMRDA & LP approvals with verified clear titles and RERA compliance.</p>
+            </div>
+          </div>
         </div>
-        <h4 className="text-xl font-bold text-white mb-3">Legally Ironclad</h4>
-        <p className="text-gray-400 text-sm leading-relaxed">100% VMRDA & LP approvals with verified clear titles and RERA compliance.</p>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* THE MANGAL STANDARD FEATURES */}
       <section className="py-32 bg-white px-6">
         <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none mt-[-16px]">
-                The <span className="text-[#22C55E]">Mangal</span>  Realty
+            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none">
+                The <span className="text-[#22C55E]">Mangal</span> Standard
             </h2>
             <div className="w-32 h-2 bg-[#22C55E] mx-auto mt-8"></div>
             </div>
