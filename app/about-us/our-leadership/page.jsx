@@ -11,7 +11,7 @@ import {
   GraduationCap,
   ChevronRight,
   Home,
-  ArrowUpRight,Linkedin
+  ArrowUpRight, Linkedin
 } from "lucide-react";
 
 const brandGreen = "#22C55E";
@@ -79,7 +79,7 @@ const strategicPartners = [
     linkedin: "https://www.linkedin.com/in/kamaldeep01/",
     icon: Briefcase,
   },
-   {
+  {
     name: "Vebhore Bagria",
     role: "Chief Financial Officer",
     description: [
@@ -153,7 +153,7 @@ export default function MangalLeadership() {
               Our leadership combines decades of traditional wisdom with a
               modern approach to urban living and commercial excellence.
             </p> */}
-          {/* </motion.div>
+        {/* </motion.div>
         </div>  */}
         <div className="relative z-20 text-center px-6 max-w-5xl">
           <motion.div
@@ -163,18 +163,18 @@ export default function MangalLeadership() {
             className=""
           >
             <div className="relative z-10 text-center text-white px-6">
-            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
-              <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
-                <Home size={12} /> Home
-              </a>
-              <ChevronRight size={12} className="opacity-50" />
-              <span className="text-[#22c55e]">About Us</span>
-            </nav>
-            {/* Standardized Heading: 4xl to 6xl */}
-            <h2 className="text-4xl md:text-6xl mb-10 font-bold tracking-tighter  leading-none">
-               Our Leadership</h2>
-          </div>
-           <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
+              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+                <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
+                  <Home size={12} /> Home
+                </a>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-[#22c55e]">About Us</span>
+              </nav>
+              {/* Standardized Heading: 4xl to 6xl */}
+              <h2 className="text-4xl md:text-6xl mb-10 font-bold tracking-tighter  leading-none">
+                Our Leadership</h2>
+            </div>
+            <div className="h-1 w-20 bg-[#22c55e] mx-auto mb-8" />
           </motion.div>
         </div>
       </section>
@@ -335,20 +335,19 @@ export default function MangalLeadership() {
         <div className="absolute inset-0 bg-stone-900 skew-y-3 origin-right translate-y-20"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-white text-4xl md:text-6xl font-bold tracking-tighter leading-none mb-6">
-              A Legacy Built on <br />
-              <span style={{ color: brandGreen }}>Unwavering Trust</span>
+            <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tighter leading-none mb-6">
+              Built on Values  <br />
+              <span style={{ color: brandGreen }}>Handed Over with Pride</span>
             </h2>
             <p className="text-stone-400 text-lg mb-8">
-              Under our management's guidance, Mangal Group follows a strict
-              corporate governance framework that ensures transparency at every
-              stage of construction and delivery.
+              At Mangal Realty, integrity is a practice. Mangal Realty, we make sure that faith is never misplaced. From the first blueprint to the final handover, we operate with a governance-first mindset that keeps our homebuyers informed, involved, and confident at every step of their journey.
+
             </p>
             <div className="space-y-4">
               {[
-                "Ethical Sourcing",
-                "Sustainable Engineering",
-                "Timely Possession",
+                "Sourced with Integrity",
+                "Future-Ready Construction",
+                "No Delays in Possession",
               ].map((item, i) => (
                 <div
                   key={i}
@@ -374,8 +373,8 @@ export default function MangalLeadership() {
                   Our Mission
                 </h4>
                 <p className="text-stone-300 text-sm mt-2">
-                  To redefine luxury through architectural innovation and
-                  carbon-neutral construction practices by 2030.
+                  To transform communities where every family thrives, where children grow surrounded by nature's healing embrace
+
                 </p>
               </div>
               <div
@@ -386,8 +385,8 @@ export default function MangalLeadership() {
                   Our Philosophy
                 </h4>
                 <p className="text-stone-300 text-sm mt-2">
-                  Customer centricity isn't a department; it's the very
-                  foundation of every brick we lay.
+                  A home is the most personal investment you'll ever make. We don't measure success in units sold. We measure it in families settled.
+
                 </p>
               </div>
             </div>
@@ -428,13 +427,12 @@ export default function MangalLeadership() {
             style={{ color: brandGreen }}
           />
           <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tighter">
-            Mangal Realty Ethos
+           The Mangal Belief
           </h2>
 
           <div className="mt-10">
             <p className="text-black text-xl md:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto">
-              "Real Estate is not just about buildings; it is about building
-              trust and creating spaces where life thrives."
+              "Build right. Deliver on time. Treat people well. That's not our tagline, it's how we show up, every single day."
             </p>
             <div className="flex flex-col items-center">
               <div className="h-1 w-20 bg-[#22c55e] mx-auto rounded-full" />

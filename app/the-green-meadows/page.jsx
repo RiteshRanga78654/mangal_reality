@@ -92,7 +92,7 @@ const GreenMeadowsJonnada = () => {
               The Green Meadows is a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments. This project is a balance between space, greenery, & community.
             </p>
             <MangalButton>
-              On Spot Registration <ArrowRight size={16} />
+              On Spot Registration <ArrowRight size={16} href="/contact-us" />
             </MangalButton>
           </motion.div>
         </div>
