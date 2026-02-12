@@ -13,29 +13,47 @@ const GreenMeadowsJonnada = () => {
   const [isFading, setIsFading] = useState(false);
 
   // --- MANGAL REALTY SIGNATURE BUTTON COMPONENT ---
-  const MangalButton = ({ children, onClick, className = "" }) => (
-    <button
-      onClick={onClick}
-      className={`group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden uppercase transition-all duration-300 w-full sm:w-auto ${className}`}
-    >
-      <span className="relative z-10 flex items-center justify-center gap-3">
-        {children}
-      </span>
-      <div className="absolute inset-1 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-      <div className="absolute inset-1 border border-[#22C55E]"></div>
-    </button>
-  );
+  // --- MANGAL REALTY SIGNATURE BUTTON COMPONENT ---
+  const MangalButton = ({ children, onClick, href, className = "" }) => {
+    const classes = `group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden uppercase transition-all duration-300 w-full sm:w-auto inline-block text-center ${className}`;
+
+    const content = (
+      <>
+        <span className="relative z-10 flex items-center justify-center gap-3">
+          {children}
+        </span>
+        <div className="absolute inset-1 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+        <div className="absolute inset-1 border border-[#22C55E]"></div>
+      </>
+    );
+
+    // If href is provided, render as a link, otherwise render as a button
+    if (href) {
+      return (
+        <a href={href} className={classes}>
+          {content}
+        </a>
+      );
+    }
+
+    return (
+      <button onClick={onClick} className={classes}>
+        {content}
+      </button>
+    );
+  };
+
 
   const projectStats = [
     { label: "VMRDA Approved", value: "LP: 71/2020", icon: <Landmark />, sub: "VMRDA/DPMS Approved" },
-    { 
-    label: "Total Area", 
-    value: "17 Acres", 
-    prefix: "",
-    suffix: " Acres",
-    icon: <Maximize2 />, 
-    sub: "Premium Open Plots" 
-  },
+    {
+      label: "Total Area",
+      value: "17 Acres",
+      prefix: "",
+      suffix: " Acres",
+      icon: <Maximize2 />,
+      sub: "Premium Open Plots"
+    },
     { label: "ROI Status", value: "18%", icon: <Zap />, sub: "Expected Returns" }
   ];
 
@@ -91,8 +109,8 @@ const GreenMeadowsJonnada = () => {
             <p className="text-white text-base leading-relaxed max-w-md mb-4">
               The Green Meadows is a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments. This project is a balance between space, greenery, & community.
             </p>
-            <MangalButton>
-              On Spot Registration <ArrowRight size={16} href="/contact-us" />
+            <MangalButton href="/contact-us">
+              On Spot Registration <ArrowRight size={16} />
             </MangalButton>
           </motion.div>
         </div>
@@ -168,78 +186,78 @@ const GreenMeadowsJonnada = () => {
       </section>
 
       {/* 4. THE CONNECTIVITY HUB */}
-     {/* 4. THE CONNECTIVITY HUB */}
-<section className="py-16 lg:py-24 bg-[#0A1A10] px-6 text-white">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
-      <div className="max-w-2xl">
-        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">
-          Location <span className="text-[#22C55E]">Corridor</span>
-        </h2>
-        <p className="text-white mt-4 md:mt-6 text-base md:text-lg ">
-          Everything Within Comfortable Reach.
-        </p>
-      </div>
-      <MangalButton onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}>
-        {showMoreLandmarks ? <Minus size={16} /> : <Plus size={16} />}
-        {showMoreLandmarks ? "Close Map" : "View Distance Map"}
-      </MangalButton>
-    </div>
-
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
-      {/* IMAGE BOX */}
-      <div className="lg:col-span-8 h-[300px] lg:h-[450px] relative overflow-hidden group">
-        <img 
-          src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000" 
-          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" 
-          alt="Educational Hub" 
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-        <div className="absolute bottom-6 left-6 text-left">
-          <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold uppercase mb-3 inline-block tracking-widest">
-            Educational Hub
-          </span>
-          <h4 className="text-2xl md:text-4xl font-bold uppercase">Lendi, Raghu & VITAM</h4>
-        </div>
-      </div>
-
-      {/* RIGHT SIDE TEXT (Top Right in your image) */}
-      <div className="lg:col-span-4 flex flex-col justify-center text-left space-y-8 p-4 lg:p-0">
-        <div>
-            {/* <div className="w-full h-6 bg-[#064e3b] mb-6 hidden lg:block opacity-40"></div> Dark Green accent bar like image */}
-            <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-200">
-                “Safety, schools, space, and community, everything needed for children to thrive and families to flourish.”
-            </p>
-        </div>
-        
-        <p className="text-slate-200 text-xl md:text-2xl leading-relaxed">
-            Visit us to walk through tree-lined avenues and discover why families and investors alike are choosing this exceptional community.
-        </p>
-      </div>
-
-      {/* DISTANCE MARKERS (Bottom row in your image) */}
-      <div className="lg:col-span-12 bg-white p-8 lg:p-14 flex flex-col justify-center text-left mt-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
-          {[
-            { l: "Revidi Junction", d: "3 KM" }, 
-            { l: "Highway", d: "5 KM" }, 
-            { l: "Lake Palace", d: "9 KM" }, 
-            { l: "Madhurawada", d: "25 KM" }
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2">
-              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em] mb-2">
-                {item.l}
-              </span>
-              <span className="text-3xl lg:text-5xl font-black text-black tracking-tighter">
-                {item.d}
-              </span>
+      {/* 4. THE CONNECTIVITY HUB */}
+      <section className="py-16 lg:py-24 bg-[#0A1A10] px-6 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
+            <div className="max-w-2xl">
+              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">
+                Location <span className="text-[#22C55E]">Corridor</span>
+              </h2>
+              <p className="text-white mt-4 md:mt-6 text-base md:text-lg ">
+                Everything Within Comfortable Reach.
+              </p>
             </div>
-          ))}
+            <MangalButton onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}>
+              {showMoreLandmarks ? <Minus size={16} /> : <Plus size={16} />}
+              {showMoreLandmarks ? "Close Map" : "View Distance Map"}
+            </MangalButton>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+            {/* IMAGE BOX */}
+            <div className="lg:col-span-8 h-[300px] lg:h-[450px] relative overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000"
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                alt="Educational Hub"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+              <div className="absolute bottom-6 left-6 text-left">
+                <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold uppercase mb-3 inline-block tracking-widest">
+                  Educational Hub
+                </span>
+                <h4 className="text-2xl md:text-4xl font-bold uppercase">Lendi, Raghu & VITAM</h4>
+              </div>
+            </div>
+
+            {/* RIGHT SIDE TEXT (Top Right in your image) */}
+            <div className="lg:col-span-4 flex flex-col justify-center text-left space-y-8 p-4 lg:p-0">
+              <div>
+                {/* <div className="w-full h-6 bg-[#064e3b] mb-6 hidden lg:block opacity-40"></div> Dark Green accent bar like image */}
+                <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-200">
+                  “Safety, schools, space, and community, everything needed for children to thrive and families to flourish.”
+                </p>
+              </div>
+
+              <p className="text-slate-200 text-xl md:text-2xl leading-relaxed">
+                Visit us to walk through tree-lined avenues and discover why families and investors alike are choosing this exceptional community.
+              </p>
+            </div>
+
+            {/* DISTANCE MARKERS (Bottom row in your image) */}
+            <div className="lg:col-span-12 bg-white p-8 lg:p-14 flex flex-col justify-center text-left mt-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
+                {[
+                  { l: "Revidi Junction", d: "3 KM" },
+                  { l: "Highway", d: "5 KM" },
+                  { l: "Lake Palace", d: "9 KM" },
+                  { l: "Madhurawada", d: "25 KM" }
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2">
+                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em] mb-2">
+                      {item.l}
+                    </span>
+                    <span className="text-3xl lg:text-5xl font-black text-black tracking-tighter">
+                      {item.d}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* 5. TESTIMONIALS */}
       <section className="py-16 lg:py-24 px-6 bg-white overflow-hidden">
@@ -286,20 +304,32 @@ const GreenMeadowsJonnada = () => {
       {/* 6. CONTACT FOOTER */}
       <footer className="py-16 lg:py-24 px-6 bg-[#0A1A10] text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-10 leading-none">Your Jonnada <br /> <span className="text-[#22C55E]">Legacy Starts</span> Here</h2>
+          <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-10 leading-none">
+            Your Jonnada <br /> <span className="text-[#22C55E]">Legacy Starts</span> Here
+          </h2>
 
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
-            <div className="flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">
+            {/* Email Link */}
+            <a
+              href="mailto:info@mangalRealty.com"
+              className="flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
+            >
               <Mail className="text-[#22C55E]" size={18} /> info@mangalRealty.com
-            </div>
-            <div className="flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">
+            </a>
+
+            {/* Phone Link */}
+            <a
+              href="tel:+919429690913"
+              className="flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
+            >
               <Phone className="text-[#22C55E]" size={18} /> +91 9429690913
-            </div>
+            </a>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <MangalButton>Book Site Visit</MangalButton>
-            <MangalButton>Contact Sales</MangalButton>
+            {/* Button Links */}
+            <MangalButton href="/">Book Site Visit</MangalButton>
+            <MangalButton href="/contact-us">Contact Sales</MangalButton>
           </div>
 
           <p className="mt-16 text-[9px] text-slate-600 uppercase tracking-[0.4em] font-bold">
