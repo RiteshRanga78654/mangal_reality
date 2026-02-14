@@ -34,8 +34,9 @@ const AnimatedCounter = ({ value }) => {
 };
 
 // --- Unified Mangal Button ---
-const MangalButton = ({ text, href }) => (
-  <Link href={href} className="group relative cursor-pointer px-10 py-4 text-white font-bold tracking-[0.1em] text-[14px] overflow-hidden inline-block text-center border border-[#22C55E]">
+// --- Updated Unified Mangal Button ---
+const MangalButton = ({ text, href, className = "text-white" }) => (
+  <Link href={href} className={`group relative cursor-pointer px-10 py-4 font-bold tracking-[0.1em] text-[14px] overflow-hidden inline-block text-center border border-[#22C55E] ${className}`}>
     <span className="relative z-10 transition-colors duration-500 group-hover:text-white">{text}</span>
     <div className="absolute inset-0 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 z-0"></div>
   </Link>
@@ -360,7 +361,7 @@ const SmartCityPremium = () => {
               <p className="text-white text-sm leading-relaxed mb-8">
                 Our track record speaks to our commitment to quality, timely delivery, and customer satisfaction. When you choose us, you choose a partner invested in your family's success.
               </p>
-              <MangalButton text="Get Final Pricing" href="/quote" />
+              <MangalButton text="Get Final Pricing" href="/contact-us" />
             </div>
           </div>
         </div>
@@ -433,22 +434,32 @@ const SmartCityPremium = () => {
         </div>
       </section>
 
-      {/* 8. CONTACT FOOTER */}
-      <footer className="py-24 px-6 text-center bg-white border-t border-slate-100 relative">
-        <div className="max-w-4xl mx-auto">
-          {/* Standardized Heading */}
-          <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-10 leading-none text-black">Invest in the <br /> <span className="text-[#22C55E]">Smart Future</span></h2>
-          <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-16">
-            <div className="flex items-center gap-3 font-bold text-black">
-              <Mail className="text-[#22C55E]" size={24} /> info@mangalRealty.com
-            </div>
-            <div className="flex items-center gap-3 font-bold text-black">
-              <Phone className="text-[#22C55E]" size={24} /> +91 040-4400033
-            </div>
-          </div>
-          <MangalButton text="Book Site Visit" href="/contact" />
-        </div>
-      </footer>
+     
+     {/* 8. CONTACT FOOTER */}
+<footer className="py-24 px-6 text-center bg-white border-t border-slate-100 relative">
+  <div className="max-w-4xl mx-auto">
+    {/* Standardized Heading */}
+    <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-10 leading-none text-black">
+      Invest in the <br /> <span className="text-[#22C55E]">Smart Future</span>
+    </h2>
+    
+    <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-16">
+      <div className="flex items-center gap-3 font-bold text-black">
+        <Mail className="text-[#22C55E]" size={24} /> info@mangalRealty.com
+      </div>
+      <div className="flex items-center gap-3 font-bold text-black">
+        <Phone className="text-[#22C55E]" size={24} /> +91 040-4400033
+      </div>
+    </div>
+
+    {/* This is the only button changed to black text */}
+    <MangalButton 
+      text="Book Site Visit" 
+      href="/contact" 
+      className="text-black" 
+    />
+  </div>
+</footer>
     </div>
   );
 };
