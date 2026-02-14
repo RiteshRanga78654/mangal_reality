@@ -170,18 +170,19 @@ const OngoingProjectsPage = () => {
               className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-15`}
             >
               {/* Image Side */}
-              <div className="w-full lg:w-1/2 relative">
-                <div className="relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[4/3]">
-                  <img
+              <div className="w-full lg:w-1/2 relative group/img">
+                <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
+                    <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 hover:scale-110"
-                  />
-                  
-                  <div className="absolute top-6 left-6 z-20 bg-white px-5 py-2 rounded-full shadow-md">
-                    <p className="text-[#22C55E] font-bold text-xs tracking-widest ">Active Phase</p>
-                  </div>
+                    className="w-full h-[450px] md:h-[600px] object-cover transform group-hover/img:scale-105 transition-transform duration-1000"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
+                <div className="absolute top-6 left-6 z-20 bg-white px-5 py-2 rounded-full shadow-md">
+                    <p className="text-[#22C55E] font-bold text-xs tracking-widest "> Active Phase </p>
+                  </div>
+              
                 {/* Accent background box */}
                 <div className={`absolute -bottom-6 ${index % 2 !== 0 ? '-left-6' : '-right-6'} -z-10 w-2/3 h-2/3 bg-emerald-50 rounded-3xl opacity-50`}></div>
               </div>
