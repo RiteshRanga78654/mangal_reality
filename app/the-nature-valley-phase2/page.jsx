@@ -106,7 +106,8 @@ const NatureValleyPhase2 = () => {
       <section className="py-16 lg:py-24 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 lg:mb-16 gap-6 text-left">
           <div className="w-full">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter leading-none ">The Valley Continues <br className="hidden md:block" />Bigger, Bolder, Greener.<span className="text-[#22C55E]"></span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter leading-none ">The Valley Continues <br className="hidden md:block" /><span className="text-[#22C55E]"></span></h2>
+             <p className="text-slate-400 mt-4 md:mt-4 text-base md:text-lg italic">Bigger, Bolder, Greener.</p>
             <div className="w-16 md:w-20 h-1 bg-[#22C55E] mt-4 md:mt-6"></div>
           </div>
           <p className="max-w-md text-slate-500 text-sm md:text-base">The wait is over. Phase 2 is live, under development, and ready for you. Expanding on the success of Phase 1, The Nature Valley Phase 2 brings 30 acres of thoughtfully planned green living to Pisini, AP.</p>
