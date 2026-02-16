@@ -58,72 +58,72 @@ const BLOG_DATA = {
       <p><strong>The Verdict: Why Now?</strong> For buyers, it offers affordability and lifestyle. For investors, it presents growth potential without excessive risk. The sweet spot in the market cycle makes 2026 an opportune time to enter this market.</p>
     `
   },
-  "future-real-estate": {
-    id: 2,
-    category: "Market Trends",
-    title: "The Future of Real Estate Business: Opportunities You Can't Afford to Miss",
-    author: "Marketing Desk",
-    date: "Jan 12, 2026",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200",
-    tags: ["Technology", "Sustainability", "Trends"],
-    quote: "Luxury is no longer about the gold on the walls; it is about the air you breathe and the silence of your surroundings.",
-    content: `
-      <p>The property market is moving at a pace never before witnessed. The reality is that technology, demographics, and economies are creating unparalleled opportunities for anyone with eyes to see. Let's look into what's hot into the future and how you can surge ahead.</p>
+  // "future-real-estate": {
+  //   id: 2,
+  //   category: "Market Trends",
+  //   title: "The Future of Real Estate Business: Opportunities You Can't Afford to Miss",
+  //   author: "Marketing Desk",
+  //   date: "Jan 12, 2026",
+  //   readTime: "6 min read",
+  //   image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200",
+  //   tags: ["Technology", "Sustainability", "Trends"],
+  //   quote: "Luxury is no longer about the gold on the walls; it is about the air you breathe and the silence of your surroundings.",
+  //   content: `
+  //     <p>The property market is moving at a pace never before witnessed. The reality is that technology, demographics, and economies are creating unparalleled opportunities for anyone with eyes to see. Let's look into what's hot into the future and how you can surge ahead.</p>
       
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">The Digital Revolution Continues</h3>
-      <p>Just five years ago, virtual tours of properties were the stuff of science fiction. Today they are mundane. Potential buyers can tour homes from their desks, never having to step foot on a plane. Artificial intelligence helps analyze market information within seconds. Chatbots give basic information at any time of day. Those technology masters, while maintaining a personal touch, are the masters who'll be on top.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">The Digital Revolution Continues</h3>
+  //     <p>Just five years ago, virtual tours of properties were the stuff of science fiction. Today they are mundane. Potential buyers can tour homes from their desks, never having to step foot on a plane. Artificial intelligence helps analyze market information within seconds. Chatbots give basic information at any time of day. Those technology masters, while maintaining a personal touch, are the masters who'll be on top.</p>
 
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Sustainability Sells</h3>
-      <p>The category of eco-conscious buyers is not a niche market anymore but a mainstream market. Prominent influences include energy-efficient houses, solar power, and smart thermostats. Buildings with smaller carbon footprints fetch a higher price and sell faster. The real estate industry today rewards professionals who can talk intelligently about the green movement and its associated savings.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Sustainability Sells</h3>
+  //     <p>The category of eco-conscious buyers is not a niche market anymore but a mainstream market. Prominent influences include energy-efficient houses, solar power, and smart thermostats. Buildings with smaller carbon footprints fetch a higher price and sell faster. The real estate industry today rewards professionals who can talk intelligently about the green movement and its associated savings.</p>
 
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Remote Work Reshapes Demand</h3>
-      <p>The 'work from anywhere' movement has fundamentally changed what we all want. Home offices are no longer a bonus, they’re a requirement. This presents opportunities for untapped markets in secondary cities with cheaper options and better standards of living.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Remote Work Reshapes Demand</h3>
+  //     <p>The 'work from anywhere' movement has fundamentally changed what we all want. Home offices are no longer a bonus, they’re a requirement. This presents opportunities for untapped markets in secondary cities with cheaper options and better standards of living.</p>
 
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Blockchain and Tokenization</h3>
-      <p>New technologies offer hope with the promise of a sea change in transaction execution. Blockchain promises an open, secure process, while tokenization allows people to own real estate at various scales. Understanding this now puts you in the innovative leadership arena.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Blockchain and Tokenization</h3>
+  //     <p>New technologies offer hope with the promise of a sea change in transaction execution. Blockchain promises an open, secure process, while tokenization allows people to own real estate at various scales. Understanding this now puts you in the innovative leadership arena.</p>
 
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Experience over Square Footage</h3>
-      <p>Today's generational buyer has different priorities. They would take a walkable community with amenities and flexibility over a formal dining room they never use. It's about understanding the psyche of the buyers beyond the 'price per square footage'.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Experience over Square Footage</h3>
+  //     <p>Today's generational buyer has different priorities. They would take a walkable community with amenities and flexibility over a formal dining room they never use. It's about understanding the psyche of the buyers beyond the 'price per square footage'.</p>
 
-      <p><strong>Seize the Moment:</strong> The next decade shall see more wealth created in real estate than possibly ever in history. Stay curious, embrace change, and find one trend to excel at. The future belongs to those making it happen now.</p>
-    `
-  },
-  "smart-solutions": {
-    id: 3,
-    category: "Investment",
-    title: "Smart Investment Solutions: Real Estate and Strategic Planning",
-    author: "Financial Strategy Team",
-    date: "Feb 05, 2026",
-    readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200",
-    tags: ["Wealth", "Tax Planning", "REITs"],
-    quote: "Consistency is more important than cleverness. The mathematical fact of compounding rewards those who start today, not tomorrow.",
-    content: `
-      <p>All investors face challenges: scarcity of capital, overwhelming choices, tax uncertainties, and market volatility. This guide presents effective solutions for these hurdles.</p>
+  //     <p><strong>Seize the Moment:</strong> The next decade shall see more wealth created in real estate than possibly ever in history. Stay curious, embrace change, and find one trend to excel at. The future belongs to those making it happen now.</p>
+  //   `
+  // },
+  // "smart-solutions": {
+  //   id: 3,
+  //   category: "Investment",
+  //   title: "Smart Investment Solutions: Real Estate and Strategic Planning",
+  //   author: "Financial Strategy Team",
+  //   date: "Feb 05, 2026",
+  //   readTime: "10 min read",
+  //   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200",
+  //   tags: ["Wealth", "Tax Planning", "REITs"],
+  //   quote: "Consistency is more important than cleverness. The mathematical fact of compounding rewards those who start today, not tomorrow.",
+  //   content: `
+  //     <p>All investors face challenges: scarcity of capital, overwhelming choices, tax uncertainties, and market volatility. This guide presents effective solutions for these hurdles.</p>
       
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 1: I Don't Have Enough Money to Start</h3>
-      <p>Millions believe investing needs lakhs, delaying the process indefinitely. The mathematical fact is that a 25-year-old investing ₹2,000 every month creates more wealth than a 35-year-old investing ₹10,000 every month.</p>
-      <p><strong>Solution:</strong> Micro-investing. Mutual Fund SIPs (minimum ₹500), Micro REIT Units (₹10,000 range), or PPF Accounts (minimum ₹500). Saving ₹3,000/month from age 25 at 12% return results in ₹1.76 crores by age 60.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 1: I Don't Have Enough Money to Start</h3>
+  //     <p>Millions believe investing needs lakhs, delaying the process indefinitely. The mathematical fact is that a 25-year-old investing ₹2,000 every month creates more wealth than a 35-year-old investing ₹10,000 every month.</p>
+  //     <p><strong>Solution:</strong> Micro-investing. Mutual Fund SIPs (minimum ₹500), Micro REIT Units (₹10,000 range), or PPF Accounts (minimum ₹500). Saving ₹3,000/month from age 25 at 12% return results in ₹1.76 crores by age 60.</p>
 
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 2: Real Estate Requires Too Much Capital</h3>
-      <p><strong>Solution:</strong> 
-        <br/>1. <strong>REITs:</strong> (₹10,000 entry) Invest in Grade A office spaces like Embassy or Mindspace. Target 12-15% total returns.
-        <br/>2. <strong>Crowdfunding:</strong> (₹5-10L) Pool funds for commercial ventures.
-        <br/>3. <strong>Leverage:</strong> Use Home Loans at 8-9% to leverage bank money.
-      </p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 2: Real Estate Requires Too Much Capital</h3>
+  //     <p><strong>Solution:</strong> 
+  //       <br/>1. <strong>REITs:</strong> (₹10,000 entry) Invest in Grade A office spaces like Embassy or Mindspace. Target 12-15% total returns.
+  //       <br/>2. <strong>Crowdfunding:</strong> (₹5-10L) Pool funds for commercial ventures.
+  //       <br/>3. <strong>Leverage:</strong> Use Home Loans at 8-9% to leverage bank money.
+  //     </p>
 
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 3: I Don't Understand Stock Markets</h3>
-      <p><strong>Solution:</strong> Simple index funds (Nifty 50) - "Set it and Forget it". Or use Robo-advisory platforms like Smallcase. Consistency is more important than cleverness. A target allocation of 40% Index Funds, 30% PPF, 15% Balanced funds, and 10% REITs works for most knowledge-limited investors.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 3: I Don't Understand Stock Markets</h3>
+  //     <p><strong>Solution:</strong> Simple index funds (Nifty 50) - "Set it and Forget it". Or use Robo-advisory platforms like Smallcase. Consistency is more important than cleverness. A target allocation of 40% Index Funds, 30% PPF, 15% Balanced funds, and 10% REITs works for most knowledge-limited investors.</p>
 
-      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 4: How Do I Save Tax While Building Wealth?</h3>
-      <p>Strategic tax-efficient investing offers a two-fold benefit. Utilize Section 80C (ELSS/PPF), Section 80CCD (NPS), and Section 24 (Home Loan interest). 
-      An investor in the 30% bracket can save up to ₹1.54 lakhs per year in taxes. Investing that tax saving alone adds up to ₹96 lakhs over 20 years at 10% returns.</p>
+  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Problem 4: How Do I Save Tax While Building Wealth?</h3>
+  //     <p>Strategic tax-efficient investing offers a two-fold benefit. Utilize Section 80C (ELSS/PPF), Section 80CCD (NPS), and Section 24 (Home Loan interest). 
+  //     An investor in the 30% bracket can save up to ₹1.54 lakhs per year in taxes. Investing that tax saving alone adds up to ₹96 lakhs over 20 years at 10% returns.</p>
 
-      <p><strong>The Journey:</strong> Financial success is determined by applying tried-and-true strategies. Start working on one issue this week. The best way to deal with investment issues? Invest now.</p>
-    `
+  //     <p><strong>The Journey:</strong> Financial success is determined by applying tried-and-true strategies. Start working on one issue this week. The best way to deal with investment issues? Invest now.</p>
+  //   `
   }
-};
+
 
 export default function BlogPortal() {
   const [activeSlug, setActiveSlug] = useState("vizag-2026");
