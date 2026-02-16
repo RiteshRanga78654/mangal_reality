@@ -20,8 +20,8 @@ const BLOG_DATA = {
     tags: ["Visakhapatnam", "Coastal Living", "Smart Investment"],
     quote: "Imagine waking up to the sound of waves and commuting to work without spending two hours in traffic. This is the new reality of Vizag.",
     content: `
-      <p>Are you looking for the next big smart investment opportunity? The coastal city of Visakhapatnam is your call now to the next big opportunity to invest in. The Indian real estate landscape is shifting, and coastal cities are emerging as the new growth centers. Imagine waking up to the sound of waves, breathing fresh sea air, and commuting to work without spending two hours in traffic. Sounds like a dream? Welcome to Visakhapatnam, where this dream is your everyday reality.</p>
-      <p>This port city in Andhra Pradesh isn't just about beautiful beaches anymore. Visakhapatnam real estate has evolved significantly over the past decade. What was once primarily a market driven by local demand is now attracting investors and homebuyers from across India. This guide will walk you through everything you need to know about finding your perfect home in the City of Destiny.</p>
+      <p>Are you looking for the next big smart investment opportunity? The coastal city of Visakhapatnam is your call now to the next big opportunity to invest in. The Indian real estate landscape is shifting, and coastal cities are emerging as the new growth centers.Imagine waking up to the sound of waves, breathing fresh sea air, and commuting to work without spending two hours in traffic. Sounds like a dream? Welcome to Visakhapatnam, where this dream is your everyday reality.</p>
+      <p>This port city in Andhra Pradesh isn't just about beautiful beaches anymore. Visakhapatnam real estate has evolved significantly over the past decade. What was once primarily a market driven by local demand is now attracting investors and homebuyers from across India. This guide will walk you through everything you need to know about finding your perfect home in the City of Destiny. </p>
       
       <h3 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Why Visakhapatnam Is Catching Investor Attention</h3>
       
@@ -188,6 +188,7 @@ export default function BlogPortal() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           <div className="lg:col-span-8">
+            
             <article className="prose prose-lg max-w-none prose-p:text-gray-600 prose-p:leading-relaxed prose-p:mb-6">
               <div 
                 className="content-render"
