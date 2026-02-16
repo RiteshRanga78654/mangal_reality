@@ -57,7 +57,7 @@ const MangalButton = ({ text, href }) => (
     <span className="absolute inset-0 bg-[#22c55e] transition-transform duration-500 ease-out transform scale-x-0 origin-left group-hover:scale-x-100"></span>
     
     {/* This layer handles the text color change */}
-    <span className="relative z-10 text-[#22c55e] font-bold tracking-widest text-xs transition-colors duration-500 group-hover:text-white uppercase">
+    <span className="relative z-10 text-[#22c55e] font-bold tracking-widest text-xs transition-colors duration-500 group-hover:text-white ">
       {text}
     </span>
   </Link>
@@ -188,14 +188,14 @@ const CompletedProjectsPage = () => {
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-emerald-50 rounded-xl text-[#22C55E]"><MapPin size={24} /></div>
                     <div>
-                        <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-1">Location</p>
+                        <p className="text-[10px] text-gray-400 font-black  tracking-widest mb-1">Location</p>
                         <p className="font-bold text-slate-800 text-lg">{project.location}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-emerald-50 rounded-xl text-[#22C55E]"><Maximize2 size={24} /></div>
                     <div>
-                        <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-1">Total Area</p>
+                        <p className="text-[10px] text-gray-400 font-black  tracking-widest mb-1">Total Area</p>
                         <p className="font-bold text-slate-800 text-lg">{project.area}</p>
                     </div>
                   </div>
@@ -248,7 +248,7 @@ const CompletedProjectsPage = () => {
         <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
             <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none">
-                The <span className="text-[#22C55E]">Mangal</span> Standard
+                The <span className="text-[#22C55E]">Mangal</span> Realty
             </h2>
             <div className="w-32 h-2 bg-[#22C55E] mx-auto mt-8"></div>
             </div>

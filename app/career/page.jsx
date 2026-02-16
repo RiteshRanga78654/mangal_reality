@@ -265,7 +265,7 @@ export default function CareerPage() {
             <p>
               Our hiring process reflects this, every step is about mutual discovery and finding the right fit for both of us.
             </p>
-            {/* <div className="flex items-center gap-2 text-[#22c55e] font-bold text-xs uppercase tracking-widest">
+            {/* <div className="flex items-center gap-2 text-[#22c55e] font-bold text-xs  tracking-widest">
               Ready to start? <ArrowRight size={16} />
             </div> */}
           </div>
@@ -304,11 +304,11 @@ export default function CareerPage() {
             >
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-[10px] font-black text-[#22c55e] uppercase tracking-[0.2em]">
+                  <span className="text-[10px] font-black text-[#22c55e]  tracking-[0.2em]">
                     {job.department}
                   </span>
                   <div className="w-1 h-1 bg-gray-300" />
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest flex items-center gap-1">
+                  <span className="text-[10px] font-bold text-gray-400  tracking-widest flex items-center gap-1">
                     <MapPin size={12} /> {job.location}
                   </span>
                 </div>
@@ -325,7 +325,7 @@ export default function CareerPage() {
                   setSelectedJob(job);
                   setIsFormOpen(true);
                 }}
-                className="group relative cursor-pointer px-12 py-5 text-[#22c55e] group-hover:text-white font-bold uppercase tracking-widest text-xs overflow-hidden"
+                className="group relative cursor-pointer px-12 py-5 text-[#22c55e] group-hover:text-white font-bold  tracking-widest text-xs overflow-hidden"
               >
                 <span className="relative z-10">Apply Position</span>
                 <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
@@ -418,14 +418,14 @@ export default function CareerPage() {
                     className={`mx-auto mb-2 ${selectedFile ? "text-[#22c55e]" : "text-gray-300"} group-hover:text-[#22c55e]`}
                     size={24}
                   />
-                  <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">
+                  <p className="text-[10px] text-gray-400 font-bold  tracking-widest">
                     {selectedFile ? `Selected: ${selectedFile.name}` : "Upload CV (PDF - Max 5MB)"}
                   </p>
                 </div>
 
                 <button
                   type="submit"
-                  className="group relative w-full cursor-pointer py-5 text-[#22c55e] hover:text-white font-bold uppercase tracking-[0.1em] text-[12px] overflow-hidden transition-colors duration-500"
+                  className="group relative w-full cursor-pointer py-5 text-[#22c55e] hover:text-white font-bold  tracking-[0.1em] text-[12px] overflow-hidden transition-colors duration-500"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Submit Application <Send size={12} />

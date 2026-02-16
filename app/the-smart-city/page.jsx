@@ -114,7 +114,7 @@ const SmartCityPremium = () => {
               The Smart City located in the vibrant area of Dakamari epresents the perfect fusion of modern technology & comfortable family living.
 
             </p>
-            <MangalButton text="Download Brochure" href="/brochure.pdf" />
+            <MangalButton text="Download Brochure" href="" />
           </motion.div>
         </div>
       </section>
@@ -124,7 +124,7 @@ const SmartCityPremium = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white shadow-2xl p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
             <TrendingUp className="text-[#22C55E] mb-4" size={24} />
-            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left uppercase">
+            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left ">
               Total Area
             </p>
             <h2 className="text-4xl font-bold text-black leading-none tracking-tighter text-left flex items-center gap-2">
@@ -154,7 +154,7 @@ const SmartCityPremium = () => {
       <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
         {/* 1. INFRASTRUCTURE HEADER */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none text-slate-900 uppercase">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none text-slate-900 ">
             Elite <span className="text-[#15803d]">Infrastructure</span>
           </h2>
           <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
@@ -175,7 +175,7 @@ const SmartCityPremium = () => {
               <div className="text-[#15803d] mb-6 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                 {item.icon}
               </div>
-              <h4 className="text-xl font-bold uppercase mb-3 tracking-tight text-slate-900 group-hover:text-white transition-colors duration-300">
+              <h4 className="text-xl font-bold  mb-3 tracking-tight text-slate-900 group-hover:text-white transition-colors duration-300">
                 {item.title}
               </h4>
               <p className="text-slate-500 text-sm leading-relaxed group-hover:text-emerald-50 transition-colors duration-300">
@@ -187,7 +187,7 @@ const SmartCityPremium = () => {
 
         {/* 2. CONNECTIVITY HEADER */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-slate-900 uppercase">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-slate-900 ">
             Just Minutes From <span className="text-[#15803d]">Everywhere</span>
           </h2>
           <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
@@ -218,7 +218,7 @@ const SmartCityPremium = () => {
             }
           ].map((item, idx) => (
             <div key={idx} className="flex flex-col border-l-4 border-[#15803d] pl-6 py-4 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group rounded-r-2xl">
-              <span className="text-[10px] uppercase font-black text-slate-400 tracking-[0.2em] mb-1 group-hover:text-[#15803d] transition-colors">
+              <span className="text-[10px]  font-black text-slate-400 tracking-[0.2em] mb-1 group-hover:text-[#15803d] transition-colors">
                 {item.title}
               </span>
               <span className="text-3xl lg:text-4xl font-black text-[#15803d] tracking-tighter mb-2">
@@ -240,7 +240,7 @@ const SmartCityPremium = () => {
               <h2 className="text-3xl md:text-7xl font-bold text-black tracking-tighter leading-none">
                 The <span className="text-[#22C55E]">Connectivity</span> Hub
               </h2>
-              <p className="text-slate-900 mt-6 text-xl font-bold uppercase tracking-tight border-[#22C55E] pl-6">
+              <p className="text-slate-900 mt-6 text-xl font-bold  tracking-tight border-[#22C55E] pl-6">
                 Where Location Meets Lifestyle
               </p>
 
@@ -270,7 +270,7 @@ const SmartCityPremium = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-left">
                 <span className="bg-[#22C55E] text-white px-4 py-1 -full text-[10px] font-bold tracking-widest mb-4 inline-block">5 Minutes Drive</span>
-                <h4 className="text font-bold text-white uppercase ">Bhogapuram International Airport</h4>
+                <h4 className="text font-bold text-white  ">Bhogapuram International Airport</h4>
               </div>
             </div>
 
@@ -299,7 +299,7 @@ const SmartCityPremium = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     <div className="absolute bottom-8 left-8 text-left text-white">
                       <Stethoscope size={40} className="mb-4 opacity-60 text-[#22C55E]" />
-                      <h4 className="text-2xl font-bold uppercase leading-tight mb-2 tracking-tighter">Health City</h4>
+                      <h4 className="text-2xl font-bold  leading-tight mb-2 tracking-tighter">Health City</h4>
                     </div>
                   </motion.div>
 
@@ -311,7 +311,7 @@ const SmartCityPremium = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                     <div className="absolute bottom-8 left-8 text-left text-white">
                       <ShoppingBag size={40} className="mb-4 opacity-60 text-[#22C55E]" />
-                      <h4 className="text-2xl font-bold uppercase leading-tight mb-2 tracking-tighter">Retail Hubs</h4>
+                      <h4 className="text-2xl font-bold  leading-tight mb-2 tracking-tighter">Retail Hubs</h4>
                     </div>
                   </motion.div>
                 </>
@@ -322,7 +322,7 @@ const SmartCityPremium = () => {
               <div className={`grid gap-x-12 gap-y-6 w-full ${showMoreLandmarks ? 'grid-cols-1' : 'grid-cols-2'}`}>
                 {[{ l: "Vizag CMR", d: "35 Mins" }, { l: "Madhurawada", d: "20 Mins" }].map((item, i) => (
                   <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2 bg-slate-50/50 -r-xl">
-                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{item.l}</span>
+                    <span className="text-[10px]  font-bold text-slate-400 tracking-widest">{item.l}</span>
                     <span className="text-2xl font-bold">{item.d}</span>
                   </div>
                 ))}
@@ -337,7 +337,7 @@ const SmartCityPremium = () => {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10 text-left">
           <div className="w-full lg:w-3/5">
             {/* Standardized Heading */}
-            <h3 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase mb-12 leading-none">A Secure <br /> <span className="text-[#22C55E]">Investment</span> Hub</h3>
+            <h3 className="text-4xl md:text-7xl font-bold tracking-tighter  mb-12 leading-none">A Secure <br /> <span className="text-[#22C55E]">Investment</span> Hub</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12">
               {[
                 { title: "VMRDA Approved", sub: "L.P.NO: 82/2020/1167" },
@@ -348,7 +348,7 @@ const SmartCityPremium = () => {
                 <div key={i} className="flex gap-4 items-start">
                   <CheckCircle className="text-[#22C55E] shrink-0" size={24} />
                   <div>
-                    <h5 className="font-bold uppercase tracking-tight">{check.title}</h5>
+                    <h5 className="font-bold  tracking-tight">{check.title}</h5>
                     <p className="text-slate-400 text-xs mt-1">{check.sub}</p>
                   </div>
                 </div>
@@ -375,7 +375,7 @@ const SmartCityPremium = () => {
               <Quote className="absolute -top-10 -left-10 text-[#22C55E] opacity-10" size={200} />
               <div className="relative z-10">
                 {/* Standardized Heading */}
-                <h3 className="text-4xl md:text-7xl font-bold uppercase leading-none mb-8">What Our <br /> <span className="text-[#22C55E]">Investors</span> Say</h3>
+                <h3 className="text-4xl md:text-7xl font-bold  leading-none mb-8">What Our <br /> <span className="text-[#22C55E]">Investors</span> Say</h3>
 
                 <div className={`transition-all duration-500 min-h-[160px] transform ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
                   <p className="text-2xl font-medium text-slate-800 leading-relaxed mb-10">
@@ -386,11 +386,11 @@ const SmartCityPremium = () => {
                       {testimonials[testimonialIndex].name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-bold text-xl uppercase tracking-tight">{testimonials[testimonialIndex].name}</p>
+                      <p className="font-bold text-xl  tracking-tight">{testimonials[testimonialIndex].name}</p>
                       <div className="flex text-[#22C55E] mb-1">
                         <Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" />
                       </div>
-                      <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{testimonials[testimonialIndex].role}</p>
+                      <p className="text-xs font-bold text-slate-400  tracking-widest">{testimonials[testimonialIndex].role}</p>
                     </div>
                   </div>
                 </div>
@@ -416,7 +416,7 @@ const SmartCityPremium = () => {
                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
                   className="w-full p-6 flex justify-between items-center text-left"
                 >
-                  <span className="font-bold text-black uppercase tracking-tight">{faq.q}</span>
+                  <span className="font-bold text-black  tracking-tight">{faq.q}</span>
                   <div className="text-[#22C55E]">
                     {activeFaq === idx ? <Minus size={18} /> : <Plus size={18} />}
                   </div>
@@ -439,7 +439,7 @@ const SmartCityPremium = () => {
 <footer className="py-24 px-6 text-center bg-white border-t border-slate-100 relative">
   <div className="max-w-4xl mx-auto">
     {/* Standardized Heading */}
-    <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-10 leading-none text-black">
+    <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-10 leading-none text-black">
       Invest in the <br /> <span className="text-[#22C55E]">Smart Future</span>
     </h2>
     
@@ -455,7 +455,7 @@ const SmartCityPremium = () => {
     {/* This is the only button changed to black text */}
     <MangalButton 
       text="Book Site Visit" 
-      href="/contact" 
+      href="/contact-us" 
       className="text-black" 
     />
   </div>

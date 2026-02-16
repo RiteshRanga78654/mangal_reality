@@ -111,7 +111,7 @@ const AlternativeVideoGallery = () => {
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 border-b border-slate-100 pb-12 gap-6 text-center md:text-left">
             <div>
-              {/* <p className="text-[#22C55E] text-[10px] font-bold tracking-[0.3em] uppercase mb-4">Gallery Grid</p> */}
+              {/* <p className="text-[#22C55E] text-[10px] font-bold tracking-[0.3em]  mb-4">Gallery Grid</p> */}
               <h2 className="text-4xl md:text-6xl font-bold tracking-tighter  text-slate-900 leading-none">Featured <br className="hidden md:block"/> Walkthroughs</h2>
             </div>
             <div className="max-w-xs text-slate-400 text-[10px] md:text-xs tracking-widest leading-loose  md:text-right">
@@ -137,15 +137,15 @@ const AlternativeVideoGallery = () => {
                     alt={vid.title}
                   />
                   <div className="absolute top-0 right-0 p-6 z-20 overflow-hidden">
-                      <div className="flex items-center gap-2 translate-x-full group-hover:translate-x-0 transition-transform duration-500 bg-[#22C55E] text-white px-4 py-2 font-bold text-[10px] tracking-widest uppercase">
+                      <div className="flex items-center gap-2 translate-x-full group-hover:translate-x-0 transition-transform duration-500 bg-[#22C55E] text-white px-4 py-2 font-bold text-[10px] tracking-widest ">
                           Play Video <ArrowUpRight size={14} />
                       </div>
                   </div>
                   <div className="absolute inset-0 p-8 flex flex-col justify-end z-10 text-left">
                     <div className="space-y-1 transform transition-all duration-500 group-hover:-translate-y-4">
-                      <span className="text-[#22C55E] text-[9px] font-bold tracking-[0.2em] uppercase">{vid.category}</span>
-                      <h3 className="text-2xl md:text-4xl font-bold text-white uppercase tracking-tighter leading-tight">{vid.title}</h3>
-                      <p className="text-gray-400 text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 uppercase tracking-widest">{vid.subtitle}</p>
+                      <span className="text-[#22C55E] text-[9px] font-bold tracking-[0.2em] ">{vid.category}</span>
+                      <h3 className="text-2xl md:text-4xl font-bold text-white  tracking-tighter leading-tight">{vid.title}</h3>
+                      <p className="text-gray-400 text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500  tracking-widest">{vid.subtitle}</p>
                     </div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -162,7 +162,7 @@ const AlternativeVideoGallery = () => {
             <div className="mt-20 flex justify-center">
               <button 
                 onClick={handleLoadMore}
-                className="group relative px-12 py-5 border border-[#22C55E] text-[#22C55E] cursor-pointer font-bold tracking-widest text-[10px] uppercase overflow-hidden transition-all duration-500 hover:text-white"
+                className="group relative px-12 py-5 border border-[#22C55E] text-[#22C55E] cursor-pointer font-bold tracking-widest text-[10px]  overflow-hidden transition-all duration-500 hover:text-white"
               >
                 <span className="relative z-10 flex items-center gap-2">Load More <Plus size={14} /></span>
                 <div className="absolute inset-0 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
@@ -184,7 +184,7 @@ const AlternativeVideoGallery = () => {
              </div>
           </div>
           <div className="w-full lg:w-1/2 space-y-8 text-center lg:text-left">
-            <h2 className="text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85] text-slate-900">Beyond the <br/> <span className="text-[#22C55E]">Lens</span></h2>
+            <h2 className="text-5xl md:text-8xl font-bold tracking-tighter  leading-[0.85] text-slate-900">Beyond the <br/> <span className="text-[#22C55E]">Lens</span></h2>
             <p className="text-slate-600 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
               We capture more than just layouts; we record the soul of the community. From the first tree planted at The Nature City to the final brick at Green Meadows.
             </p>

@@ -427,7 +427,7 @@ export default function MangalLeadership() {
             style={{ color: brandGreen }}
           />
           <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tighter">
-           The Mangal Belief
+           The Mangal Realty Belief
           </h2>
 
           <div className="mt-10">

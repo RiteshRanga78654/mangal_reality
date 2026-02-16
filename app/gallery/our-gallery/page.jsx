@@ -88,10 +88,10 @@ export default function LuxuryGalleryPage() {
         <section className="py-24 max-w-7xl mx-auto px-4 md:px-6 bg-white">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 border-b border-slate-100 pb-12 gap-6 text-center md:text-left">
             <div>
-              <p className="text-[#22C55E] text-[10px] font-bold tracking-[0.3em] uppercase mb-4">Visual Journey</p>
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase text-slate-900 leading-none">Photo <br className="hidden md:block"/> Collection</h2>
+              <p className="text-[#22C55E] text-[10px] font-bold tracking-[0.3em]  mb-4">Visual Journey</p>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter  text-slate-900 leading-none">Photo <br className="hidden md:block"/> Collection</h2>
             </div>
-            <div className="max-w-xs text-slate-400 text-[10px] md:text-xs tracking-widest leading-loose uppercase md:text-right">
+            <div className="max-w-xs text-slate-400 text-[10px] md:text-xs tracking-widest leading-loose  md:text-right">
                 Explore the textures, landscapes, and architectural details that define Mangal Realty.
             </div>
           </div>

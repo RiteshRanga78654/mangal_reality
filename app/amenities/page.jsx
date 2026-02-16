@@ -102,7 +102,7 @@ export default function AmenitiesPage() {
       <div className="text-[#22c55e] group-hover:text-black transition-colors">
         {React.cloneElement(icon, { size: 16 })}
       </div>
-      <span className="text-white group-hover:text-black text-[10px] md:text-[11px] font-bold tracking-wider uppercase leading-tight truncate">
+      <span className="text-white group-hover:text-black text-[10px] md:text-[11px] font-bold tracking-wider  leading-tight truncate">
         {title}
       </span>
     </div>
@@ -115,7 +115,7 @@ export default function AmenitiesPage() {
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000')" }} />
         <div className="absolute inset-0 bg-black/80" />
         <div className="relative z-10 text-center px-4">
-          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] font-bold tracking-[0.3em] text-white/40 uppercase">
+          <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] font-bold tracking-[0.3em] text-white/40 ">
             <a href="/" className="hover:text-white transition-colors flex items-center gap-1"><HomeIcon size={12}/> Home</a>
             <ChevronRight size={12} />
             <span className="text-[#22c55e]">Amenities</span>
@@ -123,7 +123,7 @@ export default function AmenitiesPage() {
           <h1 className="text-white text-4xl md:text-6xl font-black tracking-tighter">
             188 <span style={{ color: brandGreen }}>Elite</span> Amenities
           </h1>
-          {/* <p className="text-white/40 mt-4 tracking-[0.4em] text-[10px] uppercase font-bold">Unrivaled Excellence in Every Detail</p> */}
+          {/* <p className="text-white/40 mt-4 tracking-[0.4em] text-[10px]  font-bold">Unrivaled Excellence in Every Detail</p> */}
         </div>
       </header>
 
@@ -133,9 +133,9 @@ export default function AmenitiesPage() {
           <section key={idx} className="mb-16">
             <div className="flex items-center gap-4 mb-6">
               <div className="text-[#22c55e]">{zone.icon}</div>
-              <h2 className="text-white text-xl md:text-2xl font-black uppercase tracking-widest">{zone.name}</h2>
+              <h2 className="text-white text-xl md:text-2xl font-black  tracking-widest">{zone.name}</h2>
               <div className="h-[1px] flex-1 bg-white/10"></div>
-              <span className="text-white/20 text-[10px] font-bold uppercase">{zone.items.length} Items</span>
+              <span className="text-white/20 text-[10px] font-bold ">{zone.items.length} Items</span>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
@@ -150,7 +150,7 @@ export default function AmenitiesPage() {
       {/* Footer CTA */}
       {/* <footer className="max-w-7xl mx-auto px-4 mt-20">
         <div className="border-t border-white/10 pt-10 text-center">
-          <p className="text-white/30 text-[9px] uppercase tracking-[0.5em] font-bold mb-4">
+          <p className="text-white/30 text-[9px]  tracking-[0.5em] font-bold mb-4">
             Mangal Realty • Green Meadows Jonnada
           </p>
         </div>

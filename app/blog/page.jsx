@@ -242,7 +242,7 @@ export default function MangalRealtyBlog() {
           </button>
           
           <div className="max-w-4xl">
-            <span className="bg-[#22c55e]/10 text-[#22c55e] px-4 py-1.5 rounded-lg text-[10px] font-black tracking-widest mb-6 inline-block uppercase">
+            <span className="bg-[#22c55e]/10 text-[#22c55e] px-4 py-1.5 rounded-lg text-[10px] font-black tracking-widest mb-6 inline-block ">
               {post.category}
             </span>
             <h1 className="text-4xl md:text-6xl text-[#22c55e] font-bold mb-8 tracking-tight leading-[1.1]">
@@ -292,7 +292,7 @@ export default function MangalRealtyBlog() {
             {/* Sidebar with Suggestions */}
             <aside className="lg:col-span-4 space-y-8">
               <div className="bg-[#0a1a10] p-8 rounded-[2.5rem] text-white">
-                <h4 className="text-[10px] font-black text-[#22c55e] tracking-widest mb-6 uppercase">Continue Reading</h4>
+                <h4 className="text-[10px] font-black text-[#22c55e] tracking-widest mb-6 ">Continue Reading</h4>
                 <div className="space-y-4">
                   {Object.entries(BLOG_CONTENT).filter(([s]) => s !== activeSlug).map(([slug, data]) => (
                     <button 
@@ -323,7 +323,7 @@ export default function MangalRealtyBlog() {
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 text-center text-white px-6">
-          <nav className="flex items-center justify-center gap-2 mb-6 text-sm font-bold tracking-widest uppercase">
+          <nav className="flex items-center justify-center gap-2 mb-6 text-sm font-bold tracking-widest ">
             <a href="/" className="hover:text-[#22C55E]">Home</a>
             <ChevronRight size={12} className="opacity-50" />
             <span className="text-emerald-400">The Blogs</span>
@@ -338,7 +338,7 @@ export default function MangalRealtyBlog() {
         <section className="bg-gray-50 border-b border-gray-100 pt-20 pb-12 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-10">
             <div>
-              <h4 className="text-[#22c55e] font-bold text-xs tracking-widest mb-4 uppercase">Insights & Updates</h4>
+              <h4 className="text-[#22c55e] font-bold text-xs tracking-widest mb-4 ">Insights & Updates</h4>
               <h1 className="text-4xl md:text-6xl font-bold">Corporate <span className="text-[#22c55e]">Journal.</span></h1>
             </div>
             <div className="relative w-full md:w-80">
@@ -356,7 +356,7 @@ export default function MangalRealtyBlog() {
               <button 
                 key={cat} 
                 onClick={() => setActiveTab(cat)}
-                className={`pb-5 text-[11px] font-bold tracking-widest uppercase transition-all relative ${activeTab === cat ? "text-[#22c55e]" : "text-gray-400 hover:text-black"}`}
+                className={`pb-5 text-[11px] font-bold tracking-widest  transition-all relative ${activeTab === cat ? "text-[#22c55e]" : "text-gray-400 hover:text-black"}`}
               >
                 {cat}
                 {activeTab === cat && <motion.div layoutId="underline" className="absolute bottom-0 left-0 right-0 h-1 bg-[#22c55e]" />}

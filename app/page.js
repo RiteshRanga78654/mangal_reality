@@ -296,7 +296,7 @@ const Page = () => {
               <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/40 z-[11]"></div>
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6 text-white">
-                <span className="text-xl leading-relaxed mb-4 font-medium uppercase tracking-widest">
+                <span className="text-xl leading-relaxed mb-4 font-medium  tracking-widest">
                   {item.label}
                 </span>
                 <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
@@ -464,7 +464,7 @@ const Page = () => {
         <section className="bg-white py-16 px-4 sm:px-6 lg:px-12 w-full overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center mb-12 text-center">
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-[#0a1a10] tracking-tighter uppercase">Testimonials</h2>
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-[#0a1a10] tracking-tighter ">Testimonials</h2>
               <div className="w-24 h-1.5 bg-[#22C55E] mx-auto mb-4 rounded-none"></div>
             </div>
 
@@ -505,10 +505,10 @@ const Page = () => {
                             </div>
 
                             <div className="flex-1">
-                              <h4 className="text-[#0a1a10] font-bold text-sm md:text-base tracking-tight uppercase leading-none">
+                              <h4 className="text-[#0a1a10] font-bold text-sm md:text-base tracking-tight  leading-none">
                                 {item.name}
                               </h4>
-                              <p className="text-[#22c55e] text-[10px] font-bold tracking-widest uppercase mt-1">
+                              <p className="text-[#22c55e] text-[10px] font-bold tracking-widest  mt-1">
                                 {item.role}
                               </p>
                             </div>

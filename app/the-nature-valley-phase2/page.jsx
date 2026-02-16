@@ -250,7 +250,7 @@ const NatureValleyPhase2 = () => {
 
             {/* Link to Google Maps or a PDF/Image Map */}
             <a
-              href="https://maps.google.com/?q=Pisini+Andhra+Pradesh"
+              href="https://maps.app.goo.gl/XHL6U3TMfpLfPW7z7"
               target="_blank"
               rel="noopener noreferrer"
               className="contents"

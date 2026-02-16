@@ -60,7 +60,7 @@ export default function StrategicPartners() {
             className="mt-32 md:mt-48"
           >
             {/* Heading updated to text-4xl md:text-7xl */}
-        {/* <h1 className="text-white text-4xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.85]">
+        {/* <h1 className="text-white text-4xl md:text-7xl font-bold  tracking-tighter leading-[0.85]">
               Strategic <br />
               <span className="text-stone-400">Collaborations</span>
             </h1>
@@ -82,7 +82,7 @@ export default function StrategicPartners() {
               transition={{ delay: 1 }}
               className="mt-12 flex flex-col items-center gap-4"
             >
-              <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 font-bold">
+              <div className="text-[10px]  tracking-[0.5em] text-white/40 font-bold">
                 Scroll to explore
               </div>
               <div className="w-px h-12 bg-linear-to-b from-green-500 to-transparent opacity-50"></div>
@@ -230,7 +230,7 @@ export default function StrategicPartners() {
             Indian Real Estate
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-6">
-            {/* <button className="group relative cursor-pointer px-12 py-5 text-white font-bold uppercase tracking-widest text-xs overflow-hidden">
+            {/* <button className="group relative cursor-pointer px-12 py-5 text-white font-bold  tracking-widest text-xs overflow-hidden">
               <span className="relative z-10">Our Methodology</span>
               <div className="absolute inset-1 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
               <div className="absolute inset-1 border border-green-600"></div>
