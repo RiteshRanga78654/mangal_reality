@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <nav className="flex items-center justify-center gap-3 mb-8 text-xs font-bold tracking-[0.3em] uppercase opacity-80">
+            <nav className="flex items-center justify-center gap-3 mb-8 text-xs font-bold tracking-[0.3em]  opacity-80">
               <a href="/" className="hover:text-[#22C55E] flex items-center gap-1 transition-colors">
                 <Home size={14} /> Home
               </a>
@@ -85,7 +85,7 @@ const PrivacyPolicy = () => {
           {/* STICKY LEFT NAVIGATION */}
           <aside className="lg:col-span-4 hidden lg:block">
             <div className="sticky top-32 space-y-4">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#22C55E] mb-6">Contents</h4>
+              <h4 className="text-[10px] font-black  tracking-[0.4em] text-[#22C55E] mb-6">Contents</h4>
               {sections.map((sec, i) => (
                 <button
                   key={sec.id}
@@ -97,7 +97,7 @@ const PrivacyPolicy = () => {
                   }`}
                 >
                   <span className={`text-sm font-bold ${activeSection === i ? "text-[#22C55E]" : ""}`}>0{i + 1}</span>
-                  <span className="uppercase text-[11px] font-black tracking-widest">{sec.title}</span>
+                  <span className=" text-[11px] font-black tracking-widest">{sec.title}</span>
                 </button>
               ))}
             </div>
@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
                 <p className="text-stone-400">Our privacy officers are available to help you.</p>
               </div>
               
-              <button className="group relative cursor-pointer px-10 py-5 text-[#22C55E] hover:text-[#0a1a10] font-bold uppercase tracking-widest text-xs overflow-hidden transition-all duration-500">
+              <button className="group relative cursor-pointer px-10 py-5 text-[#22C55E] hover:text-[#0a1a10] font-bold  tracking-widest text-xs overflow-hidden transition-all duration-500">
                 <span className="relative z-10 flex items-center gap-2">Contact DPO <ChevronRight size={16} /></span>
                 <div className="absolute inset-1 border border-[#22C55E]" />
                 <div className="absolute inset-1 bg-[#22C55E] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />

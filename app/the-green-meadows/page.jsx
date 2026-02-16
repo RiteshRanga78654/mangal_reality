@@ -15,7 +15,7 @@ const GreenMeadowsJonnada = () => {
   // --- MANGAL REALTY SIGNATURE BUTTON COMPONENT ---
   // --- MANGAL REALTY SIGNATURE BUTTON COMPONENT ---
   const MangalButton = ({ children, onClick, href, className = "" }) => {
-    const classes = `group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden uppercase transition-all duration-300 w-full sm:w-auto inline-block text-center ${className}`;
+    const classes = `group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden  transition-all duration-300 w-full sm:w-auto inline-block text-center ${className}`;
 
     const content = (
       <>
@@ -99,9 +99,9 @@ const GreenMeadowsJonnada = () => {
 
         <div className="w-full lg:w-1/3 flex items-center px-6 md:px-12 py-12 lg:py-20 bg-[#0A1A10]">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="w-full text-left">
-            {/* <h2 className="text-[#22C55E] font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Mangal Realty Presents</h2> */}
-            <h1 className="text-4xl md:text-7xl font-bold text-white leading-none uppercase mb-6 tracking-tighter">
-              GREEN <br /> <span className="text-[#22C55E]">MEADOWS</span>
+            {/* <h2 className="text-[#22C55E] font-bold tracking-[0.3em]  text-[10px] mb-4">Mangal Realty Presents</h2> */}
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-none  mb-6 tracking-tighter">
+              Green <br /> <span className="text-[#22C55E]">Meadows</span>
             </h1>
             <p className="text-white  text-lg mb-8 border-l-2 border-white pl-4">
               “Expansive Green Living Across Five Acres of Excellence”
@@ -122,7 +122,7 @@ const GreenMeadowsJonnada = () => {
           {projectStats.map((stat, i) => (
             <div key={i} className="bg-white shadow-xl p-8 lg:p-10 border-b-8 border-[#22C55E] group text-left">
               <div className="text-[#22C55E] mb-3 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
-              <p className="text-slate-400 text-[9px] font-bold tracking-[0.2em] uppercase mb-1">{stat.label}</p>
+              <p className="text-slate-400 text-[9px] font-bold tracking-[0.2em]  mb-1">{stat.label}</p>
               <h2 className="text-3xl lg:text-4xl font-bold text-black tracking-tighter">{stat.value}</h2>
               <p className="text-slate-500 text-[10px] md:text-xs mt-1 font-bold">{stat.sub}</p>
             </div>
@@ -136,14 +136,14 @@ const GreenMeadowsJonnada = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mb-16 items-start">
           {/* Left Side: Heading */}
           <div className="w-full text-left">
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none uppercase text-slate-900">
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none  text-slate-900">
               Project <br className="hidden md:block" />
               <span className="text-[#22C55E]">Highlights</span>
             </h2>
             <div className="w-16 md:w-20 h-2 bg-[#22C55E] mt-4 md:mt-6"></div>
 
             {/* Original small sub-text */}
-            {/* <p className="mt-6 text-slate-500 font-bold text-sm tracking-wide uppercase">
+            {/* <p className="mt-6 text-slate-500 font-bold text-sm tracking-wide ">
               100% Work Completed • VMRDA Approved
             </p> */}
           </div>
@@ -214,10 +214,10 @@ const GreenMeadowsJonnada = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-left">
-                <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold uppercase mb-3 inline-block tracking-widest">
+                <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold  mb-3 inline-block tracking-widest">
                   Educational Hub
                 </span>
-                <h4 className="text-2xl md:text-4xl font-bold uppercase">Lendi, Raghu & VITAM</h4>
+                <h4 className="text-2xl md:text-4xl font-bold ">Lendi, Raghu & VITAM</h4>
               </div>
             </div>
 
@@ -245,7 +245,7 @@ const GreenMeadowsJonnada = () => {
                   { l: "Madhurawada", d: "25 KM" }
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2">
-                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em] mb-2">
+                    <span className="text-[10px]  font-bold text-slate-400 tracking-[0.2em] mb-2">
                       {item.l}
                     </span>
                     <span className="text-3xl lg:text-5xl font-black text-black tracking-tighter">
@@ -277,11 +277,11 @@ const GreenMeadowsJonnada = () => {
                       {testimonials[testimonialIndex].name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-bold text-lg md:text-xl uppercase tracking-tighter">{testimonials[testimonialIndex].name}</p>
+                      <p className="font-bold text-lg md:text-xl  tracking-tighter">{testimonials[testimonialIndex].name}</p>
                       <div className="flex text-[#22C55E] mb-1">
                         {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="currentColor" />)}
                       </div>
-                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{testimonials[testimonialIndex].role}</p>
+                      <p className="text-[10px] font-bold text-slate-400  tracking-widest">{testimonials[testimonialIndex].role}</p>
                     </div>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ const GreenMeadowsJonnada = () => {
       {/* 6. CONTACT FOOTER */}
       <footer className="py-16 lg:py-24 px-6 bg-[#0A1A10] text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-10 leading-none">
+          <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-10 leading-none">
             Your Jonnada <br /> <span className="text-[#22C55E]">Legacy Starts</span> Here
           </h2>
 
@@ -312,7 +312,7 @@ const GreenMeadowsJonnada = () => {
             {/* Email Link */}
             <a
               href="mailto:info@mangalRealty.com"
-              className="flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
+              className="flex items-center gap-3 font-bold  tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
             >
               <Mail className="text-[#22C55E]" size={18} /> info@mangalRealty.com
             </a>
@@ -320,7 +320,7 @@ const GreenMeadowsJonnada = () => {
             {/* Phone Link */}
             <a
               href="tel:+919429690913"
-              className="flex items-center gap-3 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
+              className="flex items-center gap-3 font-bold  tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
             >
               <Phone className="text-[#22C55E]" size={18} /> +91 9429690913
             </a>
@@ -328,11 +328,11 @@ const GreenMeadowsJonnada = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             {/* Button Links */}
-            <MangalButton href="/">Book Site Visit</MangalButton>
+            <MangalButton href="/contact-us">Book Site Visit</MangalButton>
             <MangalButton href="/contact-us">Contact Sales</MangalButton>
           </div>
 
-          <p className="mt-16 text-[9px] text-slate-600 uppercase tracking-[0.4em] font-bold">
+          <p className="mt-16 text-[9px] text-slate-600  tracking-[0.4em] font-bold">
             © 2024 Mangal Realty. VMRDA LP: 71/2020
           </p>
         </div>

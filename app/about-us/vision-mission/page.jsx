@@ -109,7 +109,7 @@ export default function VisionMission() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-4">
             <div>
               <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4 -mt-20">Non-Negotiables</h2>
-              <p className="text-emerald-700 tracking-[0.2em] text-[10px] md:text-xs font-bold uppercase">The Foundation of Mangal Realty</p>
+              <p className="text-emerald-700 tracking-[0.2em] text-[10px] md:text-xs font-bold ">The Foundation of Mangal Realty</p>
             </div>
             <div className="hidden lg:block h-px bg-slate-200 grow mx-12 mb-4" />
           </div>
@@ -151,7 +151,7 @@ export default function VisionMission() {
           <p className="text-3xl md:text-5xl font-bold leading-tight text-slate-900 mb-10 tracking-tighter">
             "We build legacies that don't <br className="hidden md:block" /> cost the <span className="text-emerald-600">Earth</span>."
           </p>
-          <div className="flex items-center justify-center gap-4 text-slate-400 tracking-[0.3em] text-[10px] font-bold uppercase">
+          <div className="flex items-center justify-center gap-4 text-slate-400 tracking-[0.3em] text-[10px] font-bold ">
             <div className="h-px w-10 bg-slate-200" />
             Established 2026 — Mangal Realty 
             <div className="h-px w-10 bg-slate-200" />

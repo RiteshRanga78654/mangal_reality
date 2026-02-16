@@ -84,7 +84,7 @@ export default function OurCreativesFormal() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             className=""
           >
-            {/* <span className="text-[10px] uppercase tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span> */}
+            {/* <span className="text-[10px]  tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span> */}
             {/* Standardized Heading: text-4xl to 7xl */}
             <div className="relative z-10 text-center text-white px-6">
             <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
@@ -130,7 +130,7 @@ export default function OurCreativesFormal() {
                   )}
                 </div>
                 
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-green-500 mb-4">
+                <p className="text-[10px] font-bold  tracking-[0.3em] text-green-500 mb-4">
                   {item.category}
                 </p>
                 <h3 className="text-2xl font-bold text-black  tracking-tight mb-4 leading-tight">
@@ -157,7 +157,7 @@ export default function OurCreativesFormal() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="text-left">
               
-              <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter text-black mb-8 leading-none">
+              <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter text-black mb-8 leading-none">
                 Technical <br /> <span className="text-stone-400">Precision</span>
               </h2>
               <p className="text-stone-500 text-lg mb-10  leading-relaxed">
@@ -172,26 +172,26 @@ export default function OurCreativesFormal() {
                 ].map((spec, i) => (
                     <div key={i} className="flex items-center gap-3 p-4 bg-white border border-stone-200 rounded-sm">
                         <spec.icon size={18} style={{ color: brandGreen }} />
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-stone-700">{spec.label}</span>
+                        <span className="text-[10px] font-bold  tracking-widest text-stone-700">{spec.label}</span>
                     </div>
                 ))}
               </div>
             </div>
             <div className="relative p-8 lg:p-10 bg-white border border-stone-200 shadow-2xl text-left">
                 <div className="absolute top-0 right-0 w-2 h-full bg-green-500"></div>
-                <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-black">Resource Center</h4>
+                <h4 className="text-sm font-bold  tracking-widest mb-6 text-black">Resource Center</h4>
                 <div className="space-y-4">
                     <div className="flex justify-between items-center p-4 border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition-colors group">
                         <div className="flex items-center gap-4">
                             <FileText size={20} className="text-stone-300 group-hover:text-green-500" />
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-black">Brand Style Guide 2026</span>
+                            <span className="text-[10px] font-bold  tracking-widest text-black">Brand Style Guide 2026</span>
                         </div>
                         <ChevronRight size={16} className="text-stone-300" />
                     </div>
                     <div className="flex justify-between items-center p-4 border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition-colors group">
                         <div className="flex items-center gap-4">
                             <Box size={20} className="text-stone-300 group-hover:text-green-500" />
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-black">High-Res Render Archive</span>
+                            <span className="text-[10px] font-bold  tracking-widest text-black">High-Res Render Archive</span>
                         </div>
                         <ChevronRight size={16} className="text-stone-300" />
                     </div>
@@ -204,7 +204,7 @@ export default function OurCreativesFormal() {
       {/* 4. FORMAL FOOTER CTA */}
       <section className="py-16 lg:py-24 bg-black text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-8 leading-tight">
+            <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-8 leading-tight">
               Request Project <br /> <span style={{ color: brandGreen }}>Specifications</span>
             </h2>
             <div className="flex justify-center mt-12">
@@ -240,8 +240,8 @@ export default function OurCreativesFormal() {
                 className="w-full h-full object-contain"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-left">
-                  <h4 className="text-white text-xl font-bold uppercase tracking-tighter">{selectedImage.title}</h4>
-                  <p className="text-stone-400 text-sm mt-1 uppercase tracking-widest">{selectedImage.category}</p>
+                  <h4 className="text-white text-xl font-bold  tracking-tighter">{selectedImage.title}</h4>
+                  <p className="text-stone-400 text-sm mt-1  tracking-widest">{selectedImage.category}</p>
               </div>
             </motion.div>
           </motion.div>
