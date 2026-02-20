@@ -63,7 +63,7 @@ const BLOG_DATA = {
     category: "Market Trends",
     title: "The Future of Real Estate Business: Opportunities You Can't Afford to Miss",
     author: "Marketing Desk",
-    date: "Jan 12, 2026",
+    date: "Jan 20, 2026",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200",
     tags: ["Technology", "Sustainability", "Trends"],
