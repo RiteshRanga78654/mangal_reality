@@ -58,37 +58,37 @@ const BLOG_DATA = {
       <p><strong>The Verdict: Why Now?</strong> For buyers, it offers affordability and lifestyle. For investors, it presents growth potential without excessive risk. The sweet spot in the market cycle makes 2026 an opportune time to enter this market.</p>
     `
   },
-  // "future-real-estate": {
-  //   id: 2,
-  //   category: "Market Trends",
-  //   title: "The Future of Real Estate Business: Opportunities You Can't Afford to Miss",
-  //   author: "Marketing Desk",
-  //   date: "Jan 12, 2026",
-  //   readTime: "6 min read",
-  //   image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200",
-  //   tags: ["Technology", "Sustainability", "Trends"],
-  //   quote: "Luxury is no longer about the gold on the walls; it is about the air you breathe and the silence of your surroundings.",
-  //   content: `
-  //     <p>The property market is moving at a pace never before witnessed. The reality is that technology, demographics, and economies are creating unparalleled opportunities for anyone with eyes to see. Let's look into what's hot into the future and how you can surge ahead.</p>
+  "future-real-estate": {
+    id: 2,
+    category: "Market Trends",
+    title: "The Future of Real Estate Business: Opportunities You Can't Afford to Miss",
+    author: "Marketing Desk",
+    date: "Jan 12, 2026",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200",
+    tags: ["Technology", "Sustainability", "Trends"],
+    quote: "Luxury is no longer about the gold on the walls; it is about the air you breathe and the silence of your surroundings.",
+    content: `
+      <p>The property market is moving at a pace never before witnessed. The reality is that technology, demographics, and economies are creating unparalleled opportunities for anyone with eyes to see. Let's look into what's hot into the future and how you can surge ahead.</p>
       
-  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">The Digital Revolution Continues</h3>
-  //     <p>Just five years ago, virtual tours of properties were the stuff of science fiction. Today they are mundane. Potential buyers can tour homes from their desks, never having to step foot on a plane. Artificial intelligence helps analyze market information within seconds. Chatbots give basic information at any time of day. Those technology masters, while maintaining a personal touch, are the masters who'll be on top.</p>
+      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">The Digital Revolution Continues</h3>
+      <p>Just five years ago, virtual tours of properties were the stuff of science fiction. Today they are mundane. Potential buyers can tour homes from their desks, never having to step foot on a plane. Artificial intelligence helps analyze market information within seconds. Chatbots give basic information at any time of day. Those technology masters, while maintaining a personal touch, are the masters who'll be on top.</p>
 
-  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Sustainability Sells</h3>
-  //     <p>The category of eco-conscious buyers is not a niche market anymore but a mainstream market. Prominent influences include energy-efficient houses, solar power, and smart thermostats. Buildings with smaller carbon footprints fetch a higher price and sell faster. The real estate industry today rewards professionals who can talk intelligently about the green movement and its associated savings.</p>
+      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Sustainability Sells</h3>
+      <p>The category of eco-conscious buyers is not a niche market anymore but a mainstream market. Prominent influences include energy-efficient houses, solar power, and smart thermostats. Buildings with smaller carbon footprints fetch a higher price and sell faster. The real estate industry today rewards professionals who can talk intelligently about the green movement and its associated savings.</p>
 
-  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Remote Work Reshapes Demand</h3>
-  //     <p>The 'work from anywhere' movement has fundamentally changed what we all want. Home offices are no longer a bonus, they’re a requirement. This presents opportunities for untapped markets in secondary cities with cheaper options and better standards of living.</p>
+      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Remote Work Reshapes Demand</h3>
+      <p>The 'work from anywhere' movement has fundamentally changed what we all want. Home offices are no longer a bonus, they’re a requirement. This presents opportunities for untapped markets in secondary cities with cheaper options and better standards of living.</p>
 
-  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Blockchain and Tokenization</h3>
-  //     <p>New technologies offer hope with the promise of a sea change in transaction execution. Blockchain promises an open, secure process, while tokenization allows people to own real estate at various scales. Understanding this now puts you in the innovative leadership arena.</p>
+      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Blockchain and Tokenization</h3>
+      <p>New technologies offer hope with the promise of a sea change in transaction execution. Blockchain promises an open, secure process, while tokenization allows people to own real estate at various scales. Understanding this now puts you in the innovative leadership arena.</p>
 
-  //     <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Experience over Square Footage</h3>
-  //     <p>Today's generational buyer has different priorities. They would take a walkable community with amenities and flexibility over a formal dining room they never use. It's about understanding the psyche of the buyers beyond the 'price per square footage'.</p>
+      <h3 style="font-size: 22px; font-weight: bold; margin-top: 24px;">Experience over Square Footage</h3>
+      <p>Today's generational buyer has different priorities. They would take a walkable community with amenities and flexibility over a formal dining room they never use. It's about understanding the psyche of the buyers beyond the 'price per square footage'.</p>
 
-  //     <p><strong>Seize the Moment:</strong> The next decade shall see more wealth created in real estate than possibly ever in history. Stay curious, embrace change, and find one trend to excel at. The future belongs to those making it happen now.</p>
-  //   `
-  // },
+      <p><strong>Seize the Moment:</strong> The next decade shall see more wealth created in real estate than possibly ever in history. Stay curious, embrace change, and find one trend to excel at. The future belongs to those making it happen now.</p>
+    `
+  },
   // "smart-solutions": {
   //   id: 3,
   //   category: "Investment",
