@@ -14,6 +14,74 @@ import {
 
 // 1. DATA DEFINITIONS (Slug-based mapping)
 const BLOG_CONTENT = {
+    "smart-solutions": {
+    id: 3,
+    category: "Investment",
+    title: "Smart Investment Solutions: Real Estate Investment and Strategic Planning",
+    author: "Archita",
+    date: "Feb 21, 2026",
+    readTime: "10 min read",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200",
+    tags: ["Wealth", "Tax Planning", "REITs"],
+    quote: "Consistency is more important than cleverness. The mathematical fact of compounding rewards those who start today, not tomorrow.",
+    content: `
+      <p>All investors face investment challenges, such as a scarcity of capital, an overwhelming number of investment choices, uncertainties related to taxes, and market volatility. Therefore, the guide offers information on the prevailing investment challenges while presenting effective solutions to various investment challenges, including real estate investment challenges as well as all investment challenges.</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 1: I Don't Have Enough Money to Start Investing</h2>
+      <p><strong>The Challenge:</strong> Millions of people believe that investing needs lakhs of rupees, and hence, they delay the wealth-creation process indefinitely. Inflation, on the other hand, eats into their savings account balance, and the financial goals recede further. This begets an expensive delusion. The man who waits for ₹1 lakh to start investing loses valuable years of compounding. The mathematical fact of compounding is that a 25-year-old investing ₹2,000 every month creates more wealth than a 35-year-old investing ₹10,000 every month.</p>
+
+      <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Smart Investment Solution:</h3>
+      <p>Micro-investing can be done immediately, as many platforms offer investment opportunities with as little as ₹100-500.</p>
+      <ul>
+        <li><strong>Mutual Fund SIP:</strong> Websites such as Groww, Zerodha Coin, and Paytm Money allow a minimum of Rs. 500 per month investment in Index Mutual Funds. A monthly investment of Rs. 2,000 for 3 funds of Rs. 700 each, comprising equity and ELSS.</li>
+        <li><strong>Micro REIT Units:</strong> With the price of Full REIT units ranging between Rs. 10,000 and 15,000, investing brokers also provide fractional investments. Exposure to Real Estate investment assets can be achieved without involving huge capital.</li>
+        <li><strong>PPF Account:</strong> Start with a minimum amount of ₹500, increase it as the income increases. Even ₹5,000 invested every year adds up to ₹1.5 lakhs at a 7.1% return after 15 years.</li>
+        <li><strong>Digital Gold:</strong> Park your money in ₹100 units of Sovereign Bonds during RBI windows.</li>
+      </ul>
+
+      <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Three Tier Start Strategy:</h3>
+      <ul>
+        <li><strong>Tier 1 (₹500-2,000/month):</strong> 50% equity index fund, 30% debt.</li>
+        <li><strong>Tier 2 (₹5,000-10,000/month):</strong> Add PPF, balanced funds.</li>
+        <li><strong>Tier 3 (₹15,000+/month):</strong> Implement the NPS plan, carry out direct real estate investment, and asset class diversification.</li>
+      </ul>
+      <p><strong>Results:</strong> Saving ₹3,000/month from age 25 at 12% results in ₹1.76 crores by age 60. Saving ₹5,000/month from age 35 results in only ₹1.18 crores—a cost of ₹58 lakhs to delay a boon!</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 2: Real Estate Investment Requires Too Much Capital</h2>
+      <p><strong>The Challenge:</strong> Aspiring property investors feel that they will have to pool in a certain minimum of ₹25-50 lakhs for a down payment, making property investment a distant dream. "Conventional wisdom dictates: Save for 10 years, then invest in property - but property rates appreciate by 8-10% a year!"</p>
+
+      <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Smart Investment Solution:</h3>
+      <p><strong>Option 1: REITs (₹10,000-15,000 entry)</strong><br/>Embassy Office Parks, Mindspace, and Brookfield offer professionally managed Grade A office spaces. Earn quarterly dividends and benefit from appreciation. Returns: 7-8% yield + 5-8% appreciation = 12-15% total returns.</p>
+      <p><strong>Option 2: Real Estate Crowdfunding (₹5-10 Lakhs entry)</strong><br/>Strata, PropShare, and RealX allow pooling funds for commercial ventures like warehouses and premium offices with a target IRR of 12-18%.</p>
+      <p><strong>Option 3: Intelligent Home Loan Strategy (₹10-15 Lakhs down payment)</strong><br/>Leverage bank money. For a ₹50L house: ₹15L down payment + ₹35L loan. Rental income covers a huge portion of the EMI, and tax benefits reduce the cost further. Your ₹15L investment grows as the property appreciates to roughly ₹73.5L in 5 years.</p>
+      <p><strong>Option 4: Partnership Investment</strong><br/>Share resources with trusted family/friends to pool capital and split the loan burden.</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 3: I Don't Understand Stock Markets or Complex Investments</h2>
+      <p><strong>The Challenge:</strong> Successful professionals often fear the unknown. This knowledge gap is costing lakhs; bank interest is 3-4% while equity appreciates 12-15%.</p>
+      <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Smart Investment Solution:</h3>
+      <ul>
+        <li><strong>Index Funds:</strong> An automated bet on India's top companies (Reliance, TCS, HDFC). Past performance: 11-13% returns with the lowest fees.</li>
+        <li><strong>PPF:</strong> Wealth building without complexity. No need to monitor markets. 7-7.5% tax-free interest.</li>
+        <li><strong>Robo Advisory:</strong> Platforms like Smallcase or Scripbox create and rebalance portfolios for you based on a 5-minute questionnaire.</li>
+      </ul>
+      <p><strong>Target Allocation for Knowledge-Limited Investors:</strong> 40% Nifty 50 Index Fund, 30% PPF, 15% Balanced advantage fund, 10% REIT units, 5% Sovereign Gold Bonds.</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 4: How Do I Save Tax While Building Wealth?</h2>
+      <p><strong>The Challenge:</strong> 30% Tax Bracket investors lose substantial money. A ₹10L salary becomes ₹7L after taxes, constraining investment capacity.</p>
+      <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">Maximum Tax Optimization Framework:</h3>
+      <ul>
+        <li><strong>Sec 80C (₹1.5L):</strong> ELSS Mutual Funds (₹75k) + PPF (₹75k).</li>
+        <li><strong>Sec 80CCD(1B) (Additional ₹50k):</strong> NPS contribution beyond 80C.</li>
+        <li><strong>Section 24 (₹2L):</strong> Deduct home loan interest. Savings on taxes can reach ₹62,400 in the 30% bracket.</li>
+        <li><strong>Section 80D (₹75k):</strong> Health insurance for self and parents.</li>
+      </ul>
+      <p><strong>Real-World Illustration:</strong> On a ₹12L income, wise planning reduces tax from ₹2.1L to just ₹56k. Saving ₹1.54L per year and investing it at 10% creates ₹96L over 20 years.</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Your Smart Investment Journey: From Problems to Solutions</h2>
+      <p>Financial success and stagnation are not determined by intelligence or luck. It involves applying tried-and-true investment strategies to solve problems methodically. Not enough money? Make a small investment. Inexperienced? Use index funds and PPF. tax burden? Take full advantage of the deductions under Sections 24, 80C, and 80CCD.</p>
+      <p>Every problem has a prudent investment solution. The key is to put progress ahead of perfection, consistency ahead of timing, and action ahead of analysis. Start working on one issue this week. For your financial transformation, it's not necessary to resolve every problem at once; instead, you should start with one and work your way up to the next. The best way to deal with issues related to investments? Invest now.</p>
+    `,
+},
   "future-real-estate": {
     id: 2,
     category: "Market Trends",
@@ -125,74 +193,7 @@ const BLOG_CONTENT = {
     `,
   },
   
-//   "smart-solutions": {
-//     id: 3,
-//     category: "Investment",
-//     title: "Smart Investment Solutions: Real Estate Investment and Strategic Planning",
-//     author: "Archita",
-//     date: "Feb 10, 2026",
-//     readTime: "10 min read",
-//     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200",
-//     tags: ["Wealth", "Tax Planning", "REITs"],
-//     quote: "Consistency is more important than cleverness. The mathematical fact of compounding rewards those who start today, not tomorrow.",
-//     content: `
-//       <p>All investors face investment challenges, such as a scarcity of capital, an overwhelming number of investment choices, uncertainties related to taxes, and market volatility. Therefore, the guide offers information on the prevailing investment challenges while presenting effective solutions to various investment challenges, including real estate investment challenges as well as all investment challenges.</p>
 
-//       <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 1: I Don't Have Enough Money to Start Investing</h2>
-//       <p><strong>The Challenge:</strong> Millions of people believe that investing needs lakhs of rupees, and hence, they delay the wealth-creation process indefinitely. Inflation, on the other hand, eats into their savings account balance, and the financial goals recede further. This begets an expensive delusion. The man who waits for ₹1 lakh to start investing loses valuable years of compounding. The mathematical fact of compounding is that a 25-year-old investing ₹2,000 every month creates more wealth than a 35-year-old investing ₹10,000 every month.</p>
-
-//       <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Smart Investment Solution:</h3>
-//       <p>Micro-investing can be done immediately, as many platforms offer investment opportunities with as little as ₹100-500.</p>
-//       <ul>
-//         <li><strong>Mutual Fund SIP:</strong> Websites such as Groww, Zerodha Coin, and Paytm Money allow a minimum of Rs. 500 per month investment in Index Mutual Funds. A monthly investment of Rs. 2,000 for 3 funds of Rs. 700 each, comprising equity and ELSS.</li>
-//         <li><strong>Micro REIT Units:</strong> With the price of Full REIT units ranging between Rs. 10,000 and 15,000, investing brokers also provide fractional investments. Exposure to Real Estate investment assets can be achieved without involving huge capital.</li>
-//         <li><strong>PPF Account:</strong> Start with a minimum amount of ₹500, increase it as the income increases. Even ₹5,000 invested every year adds up to ₹1.5 lakhs at a 7.1% return after 15 years.</li>
-//         <li><strong>Digital Gold:</strong> Park your money in ₹100 units of Sovereign Bonds during RBI windows.</li>
-//       </ul>
-
-//       <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Three Tier Start Strategy:</h3>
-//       <ul>
-//         <li><strong>Tier 1 (₹500-2,000/month):</strong> 50% equity index fund, 30% debt.</li>
-//         <li><strong>Tier 2 (₹5,000-10,000/month):</strong> Add PPF, balanced funds.</li>
-//         <li><strong>Tier 3 (₹15,000+/month):</strong> Implement the NPS plan, carry out direct real estate investment, and asset class diversification.</li>
-//       </ul>
-//       <p><strong>Results:</strong> Saving ₹3,000/month from age 25 at 12% results in ₹1.76 crores by age 60. Saving ₹5,000/month from age 35 results in only ₹1.18 crores—a cost of ₹58 lakhs to delay a boon!</p>
-
-//       <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 2: Real Estate Investment Requires Too Much Capital</h2>
-//       <p><strong>The Challenge:</strong> Aspiring property investors feel that they will have to pool in a certain minimum of ₹25-50 lakhs for a down payment, making property investment a distant dream. "Conventional wisdom dictates: Save for 10 years, then invest in property - but property rates appreciate by 8-10% a year!"</p>
-
-//       <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Smart Investment Solution:</h3>
-//       <p><strong>Option 1: REITs (₹10,000-15,000 entry)</strong><br/>Embassy Office Parks, Mindspace, and Brookfield offer professionally managed Grade A office spaces. Earn quarterly dividends and benefit from appreciation. Returns: 7-8% yield + 5-8% appreciation = 12-15% total returns.</p>
-//       <p><strong>Option 2: Real Estate Crowdfunding (₹5-10 Lakhs entry)</strong><br/>Strata, PropShare, and RealX allow pooling funds for commercial ventures like warehouses and premium offices with a target IRR of 12-18%.</p>
-//       <p><strong>Option 3: Intelligent Home Loan Strategy (₹10-15 Lakhs down payment)</strong><br/>Leverage bank money. For a ₹50L house: ₹15L down payment + ₹35L loan. Rental income covers a huge portion of the EMI, and tax benefits reduce the cost further. Your ₹15L investment grows as the property appreciates to roughly ₹73.5L in 5 years.</p>
-//       <p><strong>Option 4: Partnership Investment</strong><br/>Share resources with trusted family/friends to pool capital and split the loan burden.</p>
-
-//       <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 3: I Don't Understand Stock Markets or Complex Investments</h2>
-//       <p><strong>The Challenge:</strong> Successful professionals often fear the unknown. This knowledge gap is costing lakhs; bank interest is 3-4% while equity appreciates 12-15%.</p>
-//       <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">The Smart Investment Solution:</h3>
-//       <ul>
-//         <li><strong>Index Funds:</strong> An automated bet on India's top companies (Reliance, TCS, HDFC). Past performance: 11-13% returns with the lowest fees.</li>
-//         <li><strong>PPF:</strong> Wealth building without complexity. No need to monitor markets. 7-7.5% tax-free interest.</li>
-//         <li><strong>Robo Advisory:</strong> Platforms like Smallcase or Scripbox create and rebalance portfolios for you based on a 5-minute questionnaire.</li>
-//       </ul>
-//       <p><strong>Target Allocation for Knowledge-Limited Investors:</strong> 40% Nifty 50 Index Fund, 30% PPF, 15% Balanced advantage fund, 10% REIT units, 5% Sovereign Gold Bonds.</p>
-
-//       <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Problem 4: How Do I Save Tax While Building Wealth?</h2>
-//       <p><strong>The Challenge:</strong> 30% Tax Bracket investors lose substantial money. A ₹10L salary becomes ₹7L after taxes, constraining investment capacity.</p>
-//       <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">Maximum Tax Optimization Framework:</h3>
-//       <ul>
-//         <li><strong>Sec 80C (₹1.5L):</strong> ELSS Mutual Funds (₹75k) + PPF (₹75k).</li>
-//         <li><strong>Sec 80CCD(1B) (Additional ₹50k):</strong> NPS contribution beyond 80C.</li>
-//         <li><strong>Section 24 (₹2L):</strong> Deduct home loan interest. Savings on taxes can reach ₹62,400 in the 30% bracket.</li>
-//         <li><strong>Section 80D (₹75k):</strong> Health insurance for self and parents.</li>
-//       </ul>
-//       <p><strong>Real-World Illustration:</strong> On a ₹12L income, wise planning reduces tax from ₹2.1L to just ₹56k. Saving ₹1.54L per year and investing it at 10% creates ₹96L over 20 years.</p>
-
-//       <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Your Smart Investment Journey: From Problems to Solutions</h2>
-//       <p>Financial success and stagnation are not determined by intelligence or luck. It involves applying tried-and-true investment strategies to solve problems methodically. Not enough money? Make a small investment. Inexperienced? Use index funds and PPF. tax burden? Take full advantage of the deductions under Sections 24, 80C, and 80CCD.</p>
-//       <p>Every problem has a prudent investment solution. The key is to put progress ahead of perfection, consistency ahead of timing, and action ahead of analysis. Start working on one issue this week. For your financial transformation, it's not necessary to resolve every problem at once; instead, you should start with one and work your way up to the next. The best way to deal with issues related to investments? Invest now.</p>
-//     `,
-// },
 };
 
 const CATEGORIES = ["All", "Residential", "Commercial", "Investment", "Industry News"];
