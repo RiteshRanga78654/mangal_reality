@@ -14,7 +14,64 @@ import {
 
 // 1. DATA DEFINITIONS (Slug-based mapping)
 const BLOG_CONTENT = {
-    "smart-solutions": {
+  "expert-insights": {
+    id: 4,
+    category: "Investment",
+    title: "Smart Investment Insights: Expert Perspectives on Real Estate Investment and Wealth Building in India",
+    author: "Archita",
+    date: "Feb 23, 2026",
+    readTime: "12 min read",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200",
+    tags: ["Expert Advice", "Portfolio Management", "Wealth Creation"],
+    quote: "Effective investing is not about unlocking hidden secrets—it's about executing successful strategies on a consistent basis.",
+    content: `
+      <p>We conducted five interviews with top investment professionals to learn more about the factors that contribute to the success of shrewd investment strategies in the ever-changing Indian financial environment. The combined knowledge of these experts regarding real estate investment, investment portfolio management, and wealth generation will serve as valuable advice for all investors.</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Interview 1: The Real Estate Investment Strategist</h2>
+      <p><strong>Expert: Priya Malhotra</strong>, Real Estate Investment Consultant, 15+ years of experience, Mumbai</p>
+      
+      <p><strong>Q: Real estate prices appear to be quite high in 2026. Is real estate investment a feasible option for common investors?</strong></p>
+      <p><strong>Priya:</strong> Of course, but the approach has changed. The days of investing in any property in Mumbai or Bengaluru and watching it double in five years are over. Now, the smart way to invest in real estate is to be surgical - to zero in on emerging corridors before they go mainstream.</p>
+      <p>I advise my clients to aggressively target tier-2 cities. In Ahmedabad, after the metro was introduced, the appreciation rate was 12-15% per annum in carefully selected locations. Jaipur, around the proposed airport expansion, is another such location. Even in large, pricey cities, the outskirts are gold mines. Thane and Navi Mumbai in Mumbai, or the Peripheral Ring Road areas of Bengaluru - these provide 8-10% appreciation at 40-50% lower entry costs than main cities.</p>
+      <p>The typical investor's mistake is to wait to save the entire cost of the property. Leverage your investments. With a ₹50 lakh property, where you pay ₹15 lakh as down payment and take a ₹35 lakh home loan at 8.5%, you can control appreciating assets while the tax benefits (Section 24 and 80C) cut your effective interest cost to 6-7%.</p>
+
+      <p><strong>Q: What about REITs versus direct property investment?</strong></p>
+      <p><strong>Priya:</strong> Completely different purposes. Direct property investment provides you with leverage, hard assets, and better control. REITs address a completely different set of issues: liquidity, low capital base (₹10,000-15,000), and no hassle in managing the investment. My advice: Both. Young investor? Invest ₹25,000 in REITs while saving for property down payment.</p>
+
+      <p><strong>Q: Rental yield in India is low (2-3%). Is renting a property a good idea?</strong></p>
+      <p><strong>Priya:</strong> Looking at only the rental yield is not the whole story. When you factor in the 8% appreciation every year, the overall return is 11.6% - not bad compared to equity mutual funds, and you have a hard asset to back it up.</p>
+      <blockquote>Expert Insight: "Real estate investment is not dead - it has just evolved. Stop looking for yesterday's hotspots. Identify tomorrow's growth spots through infrastructure mapping and demographic analysis."</blockquote>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Interview 2: The Mutual Fund Investment Advisor</h2>
+      <p><strong>Expert: Rajesh Kumar</strong>, SEBI Registered Investment Advisor, Bengaluru</p>
+
+      <p><strong>Q: With hundreds of mutual funds on offer, how should new investors begin?</strong></p>
+      <p><strong>Rajesh:</strong> The Paradox of Choice paralyzes investors. My approach makes it easy: Begin with index funds. The Nifty 50 Index Fund needs no expertise. It automatically holds the top 50 Indian companies. The ultra-low expense ratio ensures more of your money remains invested.</p>
+
+      <p><strong>Q: How much equity should one allocate based on age?</strong></p>
+      <p><strong>Rajesh:</strong> The rule of thumb is Equity % = 100 - your age. But personal factors are more important. Risk tolerance, income stability, and existing assets provide the best outcomes. The most important thing that people forget is that equity allocation should be dynamic and reviewed every year.</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Interview 3: The Tax & Wealth Planning Expert</h2>
+      <p><strong>Expert: CA Meera Desai</strong>, Chartered Accountant & Financial Planner, Pune</p>
+
+      <p><strong>Q: How can investors maximize tax savings while building wealth?</strong></p>
+      <p><strong>Meera:</strong> Tax planning isn’t about evasion - it’s about using legal provisions. First, maximize Section 80C (₹1.5 lakhs). Choose ELSS for returns or PPF for safety. Second, use the additional ₹50,000 deduction through NPS under Section 80CCD(1B). Third, leverage Section 24 for home loan interest deductions (up to ₹2 lakhs).</p>
+
+      <p><strong>Q: Post-tax returns are more important than gross returns. How should investors account for this?</strong></p>
+      <p><strong>Meera:</strong> Absolutely. A Bank FD with 7% interest results in only 4.9% post-tax in the 30% bracket. PPF, being tax-free, offers a 7.1% absolute return. That 2.2% difference creates a gap of over ₹8 lakhs on a 15-year investment of ₹1.5 lakhs annually.</p>
+
+      <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Synthesizing Expert Wisdom: Your Action Plan</h2>
+      <ul>
+        <li><strong>Start Today:</strong> Each day of procrastination leads to exponentially wasted compound returns.</li>
+        <li><strong>Diversify Correctly:</strong> Across asset types (Equity, Debt, Real Estate), not just within one.</li>
+        <li><strong>Optimize Tax:</strong> Leverage Section 80C, 80CCD, and Section 24 to save more.</li>
+      </ul>
+
+      <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">Your Implementation Checklist:</h3>
+      <p><strong>This Month:</strong> Start ₹3,000 SIP in Nifty 50 index fund, open a PPF account with ₹5,000, and research REITs for a small entry investment of ₹15,000.</p>
+    `,
+  },
+  "smart-solutions": {
     id: 3,
     category: "Investment",
     title: "Smart Investment Solutions: Real Estate Investment and Strategic Planning",
@@ -81,7 +138,7 @@ const BLOG_CONTENT = {
       <p>Financial success and stagnation are not determined by intelligence or luck. It involves applying tried-and-true investment strategies to solve problems methodically. Not enough money? Make a small investment. Inexperienced? Use index funds and PPF. tax burden? Take full advantage of the deductions under Sections 24, 80C, and 80CCD.</p>
       <p>Every problem has a prudent investment solution. The key is to put progress ahead of perfection, consistency ahead of timing, and action ahead of analysis. Start working on one issue this week. For your financial transformation, it's not necessary to resolve every problem at once; instead, you should start with one and work your way up to the next. The best way to deal with issues related to investments? Invest now.</p>
     `,
-},
+  },
   "future-real-estate": {
     id: 2,
     category: "Market Trends",
@@ -134,8 +191,8 @@ const BLOG_CONTENT = {
       <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Seize the Moment</h2>
       <p>But the next decade shall see more wealth created in real estate than possibly ever in all of history. Demographics, technology, and economics shall combine to create tremendous opportunity. The question is not whether or not the real estate business has prospects for expansion, since it does, but whether or not you can capitalize on it. Start today. Find one trend to which you relate. Excel at it. Make your reputation by it. The future belongs to those making it happen now, not waiting on it to come to them.</p>
     `,
-},
- "vizag-2026": {
+  },
+  "vizag-2026": {
     id: 1,
     category: "Investment",
     title: "Visakhapatnam Real Estate Is the Smart Investment Choice in 2026",
@@ -192,8 +249,6 @@ const BLOG_CONTENT = {
       <p>Whether you're buying your first home, investing for rental income, or looking for long-term capital appreciation, Visakhapatnam deserves serious consideration. The numbers support the narrative—this coastal city is set for sustained real estate growth.</p>
     `,
   },
-  
-
 };
 
 const CATEGORIES = ["All", "Residential", "Commercial", "Investment", "Industry News"];
