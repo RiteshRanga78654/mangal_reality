@@ -14,6 +14,96 @@ import {
 
 // 1. DATA DEFINITIONS (Slug-based mapping)
 const BLOG_CONTENT = {
+"infrastructure-impact-2026": {
+  id: 5,
+  category: "Industry News",
+  title: "Infrastructure Projects Like Highways and Airports Are Reshaping Property Values in India in 2026",
+  author: "Archita",
+  date: "Feb 28, 2026",
+  readTime: "9 min read",
+  image: "/assets/images/highway-img.jpg",
+  tags: ["Infrastructure", "Highways", "Airports", "Property Growth", "India 2026"],
+  quote: "Infrastructure is not just development — it is the roadmap to future property value.",
+  content: `
+    <p>There is an old saying in real estate — the three things that matter most are location, location, and location. But here is what that saying does not tell you: location is not fixed. It changes. And the single most powerful force that changes a location's value is infrastructure.</p>
+
+    <p>Most homebuyers in India compare prices with neighbouring projects. They check the builder's reputation, the floor plan, the construction quality, the amenities list, and the payment plan. But very few step back and ask the bigger question: <strong>What is being built around this location?</strong></p>
+
+    <p>This blog unpacks exactly how infrastructure development reshapes property values, why it happens, where it is happening right now, and what you as a buyer or investor should be doing about it.</p>
+
+    <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Why Infrastructure and Property Prices Are Inseparable</h2>
+
+    <p>Consider any large Indian city today — Hyderabad, Pune, Bengaluru, Chennai — and then consider how the hotspots for property in those cities changed over the past two decades. In almost all instances, the change came after infrastructure.</p>
+
+    <p>The land around was mostly agricultural or semi-rural. A decade after the breaking ground on major infrastructure, areas like Gachibowli, Kokapet, Shamshabad, Patancheru, Hinjewadi, Navi Mumbai, and Greater Noida became some of the hottest property markets in the country. Property prices in some of these areas increased five to ten times in less than fifteen years.</p>
+
+    <p>This is not an accident. Infrastructure affects a location in four very specific ways — and all of them directly impact property prices.</p>
+
+    <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">The Four Ways Infrastructure Drives Property Value</h2>
+
+    <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">1. Connectivity Cuts Distance — And Distance Decides Value</h3>
+
+    <p>The value of a property is directly linked to accessibility. How long does it take to reach offices, schools, hospitals, and business centers? Each hour saved in travel time increases property attractiveness.</p>
+
+    <p>When a new highway or expressway is built, it shrinks distance psychologically and practically. A town that was 90 minutes away becomes 40 minutes away. Demand rises rapidly — and when demand grows faster than supply, prices increase.</p>
+
+    <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">2. Infrastructure Attracts Employment</h3>
+
+    <p>Highways and airports move not just people — but commerce. Logistics parks, warehouses, SEZs, manufacturing units, and IT parks cluster around infrastructure corridors.</p>
+
+    <p>Jobs are created. Workers move in. Housing demand follows. Early investors benefit the most from this employment-driven growth cycle.</p>
+
+    <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">3. Perception Shifts Before Prices Do</h3>
+
+    <p>When the government announces a new airport or highway, it signals long-term intent and investment confidence. Developers start acquiring land. Banks begin financing projects. Media attention grows. Buyers sense opportunity.</p>
+
+    <p>Often, perception changes before actual construction finishes — and this phase creates early appreciation.</p>
+
+    <h3 style="font-size: 20px; font-weight: bold; margin: 24px 0 12px;">4. Demand-Supply Gap Creates Appreciation</h3>
+
+    <p>Infrastructure takes years to complete. During construction, demand increases steadily — but supply takes time to catch up. This gap between rising demand and delayed supply pushes prices upward.</p>
+
+    <p>By the time the highway opens or the airport becomes operational, much of the appreciation has already occurred.</p>
+
+    <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Airports: The Strongest Property Catalyst</h2>
+
+    <p>Among all infrastructure projects, airports create the most concentrated appreciation.</p>
+
+    <ul>
+      <li>Direct jobs (airlines, ground staff, retail, logistics)</li>
+      <li>Indirect jobs (hotels, offices, service industries)</li>
+      <li>Corporate relocation due to air connectivity</li>
+      <li>Global visibility for the city</li>
+    </ul>
+
+    <p>Areas around major airports in Bengaluru, Hyderabad, and Navi Mumbai show how airport-led growth transforms land values.</p>
+
+    <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">Highways: The Everyday Wealth Creator</h2>
+
+    <p>Unlike airports that create concentrated growth, highways create corridor-based appreciation.</p>
+
+    <p>National Highway expansions reduce logistics costs, improve trade access, and connect smaller towns to larger economic ecosystems. Land along these corridors gradually shifts from agricultural perception to commercial and residential potential.</p>
+
+    <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">What Smart Buyers Should Do in 2026</h2>
+
+    <ul>
+      <li>Track announced infrastructure projects in state and union budgets.</li>
+      <li>Study land parcels near proposed corridors — but verify legal approvals.</li>
+      <li>Enter during early or mid-construction phase.</li>
+      <li>Focus on connectivity to employment nodes.</li>
+      <li>Be patient — infrastructure-driven appreciation is medium to long term.</li>
+    </ul>
+
+    <h2 style="font-size: 24px; font-weight: bold; margin: 32px 0 16px;">The Bottom Line</h2>
+
+    <p>Infrastructure is the most reliable map to future property value. It is government-backed, capital-intensive, and irreversible once built.</p>
+
+    <p>The highway widening near your hometown. The airport announced two districts away. The industrial corridor in last year's budget. These are not just headlines — they are wealth indicators.</p>
+
+    <p>Smart investors do not chase rising prices. They follow infrastructure.</p>
+  `,
+},
+
   "silver-villa-visakhapatnam": {
   id: 4,
   category: "Travel & Stay",
