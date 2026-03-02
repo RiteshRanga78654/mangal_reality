@@ -53,19 +53,19 @@ const Counter = ({ value }) => {
   );
 };
 const strategicPartners = [
-  {
-    name: "Sunil Choudhary",
-    role: "Founder & Chairman",
-    description: [
-      // "Sunil Choudhary is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
-      // "Sunil has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
-      // "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
-    ],
-    image: "/assets/images/rajesh.jpg",
-    href: "https://www.ireedindia.com/",
-    linkedin: "https://www.linkedin.com/in/bhaswarpaul/",
-    icon: GraduationCap,
-  },
+  // {
+  //   name: "Sunil Choudhary",
+  //   role: "Founder & Chairman",
+  //   description: [
+  //     "Sunil Choudhary is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
+  //     "Sunil has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
+  //     "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
+  //   ],
+  //   image: "/assets/images/rajesh.jpg",
+  //   href: "https://www.ireedindia.com/",
+  //   linkedin: "https://www.linkedin.com/in/bhaswarpaul/",
+  //   icon: GraduationCap,
+  // },
   {
     name: "Hemang Choudhary",
     role: "Managing Director",

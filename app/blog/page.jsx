@@ -14,6 +14,92 @@ import {
 
 // 1. DATA DEFINITIONS (Slug-based mapping)
 const BLOG_CONTENT = {
+  "smart-home-amenities-bondapalli": {
+  id: 6,
+  category: "Residential",
+  title: "Smart Home Amenities That Buyers Now Expect as Standard — Not Luxury",
+  author: "Archita",
+  date: "Mar 01, 2026",
+  readTime: "9 min read",
+  image: "/assets/images/smart-home-img.png", 
+  tags: [
+    "Smart Township",
+    "Bondapalli",
+    "Vizianagaram",
+    "Smart Amenities",
+    "Future Living"
+  ],
+  quote: "Smart amenities are no longer about impressing buyers. They are about respecting them.",
+  content: `
+    <p>There was a time when a gated community with a decent road and a park was enough to sell a plot. Those days are long gone.</p>
+
+    <p>There is a moment every homebuyer knows — that instant when you stop looking at a brochure and start imagining your morning there.</p>
+
+    <p>Today's homebuyer — whether a young family, a working professional returning from the office, or a retired couple looking for peace — walks into a project with a checklist. And that checklist is no longer about wants. It is about expectations.</p>
+
+    <p>Smart amenities, tech-integrated infrastructure, and lifestyle-first design are no longer selling points. They are the baseline. If your township does not have them, buyers simply move on.</p>
+
+    <h2 style="font-size:24px; font-weight:bold; margin:32px 0 16px;">Smart Infrastructure Is the New Foundation</h2>
+
+    <p>Before stepping into a clubhouse, buyers judge a township by its infrastructure.</p>
+
+    <p>A standard mid-range apartment complex in Tier-2 Andhra Pradesh may offer a gym, swimming pool, children’s play area, covered parking, multipurpose hall, and 24/7 security. Premium projects may add a jogging track and CCTV coverage.</p>
+
+    <p>It is not bad. But it is not enough anymore.</p>
+
+    <p><strong>THE NATURE CITY in Bondapalli, Vizianagaram</strong> was not designed just to solve a real estate problem. It was designed to solve a community problem — to bring back neighborhoods where children play together, elders are respected, festivals are celebrated collectively, and life is lived in connection, not isolation.</p>
+
+    <p>This philosophy reflects across all 281 features offered in the township.</p>
+
+    <p>From foxing lights with soft music along pathways, unique street names, and safety signages — roads become experiences. Infrastructure begins to speak to you.</p>
+
+    <p>The aquatic zone is not just a pool. It includes a main pool, toddler pool, kids’ play pool, aqua volleyball, water throwball, aqua gym, poolside party area, viewing deck, spa seating, sunken seating, and a water bucket fall. This is not incremental difference — it is categorical.</p>
+
+    <h2 style="font-size:24px; font-weight:bold; margin:32px 0 16px;">Power Infrastructure That Thinks Ahead</h2>
+
+    <p>Electricity infrastructure goes beyond basic street lighting. Each plot has feeder pillars. Emergency solar lights function at junctions. A full solar energy system reduces dependency on the grid and ensures lighting during outages.</p>
+
+    <p>EV charging stations and a Smart Bike Rack make the township genuinely future-ready.</p>
+
+    <h2 style="font-size:24px; font-weight:bold; margin:32px 0 16px;">Intelligent Building Management System (IBMS)</h2>
+
+    <p>A smart home is only as smart as its surroundings.</p>
+
+    <p>Each plot includes optical fibre communication and EPABX connectivity — making high-speed internet a right, not a luxury.</p>
+
+    <p>Security is technology-driven through GEO tagging, CCTV surveillance, and RFID-enabled entry systems.</p>
+
+    <p>Society Management Software streamlines maintenance requests, billing, and resident communication.</p>
+
+    <p>An Air Pollution Meter monitors environmental quality. A Water Quality Meter and digital water meters provide real-time consumption data. Wi-Fi across common areas and a township-wide music and announcement system transform the project into a smart community ecosystem.</p>
+
+    <h2 style="font-size:24px; font-weight:bold; margin:32px 0 16px;">A Clubhouse That Goes Beyond the Gym</h2>
+
+    <p>Most buyers ask for a gym and pool. THE NATURE CITY delivers that — and then expands the definition entirely.</p>
+
+    <p>Facilities include indoor gym, outdoor gym, aqua gym, senior citizens’ gym, digital workout zone, functional training zone, interactive gym, and Zumba room.</p>
+
+    <p>Children enjoy ball pits, jungle gyms, blackboard walls, art and craft rooms, pottery corners, and virtual gaming zones.</p>
+
+    <p>Teenagers have access to foosball, air hockey, dart games, snooker, table tennis, and interactive floor games.</p>
+
+    <p>For quieter moments, there is a reading lounge, digital library, chess, carrom, and ludo.</p>
+
+    <p>Relaxation spaces include massage chair corners, TV lounges, and a cafeteria.</p>
+
+    <p>Even a mobile charging station inside the clubhouse reflects attention to real-life detail.</p>
+
+    <h2 style="font-size:24px; font-weight:bold; margin:32px 0 16px;">Conclusion</h2>
+
+    <p>The modern homebuyer is not asking for luxury. They are asking for a thoughtfully designed life.</p>
+
+    <p>They want clean air, well-lit paths, safe play zones for children, smart security systems, community engagement, and sustainable infrastructure.</p>
+
+    <p>Bondapalli is no longer just a location. It is becoming a benchmark for integrated township living in Andhra Pradesh.</p>
+
+    <p>Smart amenities are not about impressing buyers. They are about respecting them. And THE NATURE CITY does exactly that — in 281 ways and counting.</p>
+  `
+},
 "infrastructure-impact-2026": {
   id: 5,
   category: "Industry News",
