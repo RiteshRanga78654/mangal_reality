@@ -66,33 +66,42 @@ const strategicPartners = [
   //   linkedin: "https://www.linkedin.com/in/bhaswarpaul/",
   //   icon: GraduationCap,
   // },
+
   {
     name: "Hemang Choudhary",
     role: "Managing Director",
     description: [
-      // "Hemang Choudhary is a prolific business professional and trainer, helping various up and coming as well as invaluable brands with his expertise across luxury sales, high octane corporate event facilitation, and operations management. In his glorious 5-year stint, he has forged strategic partnerships with more than 50 institutions across India.",
-      // "He is determined to generate a skilled workforce contributing to India's real estate sector, which is evaluated to reach a staggering USD 1 Trillion mark by 2030. He has also trained 2000+ students across his domains of excellence, a testimony to his ability to engage with diverse audience groups.",
-      // "Currently, as a Business Head (Up-Country Expansions) and Trainer at IREED Academy, he is determined about shaping the future of Real Estate Education in India. He is passionate about driving magnificent career opportunities for younger generations.",
+      "Hemang Choudhary is currently positioned as the Managing Director of Mangal Realty, India's No. 1 real estate developer that is totally redefining plotted developments across India. Guided by a strong sense of the ethos of sustainable life, the vision of mangal realty under the leadership of Hemang has a futuristic outlook.",
+      
+      "With over five years of experience in the plywood industry and real estate sector, Hemang brings a combination of experience and enthusiasm to any business that he chooses to venture into. His guidance and leadership, Mangal Realty has created a voice for itself in the competitive business landscape  of India.",
+      "Education & Journey",
+      "BBA from GITAM University (2024). Currently pursuing an MBA in Family Business Management at SP Jain School of Global Management (expected 2026).",
+      "**Creating innovation with eco-conscious thinking to shape the future of sustainable luxury real estate.**",
+      "Managing Director, Mangal Realty  fueling its growth as India's No.1 eco-luxury real estate.",
+      "Director, Pando Ply (since 2023)  managing operations in many sectors, including manufacturing and realty.",
+      "Currently, pursuing a futuristic program in Family Business Management at SP Jain School of Global Management, one of Asia's premier programs.",
+      "Established Mangal Realty as a market benchmark in sustainable, eco-friendly plotted developments in India.",  
     ],
-    image: "/assets/images/sanjay.jpg",
-    href: "https://www.ireedindia.com/",
-    linkedin: "https://www.linkedin.com/in/kamaldeep01/",
+    image: "/assets/images/hemang-choudhary.jpg",
+    href: "https://mangalrealty.com/",
+    linkedin: "https://www.linkedin.com/in/hemang-choudhary/",
     icon: Briefcase,
   },
-  {
-    name: "Vebhore Bagria",
-    role: "Chief Financial Officer",
-    description: [
-      // "Bhaswar Paul is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
-      // "Bhaswar has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
-      // "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
-    ],
-    image: "/assets/images/vebhore.jpg",
-    href: "https://www.ireedindia.com/",
-    linkedin: "https://www.linkedin.com/in/bhaswarpaul/",
-    icon: GraduationCap,
-  },
 ];
+// {
+//   name: "Vebhore Bagria",
+//   role: "Chief Financial Officer",
+//   description: [
+//     // "Bhaswar Paul is a highly respected professional in the burgeoning Indian real estate sector. He is known for his strategic sales leadership, strong interpersonal skills, ability to build teams and nurture relationships with clients including banks, multinational corporations, diplomats, and NRI investors. His experience in the industry spans over two decades in business development, project planning, sales, marketing, customer hospitality, team building and sales training.",
+//     // "Bhaswar has worked with leading Indian real estate developers including M3M India, Central Park Developers and IREO Branded Residences. His career includes senior leadership roles in domestic and international sales to establish a strong network of global clients across Middle East, South East Asia, UK and USA.",
+//     // "As a strategic project head, he developed business strategies and managed high-net-worth individual (HNIs) portfolios. He is the Founder and CEO of IREED Academy India Private Limited, which focuses on real estate career program, corporate training, soft skill development and sales training. His founding of IREED Academy reflects his commitment to addressing the skill gap in the real estate workforce through comprehensive training programs.",
+//   ],
+//   image: "/assets/images/vebhore.jpg",
+//   href: "https://www.ireedindia.com/",
+//   linkedin: "https://www.linkedin.com/in/bhaswarpaul/",
+//   icon: GraduationCap,
+// },
+
 
 const management = [
   {
@@ -304,12 +313,23 @@ export default function MangalLeadership() {
                     {partner.role}
                   </p>
 
-                  <div className="space-y-6 text-stone-600">
-                    {partner.description.map((para, pIdx) => (
-                      <p key={pIdx} className="text-lg leading-relaxed">
-                        {para}
-                      </p>
-                    ))}
+                  <div className="space-y-4 text-stone-600">
+                    {partner.description.map((para, pIdx) => {
+                      // Check for the bold vision statement
+                      if (para.startsWith("**")) {
+                        return (
+                          <p key={pIdx} className="text-xl md:text-2xl font-bold text-stone-900 pt-6 pb-2 leading-tight">
+                            {para.replace(/\*\*/g, "")}
+                          </p>
+                        );
+                      }
+                      // Render standard pointers
+                      return (
+                        <p key={pIdx} className="text-lg leading-relaxed pl-2">
+                          {para}
+                        </p>
+                      );
+                    })}
                   </div>
 
                   <div className="mt-12 pb-10 border-b border-stone-200 flex flex-wrap items-center gap-8">
@@ -427,7 +447,7 @@ export default function MangalLeadership() {
             style={{ color: brandGreen }}
           />
           <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tighter">
-           The Mangal Realty Belief
+            The Mangal Realty Belief
           </h2>
 
           <div className="mt-10">

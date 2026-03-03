@@ -22,7 +22,7 @@ const BLOG_CONTENT = {
   author: "Archita",
   date: "Mar 03, 2026",
   readTime: "7 min read",
-  image: "/assets/images/blog-11-img.webp",
+  image: "/assets/images/blog-11-img.jpeg",
   tags: ["Township Living", "Plotted Development", "Lifestyle", "Real Estate Trends"],
   quote: "The question is no longer simply 'Where are you buying?' but 'How do you want to live?'",
   content: `
