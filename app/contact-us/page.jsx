@@ -126,14 +126,14 @@ export default function ContactUs() {
                   title: "Address",
                   content: (
                     <>
-                      D-No: 49, 24-26, Shankaramatam Road,<br />
+                      D-No: 49-24-66, 1st Floor,<br /> Shankaramatam Road,<br />
                       Beside UK Parlour<br />
-                      Visakhapatnam
+                      Visakhapatnam – 530020
                     </>
                   )
                 },
-                { icon: <Phone />, title: "Call Us", content: "+91 040-4400033" },
-                { icon: <Mail />, title: "Email", content: "info@mangalRealty.com" },
+                { icon: <Phone />, title: "Call Us", content: "+91 69000-48000" },
+                { icon: <Mail />, title: "Email", content: "info@mangalrealty.com" },
                 // { icon: <Clock />, title: "Hours", content: "Mon - Sat: 9:00 AM - 7:00 PM" }
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 items-start group">
