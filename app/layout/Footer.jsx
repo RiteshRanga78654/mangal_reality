@@ -99,7 +99,7 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <div className="space-y-1">
                 <p className="text-[#4ADE80] text-[10px]  font-bold tracking-widest">Visit us at our office in</p>
-                <p className="text-sm font-light leading-relaxed"> Mangal Realty, D-No: 49, 24-26, Shankaramatam Road, Beside UK Parlour<br />Visakhapatnam, Andhra Pradesh - 530016</p>
+                <p className="text-sm font-light leading-relaxed"> D-No: 49-24-66, 1st Floor, <br /> Shankaramatam Road,<br /> Beside UK Parlour, <br />Visakhapatnam - 530020</p>
               </div>
 
               <div className="flex flex-col gap-4">
@@ -115,7 +115,7 @@ export default function Footer() {
                   <div className="w-10 h-10 rounded-full bg-[#22C55E]/10 flex items-center justify-center group-hover:bg-[#22C55E] transition-all duration-500">
                     <Phone size={16} className="text-[#4ADE80] group-hover:text-white" />
                   </div>
-                  <span className="text-sm font-semibold text-white group-hover:text-[#4ADE80] transition-colors">+91 040-4400033</span>
+                  <span className="text-sm font-semibold text-white group-hover:text-[#4ADE80] transition-colors">+91 69000-48000</span>
                 </a>
               </div>
             </div>
