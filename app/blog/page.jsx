@@ -14,11 +14,126 @@ import {
 
 // 1. DATA DEFINITIONS (Slug-based mapping)
 const BLOG_CONTENT = {
+"igbc-townships-india": {
+  id: 10,
+  category: "Market Trends",
+  title: "Green, Certified, and Profitable: The Rise of IGBC Townships in Indian Real Estate",
+  author: "Archita",
+  date: "Mar 17, 2026",
+  readTime: "10 min read",
+  image: "/assets/images/green-finance-for-green-building.jpg",
+  tags: [
+    "IGBC",
+    "Green Buildings",
+    "Sustainable Living",
+    "Real Estate Trends",
+    "Investment"
+  ],
+  quote: "Green townships are no longer the future — they are the present of smart real estate investment in India.",
+  content: `
+  <p>The character of India’s urban areas is evolving rapidly. Homebuyers and investors from a new generation are now asking a question that would not even have crossed minds a decade ago — <strong>“Is this building environmentally friendly?”</strong></p>
+
+  <p>Buildings with IGBC certification are increasingly answering that question with confidence, and demand for such developments is rising across the country.</p>
+
+  <p>This article explains what IGBC certification means, why it is becoming important in India, and how buyers and investors can identify truly sustainable developments.</p>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">What Is IGBC and Why Does It Matter</h2>
+
+  <p>IGBC stands for the <strong>Indian Green Building Council</strong>, part of the Confederation of Indian Industry. It sets standards for sustainable construction in India.</p>
+
+  <p>An IGBC rating evaluates projects based on:</p>
+  <ul>
+    <li>Energy efficiency</li>
+    <li>Water conservation</li>
+    <li>Waste management</li>
+    <li>Indoor air quality</li>
+    <li>Site planning</li>
+  </ul>
+
+  <p>For buyers, this translates into lower utility costs, healthier living conditions, and long-term savings.</p>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">The Shift Happening in Indian Real Estate</h2>
+
+  <p>Green buildings were once limited to corporate offices and luxury hotels. Today, IGBC-certified residential townships are rapidly growing in cities like Pune, Hyderabad, Bengaluru, Chennai, and NCR.</p>
+
+  <p>India is now among the top countries globally in green building adoption, with residential townships becoming the fastest-growing segment.</p>
+
+  <p>This shift is driven by:</p>
+  <ul>
+    <li>Rising environmental awareness</li>
+    <li>Government incentives</li>
+    <li>Younger, informed buyers</li>
+  </ul>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">What Makes an IGBC Township Different</h2>
+
+  <p>Living in an IGBC township feels different — cleaner air, better natural light, and thoughtfully designed green spaces.</p>
+
+  <ul>
+    <li>Use of sustainable construction materials</li>
+    <li>Rainwater harvesting systems</li>
+    <li>Solar energy usage</li>
+    <li>Efficient waste management systems</li>
+  </ul>
+
+  <p>Residents often report savings of up to <strong>30% on electricity bills</strong>, proving that sustainability is also financially beneficial.</p>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">Why Investors Are Taking IGBC Seriously</h2>
+
+  <p>IGBC-certified properties are increasingly outperforming conventional projects in terms of value appreciation.</p>
+
+  <ul>
+    <li>Higher resale value</li>
+    <li>Better rental demand</li>
+    <li>Lower vacancy rates</li>
+  </ul>
+
+  <p>With ESG (Environmental, Social, Governance) investing gaining momentum, certified green projects are attracting more institutional capital.</p>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">The Role of Government Policy</h2>
+
+  <p>The Indian government actively supports green development through:</p>
+
+  <ul>
+    <li>FSI (Floor Space Index) incentives</li>
+    <li>Faster project approvals</li>
+    <li>Smart Cities Mission & AMRUT initiatives</li>
+  </ul>
+
+  <p>This policy support reduces long-term risk for investors and encourages developers to build sustainably.</p>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">How to Evaluate a Green Township</h2>
+
+  <p>Not all projects claiming to be “green” are certified. Before investing, check:</p>
+
+  <ul>
+    <li>IGBC certification level (Certified, Silver, Gold, Platinum)</li>
+    <li>Renewable energy usage</li>
+    <li>Water recycling systems</li>
+    <li>Developer track record</li>
+  </ul>
+
+  <p>Transparency from the developer is a strong indicator of credibility.</p>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">The Road Ahead</h2>
+
+  <p>India’s urban population is growing rapidly, making sustainable housing a necessity rather than a trend.</p>
+
+  <p>Developers who build green today are aligning with future demand — and buyers who invest early stand to benefit the most.</p>
+
+  <h2 style="font-size:24px;font-weight:bold;margin:32px 0 16px;">Final Thoughts</h2>
+
+  <p>IGBC townships are no longer optional — they are becoming the benchmark for modern living.</p>
+
+  <p>If you are planning your next real estate move, choosing a green-certified development can deliver both lifestyle benefits and long-term financial returns.</p>
+  `
+},
+
 "smart-investment-insights-india": {
   id: 9,
   category: "Investment",
   title: "Smart Investment Insights: Expert Perspectives on Real Estate Investment and Wealth Building in India",
-  author: "Editorial Team",
+  author: "Archita",
   date: "Mar 11, 2026",
   readTime: "12 min read",
   image: "/assets/images/flats-img.jpg",
