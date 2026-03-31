@@ -78,11 +78,11 @@ const CompletedProjectsPage = () => {
     },
     {
       title: "The Smart City",
-      location: "Dakamari",
+      location: "Dakamarri",
       area: "3 Acres",
-      tagline: "Intelligence Meets Luxury in the Heart of Dakamari.",
-      description: "The Smart City located in the vibrant area of Dakamari represents the perfect fusion of modern technology & comfortable family living.",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000",
+      tagline: "Intelligence Meets Luxury in the Heart of Dakamarri.",
+      description: "The Smart City located in the vibrant area of Dakamarri represents the perfect fusion of modern technology & comfortable family living.",
+      image: "/assets/images/smart-city.png",
       link: "/the-smart-city"
     },
     {
@@ -91,7 +91,7 @@ const CompletedProjectsPage = () => {
       area: "5 Acres",
       tagline: "Expansive Green Living Across Five Acres of Excellence.",
       description: "The Green Meadows a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments.",
-      image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=1000",
+      image: "/assets/images/green-meadows.png",
       link: "/the-green-meadows"
     }
   ];

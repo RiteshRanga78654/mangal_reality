@@ -91,7 +91,7 @@ const GreenMeadowsJonnada = () => {
       <section className="relative min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row bg-[#0A1A10] overflow-hidden">
         <div className="w-full lg:w-2/3 h-[45vh] lg:h-screen relative">
           <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1500"
+            src="/assets/images/green-meadows.png"
             className="w-full h-full object-cover opacity-60"
             alt="Green Meadows Jonnada"
           />
@@ -294,8 +294,8 @@ const GreenMeadowsJonnada = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 h-[300px] lg:h-[450px]">
-              <div className="h-full shadow-2xl"><img src="/assets/images/house-pic.jpg" className="w-full h-full object-cover" alt="Real Estate" /></div>
-              <div className="h-full shadow-2xl translate-y-8"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="Modern House" /></div>
+              <div className="h-full shadow-2xl"><img src="/assets/images/what-our-student-says-2.jpeg" className="w-full h-full object-cover" alt="Real Estate" /></div>
+              <div className="h-full shadow-2xl translate-y-8"><img src="/assets/images/3.jpeg" className="w-full h-full object-cover" alt="Modern House" /></div>
             </div>
           </div>
         </div>
