@@ -14,6 +14,7 @@ import {
 
 // 1. DATA DEFINITIONS (Slug-based mapping)
 const BLOG_CONTENT = {
+  
 "igbc-townships-india": {
   id: 10,
   category: "Market Trends",

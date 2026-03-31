@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Mail, Phone, ChevronUp } from 'lucide-react';
-import { FaTwitter, FaFacebookF, FaPinterestP, FaInstagram } from "react-icons/fa";
+// import { FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaPinterestP, FaInstagram, FaLinkedinIn, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -156,24 +157,39 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-6">
-            {[FaTwitter, FaFacebookF, FaPinterestP, FaInstagram].map((Icon, i) => (
-              <Link key={i} href="#" className="text-white-500 hover:text-[#4ADE80] transition-all duration-300 transform hover:-translate-y-1">
-                <Icon size={18} />
-              </Link>
-            ))}
+            {[
+              { icon: FaFacebookF, link: " https://www.facebook.com/MangalRealty/" },
+              { icon: FaPinterestP, link: "https://in.pinterest.com/mangalrealty/" },
+              { icon: FaInstagram, link: " https://www.instagram.com/mangalrealty/" },
+              { icon: FaLinkedinIn, link: " https://www.linkedin.com/company/mangalrealty/" },
+              { icon: FaYoutube, link: "https://www.youtube.com/@mangalrealty" },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={i}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white-500 hover:text-[#4ADE80] transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <Icon size={18} />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </motion.div>
 
       {/* FLOATING ACTION */}
-      <motion.button
-        whileHover={{ scale: 1.1, y: -5 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={scrollToTop}
-        className="fixed bottom-10 cursor-pointer right-10 w-14 h-14 bg-[#2b6642] text-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(21,128,61,0.4)] z-40"
+      <a
+        href="https://wa.me/916900048000" // replace with your number
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-10 right-10 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.4)] z-40 cursor-pointer hover:scale-110 transition-all duration-300"
       >
-        <ChevronUp size={24} />
-      </motion.button>
+        <FaWhatsapp size={26} />
+      </a>
     </footer>
   );
 }

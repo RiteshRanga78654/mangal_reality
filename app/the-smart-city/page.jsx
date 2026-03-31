@@ -94,7 +94,7 @@ const SmartCityPremium = () => {
       <section className="relative h-[85vh] lg:h-screen flex flex-col lg:flex-row bg-slate-900">
         <div className="w-full lg:w-2/3 h-[40vh] lg:h-full relative overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1500"
+            src="/assets/images/smart-city.png"
             className="w-full h-full object-cover opacity-70 transition-transform duration-1000"
             alt="Smart City Banner"
           />
@@ -397,8 +397,8 @@ const SmartCityPremium = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="h-64 bg-slate-100 -[2rem] overflow-hidden"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="site progress" /></div>
-              <div className="h-64 bg-slate-100 -[2rem] overflow-hidden mt-12"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover" alt="site project" /></div>
+              <div className="h-64 bg-slate-100 -[2rem] overflow-hidden"><img src="/assets/images/what-our-student-says-1.jpeg" className="w-full h-full object-cover" alt="site progress" /></div>
+              <div className="h-64 bg-slate-100 -[2rem] overflow-hidden mt-12"><img src="/assets/images/what-our-student-says-2.jpeg" className="w-full h-full object-cover" alt="site project" /></div>
             </div>
           </div>
         </div>
