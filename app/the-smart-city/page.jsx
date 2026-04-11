@@ -114,7 +114,7 @@ const SmartCityPremium = () => {
               The Smart City located in the vibrant area of Dakamari epresents the perfect fusion of modern technology & comfortable family living.
 
             </p>
-            <MangalButton text="Download Brochure" href="" />
+            <MangalButton text="Download Brochure" href="/assets/files/tcs-brochure.pdf"  />
           </motion.div>
         </div>
       </section>

@@ -99,7 +99,7 @@ const NatureValleyPhase1 = () => {
       <section className="relative min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row bg-[#0A1A10] overflow-hidden">
         <div className="w-full lg:w-2/3 h-[45vh] lg:h-screen relative">
           <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1500"
+            src="/assets/images/nature-valley-phase-1.jpeg"
             className="w-full h-full object-cover opacity-60"
             alt="Nature Valley (Phase 1)"
           />

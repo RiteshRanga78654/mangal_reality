@@ -66,7 +66,7 @@ const NatureValleyPhase2 = () => {
       <section className="relative min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row bg-[#0A1A10] overflow-hidden">
         <div className="w-full lg:w-2/3 h-[45vh] lg:h-screen relative">
           <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1500"
+            src="/assets/images/nature-valley-phase-2.jpeg"
             className="w-full h-full object-cover opacity-60"
             alt="Nature Valley Phase 2"
           />
@@ -235,10 +235,10 @@ const NatureValleyPhase2 = () => {
 
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
             <div className="flex items-center gap-3 font-bold  tracking-[0.1em] text-[10px] md:text-xs">
-              <Mail className="text-[#22C55E]" size={18} /> info@mangalRealty.com
+              <Mail className="text-[#22C55E]" size={18} /> info@mangalrealty.com
             </div>
             <div className="flex items-center gap-3 font-bold tracking-[0.1em] text-[10px] md:text-xs">
-              <Phone className="text-[#22C55E]" size={18} /> +91 9429690913
+              <Phone className="text-[#22C55E]" size={18} /> +91 69000-48000
             </div>
           </div>
 
@@ -256,6 +256,7 @@ const NatureValleyPhase2 = () => {
               className="contents"
             >
               <MangalButton>Get Location Map</MangalButton>
+              
             </a>
           </div>
         </div>

@@ -91,7 +91,7 @@ const OngoingProjectsPage = () => {
       location: "Pisini, AP",
       status: "Phase 2: Landscaping",
       area: "30 Acres",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200",
+      image: "/assets/images/nature-valley-phase-2.jpeg",
       link: "/the-nature-valley-phase2"
     }
   ];

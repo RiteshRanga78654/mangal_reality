@@ -73,7 +73,7 @@ const CompletedProjectsPage = () => {
       area: "17 Acres",
       tagline: "Experience the Luxurious Green Side of Life.",
       description: "The Nature Valley, a testament to our vision of harmonious living nestled in the serene landscape of Bhogapuram.",
-      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1000",
+      image: "/assets/images/nature-valley-phase-2.jpeg",
       link: "/the-nature-valley-phase1"
     },
     {
