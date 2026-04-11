@@ -29,7 +29,7 @@ const brandGreen = "#22C55E";
 const JOBS = [
   {
     id: 1,
-    title: "Property Consultant",
+    title: "Relationship Manager ",
     department: "Sales",
     location: "Visakhapatnam, AP",
     type: "Full-Time",
