@@ -101,7 +101,7 @@ export default function ContactPopup({ isOpen, onClose }) {
           <div className="pt-1 pb-2">
             <h2
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              className="text-[13px] font-bold tracking-wider text-[#0A1A10] leading-none"
+              className="text-[13px] font-bold tracking-wider text-[#22C55E] leading-none"
             >
               GET IN TOUCH WITH US
             </h2>

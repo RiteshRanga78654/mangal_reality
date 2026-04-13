@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Camera, 
-  Play, 
-  Layers, 
-  ArrowUpRight, 
-  Monitor, 
-  Box, 
+import {
+  Camera,
+  Play,
+  Layers,
+  ArrowUpRight,
+  Monitor,
+  Box,
   FileText,
   ChevronRight,
   X,
@@ -29,7 +29,7 @@ const MangalButton = ({ text, onClick, className = "" }) => (
 
     {/* 2. Animated Fill Background */}
     <div className="absolute inset-1 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-    
+
     {/* 3. Persistent Inset Border */}
     <div className="absolute inset-1 border border-[#22C55E]"></div>
   </button>
@@ -37,25 +37,17 @@ const MangalButton = ({ text, onClick, className = "" }) => (
 const creativePortfolio = [
   {
     id: 1,
-    category: "Architectural Rendering",
-    title: "Signature Skyline Phase I",
-    description: "High-fidelity structural visualization showcasing the integration of glass-active facades and urban greenery.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200",
+    image: "/assets/images/creative-1.webp",
   },
-  // {
-  //   id: 2,
-  //   category: "Digital Experience",
-  //   title: "The Genesis Virtual Tour",
-  //   description: "An immersive 360-degree walkthrough experience designed for international stakeholders and NRI investors.",
-  //   image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200",
-  //   isVideo: true
-  // },
+  {
+    id: 2,
+    image: "/assets/images/creative-2.webp",
+   
+  },
   {
     id: 3,
-    category: "Corporate Campaign",
-    title: "Trust in Every Brick",
-    description: "National brand campaign highlighting Mangal Realty's three decades of transparency and timely delivery.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1200",
+    
+    image: "/assets/images/creative-3.webp",
   }
 ];
 
@@ -63,11 +55,11 @@ export default function OurCreativesFormal() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <main 
+    <main
       className="bg-white font-medium overflow-hidden text-left"
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
-      
+
       {/* 1. INSTITUTIONAL HERO BANNER */}
       <section className="relative h-[60vh] md:h-[82vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img
@@ -87,19 +79,19 @@ export default function OurCreativesFormal() {
             {/* <span className="text-[10px]  tracking-[0.5em] text-green-500 font-bold mb-6 block">Visual Assets & Media</span> */}
             {/* Standardized Heading: text-4xl to 7xl */}
             <div className="relative z-10 text-center text-white px-6">
-            <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
-              <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
-                <Home size={12} /> Home
-              </a>
-              <ChevronRight size={12} className="opacity-50" />
-              <span className="text-[#22c55e]">Gallery</span>
-            </nav>
-            {/* Standardized Heading: 4xl to 7xl */}
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">
-               Our Creatives
-            </h2>
-            <div className="h-1 w-20 bg-[#22c55e] mx-auto my-8" />
-          </div>
+              <nav className="flex items-center justify-center gap-2 mb-6 text-[10px] md:text-sm font-bold tracking-[0.2em] ">
+                <a href="/" className="hover:text-green-400 flex items-center gap-1 transition-colors">
+                  <Home size={12} /> Home
+                </a>
+                <ChevronRight size={12} className="opacity-50" />
+                <span className="text-[#22c55e]">Gallery</span>
+              </nav>
+              {/* Standardized Heading: 4xl to 7xl */}
+              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter  leading-none">
+                Our Creatives
+              </h2>
+              <div className="h-1 w-20 bg-[#22c55e] mx-auto my-8" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -118,10 +110,10 @@ export default function OurCreativesFormal() {
                 className="group text-left"
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-8 shadow-xl bg-stone-100">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-105"
+                    className="w-full h-full object-cover transition-all duration-1000 transform group-hover:scale-105"
                   />
                   {item.isVideo && (
                     <div className="absolute top-6 right-6 p-3 bg-white/90 backdrop-blur-md rounded-full shadow-lg">
@@ -129,7 +121,7 @@ export default function OurCreativesFormal() {
                     </div>
                   )}
                 </div>
-                
+
                 <p className="text-[10px] font-bold  tracking-[0.3em] text-green-500 mb-4">
                   {item.category}
                 </p>
@@ -139,7 +131,7 @@ export default function OurCreativesFormal() {
                 <p className="text-stone-500 text-sm leading-relaxed mb-8">
                   {item.description}
                 </p>
-                
+
                 {/* TRIGGER BUTTON: Opens Lightbox */}
                 {/* <MangalButton 
                   text="View Details" 
@@ -204,12 +196,12 @@ export default function OurCreativesFormal() {
       {/* 4. FORMAL FOOTER CTA */}
       <section className="py-16 lg:py-24 bg-black text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-8 leading-tight">
-              Request Project <br /> <span style={{ color: brandGreen }}>Specifications</span>
-            </h2>
-            <div className="flex justify-center mt-12">
-               <MangalButton text="Access Media Portal" />
-            </div>
+          <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-8 leading-tight">
+            Request Project <br /> <span style={{ color: brandGreen }}>Specifications</span>
+          </h2>
+          <div className="flex justify-center mt-12">
+            <MangalButton text="Access Media Portal" />
+          </div>
         </div>
       </section>
 
@@ -222,26 +214,26 @@ export default function OurCreativesFormal() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-10"
           >
-            <button 
+            <button
               onClick={() => setSelectedImage(null)}
               className="absolute top-6 right-6 text-white bg-white/10 p-3 rounded-full hover:bg-white/20 transition-all z-[110]"
             >
               <X size={24} />
             </button>
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="relative w-full max-w-6xl aspect-[4/3] md:aspect-video rounded-lg overflow-hidden shadow-2xl bg-stone-900"
             >
-              <img 
-                src={selectedImage.image} 
-                alt={selectedImage.title} 
+              <img
+                src={selectedImage.image}
+                alt={selectedImage.title}
                 className="w-full h-full object-contain"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-left">
-                  <h4 className="text-white text-xl font-bold  tracking-tighter">{selectedImage.title}</h4>
-                  <p className="text-stone-400 text-sm mt-1  tracking-widest">{selectedImage.category}</p>
+                <h4 className="text-white text-xl font-bold  tracking-tighter">{selectedImage.title}</h4>
+                <p className="text-stone-400 text-sm mt-1  tracking-widest">{selectedImage.category}</p>
               </div>
             </motion.div>
           </motion.div>
