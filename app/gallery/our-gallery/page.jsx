@@ -5,12 +5,19 @@ import { X, Play, Home, ChevronRight } from "lucide-react";
 
 // --- DUMMY DATA ---
 const galleryPhotos = [
-  { id: 1, type: "image", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200" },
-  { id: 2, type: "image", url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200" },
-  { id: 3, type: "image", url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200" },
-  { id: 4, type: "image", url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200" },
-  { id: 5, type: "image", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200" },
-  { id: 6, type: "image", url: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200" },
+  { id: 1, type: "image", url: "/assets/images/gallery-1.webp" },
+  { id: 2, type: "image", url: "/assets/images/gallery-2.webp" },
+  { id: 3, type: "image", url: "/assets/images/gallery-3.webp" },
+  { id: 4, type: "image", url: "/assets/images/gallery-4.webp" },
+  { id: 5, type: "image", url: "/assets/images/gallery-5.webp" },
+  { id: 6, type: "image", url: "/assets/images/gallery-6.webp" },
+  { id: 7, type: "image", url: "/assets/images/gallery-7.webp" },
+  { id: 8, type: "image", url: "/assets/images/gallery-8.webp" },
+  { id: 9, type: "image", url: "/assets/images/gallery-9.webp" },
+  // { id: 10, type: "image", url: "/assets/images/gallery-10.webp" },
+  { id: 11, type: "image", url: "/assets/images/gallery-11.webp" },
+  { id: 12, type: "image", url: "/assets/images/gallery-12.webp" },
+  { id: 13, type: "image", url: "/assets/images/gallery-13.webp" },
 ];
 
 const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
@@ -30,7 +37,7 @@ const MarqueeColumn = ({ items, reverse = false, onSelect }) => (
           <img
             src={img.url}
             alt="Gallery"
-            className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+            className="object-cover w-full h-full transition-all duration-700"
           />
         </motion.div>
       ))}
@@ -60,18 +67,18 @@ export default function LuxuryGalleryPage() {
           </div>
 
           <div className="relative z-10 px-6 text-center text-white max-w-5xl">
-            <motion.nav 
+            <motion.nav
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               className="flex items-center justify-center gap-2 mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em] opacity-80"
             >
-              <Home size={14} /><span className="text-white"> Home</span> 
-              <ChevronRight size={12} /> 
-             
+              <Home size={14} /><span className="text-white"> Home</span>
+              <ChevronRight size={12} />
+
               <span className="text-emerald-400">Gallery</span>
             </motion.nav>
 
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
@@ -89,11 +96,11 @@ export default function LuxuryGalleryPage() {
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 border-b border-slate-100 pb-12 gap-6 text-center md:text-left">
             <div>
               <p className="text-[#22C55E] text-[10px] font-bold tracking-[0.3em]  mb-4">Visual Journey</p>
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter  text-slate-900 leading-none">Photo <br className="hidden md:block"/> Collection</h2>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter  text-slate-900 leading-none">Photo <br className="hidden md:block" /> Collection</h2>
             </div>
-            <div className="max-w-xs text-slate-400 text-[10px] md:text-xs tracking-widest leading-loose  md:text-right">
-                Explore the textures, landscapes, and architectural details that define Mangal Realty.
-            </div>
+            {/* <div className="max-w-xs text-slate-400 text-[10px] md:text-xs tracking-widest leading-loose  md:text-right">
+              Explore the textures, landscapes, and architectural details that define Mangal Realty.
+            </div> */}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">

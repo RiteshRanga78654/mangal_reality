@@ -326,9 +326,9 @@ const Page = () => {
         <section className="py-20 px-4 md:px-12 bg-stone-50">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6 text-center md:text-left">
-              <p className="text-sm tracking-widest uppercase text-[#22C55E] font-semibold">Welcome to Mangal Realty</p>
+              <p className="text-sm tracking-widest uppercase text-[#22C55E] font-semibold ">Welcome to Mangal Realty</p>
               <h2 className="text-4xl md:text-6xl font-bold text-black leading-tight">
-                Turning Land into <span className="text-[#22C55E]">Landmarks</span>
+                Creating Value, <span className="text-[#22C55E]">Realizing Dreams</span>
               </h2>
               <div className="w-20 h-1 bg-[#22C55E] mx-auto md:mx-0"></div>
               <p className="text-lg md:text-xl text-black/70 leading-relaxed max-w-xl">
@@ -336,7 +336,7 @@ const Page = () => {
               </p>
               <p className="text-base md:text-lg text-black/80 leading-relaxed">
                 Recognized as <span>India's No.1 Eco-Luxury Real Estate Developer in Visakhapatnam</span>, we create future-ready plotted developments and premium villas with
-                <span className="text-black"> sustainable design, green landscapes, and modern lifestyle amenities</span> — offering the perfect blend of luxury & nature.
+                <span className="text-black/80"> sustainable design, green landscapes, and modern lifestyle amenities</span> — offering the perfect blend of luxury & nature.
               </p>
             </div>
 
@@ -438,6 +438,7 @@ const Page = () => {
         </section>
 
         <Amenities />
+
 
         {/* SECTION 6: TESTIMONIALS */}
         <section className="bg-white py-16 px-4 sm:px-6 lg:px-12 w-full overflow-hidden">
