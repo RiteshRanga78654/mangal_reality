@@ -15,8 +15,6 @@ import {
 } from 'lucide-react';
 
 const brandGreen = "#22C55E";
-
-// --- MANGAL SIGNATURE BUTTON COMPONENT ---
 const MangalButton = ({ text, onClick, className = "" }) => (
   <button
     onClick={onClick}
@@ -42,11 +40,11 @@ const creativePortfolio = [
   {
     id: 2,
     image: "/assets/images/creative-2.webp",
-   
+
   },
   {
     id: 3,
-    
+
     image: "/assets/images/creative-3.webp",
   }
 ];
@@ -109,6 +107,7 @@ export default function OurCreativesFormal() {
                 transition={{ delay: idx * 0.1 }}
                 className="group text-left"
               >
+                
                 <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-8 shadow-xl bg-stone-100">
                   <img
                     src={item.image}
@@ -125,6 +124,7 @@ export default function OurCreativesFormal() {
                 <p className="text-[10px] font-bold  tracking-[0.3em] text-green-500 mb-4">
                   {item.category}
                 </p>
+
                 <h3 className="text-2xl font-bold text-black  tracking-tight mb-4 leading-tight">
                   {item.title}
                 </h3>
@@ -137,6 +137,7 @@ export default function OurCreativesFormal() {
                   text="View Details" 
                   onClick={() => setSelectedImage(item)} 
                 /> */}
+
               </motion.div>
             ))}
           </div>

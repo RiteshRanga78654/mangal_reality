@@ -10,8 +10,6 @@ import {
   MapPin,
 } from "lucide-react";
 import Amenities from "./components/Amenities";
-
-// ✅ Import ContactPopup
 import ContactPopup from "./pop-form/page";
 
 

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Play, Home, ChevronRight } from "lucide-react";
 
-// --- DUMMY DATA ---
+
 const galleryPhotos = [
   { id: 1, type: "image", url: "/assets/images/gallery-1.webp" },
   { id: 2, type: "image", url: "/assets/images/gallery-2.webp" },
