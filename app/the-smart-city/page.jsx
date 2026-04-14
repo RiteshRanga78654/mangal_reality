@@ -9,6 +9,7 @@ import {
   TreePine, Landmark, TrendingUp,
   Plus, Minus, Quote, Star, Stethoscope, ShoppingBag, Maximize2
 } from 'lucide-react';
+import ContactPopup from "@/app/pop-form/page";
 
 
 // --- Animated Counter ---
@@ -34,7 +35,6 @@ const AnimatedCounter = ({ value }) => {
 };
 
 // --- Unified Mangal Button ---
-// --- Updated Unified Mangal Button ---
 const MangalButton = ({ text, href, className = "text-white" }) => (
   <Link href={href} className={`group relative cursor-pointer px-10 py-4 font-bold tracking-[0.1em] text-[14px] overflow-hidden inline-block text-center border border-[#22C55E] ${className}`}>
     <span className="relative z-10 transition-colors duration-500 group-hover:text-white">{text}</span>
@@ -47,6 +47,7 @@ const SmartCityPremium = () => {
   const [showMoreLandmarks, setShowMoreLandmarks] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const testimonials = [
     {
@@ -102,19 +103,16 @@ const SmartCityPremium = () => {
 
         <div className="w-full lg:w-1/3 flex items-center bg-[#0A1A10] px-8 lg:px-12 py-16 text-left relative">
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-            {/* <h2 className="text-[#22C55E] font-bold tracking-[0.3em] text-xs mb-4">Mangal Realty Presents</h2> */}
-            {/* Standardized Heading */}
             <h1 className="text md:text-5xl font-bold text-white leading-none mb-6 tracking-tighter">
               The Smart City
             </h1>
-            <p className="text-white  text-lg mb-8 border-l-2 border-white pl-4">
+            <p className="text-white text-lg mb-8 border-l-2 border-white pl-4">
               "Intelligence Meets Luxury in the Heart of Dakamari"
             </p>
             <p className="text-white text-base leading-relaxed max-w-md mb-4">
-              The Smart City located in the vibrant area of Dakamari epresents the perfect fusion of modern technology & comfortable family living.
-
+              The Smart City located in the vibrant area of Dakamari represents the perfect fusion of modern technology & comfortable family living.
             </p>
-            <MangalButton text="Download Brochure" href="/assets/files/tcs-brochure.pdf"  />
+            <MangalButton text="Download Brochure" href="/assets/files/tcs-brochure.pdf" />
           </motion.div>
         </div>
       </section>
@@ -124,24 +122,23 @@ const SmartCityPremium = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white shadow-2xl p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
             <TrendingUp className="text-[#22C55E] mb-4" size={24} />
-            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left ">
+            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left">
               Total Area
             </p>
             <h2 className="text-4xl font-bold text-black leading-none tracking-tighter text-left flex items-center gap-2">
-              {/* Use your AnimatedCounter here for the "17" and manually add "Acres" */}
               <AnimatedCounter value="3" /> Acres
             </h2>
             <p className="text-slate-500 text-xs mt-2 font-bold text-left">
               Premium Open Plots
             </p>
           </div>
-          <div className="bg-white shadow-2xl  p-10 transition-transform hover:-translate-y-2">
+          <div className="bg-white shadow-2xl p-10 transition-transform hover:-translate-y-2">
             <CheckCircle className="text-[#22C55E] mb-4" />
             <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left">Live Status</p>
             <h2 className="text-4xl font-bold text-black leading-none tracking-tighter text-left">100%</h2>
             <p className="text-slate-500 text-xs mt-2 font-bold text-left">Work Completed</p>
           </div>
-          <div className="bg-white shadow-2xl  p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
+          <div className="bg-white shadow-2xl p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
             <Landmark className="text-[#22C55E] mb-4" />
             <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left">Legal Status</p>
             <h2 className="text font-bold text-black leading-none tracking-tighter text-left">VMRDA Approved</h2>
@@ -152,15 +149,13 @@ const SmartCityPremium = () => {
 
       {/* 3. PREMIUM HIGHLIGHTS */}
       <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
-        {/* 1. INFRASTRUCTURE HEADER */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none text-slate-900 ">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none text-slate-900">
             Elite <span className="text-[#15803d]">Infrastructure</span>
           </h2>
           <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
         </div>
 
-        {/* INFRASTRUCTURE GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {[
             { title: "60ft Main Road", icon: <Layout />, desc: "Morning Wellness Routines jogs along tree-lined 60-feet roads." },
@@ -175,7 +170,7 @@ const SmartCityPremium = () => {
               <div className="text-[#15803d] mb-6 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                 {item.icon}
               </div>
-              <h4 className="text-xl font-bold  mb-3 tracking-tight text-slate-900 group-hover:text-white transition-colors duration-300">
+              <h4 className="text-xl font-bold mb-3 tracking-tight text-slate-900 group-hover:text-white transition-colors duration-300">
                 {item.title}
               </h4>
               <p className="text-slate-500 text-sm leading-relaxed group-hover:text-emerald-50 transition-colors duration-300">
@@ -185,40 +180,22 @@ const SmartCityPremium = () => {
           ))}
         </div>
 
-        {/* 2. CONNECTIVITY HEADER */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-slate-900 ">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-slate-900">
             Just Minutes From <span className="text-[#15803d]">Everywhere</span>
           </h2>
           <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
         </div>
 
-        {/* CONNECTIVITY GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            {
-              title: "Bhogapuram Airport",
-              time: "5 Minutes",
-              desc: "The new international airport transforms property values and lifestyle convenience."
-            },
-            {
-              title: "IT SEZ Corridor",
-              time: "10 Minutes",
-              desc: "Join tech professionals who've discovered the perfect work-life balance."
-            },
-            {
-              title: "Vizag CMR",
-              time: "35 Minutes",
-              desc: "Premium shopping, healthcare, and entertainment without the city chaos."
-            },
-            {
-              title: "NH-45 Access",
-              time: "600 Meters",
-              desc: "Direct highway access for effortless and rapid travel."
-            }
+            { title: "Bhogapuram Airport", time: "5 Minutes", desc: "The new international airport transforms property values and lifestyle convenience." },
+            { title: "IT SEZ Corridor", time: "10 Minutes", desc: "Join tech professionals who've discovered the perfect work-life balance." },
+            { title: "Vizag CMR", time: "35 Minutes", desc: "Premium shopping, healthcare, and entertainment without the city chaos." },
+            { title: "NH-45 Access", time: "600 Meters", desc: "Direct highway access for effortless and rapid travel." }
           ].map((item, idx) => (
             <div key={idx} className="flex flex-col border-l-4 border-[#15803d] pl-6 py-4 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group rounded-r-2xl">
-              <span className="text-[10px]  font-black text-slate-400 tracking-[0.2em] mb-1 group-hover:text-[#15803d] transition-colors">
+              <span className="text-[10px] font-black text-slate-400 tracking-[0.2em] mb-1 group-hover:text-[#15803d] transition-colors">
                 {item.title}
               </span>
               <span className="text-3xl lg:text-4xl font-black text-[#15803d] tracking-tighter mb-2">
@@ -231,25 +208,23 @@ const SmartCityPremium = () => {
           ))}
         </div>
       </section>
+
       {/* 4. CONNECTIVITY HUB */}
       <section className="py-24 bg-white px-6 mt-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
             <div className="text-left max-w-2xl">
-              {/* Standardized Heading */}
               <h2 className="text-3xl md:text-7xl font-bold text-black tracking-tighter leading-none">
                 The <span className="text-[#22C55E]">Connectivity</span> Hub
               </h2>
-              <p className="text-slate-900 mt-6 text-xl font-bold  tracking-tight border-[#22C55E] pl-6">
+              <p className="text-slate-900 mt-6 text-xl font-bold tracking-tight border-[#22C55E] pl-6">
                 Where Location Meets Lifestyle
               </p>
-
               <p className="text-slate-600 mt-4 text-lg leading-relaxed pl-7">
                 Our location between Visakhapatnam and Vizianagaram places you in the
                 fastest-growing residential corridor, surrounded by educational
                 institutions, IT companies, and upcoming infrastructure projects.
               </p>
-
             </div>
             <button
               onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}
@@ -261,7 +236,7 @@ const SmartCityPremium = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 h-[400px] relative -[3rem] overflow-hidden group shadow-2xl">
+            <div className="md:col-span-2 h-[400px] relative overflow-hidden group shadow-2xl">
               <img
                 src="/assets/images/Bhogapuram_Airport_Vizag.webp"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
@@ -269,12 +244,12 @@ const SmartCityPremium = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-left">
-                <span className="bg-[#22C55E] text-white px-4 py-1 -full text-[10px] font-bold tracking-widest mb-4 inline-block">5 Minutes Drive</span>
-                <h4 className="text font-bold text-white  ">Bhogapuram International Airport</h4>
+                <span className="bg-[#22C55E] text-white px-4 py-1 text-[10px] font-bold tracking-widest mb-4 inline-block">5 Minutes Drive</span>
+                <h4 className="text font-bold text-white">Bhogapuram International Airport</h4>
               </div>
             </div>
 
-            <div className="h-[400px] relative -[3rem] overflow-hidden group shadow-2xl">
+            <div className="h-[400px] relative overflow-hidden group shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
@@ -283,8 +258,8 @@ const SmartCityPremium = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A10] via-[#0A1A10]/40 to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-left">
                 <Building2 size={48} className="text-[#22C55E] mb-4 opacity-80" />
-                <span className="text-[#22C55E] text-[10px] font-bold  tracking-widest mb-2 block">10 Minutes Drive</span>
-                <h4 className="text font-bold text-white  leading-none">IT SEZ Corridor</h4>
+                <span className="text-[#22C55E] text-[10px] font-bold tracking-widest mb-2 block">10 Minutes Drive</span>
+                <h4 className="text font-bold text-white leading-none">IT SEZ Corridor</h4>
               </div>
             </div>
 
@@ -293,41 +268,30 @@ const SmartCityPremium = () => {
                 <>
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-                    className="h-[350px] relative -[3rem] overflow-hidden group shadow-2xl"
+                    className="h-[350px] relative overflow-hidden group shadow-2xl"
                   >
                     <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Health City" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     <div className="absolute bottom-8 left-8 text-left text-white">
                       <Stethoscope size={40} className="mb-4 opacity-60 text-[#22C55E]" />
-                      <h4 className="text-2xl font-bold  leading-tight mb-2 tracking-tighter">Health City</h4>
+                      <h4 className="text-2xl font-bold leading-tight mb-2 tracking-tighter">Health City</h4>
                     </div>
                   </motion.div>
 
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-                    className="h-[350px] relative -[3rem] overflow-hidden group shadow-2xl"
+                    className="h-[350px] relative overflow-hidden group shadow-2xl"
                   >
                     <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Retail Hub" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                     <div className="absolute bottom-8 left-8 text-left text-white">
                       <ShoppingBag size={40} className="mb-4 opacity-60 text-[#22C55E]" />
-                      <h4 className="text-2xl font-bold  leading-tight mb-2 tracking-tighter">Retail Hubs</h4>
+                      <h4 className="text-2xl font-bold leading-tight mb-2 tracking-tighter">Retail Hubs</h4>
                     </div>
                   </motion.div>
                 </>
               )}
             </AnimatePresence>
-
-            {/* <div className={`transition-all duration-700 h-[150px] bg-white border border-slate-100 p-12 -[3rem] flex flex-col justify-center shadow-2xl text-left ${showMoreLandmarks ? 'md:col-span-1' : 'md:col-span-2'}`}>
-              <div className={`grid gap-x-12 gap-y-6 w-full ${showMoreLandmarks ? 'grid-cols-1' : 'grid-cols-2'}`}>
-                {[{ l: "Vizag CMR", d: "35 Mins" }, { l: "Madhurawada", d: "20 Mins" }].map((item, i) => (
-                  <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2 bg-slate-50/50 -r-xl">
-                    <span className="text-[10px]  font-bold text-slate-400 tracking-widest">{item.l}</span>
-                    <span className="text-2xl font-bold">{item.d}</span>
-                  </div>
-                ))}
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
@@ -336,8 +300,7 @@ const SmartCityPremium = () => {
       <section className="py-24 bg-[#0A1A10] text-white mx-6 lg:mx-14 mb-24 px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10 text-left">
           <div className="w-full lg:w-3/5">
-            {/* Standardized Heading */}
-            <h3 className="text-4xl md:text-7xl font-bold tracking-tighter  mb-12 leading-none">A Secure <br /> <span className="text-[#22C55E]">Investment</span> Hub</h3>
+            <h3 className="text-4xl md:text-7xl font-bold tracking-tighter mb-12 leading-none">A Secure <br /> <span className="text-[#22C55E]">Investment</span> Hub</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12">
               {[
                 { title: "VMRDA Approved", sub: "L.P.NO: 82/2020/1167" },
@@ -348,7 +311,7 @@ const SmartCityPremium = () => {
                 <div key={i} className="flex gap-4 items-start">
                   <CheckCircle className="text-[#22C55E] shrink-0" size={24} />
                   <div>
-                    <h5 className="font-bold  tracking-tight">{check.title}</h5>
+                    <h5 className="font-bold tracking-tight">{check.title}</h5>
                     <p className="text-slate-400 text-xs mt-1">{check.sub}</p>
                   </div>
                 </div>
@@ -356,7 +319,7 @@ const SmartCityPremium = () => {
             </div>
           </div>
           <div className="w-full lg:w-2/5 flex flex-col gap-6">
-            <div className="bg-white/5 border border-white/10 p-10 -[2.5rem] backdrop-blur-xl">
+            <div className="bg-white/5 border border-white/10 p-10 backdrop-blur-xl">
               <ShieldCheck className="text-[#22C55E] mb-6" size={48} />
               <p className="text-white text-sm leading-relaxed mb-8">
                 Our track record speaks to our commitment to quality, timely delivery, and customer satisfaction. When you choose us, you choose a partner invested in your family's success.
@@ -374,31 +337,29 @@ const SmartCityPremium = () => {
             <div className="relative">
               <Quote className="absolute -top-10 -left-10 text-[#22C55E] opacity-10" size={200} />
               <div className="relative z-10">
-                {/* Standardized Heading */}
-                <h3 className="text-4xl md:text-7xl font-bold  leading-none mb-8">What Our <br /> <span className="text-[#22C55E]">Investors</span> Say</h3>
-
+                <h3 className="text-4xl md:text-7xl font-bold leading-none mb-8">What Our <br /> <span className="text-[#22C55E]">Investors</span> Say</h3>
                 <div className={`transition-all duration-500 min-h-[160px] transform ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
                   <p className="text-2xl font-medium text-slate-800 leading-relaxed mb-10">
                     "{testimonials[testimonialIndex].text}"
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-slate-900 text-[#22C55E] -full flex items-center justify-center font-bold text-xl">
+                    <div className="w-16 h-16 bg-slate-900 text-[#22C55E] flex items-center justify-center font-bold text-xl">
                       {testimonials[testimonialIndex].name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-bold text-xl  tracking-tight">{testimonials[testimonialIndex].name}</p>
+                      <p className="font-bold text-xl tracking-tight">{testimonials[testimonialIndex].name}</p>
                       <div className="flex text-[#22C55E] mb-1">
                         <Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" />
                       </div>
-                      <p className="text-xs font-bold text-slate-400  tracking-widest">{testimonials[testimonialIndex].role}</p>
+                      <p className="text-xs font-bold text-slate-400 tracking-widest">{testimonials[testimonialIndex].role}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="h-64 bg-slate-100 -[2rem] overflow-hidden"><img src="/assets/images/what-our-student-says-1.jpeg" className="w-full h-full object-cover" alt="site progress" /></div>
-              <div className="h-64 bg-slate-100 -[2rem] overflow-hidden mt-12"><img src="/assets/images/what-our-student-says-2.jpeg" className="w-full h-full object-cover" alt="site project" /></div>
+              <div className="h-64 bg-slate-100 overflow-hidden"><img src="/assets/images/what-our-student-says-1.jpeg" className="w-full h-full object-cover" alt="site progress" /></div>
+              <div className="h-64 bg-slate-100 overflow-hidden mt-12"><img src="/assets/images/what-our-student-says-2.jpeg" className="w-full h-full object-cover" alt="site project" /></div>
             </div>
           </div>
         </div>
@@ -407,16 +368,15 @@ const SmartCityPremium = () => {
       {/* 7. FAQ SECTION */}
       <section className="py-24 bg-[#0A1A10] px-6">
         <div className="max-w-4xl mx-auto">
-          {/* Standardized Heading */}
           <h3 className="text-4xl md:text-7xl font-bold text-center text-white mb-16">Investor <span className="text-[#22C55E]">Knowledge</span></h3>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white  overflow-hidden shadow-sm">
+              <div key={idx} className="bg-white overflow-hidden shadow-sm">
                 <button
                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
                   className="w-full p-6 flex justify-between items-center text-left"
                 >
-                  <span className="font-bold text-black  tracking-tight">{faq.q}</span>
+                  <span className="font-bold text-black tracking-tight">{faq.q}</span>
                   <div className="text-[#22C55E]">
                     {activeFaq === idx ? <Minus size={18} /> : <Plus size={18} />}
                   </div>
@@ -434,32 +394,35 @@ const SmartCityPremium = () => {
         </div>
       </section>
 
-     
-     {/* 8. CONTACT FOOTER */}
-<footer className="py-24 px-6 text-center bg-white border-t border-slate-100 relative">
-  <div className="max-w-4xl mx-auto">
-    {/* Standardized Heading */}
-    <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-10 leading-none text-black">
-      Invest in the <br /> <span className="text-[#22C55E]">Smart Future</span>
-    </h2>
-    
-    <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-16">
-      <div className="flex items-center gap-3 font-bold text-black">
-        <Mail className="text-[#22C55E]" size={24} /> info@mangalRealty.com
-      </div>
-      <div className="flex items-center gap-3 font-bold text-black">
-        <Phone className="text-[#22C55E]" size={24} /> +91 040-4400033
-      </div>
-    </div>
+      {/* 8. CONTACT FOOTER */}
+      <footer className="py-24 px-6 text-center bg-white border-t border-slate-100 relative">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter mb-10 leading-none text-black">
+            Invest in the <br /> <span className="text-[#22C55E]">Smart Future</span>
+          </h2>
 
-    {/* This is the only button changed to black text */}
-    <MangalButton 
-      text="Book Site Visit" 
-      href="/contact-us" 
-      className="text-black" 
-    />
-  </div>
-</footer>
+          <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-16">
+            <div className="flex items-center gap-3 font-bold text-black">
+              <Mail className="text-[#22C55E]" size={24} /> info@mangalRealty.com
+            </div>
+            <div className="flex items-center gap-3 font-bold text-black">
+              <Phone className="text-[#22C55E]" size={24} /> +91 040-4400033
+            </div>
+          </div>
+
+          <button
+            onClick={() => setIsPopupOpen(true)}
+            className="group relative cursor-pointer px-10 py-4 font-bold tracking-[0.1em] text-[14px] overflow-hidden inline-block text-center border border-[#22C55E] text-black"
+          >
+            <span className="relative z-10 transition-colors duration-500 group-hover:text-white">Book Site Visit</span>
+            <div className="absolute inset-0 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 z-0"></div>
+          </button>
+        </div>
+      </footer>
+
+      {/* CONTACT POPUP */}
+      <ContactPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+
     </div>
   );
 };
