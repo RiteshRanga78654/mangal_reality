@@ -9,7 +9,7 @@ const defaultForm = {
   city: "",
   message: "",
   url: "https://www.mangalrealty.com/",
-  toEmail: "aniket.thakur@ireedindia.com",
+  toEmail: "info@mangalrealty.com",
 };
 
 export default function ContactPopup({ isOpen, onClose }) {
