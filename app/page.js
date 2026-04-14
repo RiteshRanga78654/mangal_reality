@@ -362,7 +362,7 @@ const Page = () => {
             </div>
 
             <div
-              className="relative"
+              className="relative "
               onMouseEnter={() => setIsProjectPaused(true)}
               onMouseLeave={() => setIsProjectPaused(false)}
             >
@@ -378,7 +378,12 @@ const Page = () => {
                         onMouseLeave={() => setHoveredId(null)}
                         className="relative group cursor-pointer overflow-hidden rounded-[1.5rem] bg-[#0a1a10] h-[450px]"
                       >
-                        <a href={project.link} className="absolute inset-0 z-0">
+                        <a
+                          href={project.link}
+                          target={project.slug === "the-nature-city" ? "_blank" : "_self"}
+                          rel={project.slug === "the-nature-city" ? "noopener noreferrer" : ""}
+                          className="absolute inset-0 z-0"
+                        >
                           <motion.img
                             src={project.image}
                             alt={project.title}
@@ -409,7 +414,12 @@ const Page = () => {
                                       <span className="text-xs font-medium">{project.area}</span>
                                     </div>
                                   </div>
-                                  <a href={project.link} className="relative inline-flex items-center gap-2 px-8 py-4 text-white font-bold text-[10px] tracking-widest overflow-hidden group/btn">
+                                  <a
+                                    href={project.link}
+                                    target={project.slug === "the-nature-city" ? "_blank" : "_self"}
+                                    rel={project.slug === "the-nature-city" ? "noopener noreferrer" : ""}
+                                    className="relative inline-flex items-center gap-2 px-8 py-4 text-white font-bold text-[10px] tracking-widest overflow-hidden group/btn"
+                                  >"
                                     <span className="relative z-10 flex items-center gap-2">Explore Details <ArrowRight size={14} /></span>
                                     <div className="absolute inset-0 bg-[#22c55e] scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left" />
                                     <div className="absolute inset-0 border border-[#22c55e]" />
@@ -427,10 +437,10 @@ const Page = () => {
 
               <div className="flex justify-center gap-4 mt-12">
                 <button onClick={prevProject} style={{ borderColor: brandGreen }} className="w-12 h-12 border flex items-center justify-center hover:bg-[#22c55e] transition-colors rounded-sm group">
-                  <ChevronLeft className="w-6 h-6 text-[#22c55e] group-hover:text-white" />
+                  <ChevronLeft className="w-6 h-6 text-[#22c55e] group-hover:text-white cursor-pointer" />
                 </button>
                 <button onClick={nextProject} style={{ borderColor: brandGreen }} className="w-12 h-12 border flex items-center justify-center hover:bg-[#22c55e] transition-colors rounded-sm group">
-                  <ChevronRight className="w-6 h-6 text-[#22c55e] group-hover:text-white" />
+                  <ChevronRight className="w-6 h-6 text-[#22c55e] group-hover:text-white cursor-pointer " />
                 </button>
               </div>
             </div>
@@ -483,7 +493,7 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="hidden md:flex justify-center mt-8 pr-4 text-[#22c55e]">
+              <div className="hidden md:flex justify-center mt-8 cursor-pointer pr-4 text-[#22c55e]">
                 <NavControls prev={prevSlide} next={nextSlide} />
               </div>
             </div>
