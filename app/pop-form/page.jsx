@@ -248,7 +248,7 @@ export default function ContactPopup({ isOpen, onClose }) {
           {/* Full-height image */}
           <div className="relative flex-1">
             <Image
-              src="/assets/images/famili-img1.jpeg"
+              src="/assets/images/family-img1.jpeg"
               alt="Happy family in their new home"
               fill
               className="object-cover object-center"
