@@ -158,11 +158,11 @@ export default function Footer() {
 
           <div className="flex items-center gap-6">
             {[
-              { icon: FaFacebookF, link: " https://www.facebook.com/MangalRealty/" },
-              { icon: FaPinterestP, link: "https://in.pinterest.com/mangalrealty/" },
+              { icon: FaFacebookF, link: "  https://www.facebook.com/MangalRealty" },
+              { icon: FaPinterestP, link: " https://in.pinterest.com/mangalrealty_/" },
               { icon: FaInstagram, link: " https://www.instagram.com/mangalrealty/" },
-              { icon: FaLinkedinIn, link: " https://www.linkedin.com/company/mangalrealty/" },
-              { icon: FaYoutube, link: "https://www.youtube.com/@mangalrealty" },
+              { icon: FaLinkedinIn, link: " https://in.pinterest.com/mangalrealty_/" },
+              { icon: FaYoutube, link: " https://www.youtube.com/@Mangal_Realty" },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
