@@ -6,13 +6,14 @@ import {
   TrendingUp, Phone, Mail, ArrowRight, Waves, Zap, Fence,
   Quote, Maximize2
 } from 'lucide-react';
+import ContactPopup from "@/app/pop-form/page"; // adjust path if needed
 
 const GreenMeadowsJonnada = () => {
   const [showMoreLandmarks, setShowMoreLandmarks] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  // --- MANGAL REALTY SIGNATURE BUTTON COMPONENT ---
   // --- MANGAL REALTY SIGNATURE BUTTON COMPONENT ---
   const MangalButton = ({ children, onClick, href, className = "" }) => {
     const classes = `group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden  transition-all duration-300 w-full sm:w-auto inline-block text-center ${className}`;
@@ -27,7 +28,6 @@ const GreenMeadowsJonnada = () => {
       </>
     );
 
-    // If href is provided, render as a link, otherwise render as a button
     if (href) {
       return (
         <a href={href} className={classes}>
@@ -87,6 +87,9 @@ const GreenMeadowsJonnada = () => {
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
 
+      {/* CONTACT POPUP */}
+      <ContactPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row bg-[#0A1A10] overflow-hidden">
         <div className="w-full lg:w-2/3 h-[45vh] lg:h-screen relative">
@@ -99,12 +102,11 @@ const GreenMeadowsJonnada = () => {
 
         <div className="w-full lg:w-1/3 flex items-center px-6 md:px-12 py-12 lg:py-20 bg-[#0A1A10]">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="w-full text-left">
-            {/* <h2 className="text-[#22C55E] font-bold tracking-[0.3em]  text-[10px] mb-4">Mangal Realty Presents</h2> */}
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-none  mb-6 tracking-tighter">
               Green <br /> <span className="text-[#22C55E]">Meadows</span>
             </h1>
             <p className="text-white  text-lg mb-8 border-l-2 border-white pl-4">
-              “Expansive Green Living Across Five Acres of Excellence”
+              "Expansive Green Living Across Five Acres of Excellence"
             </p>
             <p className="text-white text-base leading-relaxed max-w-md mb-4">
               The Green Meadows is a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments. This project is a balance between space, greenery, & community.
@@ -132,23 +134,15 @@ const GreenMeadowsJonnada = () => {
 
       {/* 3. PROJECT HIGHLIGHTS */}
       <section className="py-16 lg:py-24 px-6 max-w-7xl mx-auto bg-white">
-        {/* Header Section with New Content on the Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mb-16 items-start">
-          {/* Left Side: Heading */}
           <div className="w-full text-left">
             <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none  text-slate-900">
               Project <br className="hidden md:block" />
               <span className="text-[#22C55E]">Highlights</span>
             </h2>
             <div className="w-16 md:w-20 h-2 bg-[#22C55E] mt-4 md:mt-6"></div>
-
-            {/* Original small sub-text */}
-            {/* <p className="mt-6 text-slate-500 font-bold text-sm tracking-wide ">
-              100% Work Completed • VMRDA Approved
-            </p> */}
           </div>
 
-          {/* Right Side: New Descriptive Text */}
           <div className="space-y-6 text-left">
             <p className="text-black text-base md:text-lg leading-relaxed">
               At <span className="text-black ">Green Meadows</span>, we understand that choosing where to build your home is one of life's most important decisions; it's a community designed for families who value both security and serenity.
@@ -164,7 +158,6 @@ const GreenMeadowsJonnada = () => {
           </div>
         </div>
 
-        {/* Highlights Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {highlights.map((item, idx) => (
             <div
@@ -186,7 +179,6 @@ const GreenMeadowsJonnada = () => {
       </section>
 
       {/* 4. THE CONNECTIVITY HUB */}
-      {/* 4. THE CONNECTIVITY HUB */}
       <section className="py-16 lg:py-24 bg-[#0A1A10] px-6 text-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
@@ -205,7 +197,6 @@ const GreenMeadowsJonnada = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
-            {/* IMAGE BOX */}
             <div className="lg:col-span-8 h-[300px] lg:h-[450px] relative overflow-hidden group">
               <img
                 src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000"
@@ -221,12 +212,10 @@ const GreenMeadowsJonnada = () => {
               </div>
             </div>
 
-            {/* RIGHT SIDE TEXT (Top Right in your image) */}
             <div className="lg:col-span-4 flex flex-col justify-center text-left space-y-8 p-4 lg:p-0">
               <div>
-                {/* <div className="w-full h-6 bg-[#064e3b] mb-6 hidden lg:block opacity-40"></div> Dark Green accent bar like image */}
                 <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-200">
-                  “Safety, schools, space, and community, everything needed for children to thrive and families to flourish.”
+                  "Safety, schools, space, and community, everything needed for children to thrive and families to flourish."
                 </p>
               </div>
 
@@ -235,7 +224,6 @@ const GreenMeadowsJonnada = () => {
               </p>
             </div>
 
-            {/* DISTANCE MARKERS (Bottom row in your image) */}
             <div className="lg:col-span-12 bg-white p-8 lg:p-14 flex flex-col justify-center text-left mt-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
                 {[
@@ -309,26 +297,24 @@ const GreenMeadowsJonnada = () => {
           </h2>
 
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
-            {/* Email Link */}
             <a
               href="mailto:info@mangalRealty.com"
               className="flex items-center gap-3 font-bold  tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
             >
               <Mail className="text-[#22C55E]" size={18} /> info@mangalRealty.com
             </a>
-
-            {/* Phone Link */}
             <a
-              href="tel:+919429690913"
+              href="tel:+9169000-48000"
               className="flex items-center gap-3 font-bold  tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
             >
-              <Phone className="text-[#22C55E]" size={18} /> +91 9429690913
+              <Phone className="text-[#22C55E]" size={18} /> +91 69000-48000
             </a>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            {/* Button Links */}
-            <MangalButton href="/contact-us">Book Site Visit</MangalButton>
+            {/* Book Site Visit → opens popup */}
+            <MangalButton onClick={() => setIsPopupOpen(true)}>Book Site Visit</MangalButton>
+            {/* Contact Sales → navigates to page */}
             <MangalButton href="/contact-us">Contact Sales</MangalButton>
           </div>
 

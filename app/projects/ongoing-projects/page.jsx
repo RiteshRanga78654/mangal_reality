@@ -81,7 +81,7 @@ const OngoingProjectsPage = () => {
     
       area: "90+ Acres",
       image: "/assets/images/WhatsApp Image 2026-01-29 at 11.12.55 AM (1).jpeg",
-      link: "https://the-nature-city.vercel.app/"
+      link: "/the-nature-city"
     },
     {
       id: 2,
