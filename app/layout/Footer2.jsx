@@ -189,7 +189,7 @@ export default function Footer() {
             {[
               { icon: FaFacebookF, link: "  https://www.facebook.com/MangalRealty" },
               { icon: FaPinterestP, link: " https://in.pinterest.com/mangalrealty_/" },
-              { icon: FaInstagram, link: " https://www.instagram.com/mangalrealty/" },
+              { icon: FaInstagram, link: "  https://www.instagram.com/mangalrealty_/" },
               { icon: FaLinkedinIn, link: " https://in.pinterest.com/mangalrealty_/" },
               { icon: FaYoutube, link: " https://www.youtube.com/@Mangal_Realty" },
             ].map((item, i) => {
@@ -201,7 +201,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white-500 hover:text-[#4ADE80] transition-all duration-300 transform hover:-translate-y-1"
-                >
+                >f
                   <Icon size={18} />
                 </Link>
               );

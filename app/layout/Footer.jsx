@@ -160,7 +160,7 @@ export default function Footer() {
             {[
               { icon: FaFacebookF, link: "  https://www.facebook.com/MangalRealty" },
               { icon: FaPinterestP, link: " https://in.pinterest.com/mangalrealty_/" },
-              { icon: FaInstagram, link: " https://www.instagram.com/mangalrealty/" },
+              { icon: FaInstagram, link: " https://www.instagram.com/mangalrealty_/" },
               { icon: FaLinkedinIn, link: " https://in.pinterest.com/mangalrealty_/" },
               { icon: FaYoutube, link: " https://www.youtube.com/@Mangal_Realty" },
             ].map((item, i) => {
