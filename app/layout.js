@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // Import your Header and Footer components
 import Header from "@/app/layout/Header";
-import Footer from "@/app/layout/Footer";
+// import Footer from "@/app/layout/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,12 +26,12 @@ export default function RootLayout({ children }) {
       >
         {/* Header stays at the top of every page */}
         <Header />
-        
+
         {/* Main content area */}
         <main>
           {children}
         </main>
-<Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

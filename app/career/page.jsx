@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { Leaf, Globe, Award, ChevronRight } from "lucide-react";
 const brandGreen = "#22C55E";
+import Footer from "../layout/Footer";
 
 // --- DATA ---
 const JOBS = [
@@ -442,6 +443,8 @@ export default function CareerPage() {
           </div>
         )}
       </AnimatePresence>
+      <Footer />
     </div>
+    
   );
 }

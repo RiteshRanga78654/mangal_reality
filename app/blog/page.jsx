@@ -11,6 +11,7 @@ import {
   Home,
   Clock,
 } from "lucide-react";
+import Footer from "../layout/Footer";
 
 // 1. DATA DEFINITIONS (Slug-based mapping)
 const BLOG_CONTENT = {
@@ -1104,7 +1105,9 @@ export default function MangalRealtyBlog() {
               ))}
             </AnimatePresence>
           </div>
+         
         </main>
+        <Footer />
       </div>
     </>
   );

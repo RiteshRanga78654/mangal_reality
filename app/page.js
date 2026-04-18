@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Amenities from "./components/Amenities";
 import ContactPopup from "./pop-form/page";
+import Footer from "./layout/Footer";
 
 
 const StatCounter = ({ endValue, duration = 2000 }) => {
@@ -501,6 +502,7 @@ const Page = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </>
   );

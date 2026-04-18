@@ -14,6 +14,7 @@ import {
   ArrowUpRight,
   Linkedin,
 } from "lucide-react";
+import Footer from "../../layout/Footer";
 
 const brandGreen = "#22C55E";
 
@@ -267,6 +268,7 @@ export default function MangalLeadership() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

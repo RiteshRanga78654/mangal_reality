@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Target, Eye, Leaf, Shield, Sparkles, Trees, Wind, Droplets, Home, ChevronRight } from 'lucide-react';
 import { useRef } from 'react';
+import Footer from "../../layout/Footer";
 
 export default function VisionMission() {
   const containerRef = useRef(null);
@@ -158,6 +159,7 @@ export default function VisionMission() {
           </div>
         </motion.div>
       </section>
+      <Footer />
     </main>
   );
 }

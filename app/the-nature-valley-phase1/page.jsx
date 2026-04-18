@@ -6,7 +6,7 @@ import {
   TrendingUp, Phone, Mail, ArrowRight, Waves, Zap, Fence,
   Quote, MapPin, Maximize2, Layout, Navigation
 } from 'lucide-react';
-
+import Footer from "../layout/Footer";
 const NatureValleyPhase1 = () => {
   const [showMoreLandmarks, setShowMoreLandmarks] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -315,6 +315,7 @@ const NatureValleyPhase1 = () => {
           </div>
         </div>
       </footer>
+      <Footer />
     </div>
   );
 };

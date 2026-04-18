@@ -8,6 +8,7 @@ import {
   ChevronRight
 } from "lucide-react";
 
+
 const BLOG_DATA = {
   "vizag-2026": {
     id: 1,
@@ -258,6 +259,7 @@ export default function BlogPortal() {
 
           </aside>
         </div>
+      
       </main>
     </div>
   );

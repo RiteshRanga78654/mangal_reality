@@ -8,7 +8,7 @@ import {
   Send,
 } from "lucide-react";
 import { Home, ChevronRight } from "lucide-react";
-
+import Footer from "../layout/Footer";
 const brandGreen = "#22C55E";
 
 
@@ -311,6 +311,7 @@ export default function ContactUs() {
           loading="lazy"
         ></iframe>
       </section>
+      <Footer />
     </main>
   );
 }

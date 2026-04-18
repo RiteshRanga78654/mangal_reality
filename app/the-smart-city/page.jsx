@@ -10,6 +10,7 @@ import {
   Plus, Minus, Quote, Star, Stethoscope, ShoppingBag, Maximize2
 } from 'lucide-react';
 import ContactPopup from "@/app/pop-form/page";
+import Footer from "../layout/Footer";
 
 
 // --- Animated Counter ---
@@ -422,7 +423,7 @@ const SmartCityPremium = () => {
 
       {/* CONTACT POPUP */}
       <ContactPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-
+<Footer />
     </div>
   );
 };
