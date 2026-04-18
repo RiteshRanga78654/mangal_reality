@@ -7,6 +7,7 @@ import {
   Quote, MapPin, Maximize2
 } from 'lucide-react';
 import ContactPopup from "@/app/pop-form/page";
+import Footer from "../layout/Footer";
 
 const NatureValleyPhase2 = () => {
   const [showMoreLandmarks, setShowMoreLandmarks] = useState(false);
@@ -256,7 +257,7 @@ const NatureValleyPhase2 = () => {
 
       {/* CONTACT POPUP */}
       <ContactPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-
+      <Footer />
     </div>
   );
 };

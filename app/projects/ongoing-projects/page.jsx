@@ -6,6 +6,7 @@ import {
   MapPin, Maximize2, ShieldCheck, Leaf, Map, Zap, Home, ChevronRight,
   Target
 } from 'lucide-react';
+import Footer from "../../layout/Footer";
 
 // --- 1. ANIMATED COUNTER COMPONENT ---
 const AnimatedCounter = ({ value, duration = 1500 }) => {
@@ -240,6 +241,7 @@ const OngoingProjectsPage = () => {
             </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

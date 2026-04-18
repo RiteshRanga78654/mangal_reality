@@ -6,6 +6,7 @@ import {
   Waves as Pool, Heart, Coffee, Camera, ChevronRight, 
   Home as HomeIcon, Tent, Zap, Baby, Gamepad2, Bike
 } from 'lucide-react';
+import Footer from "../layout/Footer";
 
 export default function AmenitiesPage() {
   const brandGreen = "#22c55e";
@@ -155,6 +156,7 @@ export default function AmenitiesPage() {
           </p>
         </div>
       </footer> */}
+      <Footer />
     </main>
   );
 }

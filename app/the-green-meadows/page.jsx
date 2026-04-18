@@ -7,6 +7,7 @@ import {
   Quote, Maximize2
 } from 'lucide-react';
 import ContactPopup from "@/app/pop-form/page"; // adjust path if needed
+import Footer from "../layout/Footer";
 
 const GreenMeadowsJonnada = () => {
   const [showMoreLandmarks, setShowMoreLandmarks] = useState(false);
@@ -323,6 +324,7 @@ const GreenMeadowsJonnada = () => {
           </p>
         </div>
       </footer>
+      <Footer />
     </div>
   );
 };
