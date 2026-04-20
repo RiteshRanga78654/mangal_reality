@@ -63,7 +63,7 @@ const SmartCityPremium = () => {
     },
     {
       name: "Suresh Kumar",
-      text: "The value appreciation in this corridor is unmatched. The VMRDA approval and RERA registration gave us confidence, but the 40feet roads and children's play area won our hearts.Being just 5 minutes from the International Airport makes this the best investment in Vizag.",
+      text: "The value appreciation in this corridor is unmatched. The VMRDA approval and RERA registration gave us confidence, but the 40feet roads and children's play area won our hearts.Being just 25 minutes from the International Airport makes this the best investment in Vizag.",
       role: "Business Owner"
     }
   ];
@@ -83,7 +83,7 @@ const SmartCityPremium = () => {
     { q: "Is the project VMRDA Approved?", a: "Yes, the project is 100% VMRDA approved with L.P.NO: 82/2020/1167/VMRDA/DPMS. All documents are verified and clear." },
     { q: "What are the road widths within the project?", a: "The project features a proposed 60-feet main access road and 40-feet wide internal blacktop roads for seamless transit." },
     { q: "Are bank loans available for this project?", a: "Yes, the project is approved by major banks. We provide full assistance in securing loans for your plot purchase." },
-    { q: "How far is the Bhogapuram Airport?", a: "The project is strategically located just 5 minutes away from the upcoming Bhogapuram International Airport." }
+    { q: "How far is the Bhogapuram Airport?", a: "The project is strategically located just 25 minutes away from the upcoming Bhogapuram International Airport." }
   ];
 
   return (
@@ -190,10 +190,10 @@ const SmartCityPremium = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { title: "Bhogapuram Airport", time: "5 Minutes", desc: "The new international airport transforms property values and lifestyle convenience." },
-            { title: "IT SEZ Corridor", time: "10 Minutes", desc: "Join tech professionals who've discovered the perfect work-life balance." },
-            { title: "Vizag CMR", time: "35 Minutes", desc: "Premium shopping, healthcare, and entertainment without the city chaos." },
-            { title: "NH-45 Access", time: "600 Meters", desc: "Direct highway access for effortless and rapid travel." }
+            { title: "NH-16-THAGARAPUVALASA", time: "6 - Lane", desc: "Positioned alongside a premier 6-lane national highway corridor for unmatched regional connectivity." },
+            { title: "NH-45 RAGHU ENGG, COLLEGE JUN.", time: "600 m", desc: "Direct highway access just steps away for swift, effortless travel in every direction." },
+            { title: "EDUCATION HUB", time: "12 Colleges", desc: "Surrounded by 12 engineering and medical colleges, ensuring world-class academic access for families." },
+            { title: "VIZAG CITY CMR CENTRAL", time: "35 min", desc: "Premium shopping, healthcare, and entertainment without the city chaos all within easy reach." }
           ].map((item, idx) => (
             <div key={idx} className="flex flex-col border-l-4 border-[#15803d] pl-6 py-4 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group rounded-r-2xl">
               <span className="text-[10px] font-black text-slate-400 tracking-[0.2em] mb-1 group-hover:text-[#15803d] transition-colors">
@@ -245,7 +245,7 @@ const SmartCityPremium = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-left">
-                <span className="bg-[#22C55E] text-white px-4 py-1 text-[10px] font-bold tracking-widest mb-4 inline-block">5 Minutes Drive</span>
+                <span className="bg-[#22C55E] text-white px-4 py-1 text-[10px] font-bold tracking-widest mb-4 inline-block">25 minutes Drive</span>
                 <h4 className="text font-bold text-white">Bhogapuram International Airport</h4>
               </div>
             </div>
@@ -259,7 +259,7 @@ const SmartCityPremium = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A10] via-[#0A1A10]/40 to-transparent"></div>
               <div className="absolute bottom-10 left-10 text-left">
                 <Building2 size={48} className="text-[#22C55E] mb-4 opacity-80" />
-                <span className="text-[#22C55E] text-[10px] font-bold tracking-widest mb-2 block">10 Minutes Drive</span>
+                <span className="text-[#22C55E] text-[10px] font-bold tracking-widest mb-2 block">20 minutes Drive</span>
                 <h4 className="text font-bold text-white leading-none">IT SEZ Corridor</h4>
               </div>
             </div>
