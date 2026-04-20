@@ -1,74 +1,79 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import {
-  Plus, Minus, Star, ShieldCheck, TreePine, Landmark,
-  TrendingUp, Phone, Mail, ArrowRight, Waves, Zap, Fence,
-  Quote, Maximize2
+  ShieldCheck, TreePine, Landmark, TrendingUp,
+  Plus, Minus, Quote, Star, Waves, Zap, Fence,
+  Phone, Mail, CheckCircle, Maximize2, ArrowRight
 } from 'lucide-react';
-import ContactPopup from "@/app/pop-form/page"; // adjust path if needed
+import ContactPopup from "@/app/pop-form/page";
 import Footer from "../layout/Footer";
 
-const GreenMeadowsJonnada = () => {
+
+// --- Animated Counter ---
+const AnimatedCounter = ({ value }) => {
+  const [displayValue, setDisplayValue] = useState(0);
+  const nodeRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        let start = 0;
+        const end = parseInt(value.replace(/\D/g, ''));
+        const timer = setInterval(() => {
+          start += Math.ceil(end / 50);
+          if (start >= end) { setDisplayValue(end); clearInterval(timer); }
+          else { setDisplayValue(start); }
+        }, 30);
+      }
+    }, { threshold: 0.1 });
+    if (nodeRef.current) observer.observe(nodeRef.current);
+    return () => observer.disconnect();
+  }, [value]);
+  return <span ref={nodeRef}>{displayValue}{value.includes('+') ? '+' : value.includes('%') ? '%' : ''}</span>;
+};
+
+// --- Unified Mangal Button ---
+const MangalButton = ({ text, href, onClick, className = "text-white" }) => {
+  if (href) {
+    return (
+      <Link href={href} className={`group relative cursor-pointer px-10 py-4 font-bold tracking-[0.1em] text-[14px] overflow-hidden inline-block text-center border border-[#22C55E] ${className}`}>
+        <span className="relative z-10 transition-colors duration-500 group-hover:text-white">{text}</span>
+        <div className="absolute inset-0 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 z-0"></div>
+      </Link>
+    );
+  }
+  return (
+    <button onClick={onClick} className={`group relative cursor-pointer px-10 py-4 font-bold tracking-[0.1em] text-[14px] overflow-hidden inline-block text-center border border-[#22C55E] ${className}`}>
+      <span className="relative z-10 transition-colors duration-500 group-hover:text-white">{text}</span>
+      <div className="absolute inset-0 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 z-0"></div>
+    </button>
+  );
+};
+
+const GreenMeadowsPremium = () => {
+  const [activeFaq, setActiveFaq] = useState(null);
   const [showMoreLandmarks, setShowMoreLandmarks] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  // --- MANGAL REALTY SIGNATURE BUTTON COMPONENT ---
-  const MangalButton = ({ children, onClick, href, className = "" }) => {
-    const classes = `group relative cursor-pointer px-10 py-5 text-white font-bold tracking-[0.2em] text-[10px] md:text-xs overflow-hidden  transition-all duration-300 w-full sm:w-auto inline-block text-center ${className}`;
-
-    const content = (
-      <>
-        <span className="relative z-10 flex items-center justify-center gap-3">
-          {children}
-        </span>
-        <div className="absolute inset-1 bg-[#22C55E] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-        <div className="absolute inset-1 border border-[#22C55E]"></div>
-      </>
-    );
-
-    if (href) {
-      return (
-        <a href={href} className={classes}>
-          {content}
-        </a>
-      );
-    }
-
-    return (
-      <button onClick={onClick} className={classes}>
-        {content}
-      </button>
-    );
-  };
-
-
-  const projectStats = [
-    { label: "VMRDA Approved", value: "LP: 71/2020", icon: <Landmark />, sub: "VMRDA/DPMS Approved" },
-    {
-      label: "Total Area",
-      value: "17 Acres",
-      prefix: "",
-      suffix: " Acres",
-      icon: <Maximize2 />,
-      sub: "Premium Open Plots"
-    },
-    { label: "ROI Status", value: "18%", icon: <Zap />, sub: "Expected Returns" }
-  ];
-
-  const highlights = [
-    { title: "24/7 Security", icon: <ShieldCheck />, desc: "Your family's safety is never compromised. Your insurance premiums stay reasonable." },
-    { title: "Elite Infrastructure", icon: <Fence />, desc: "Built to Last, Designed to Impress.Grand entrance arch everything ready for immediate construction." },
-    { title: "Modern Utilities", icon: <Waves />, desc: "Good utilities are invisible ,they just work.Advanced utilities and smart systems that contemporary families expect." },
-    { title: "Green Living", icon: <TreePine />, desc: "Spaces That Bring People Together. The playground fills with laughter,The parks host weekend picnics where community bonds form." }
-  ];
-
   const testimonials = [
-    { name: "Srinivas Rao", text: "The Jonnada project is ideally located. Being near Lendi and Raghu colleges makes it a perfect investment for future rental demand.", role: "Educator" },
-    { name: "Priya Sharma", text: "100% work completion and on-spot registration gave me the confidence I needed to invest my savings here.", role: "Home Buyer" },
-    { name: "Vikas Reddy", text: "Best for both living and investment. The 18% ROI promise and VMRDA approval make it a secure asset.", role: "Real Estate Investor" }
+    {
+      name: "Srinivas Rao",
+      text: "The Jonnada project is ideally located. Being near Lendi and Raghu colleges makes it a perfect investment for future rental demand. The completed infrastructure gave us full confidence before signing.",
+      role: "Educator"
+    },
+    {
+      name: "Priya Sharma",
+      text: "100% work completion and on-spot registration gave me the confidence I needed to invest my savings here. Every document was clear, every approval was verified, and the infrastructure was actually complete.",
+      role: "Home Buyer"
+    },
+    {
+      name: "Vikas Reddy",
+      text: "Best for both living and investment. The 18% ROI promise and VMRDA approval make it a secure asset. The tree-lined avenues and green spaces won our hearts completely.",
+      role: "Real Estate Investor"
+    }
   ];
 
   useEffect(() => {
@@ -82,96 +87,130 @@ const GreenMeadowsJonnada = () => {
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
+  const faqs = [
+    { q: "Is the project VMRDA Approved?", a: "Yes, the project is 100% VMRDA approved with L.P.NO: 71/2020/VMRDA/DPMS. All documents are verified and clear." },
+    { q: "What is the total area of Green Meadows?", a: "Green Meadows spans 17 acres of premium open plots with wide internal roads, green zones, and complete amenities." },
+    { q: "Are bank loans available for this project?", a: "Yes, the project is approved by major banks. We provide full assistance in securing loans for your plot purchase." },
+    { q: "What is the expected ROI for this project?", a: "The project is strategically located in Vizianagaram's fastest-growing educational corridor with an expected 18% ROI." }
+  ];
+
   return (
     <div
       className="bg-[#f8fafc] min-h-screen font-medium antialiased text-slate-900 overflow-x-hidden"
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
 
-      {/* CONTACT POPUP */}
-      <ContactPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[85vh] lg:min-h-screen flex flex-col lg:flex-row bg-[#0A1A10] overflow-hidden">
-        <div className="w-full lg:w-2/3 h-[45vh] lg:h-screen relative">
+      <section className="relative h-[85vh] lg:h-screen flex flex-col lg:flex-row bg-slate-900">
+        <div className="w-full lg:w-2/3 h-[40vh] lg:h-full relative overflow-hidden">
           <img
             src="/assets/images/green-meadows.png"
-            className="w-full h-full object-cover opacity-60"
-            alt="Green Meadows Jonnada"
+            className="w-full h-full object-cover opacity-70 transition-transform duration-1000"
+            alt="Green Meadows Banner"
           />
         </div>
 
-        <div className="w-full lg:w-1/3 flex items-center px-6 md:px-12 py-12 lg:py-20 bg-[#0A1A10]">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="w-full text-left">
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-none  mb-6 tracking-tighter">
-              Green <br /> <span className="text-[#22C55E]">Meadows</span>
+        <div className="w-full lg:w-1/3 flex items-center bg-[#0A1A10] px-8 lg:px-12 py-16 text-left relative">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
+            <h1 className="text-3xl md:text-4xl font-bold text-white leading-none mb-6 tracking-tighter">
+              Green <span className="text-[#22C55E]">Meadows</span>
             </h1>
-            <p className="text-white  text-lg mb-8 border-l-2 border-white pl-4">
-              "Expansive Green Living Across Five Acres of Excellence"
+            <p className="text-white text-lg mb-8 border-l-2 border-white pl-4">
+              "Expansive Green Living Across Seventeen Acres of Excellence"
             </p>
-            <p className="text-white text-base leading-relaxed max-w-md mb-4">
-              The Green Meadows is a 5-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments. This project is a balance between space, greenery, & community.
+            <p className="text-white text-base leading-relaxed max-w-md mb-8">
+              Green Meadows is a 17-acre completed project that exemplifies our dedication to creating spacious, nature-integrated living environments — a perfect balance between space, greenery, & community.
             </p>
-            <MangalButton href="/assets/files/green-medows-brouchure.pdf">
-              Download Brochure <ArrowRight size={16} />
-            </MangalButton>
+            <MangalButton text="Download Brochure" href="/assets/files/green-medows-brouchure.pdf" />
           </motion.div>
         </div>
       </section>
 
-      {/* 2. STATS GRID */}
-      <section className="px-6 -mt-10 lg:-mt-16 relative z-30">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-          {projectStats.map((stat, i) => (
-            <div key={i} className="bg-white shadow-xl p-8 lg:p-10 border-b-8 border-[#22C55E] group text-left">
-              <div className="text-[#22C55E] mb-3 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
-              <p className="text-slate-400 text-[9px] font-bold tracking-[0.2em]  mb-1">{stat.label}</p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-black tracking-tighter">{stat.value}</h2>
-              <p className="text-slate-500 text-[10px] md:text-xs mt-1 font-bold">{stat.sub}</p>
-            </div>
-          ))}
+      {/* 2. STATS OVERLAY */}
+      <section className="px-6 -mt-16 lg:-mt-24 relative z-30">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white shadow-2xl p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
+            <Maximize2 className="text-[#22C55E] mb-4" size={24} />
+            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left">
+              Total Area
+            </p>
+            <h2 className="text-4xl font-bold text-black leading-none tracking-tighter text-left flex items-center gap-2">
+              <AnimatedCounter value="17" /> Acres
+            </h2>
+            <p className="text-slate-500 text-xs mt-2 font-bold text-left">
+              Premium Open Plots
+            </p>
+          </div>
+          <div className="bg-white shadow-2xl p-10 transition-transform hover:-translate-y-2">
+            <CheckCircle className="text-[#22C55E] mb-4" />
+            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left">ROI Status</p>
+            <h2 className="text-4xl font-bold text-black leading-none tracking-tighter text-left">18%</h2>
+            <p className="text-slate-500 text-xs mt-2 font-bold text-left">Expected Returns</p>
+          </div>
+          <div className="bg-white shadow-2xl p-10 border-b-8 border-[#22C55E] transition-transform hover:-translate-y-2">
+            <Landmark className="text-[#22C55E] mb-4" />
+            <p className="text-black text-[12px] font-bold tracking-[0.1em] mb-1 text-left">Legal Status</p>
+            <h2 className="text-xl font-bold text-black leading-none tracking-tighter text-left">VMRDA Approved</h2>
+            <p className="text-slate-500 text-xs mt-2 font-bold text-left">LP: 71/2020</p>
+          </div>
         </div>
       </section>
 
       {/* 3. PROJECT HIGHLIGHTS */}
-      <section className="py-16 lg:py-24 px-6 max-w-7xl mx-auto bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mb-16 items-start">
-          <div className="w-full text-left">
-            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none  text-slate-900">
-              Project <br className="hidden md:block" />
-              <span className="text-[#22C55E]">Highlights</span>
-            </h2>
-            <div className="w-16 md:w-20 h-2 bg-[#22C55E] mt-4 md:mt-6"></div>
-          </div>
-
-          <div className="space-y-6 text-left">
-            <p className="text-black text-base md:text-lg leading-relaxed">
-              At <span className="text-black ">Green Meadows</span>, we understand that choosing where to build your home is one of life's most important decisions; it's a community designed for families who value both security and serenity.
-            </p>
-
-            <p className="text-black text-base leading-relaxed">
-              Green Meadows isn't just another residential project. It's a strategic positioning opportunity in Vizianagaram's fastest-growing educational and residential corridor.
-            </p>
-
-            <p className="text-black   leading-tight">
-              Executed with precision. This is the lifestyle people living here for.
-            </p>
-          </div>
+      <section className="py-24 px-6 max-w-7xl mx-auto bg-white">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none text-slate-900">
+            Project <span className="text-[#15803d]">Highlights</span>
+          </h2>
+          <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {highlights.map((item, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+          {[
+            { title: "24/7 Security", icon: <ShieldCheck />, desc: "Your family's safety is never compromised. Round-the-clock security keeps your investment and loved ones protected." },
+            { title: "Elite Infrastructure", icon: <Fence />, desc: "Built to Last, Designed to Impress. Grand entrance arch and everything ready for immediate construction." },
+            { title: "Modern Utilities", icon: <Waves />, desc: "Good utilities are invisible — they just work. Advanced systems that contemporary families expect, fully installed." },
+            { title: "Green Living", icon: <TreePine />, desc: "Spaces that bring people together. Parks host weekend picnics where community bonds form naturally." }
+          ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-white p-8 border border-slate-100 shadow-sm hover:bg-[#15803d] hover:text-white transition-all duration-500 group text-left"
+              className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm transition-all duration-500 group text-left hover:bg-[#15803d] cursor-pointer"
             >
-              <div className="text-[#22C55E] mb-6 group-hover:scale-110 transition-transform">
+              <div className="text-[#15803d] mb-6 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                 {item.icon}
               </div>
-              <h4 className="text-xl font-bold mb-3 tracking-tight">
+              <h4 className="text-xl font-bold mb-3 tracking-tight text-slate-900 group-hover:text-white transition-colors duration-300">
                 {item.title}
               </h4>
-              <p className="text-slate-500 group-hover:text-slate-300 text-sm leading-relaxed">
+              <p className="text-slate-500 text-sm leading-relaxed group-hover:text-emerald-50 transition-colors duration-300">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none text-slate-900">
+            Just Minutes From <span className="text-[#15803d]">Everywhere</span>
+          </h2>
+          <div className="w-20 h-1.5 bg-[#15803d] mx-auto mt-4"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: "SVN LAKE PALACE, VZM", time: "9 KM", desc: "Vizianagaram's premier leisure destination leisure, dining, and scenic escapes close to home" },
+            { title: "PADMANABHA TEMPLE", time: "18 km", desc: "A revered spiritual landmark, offering peace and cultural heritage within easy reach." },
+            { title: "REVIDI JUNCTION", time: "11 KM", desc: "A key transit node linking you to the wider Vizianagaram district network" },
+            { title: "OAKRIDGE INTERNATIONAL SCHOOL", time: "11 km", desc: "World-class education for your children, just a short drive from your doorstep." }
+          ].map((item, idx) => (
+            <div key={idx} className="flex flex-col border-l-4 border-[#15803d] pl-6 py-4 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group rounded-r-2xl">
+              <span className="text-[10px] font-black text-slate-400 tracking-[0.2em] mb-1 group-hover:text-[#15803d] transition-colors">
+                {item.title}
+              </span>
+              <span className="text-3xl lg:text-4xl font-black text-[#15803d] tracking-tighter mb-2">
+                {item.time}
+              </span>
+              <p className="text-slate-600 text-xs leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -179,154 +218,227 @@ const GreenMeadowsJonnada = () => {
         </div>
       </section>
 
-      {/* 4. THE CONNECTIVITY HUB */}
-      <section className="py-16 lg:py-24 bg-[#0A1A10] px-6 text-white">
+      {/* 4. CONNECTIVITY HUB */}
+      <section className="py-24 bg-white px-6 mt-6">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-10 lg:mb-16 gap-8 text-left">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none ">
-                Location <span className="text-[#22C55E]">Corridor</span>
+          <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
+            <div className="text-left max-w-2xl">
+              <h2 className="text-3xl md:text-7xl font-bold text-black tracking-tighter leading-none">
+                The <span className="text-[#22C55E]">Location</span> Corridor
               </h2>
-              <p className="text-white mt-4 md:mt-6 text-base md:text-lg ">
-                Everything Within Comfortable Reach.
+              <p className="text-slate-900 mt-6 text-xl font-bold tracking-tight pl-6">
+                Everything Within Comfortable Reach
+              </p>
+              <p className="text-slate-600 mt-4 text-lg leading-relaxed pl-7">
+                Our location in Vizianagaram's fastest-growing educational and residential corridor places you surrounded by prestigious engineering colleges, medical institutions, and upcoming infrastructure projects.
               </p>
             </div>
-            <MangalButton onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}>
-              {showMoreLandmarks ? <Minus size={16} /> : <Plus size={16} />}
-              {showMoreLandmarks ? "Close Map" : "View Distance Map"}
-            </MangalButton>
+            <button
+              onClick={() => setShowMoreLandmarks(!showMoreLandmarks)}
+              className="flex items-center gap-3 px-8 py-4 font-bold shadow-xl bg-green-600 text-white hover:bg-[#22C55E] transition-all cursor-pointer"
+            >
+              <Plus className={`transition-transform duration-500 ${showMoreLandmarks ? 'rotate-45' : 'rotate-0'}`} />
+              {showMoreLandmarks ? "Close Hub" : "Explore More"}
+            </button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
-            <div className="lg:col-span-8 h-[300px] lg:h-[450px] relative overflow-hidden group">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="md:col-span-2 h-[400px] relative overflow-hidden group shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1000"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
-                alt="Educational Hub"
+                src="/assets/images/Bhogapuram_Airport_Vizag.webp"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                alt="Bhogapuram Airport"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-left">
-                <span className="bg-[#22C55E] text-black px-3 py-1 text-[9px] font-bold  mb-3 inline-block tracking-widest">
-                  Educational Hub
-                </span>
-                <h4 className="text-2xl md:text-4xl font-bold ">Lendi, Raghu & VITAM</h4>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+              <div className="absolute bottom-10 left-10 text-left">
+                <span className="bg-[#22C55E] text-white px-4 py-1 text-[10px] font-bold tracking-widest mb-4 inline-block">25 minutes Drive</span>
+                <h4 className="text font-bold text-white">Bhogapuram International Airport</h4>
+              </div>
+            </div>
+          
+
+            <div className="h-[400px] relative overflow-hidden group shadow-2xl">
+              <img
+                src="/assetss/images/nature-city-img/highway-img-1.webp"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                alt="Residential Corridor"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A10] via-[#0A1A10]/40 to-transparent"></div>
+              <div className="absolute bottom-10 left-10 text-left">
+                <TrendingUp size={48} className="text-[#22C55E] mb-4 opacity-80" />
+                <span className="text-[#22C55E] text-[10px] font-bold tracking-widest mb-2 block">5 Km</span>
+                <h4 className="text-xl font-bold text-white leading-none">VZM HIGHWAY</h4>
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col justify-center text-left space-y-8 p-4 lg:p-0">
-              <div>
-                <p className="text-xl md:text-2xl leading-relaxed font-medium text-slate-200">
-                  "Safety, schools, space, and community, everything needed for children to thrive and families to flourish."
-                </p>
-              </div>
+            <AnimatePresence>
+              {showMoreLandmarks && (
+                <>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
+                    className="h-[350px] relative overflow-hidden group shadow-2xl"
+                  >
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Health Facilities" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div className="absolute bottom-8 left-8 text-left text-white">
+                      <Waves size={40} className="mb-4 opacity-60 text-[#22C55E]" />
+                      <h4 className="text-2xl font-bold leading-tight mb-2 tracking-tighter">Health Facilities</h4>
+                    </div>
+                  </motion.div>
 
-              <p className="text-slate-200 text-xl md:text-2xl leading-relaxed">
-                Visit us to walk through tree-lined avenues and discover why families and investors alike are choosing this exceptional community.
-              </p>
-            </div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
+                    className="h-[350px] relative overflow-hidden group shadow-2xl"
+                  >
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover" alt="Retail & Shopping" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                    <div className="absolute bottom-8 left-8 text-left text-white">
+                      <Zap size={40} className="mb-4 opacity-60 text-[#22C55E]" />
+                      <h4 className="text-2xl font-bold leading-tight mb-2 tracking-tighter">Retail & Shopping</h4>
+                    </div>
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+      </section>
 
-            <div className="lg:col-span-12 bg-white p-8 lg:p-14 flex flex-col justify-center text-left mt-4">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
-                {[
-                  { l: "Revidi Junction", d: "3 KM" },
-                  { l: "Highway", d: "5 KM" },
-                  { l: "Lake Palace", d: "9 KM" },
-                  { l: "Madhurawada", d: "25 KM" }
-                ].map((item, i) => (
-                  <div key={i} className="flex flex-col border-l-4 border-[#22C55E] pl-6 py-2">
-                    <span className="text-[10px]  font-bold text-slate-400 tracking-[0.2em] mb-2">
-                      {item.l}
-                    </span>
-                    <span className="text-3xl lg:text-5xl font-black text-black tracking-tighter">
-                      {item.d}
-                    </span>
+      {/* 5. INVESTMENT CHECKLIST */}
+      <section className="py-24 bg-[#0A1A10] text-white mx-6 lg:mx-14 mb-24 px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10 text-left">
+          <div className="w-full lg:w-3/5">
+            <h3 className="text-4xl md:text-7xl font-bold tracking-tighter mb-12 leading-none">A Secure <br /> <span className="text-[#22C55E]">Investment</span> Hub</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-12">
+              {[
+                { title: "VMRDA Approved", sub: "L.P.NO: 71/2020" },
+                { title: "Bank Loans", sub: "Easy financing options available" },
+                { title: "Immediate Reg.", sub: "Spot registration for all plots" },
+                { title: "18% ROI", sub: "Expected returns on investment" }
+              ].map((check, i) => (
+                <div key={i} className="flex gap-4 items-start">
+                  <CheckCircle className="text-[#22C55E] shrink-0" size={24} />
+                  <div>
+                    <h5 className="font-bold tracking-tight">{check.title}</h5>
+                    <p className="text-slate-400 text-xs mt-1">{check.sub}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="w-full lg:w-2/5 flex flex-col gap-6">
+            <div className="bg-white/5 border border-white/10 p-10 backdrop-blur-xl">
+              <ShieldCheck className="text-[#22C55E] mb-6" size={48} />
+              <p className="text-white text-sm leading-relaxed mb-8">
+                Green Meadows is a completed project — 100% work done. Our track record speaks to our commitment to quality, timely delivery, and customer satisfaction. When you choose us, you choose a partner invested in your family's success.
+              </p>
+              <MangalButton text="Get Final Pricing" href="/contact-us" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. TESTIMONIALS */}
-      <section className="py-16 lg:py-24 px-6 bg-white overflow-hidden">
+      {/* 6. TESTIMONIALS */}
+      <section className="py-24 px-6 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative text-left">
-              <Quote className="absolute -top-10 -left-6 text-[#22C55E] opacity-10" size={120} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-left">
+            <div className="relative">
+              <Quote className="absolute -top-10 -left-10 text-[#22C55E] opacity-10" size={200} />
               <div className="relative z-10">
-                <h3 className="text-4xl md:text-7xl font-bold tracking-tighter leading-none mb-8">Investor <br /><span className="text-[#22C55E]">Voices</span></h3>
-
-                <div className={`transition-all duration-500 min-h-[150px] ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
-                  <p className="text-lg md:text-2xl font-medium text-slate-800 leading-relaxed mb-8 italic">
+                <h3 className="text-4xl md:text-7xl font-bold leading-none mb-8">Investor <br /> <span className="text-[#22C55E]">Voices</span></h3>
+                <div className={`transition-all duration-500 min-h-[160px] transform ${isFading ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
+                  <p className="text-2xl font-medium text-slate-800 leading-relaxed mb-10">
                     "{testimonials[testimonialIndex].text}"
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-[#0A1A10] text-[#22C55E]  flex items-center justify-center font-bold text-xl">
+                    <div className="w-16 h-16 bg-slate-900 text-[#22C55E] flex items-center justify-center font-bold text-xl">
                       {testimonials[testimonialIndex].name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-bold text-lg md:text-xl  tracking-tighter">{testimonials[testimonialIndex].name}</p>
+                      <p className="font-bold text-xl tracking-tight">{testimonials[testimonialIndex].name}</p>
                       <div className="flex text-[#22C55E] mb-1">
-                        {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="currentColor" />)}
+                        <Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" />
                       </div>
-                      <p className="text-[10px] font-bold text-slate-400  tracking-widest">{testimonials[testimonialIndex].role}</p>
+                      <p className="text-xs font-bold text-slate-400 tracking-widest">{testimonials[testimonialIndex].role}</p>
                     </div>
                   </div>
                 </div>
-
-                <div className="flex gap-2 mt-8 lg:mt-12">
+                <div className="flex gap-2 mt-10">
                   {testimonials.map((_, i) => (
                     <button key={i} onClick={() => setTestimonialIndex(i)} className={`h-1.5 transition-all duration-300 ${i === testimonialIndex ? 'w-12 bg-[#22C55E]' : 'w-3 bg-slate-200'}`} />
                   ))}
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3 h-[300px] lg:h-[450px]">
-              <div className="h-full shadow-2xl"><img src="/assets/images/what-our-student-says-2.jpeg" className="w-full h-full object-cover" alt="Real Estate" /></div>
-              <div className="h-full shadow-2xl translate-y-8"><img src="/assets/images/3.jpeg" className="w-full h-full object-cover" alt="Modern House" /></div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="h-64 bg-slate-100 overflow-hidden"><img src="/assets/images/what-our-student-says-2.jpeg" className="w-full h-full object-cover" alt="site progress" /></div>
+              <div className="h-64 bg-slate-100 overflow-hidden mt-12"><img src="/assets/images/3.jpeg" className="w-full h-full object-cover" alt="site project" /></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. CONTACT FOOTER */}
-      <footer className="py-16 lg:py-24 px-6 bg-[#0A1A10] text-center text-white">
+      {/* 7. FAQ SECTION */}
+      <section className="py-24 bg-[#0A1A10] px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-7xl font-bold  tracking-tighter mb-10 leading-none">
+          <h3 className="text-4xl md:text-7xl font-bold text-center text-white mb-16">Investor <span className="text-[#22C55E]">Knowledge</span></h3>
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="bg-white overflow-hidden shadow-sm">
+                <button
+                  onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
+                  className="w-full p-6 flex justify-between items-center text-left"
+                >
+                  <span className="font-bold text-black tracking-tight">{faq.q}</span>
+                  <div className="text-[#22C55E]">
+                    {activeFaq === idx ? <Minus size={18} /> : <Plus size={18} />}
+                  </div>
+                </button>
+                <AnimatePresence>
+                  {activeFaq === idx && (
+                    <motion.div initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }} className="overflow-hidden">
+                      <p className="p-6 pt-0 text-slate-500 leading-relaxed text-left border-t border-slate-50">{faq.a}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. CONTACT FOOTER */}
+      <footer className="py-24 px-6 text-center bg-white border-t border-slate-100 relative">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-7xl font-bold tracking-tighter mb-10 leading-none text-black">
             Your Jonnada <br /> <span className="text-[#22C55E]">Legacy Starts</span> Here
           </h2>
 
-          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 items-center mb-12">
-            <a
-              href="mailto:info@mangalRealty.com"
-              className="flex items-center gap-3 font-bold  tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
-            >
-              <Mail className="text-[#22C55E]" size={18} /> info@mangalRealty.com
-            </a>
-            <a
-              href="tel:+9169000-48000"
-              className="flex items-center gap-3 font-bold  tracking-[0.2em] text-[10px] md:text-xs hover:text-[#22C55E] transition-colors"
-            >
-              <Phone className="text-[#22C55E]" size={18} /> +91 69000-48000
-            </a>
+          <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-16">
+            <div className="flex items-center gap-3 font-bold text-black">
+              <Mail className="text-[#22C55E]" size={24} /> info@mangalrealty.com
+            </div>
+            <div className="flex items-center gap-3 font-bold text-black">
+              <Phone className="text-[#22C55E]" size={24} /> +91 69000-48000
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            {/* Book Site Visit → opens popup */}
-            <MangalButton onClick={() => setIsPopupOpen(true)}>Book Site Visit</MangalButton>
-            {/* Contact Sales → navigates to page */}
-            <MangalButton href="/contact-us">Contact Sales</MangalButton>
+            <MangalButton text="Book Site Visit" onClick={() => setIsPopupOpen(true)} className="text-black" />
+            <MangalButton text="Contact Sales" className="text-black" href="/contact-us" />
           </div>
 
-          <p className="mt-16 text-[9px] text-slate-600  tracking-[0.4em] font-bold">
+          <p className="mt-16 text-[9px] text-slate-400 tracking-[0.4em] font-bold">
             © 2024 Mangal Realty. VMRDA LP: 71/2020
           </p>
         </div>
       </footer>
+
+      {/* CONTACT POPUP */}
+      <ContactPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
       <Footer />
     </div>
   );
 };
 
-export default GreenMeadowsJonnada;
+export default GreenMeadowsPremium;
