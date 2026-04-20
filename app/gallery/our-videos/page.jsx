@@ -22,7 +22,7 @@ const AlternativeVideoGallery = () => {
       subtitle: "Cinematic Walkthrough",
       category: "Masterpiece",
       thumbnail: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "/",
       span: "row-span-2 col-span-1 md:col-span-2"
     },
     {
@@ -31,7 +31,7 @@ const AlternativeVideoGallery = () => {
       subtitle: "Urban Innovation",
       category: "Innovation",
       thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "/",
       span: "col-span-1"
     },
     {
@@ -40,7 +40,7 @@ const AlternativeVideoGallery = () => {
       subtitle: "Legacy Living",
       category: "Completed",
       thumbnail: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "/  ",
       span: "col-span-1"
     },
     {
@@ -49,7 +49,7 @@ const AlternativeVideoGallery = () => {
       subtitle: "Happy Families",
       category: "Stories",
       thumbnail: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "/  ",
       span: "col-span-1 md:col-span-2"
     },
     {

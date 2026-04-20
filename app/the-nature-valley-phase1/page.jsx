@@ -296,7 +296,7 @@ const NatureValleyPhase1 = () => {
               <Mail className="text-[#22C55E]" size={18} /> info@mangalRealty.com
             </div>
             <div className="flex items-center gap-3 font-bold tracking-[0.1em] text-[10px] md:text-xs">
-              <Phone className="text-[#22C55E]" size={18} /> +91 9429690913
+              <Phone className="text-[#22C55E]" size={18} /> +91 69000-48000
             </div>
           </div>
 
