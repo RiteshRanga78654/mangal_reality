@@ -132,7 +132,7 @@ const Page = () => {
             price: "₹3.5Cr",
             size: "3175 sft built up",
             heroImg:
-                "/assetss/images/slider/WhatsApp Image 2026-01-29 at 11.12.59 AM (2).jpeg",
+                "/assetss/images/slider/WhatsApp Image 2026-01-29 at 11.12.56 AM.jpeg",
             floorPlans: [
                 "/assetss/images/slider/WhatsApp Image 2026-01-29 at 11.12.54 AM (1).jpeg",
                 "/assetss/images/slider/WhatsApp Image 2026-01-29 at 11.12.56 AM (2).jpeg",
@@ -514,22 +514,22 @@ const Page = () => {
                     </AnimatePresence>
 
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-[120] w-full max-w-[95%] md:max-w-5xl px-2">
-                        <div className="flex h-[75px] md:h-[95px] w-full items-center overflow-visible">
+                       <div className="flex h-[55px] md:h-[70px] w-full max-w-sm mx-auto items-center overflow-visible">
                             {["3BHK", "4BHK"].map((type, index) => {
                                 const isActive = orientation === type;
                                 return (
                                     <button
                                         key={type}
                                         onClick={() => setOrientation(type)}
-                                        className={`relative flex flex-col items-center justify-center transition-all duration-500 ease-in-out h-full
+                                        className={`relative flex flex-col cursor-pointer items-center justify-center transition-all duration-500 ease-in-out h-full
             ${index !== 0 ? "border-l border-white/10" : ""} 
-            ${isActive ? "text-white z-20 scale-y-125 scale-x-105 shadow-[0_20px_50px_rgba(0,0,0,0.4)]" : "text-stone-400 z-10"}`}
+            ${isActive ? "text-white z-20 scale-y-110 scale-x-105 cursor-pointer shadow-[0_10px_30px_rgba(0,0,0,0.4)]" : "text-stone-400 z-10"}`}
                                         style={{
-                                            flex: isActive ? "1.8" : "1",
+                                            flex: isActive ? "1.4" : "1",
                                             backgroundColor: isActive ? "#3fad26" : "#011411",
                                         }}
                                     >
-                                        <span className={`leading-none transition-all duration-500 ${isActive ? "text-2xl md:text-3xl " : "text-lg md:text-2xl"}`}>
+                                        <span className={`leading-none transition-all cursor-pointer duration-500 ${isActive ? "text-2xl md:text-3xl " : "text-lg md:text-2xl"}`}>
                                             {type.charAt(0)}BHK Villa
                                         </span>
                                         {isActive && (

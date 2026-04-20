@@ -113,7 +113,7 @@ const SmartCityPremium = () => {
             <p className="text-white text-base leading-relaxed max-w-md mb-4">
               The Smart City located in the vibrant area of Dakamari represents the perfect fusion of modern technology & comfortable family living.
             </p>
-            <MangalButton text="Download Brochure" href="/assets/files/tcs-brochure.pdf" />
+            <MangalButton text="Download Brochure" href="/assets/files/smart-city-brouchure.pdf" />
           </motion.div>
         </div>
       </section>
@@ -404,10 +404,10 @@ const SmartCityPremium = () => {
 
           <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-16">
             <div className="flex items-center gap-3 font-bold text-black">
-              <Mail className="text-[#22C55E]" size={24} /> info@mangalRealty.com
+              <Mail className="text-[#22C55E]" size={24} /> info@mangalrealty.com
             </div>
             <div className="flex items-center gap-3 font-bold text-black">
-              <Phone className="text-[#22C55E]" size={24} /> +91 040-4400033
+              <Phone className="text-[#22C55E]" size={24} /> +91 69000-48000
             </div>
           </div>
 
@@ -423,7 +423,7 @@ const SmartCityPremium = () => {
 
       {/* CONTACT POPUP */}
       <ContactPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-<Footer />
+      <Footer />
     </div>
   );
 };
